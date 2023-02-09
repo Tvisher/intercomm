@@ -1,23 +1,12 @@
 'use strict';
 import * as baseFunction from './modules/functions.js';
-import './vendors/vendors.js';
-import Swiper, {
-    Navigation,
-    Pagination,
-    Autoplay,
-    EffectFade,
-} from 'swiper';
+
 
 import AOS from 'aos';
 import IMask from 'imask';
 
 // Проверка поддержки webP
 baseFunction.testWebP();
-
-window.addEventListener('load', (e) => {
-    document.body.style.opacity = 1;
-});
-
 
 
 // Инит и опции библиотеки анимаций
@@ -59,4 +48,38 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
 });
 
 
+const mainSliderComponent = new Swiper('.main-slider__component', {
+    slidesPerView: 1,
+    speed: 1100,
+    autoplay: {
+        delay: 5000,
+    },
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+});
 
+
+
+// Функция для работы фикс меню
+(function () {
+    const staticHeader = document.querySelector('.header');
+    const flyingHeader = document.querySelector('.fixed-header');
+    const checkScroll = () => {
+
+        const windowScroll = window.scrollY;
+        if (windowScroll > staticHeader.clientHeight) {
+            flyingHeader.classList.add('fixed');
+        } else {
+            flyingHeader.classList.remove('fixed');
+        }
+    }
+    checkScroll();
+    window.addEventListener('scroll', checkScroll);
+})();
