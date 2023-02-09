@@ -1375,7 +1375,7 @@ header {
 
 .fixed-header .search-form {
   margin-right: 15px;
-  margin-left: 45px;
+  padding-left: 45px;
 }
 
 .fixed-header .header__index-data {
