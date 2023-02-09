@@ -417,7 +417,6 @@ header {
   }
   .search-form {
     margin-right: 15px;
-    // margin-left: 45px;
     padding-left: 45px;
   }
   .header__index-data {
@@ -665,6 +664,7 @@ header {
   }
 
   &.small-article {
+    font-size: 18px;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -706,7 +706,7 @@ header {
   &.text-article {
     position: relative;
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
     &:before {
       position: absolute;
@@ -722,7 +722,9 @@ header {
     }
     padding-left: 38px;
     .article__title {
-      margin-bottom: 12px;
+      font-size: 18px;
+      margin-bottom: 15px;
+      @include pruning(2);
     }
   }
 }
