@@ -32,6 +32,9 @@ p {
   margin: 0;
   line-height: initial;
 }
+span {
+  display: block;
+}
 a {
   display: block;
   text-decoration: none;
@@ -77,6 +80,9 @@ button,
 textarea,
 select {
   font: inherit;
+  &:focus {
+    outline: none;
+  }
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
