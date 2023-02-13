@@ -455,26 +455,37 @@ header {
 }
 
 .main-screen {
-  padding-top: 30px;
+  // padding-top: 30px;
+  padding-top: 3vh;
+
   padding-bottom: 120px;
 }
 
 .site-nav {
-  gap: 20px;
+  width: fit-content;
+  margin: auto;
+  height: calc(95vh - 135px);
+  width: 125vh;
+  // gap: 20px;
+  gap: 1.5vh;
   display: grid;
   // grid-template-columns: repeat(auto-fill, 210px);
   // grid-template-columns: repeat(6, 1fr);
-  grid-template-columns: repeat(6, 210px);
-  grid-template-rows: repeat(4, 210px);
+  // grid-template-rows: repeat(4, 210px);
+  grid-template-columns: repeat(6, 18.5vh);
+  grid-template-rows: repeat(4, 18.5vh);
+
+  // grid-template-columns: repeat(6, 1fr);
+  // grid-template-rows: repeat(4, 1fr);
 }
 
 .site-nav__item {
   // width: 210px;
   // height: 210px;
   background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   color: #fff;
   position: relative;
   // font-size: 50px;
@@ -497,9 +508,12 @@ header {
   .item__link {
     width: 100%;
     height: 100%;
-    padding: 30px 34px;
+    // padding: 30px 34px;
+    padding: 3vh 3vh;
   }
   .item__ico {
+    width: 7vh;
+    height: 7vh;
     background-repeat: no-repeat;
     background-position: center;
     // height: 100%;
@@ -510,21 +524,30 @@ header {
     pointer-events: none;
   }
   .item__title {
-    padding-top: 110px;
+    // padding-top: 110px;
+    padding-top: 9vh;
     font-weight: 700;
-    font-size: 18px;
+    // font-size: 18px;
+    font-size: 1.8vh;
+
     color: #fff;
   }
   .item__social {
-    width: 60px;
-    height: 60px;
+    // width: 60px;
+    // height: 60px;
+    width: calc(50% - 1vh);
+    height: calc(50% - 1vh);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
   }
   &.socials {
-    padding: 32px;
-    gap: 26px;
+    padding: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
     flex-wrap: wrap;
   }
 }
@@ -592,7 +615,7 @@ header {
       rgba(22, 22, 30, 0.81) 76.31%,
       rgba(0, 0, 0, 0.82) 100%
     );
-    padding: 0 25px 57px;
+    padding: 0 2.3vh 5.3vh;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -601,13 +624,14 @@ header {
 
   .main-slide__title {
     font-weight: 600;
-    font-size: 40px;
+    // font-size: 40px;
+    font-size: 3.7vh;
     margin-bottom: 5px;
     line-height: 130%;
   }
 
   .main-slide__descr {
-    font-size: 20px;
+    font-size: 1.8vh;
     @include pruning(3);
   }
 

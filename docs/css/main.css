@@ -86,8 +86,7 @@ ol[class] {
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
@@ -321,8 +320,7 @@ swiper-slide {
 }
 
 .swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
-  -webkit-margin-start: var(--swiper-centered-offset-before);
-          margin-inline-start: var(--swiper-centered-offset-before);
+  margin-inline-start: var(--swiper-centered-offset-before);
 }
 
 .swiper-centered.swiper-horizontal > .swiper-wrapper::before {
@@ -332,8 +330,7 @@ swiper-slide {
 }
 
 .swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
-  -webkit-margin-before: var(--swiper-centered-offset-before);
-          margin-block-start: var(--swiper-centered-offset-before);
+  margin-block-start: var(--swiper-centered-offset-before);
 }
 
 .swiper-centered.swiper-vertical > .swiper-wrapper::before {
@@ -585,8 +582,7 @@ button.swiper-pagination-bullet {
   padding: 0;
   box-shadow: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -784,8 +780,7 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container > canvas {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .swiper-slide-zoomed {
@@ -955,9 +950,11 @@ swiper-container .swiper-notification {
   /* iOS Safari */
   -webkit-user-select: none;
   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
   /* Konqueror */
   -moz-user-select: none;
   /* Firefox */
+  -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently
@@ -1143,10 +1140,8 @@ header {
 .header__logo img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: left top;
-     object-position: left top;
+  object-fit: contain;
+  object-position: left top;
 }
 
 .header__nav,
@@ -1441,22 +1436,23 @@ header {
 }
 
 .main-screen {
-  padding-top: 30px;
+  padding-top: 3vh;
   padding-bottom: 120px;
 }
 
 .site-nav {
-  gap: 20px;
+  width: fit-content;
+  margin: auto;
+  height: calc(95vh - 135px);
+  width: 125vh;
+  gap: 1.5vh;
   display: grid;
-  grid-template-columns: repeat(6, 210px);
-  grid-template-rows: repeat(4, 210px);
+  grid-template-columns: repeat(6, 18.5vh);
+  grid-template-rows: repeat(4, 18.5vh);
 }
 
 .site-nav__item {
   background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #fff;
   position: relative;
 }
@@ -1480,10 +1476,12 @@ header {
 .site-nav__item .item__link {
   width: 100%;
   height: 100%;
-  padding: 30px 34px;
+  padding: 3vh 3vh;
 }
 
 .site-nav__item .item__ico {
+  width: 7vh;
+  height: 7vh;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -1493,23 +1491,27 @@ header {
 }
 
 .site-nav__item .item__title {
-  padding-top: 110px;
+  padding-top: 9vh;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.8vh;
   color: #fff;
 }
 
 .site-nav__item .item__social {
-  width: 60px;
-  height: 60px;
+  width: calc(50% - 1vh);
+  height: calc(50% - 1vh);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .site-nav__item.socials {
-  padding: 32px;
-  gap: 26px;
+  padding: 3vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
   flex-wrap: wrap;
 }
 
@@ -1583,7 +1585,7 @@ header {
 
 .main-slider__component .main-slide__content {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.65%, rgba(22, 22, 30, 0.81) 76.31%, rgba(0, 0, 0, 0.82) 100%);
-  padding: 0 25px 57px;
+  padding: 0 2.3vh 5.3vh;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1592,16 +1594,17 @@ header {
 
 .main-slider__component .main-slide__title {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 3.7vh;
   margin-bottom: 5px;
   line-height: 130%;
 }
 
 .main-slider__component .main-slide__descr {
-  font-size: 20px;
+  font-size: 1.8vh;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
+  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -1704,8 +1707,7 @@ header {
 .media-b-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .media-section__article .atricle-date {
@@ -1719,10 +1721,8 @@ header {
 .media-section__article .article__img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .media-section__article.small-article {
@@ -1755,6 +1755,7 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
+  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -1780,6 +1781,7 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
+  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -1815,6 +1817,7 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
+  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
