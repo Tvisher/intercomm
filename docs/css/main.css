@@ -965,7 +965,6 @@ html {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-behavior: smooth;
   line-height: 130%;
   font-size: 16px;
   color: #333333;
@@ -982,6 +981,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+}
+
+body.no-click {
+  pointer-events: none;
+  overflow-y: hidden;
 }
 
 footer {
@@ -1050,6 +1054,15 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent;
+}
+
+.main-screen__scroll-trigger {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
 }
 
 .section-title {
@@ -1382,6 +1395,7 @@ header {
 }
 
 .promo-string-mob {
+  color: #333333;
   width: 100%;
   position: relative;
   font-size: 14px;
@@ -1530,7 +1544,14 @@ footer {
 .main-screen {
   overflow: hidden;
   padding-top: 3vh;
-  padding-bottom: 60px;
+}
+
+.main-screen {
+  padding-bottom: 10px;
+}
+
+.media-section {
+  padding-top: 50px;
 }
 
 .site-nav {
@@ -1538,7 +1559,7 @@ footer {
   max-width: 100%;
   width: fit-content;
   margin: auto;
-  height: calc(95vh - 135px);
+  height: calc(100vh - 135px);
   gap: 1.5vh;
   display: grid;
   grid-template-columns: repeat(6, 18.5vh);
@@ -1746,7 +1767,7 @@ footer {
 .scroll-helper {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2128,6 +2149,10 @@ footer {
 }
 
 @media (max-width: 1400px) {
+  .scroll-helper .scroll-helper__text {
+    font-size: 14px;
+  }
+
   .header__nav,
   .header__top {
     gap: 15px;
@@ -2142,7 +2167,7 @@ footer {
   }
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1359px) {
   .site-nav {
     height: auto;
     grid-template-columns: repeat(6, 140px);
@@ -2518,7 +2543,7 @@ footer {
   }
 
   .media-section__article.large-article .article__title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .header {
@@ -2600,6 +2625,15 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .site-nav__item .item__title {
+    padding-top: 20vw;
+  }
+
+  .inner-form,
+  .survey {
+    padding: 20px;
+  }
+
   .main-slider__component .main-slide__descr {
     font-size: 12px;
   }
@@ -2608,8 +2642,8 @@ footer {
     font-size: 20px;
   }
 
-  .main-screen {
-    padding-top: 0;
+  .media-section {
+    padding-top: 0px;
   }
 
   .site-nav__item.main-slider {
@@ -2632,6 +2666,105 @@ footer {
   .site-nav__item {
     width: 40vw;
     height: 40vw;
+  }
+}
+
+@media (max-width: 390px) {
+  .inner-form__title {
+    font-size: 14px;
+  }
+
+  .survey .survey__text {
+    font-size: 12px;
+  }
+
+  .article-data {
+    font-size: 10px;
+  }
+
+  .media-section__article.text-article:before {
+    width: 17px;
+    height: 17px;
+  }
+
+  .media-section__article.text-article {
+    padding-left: 25px;
+  }
+
+  .media-section__article .article-link {
+    font-size: 14px;
+  }
+
+  .media-section__article.small-article .article__img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .media-section__article.small-article .article-link {
+    font-size: 14px;
+  }
+
+  .arrow-title {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 27px;
+  }
+
+  .media-section__article.small-article {
+    gap: 12px;
+  }
+
+  .article-data .favorite-label,
+  .article-data .favorites-data .ico,
+  .article-data .views-data .ico,
+  .article-data .comments-data .ico {
+    width: 14px;
+    height: 14px;
+  }
+
+  .article-data,
+  .media-section__article.small-article .article__content .article-data {
+    gap: 6px;
+  }
+
+  .inner-form__label .inner-form__input {
+    font-size: 12px;
+  }
+
+  .inner-form__label .inner-form__input {
+    padding: 10px 13px;
+  }
+
+  .inner-form__label {
+    margin-bottom: 15px;
+  }
+
+  .red-btn {
+    font-size: 14px;
+  }
+
+  .inner-form__agree .form-agree__text {
+    font-size: 12px;
+  }
+
+  .media-section__article.small-article:not(:last-child),
+  .media-section__article.text-article:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .media-section {
+    padding-top: 30px;
+  }
+
+  .survey .survey__text::before {
+    top: 0;
+  }
+
+  .survey .survey__text::after {
+    top: 3px;
   }
 }
 
