@@ -694,15 +694,22 @@
                     <form class="inner-form">
                         <span class="inner-form__title">Подпишитесь на наш еженедельный дайджест самых интересных новостей</span>
                         <label class="inner-form__label">
-                            <input type="email" required placeholder="Введите E-mail" class="inner-form__input">
+                            <input placeholder="Введите E-mail" class="inner-form__input">
                         </label>
-                        <button type="submit" class="red-btn">
+                        <button type="submit" class="red-btn inner-form__btn" disabled="true">
                             <span>Отправить</span>
                         </button>
                         <label class="inner-form__agree">
                             <input type="checkbox" name="form-agree" class="form__agree-checkbox">
                             <span class="form-agree__text">Согласен на обработку персональных данных</span>
                         </label>
+                        <div class="form-sucsess">
+                            <div class="form-sucsess__content">
+                                <div class="close-btn" data-close-form-sucsess></div>
+                                <div class="form-sucsess__title">Поздравляем! <br>Вы подписались<br>на еженедельный дайджест</div>
+                                <div class="red-btn" data-close-form-sucsess><span>Закрыть</span></div>
+                            </div>
+                        </div>
                     </form>
 
                 </div>
@@ -749,7 +756,7 @@
                                 </div> -->
                             </label>
                             <div class="survey__footer">
-                                <button class="red-btn">
+                                <button class="red-btn survey__btn" disabled="true">
                                     <span>Пройти опрос</span>
                                 </button>
                             </div>

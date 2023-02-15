@@ -31,8 +31,15 @@ baseFunction.testWebP();
 //логика работы меню бургер
 document.body.addEventListener('click', (e) => {
     const target = e.target;
+    // Работа мобильно меню
     if (target.hasAttribute('data-burger-menu') || target.classList.contains('mobile-menu__close')) {
         document.querySelector('[data-header-menu]').classList.toggle('active');
+    }
+
+
+    // Закрытие модально окна с успешной от правкой формы
+    if ((target.closest('.form-sucsess') && !target.closest('.form-sucsess__content')) || target.hasAttribute('data-close-form-sucsess')) {
+        document.querySelector('.form-sucsess').classList.remove('show');
     }
 });
 
@@ -131,8 +138,8 @@ const mainSliderComponent = new Swiper('.main-slider__component', {
                 document.body.classList.add('no-click');
                 lockScroll(document.querySelector('body'));
                 $('html, body').animate({
-                    scrollTop: dataTrigerValue
-                }, 2000, function () {
+                    scrollTop: dataTrigerValue,
+                }, 1800, 'swing', function () {
                     trigerCounter = 0;
                     console.log("Animation complete");
                     unlockScroll(document.querySelector('body'));
@@ -150,5 +157,64 @@ const mainSliderComponent = new Swiper('.main-slider__component', {
             // }
         })
     }
-})()
+})();
+
+
+function validateEmail(email) {
+    const re =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+//Валидация формы для возможности нажать Отправить
+document.querySelectorAll('.inner-form').forEach(form => {
+    const formBtn = form.querySelector('.inner-form__btn');
+    formBtn.setAttribute('disabled', true);
+    const innerFormInput = form.querySelector('.inner-form__input');
+    const formAgreeCheckbox = form.querySelector('.form__agree-checkbox');
+
+    innerFormInput.addEventListener('input', (e) => {
+        if (validateEmail(e.target.value) && formAgreeCheckbox.checked) {
+            formBtn.removeAttribute('disabled');
+        }
+        else {
+            formBtn.setAttribute('disabled', true);
+        }
+    });
+
+    formAgreeCheckbox.addEventListener('change', (e) => {
+        if (e.target.checked && validateEmail(innerFormInput.value.trim())) {
+            formBtn.removeAttribute('disabled');
+        } else {
+            formBtn.setAttribute('disabled', true);
+        }
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (validateEmail(innerFormInput.value.trim()) && formAgreeCheckbox.checked) {
+            // тут отправка на сервер формы
+            form.querySelector('.form-sucsess').classList.add('show');
+            form.reset();
+            formBtn.setAttribute('disabled', true);
+        }
+    });
+});
+
+
+// Валидацця опроса для возжность нажать кнопку Пройти опрос
+document.querySelectorAll('.survey').forEach(survey => {
+    const surveyVariants = survey.querySelectorAll('.survey__input');
+    const submitBtn = survey.querySelector('.survey__btn');
+    surveyVariants.forEach(variant => {
+        variant.addEventListener('change', (e) => {
+            submitBtn.removeAttribute('disabled');
+        });
+    });
+});
+
+
+
+
 
