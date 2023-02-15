@@ -2593,6 +2593,7 @@ footer {
   }
 
   .mobile-menu .mobile-menu__content {
+    overflow: auto;
     padding: 0 10px;
     padding-top: 43px;
     padding-bottom: 27px;
