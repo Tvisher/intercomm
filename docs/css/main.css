@@ -1089,7 +1089,7 @@ button {
 .article-data .views-data,
 .article-data .comments-data {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 6px;
 }
 
@@ -1950,11 +1950,20 @@ footer {
 .arrow-title {
   display: flex;
   align-items: center;
-  gap: 17px;
+  gap: 8px;
   font-weight: 600;
   font-size: 25px;
   color: #ad073d;
   margin-bottom: 30px;
+}
+
+.arrow-title .arrow-ico {
+  padding-top: 3px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inner-form {
@@ -2587,7 +2596,7 @@ footer {
     padding: 0 10px;
     padding-top: 43px;
     padding-bottom: 27px;
-    height: calc(100% - 30px);
+    height: 90%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -2642,6 +2651,29 @@ footer {
 
   .mobile-menu .user-data__control svg path {
     stroke: #fff;
+  }
+
+  .media-section__article.small-article .article__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .media-section__article.small-article .article__content .article-data {
+    gap: 7px;
+  }
+
+  .media-section__article.small-article {
+    gap: 10px;
+  }
+
+  .article-data {
+    font-size: 12px;
+  }
+
+  .article-data .favorites-data,
+  .article-data .views-data,
+  .article-data .comments-data {
+    gap: 2px;
   }
 
   .footer__logo-wrapper {
@@ -2763,6 +2795,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .main-screen {
+    padding-top: 0;
+  }
+
   .site-nav__item .item__title {
     padding-top: 20vw;
   }
@@ -2808,6 +2844,17 @@ footer {
 }
 
 @media (max-width: 390px) {
+  .arrow-title .arrow-ico {
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .arrow-title .arrow-ico svg {
+    width: 100%;
+    height: 100%;
+  }
+
   .inner-form__title {
     font-size: 14px;
   }
