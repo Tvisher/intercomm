@@ -30,6 +30,69 @@
                             <span></span>
                             <span></span>
                             <span></span>
+                            <!-- Мобильное меню в сосокупности с маленьким меню из висячей шапки -->
+                            <div class="mobile-menu" data-header-menu>
+                                <div class="mobile-menu__head">
+                                    <div class="mobile-menu__close"></div>
+                                    <a href="javascript:void(0)" class="mobile-menu__logo">
+                                        <img src="@img/mobile-logo.svg" alt="">
+                                    </a>
+                                    <a href="javascript:void(0)" class="mobile-search-btn">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="13.75" cy="13.75" r="7.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                            <path d="M25 25L21.25 21.25" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="mobile-menu__content">
+                                    <nav class="mobile-menu__nav">
+                                        <a href="javascript:void(0)" class="mobile-menu__link active">Премия</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Медиа</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Конференции</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Обучение</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Агентство</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Контакты</a>
+                                    </nav>
+                                    <div class="mobile-menu__user-data">
+                                        <a href="javascript:void(0)" class="user-data__item">
+                                            <div class="header__favorites">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.6799 8.28429C13.6632 5.83305 14.1548 4.60742 15.0002 4.60742C15.8456 4.60742 16.3373 5.83305 17.3205 8.2843L17.3663 8.39844C17.9218 9.78327 18.1996 10.4757 18.7656 10.8966C19.3317 11.3174 20.0747 11.384 21.5609 11.5171L21.8296 11.5411C24.2618 11.7589 25.478 11.8679 25.7382 12.6416C25.9984 13.4153 25.0953 14.237 23.289 15.8804L22.6861 16.4288C21.7717 17.2607 21.3145 17.6767 21.1014 18.2218C21.0617 18.3235 21.0286 18.4277 21.0025 18.5337C20.8624 19.1021 20.9963 19.7055 21.2641 20.9123L21.3474 21.288C21.8395 23.5059 22.0856 24.6148 21.656 25.0932C21.4954 25.2719 21.2868 25.4006 21.055 25.4638C20.4348 25.6331 19.5542 24.9155 17.793 23.4804C16.6365 22.5381 16.0583 22.0669 15.3944 21.9609C15.1333 21.9192 14.8672 21.9192 14.6061 21.9609C13.9422 22.0669 13.3639 22.5381 12.2075 23.4804C10.4463 24.9155 9.5657 25.6331 8.94545 25.4638C8.71367 25.4006 8.50504 25.2719 8.34451 25.0932C7.91491 24.6148 8.16095 23.5059 8.65305 21.288L8.73639 20.9123C9.00415 19.7055 9.13803 19.1021 8.99796 18.5337C8.97184 18.4277 8.93879 18.3235 8.89904 18.2218C8.68595 17.6767 8.22876 17.2607 7.31437 16.4288L6.71152 15.8804C4.90522 14.237 4.00206 13.4153 4.26229 12.6416C4.52251 11.8679 5.73864 11.7589 8.17091 11.5411L8.43958 11.5171C9.92573 11.384 10.6688 11.3174 11.2349 10.8966C11.8009 10.4757 12.0787 9.78327 12.6342 8.39844L12.6799 8.28429Z" stroke="white" stroke-width="2" />
+                                                </svg>
+                                                <div>Избранное</div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0)" class="user-data__item">
+                                            <div class="header__basket">
+                                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13 20L12 17" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M10.625 6.125L8.125 9.875M19.375 6.125L21.875 9.875" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M17 20L18 17" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M5.625 13.625H6.09422C6.55309 13.625 6.95307 13.9373 7.06437 14.3825L9.18563 22.8675C9.29693 23.3127 9.69691 23.625 10.1558 23.625H19.8442C20.3031 23.625 20.7031 23.3127 20.8144 22.8675L22.9356 14.3825C23.0469 13.9373 23.4469 13.625 23.9058 13.625H24.375" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M24.625 13.625H5.375C4.82272 13.625 4.375 13.1773 4.375 12.625V10.875C4.375 10.3227 4.82272 9.875 5.375 9.875H24.625C25.1773 9.875 25.625 10.3227 25.625 10.875V12.625C25.625 13.1773 25.1773 13.625 24.625 13.625Z" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                                                </svg>
+                                                <div class="basket__count">12</div>
+                                            </div>
+                                            Корзина
+                                        </a>
+                                        <div class="user-data__control">
+                                            <a href="javascript:void(0)" class="header__exit">
+                                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.5 9.25L2.5 15.5M2.5 15.5L7.5 21.75M2.5 15.5H13.75" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M11.25 11.1484V8.19933C11.25 7.21942 11.96 6.38382 12.927 6.22558L22.677 4.63012C23.8943 4.43093 25 5.37038 25 6.60387V24.3961C25 25.6296 23.8943 26.5691 22.677 26.3699L12.927 24.7744C11.96 24.6162 11.25 23.7806 11.25 22.8007V20.0742" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                                                </svg>
+                                            </a>
+                                            <a href="javascript:void(0)" class="user__data has-messages">
+                                                <div class="user__name">Иванов И.</div>
+                                                <div class="user__photo" style="background-image: url('@img/user.jpg');">
+                                                    <div class="messages__count">3</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <a href="javascript:void(0)" class="mobile-search-btn">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

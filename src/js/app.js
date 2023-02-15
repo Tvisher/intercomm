@@ -31,7 +31,8 @@ AOS.init({
 //логика работы меню бургер
 document.body.addEventListener('click', (e) => {
     const target = e.target;
-    if (target.closest('[data-burger-menu]')) {
+    if (target.hasAttribute('data-burger-menu')) {
+        // e.stopPropagation();
         target.closest('[data-burger-menu]').classList.toggle('active');
         document.querySelector('[data-header-menu]').classList.toggle('active');
         document.body.classList.toggle('hidden');
