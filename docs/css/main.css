@@ -2194,6 +2194,7 @@ footer {
 }
 
 .inner-banner._small {
+  margin: auto;
   margin-bottom: 30px;
   position: relative;
   height: 180px;
