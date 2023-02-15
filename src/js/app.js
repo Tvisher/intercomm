@@ -81,74 +81,76 @@ const mainSliderComponent = new Swiper('.main-slider__component', {
 })();
 
 
+(function () {
+    const scrollTrigger = document.querySelector('.main-screen__scroll-trigger');
+    const flyingHeader = document.querySelector('.fixed-header');
+    const dataReverseTriger = document.querySelector('[data-reverse-triger]');
 
-const scrollTrigger = document.querySelector('.main-screen__scroll-trigger');
-const flyingHeader = document.querySelector('.fixed-header');
-const dataReverseTriger = document.querySelector('[data-reverse-triger]');
+    var scrollPos = 0;
+    let sctollDirection;
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (st > scrollPos) {
+            sctollDirection = 1;
+        } else {
+            sctollDirection = -1;
+        }
+        scrollPos = st;
+    });
 
 
-var scrollPos = 0;
-let sctollDirection;
-$(window).scroll(function () {
-    var st = $(this).scrollTop();
-    if (st > scrollPos) {
-        sctollDirection = 1;
-    } else {
-        sctollDirection = -1;
-    }
-    scrollPos = st;
-});
-
-
-function lockScroll(elem) {
-    if (elem.addEventListener) {
-        elem.addEventListener("DOMMouseScroll", elem.onmousewheel = function (e) {
-            e.preventDefault();
-        }, false);
-    } else {
-        elem.onmousewheel = function (e) {
-            window.event.returnValue = false;
+    function lockScroll(elem) {
+        if (elem.addEventListener) {
+            elem.addEventListener("DOMMouseScroll", elem.onmousewheel = function (e) {
+                e.preventDefault();
+            }, false);
+        } else {
+            elem.onmousewheel = function (e) {
+                window.event.returnValue = false;
+            }
         }
     }
-}
 
-function unlockScroll(elem) {
-    if (elem.removeEventListener) {
-        elem.removeEventListener("DOMMouseScroll", elem.onmousewheel, false);
-        elem.onmousewheel = null;
-    } else {
-        elem.onmousewheel = null;
-    }
-}
-
-
-if (scrollTrigger) {
-    let trigerCounter = 0
-    window.addEventListener("scroll", (e) => {
-        let dataTrigerValue = dataReverseTriger.getBoundingClientRect().top - flyingHeader.clientHeight;
-        // console.log(window.scrollY);
-        if (window.scrollY < 10 && trigerCounter == 0 && dataTrigerValue > 0 && sctollDirection > 0) {
-            console.log('Прокрутка к Медиа');
-            trigerCounter = 1;
-            document.body.classList.add('no-click');
-            lockScroll(document.querySelector('body'));
-            $('html, body').animate({
-                scrollTop: dataTrigerValue
-            }, 2000, function () {
-                trigerCounter = 0;
-                console.log("Animation complete");
-                unlockScroll(document.querySelector('body'));
-                document.body.classList.remove('no-click');
-            });
+    function unlockScroll(elem) {
+        if (elem.removeEventListener) {
+            elem.removeEventListener("DOMMouseScroll", elem.onmousewheel, false);
+            elem.onmousewheel = null;
+        } else {
+            elem.onmousewheel = null;
         }
+    }
 
-        // if (sctollDirection < 0 && dataTrigerValue > 0) {
-        //     console.log('Прокрутка к началу');
-        //     $('html, body').animate({
-        //         scrollTop: 0
-        //     }, 2000, function () {
-        //         console.log("Animation complete");
-        //     });
-        // }
-    })
-}
+
+    if (scrollTrigger) {
+        let trigerCounter = 0
+        window.addEventListener("scroll", (e) => {
+            if (window.innerWidth < 1360) return;
+
+            let dataTrigerValue = dataReverseTriger.getBoundingClientRect().top - flyingHeader.clientHeight;
+            if (window.scrollY < 10 && trigerCounter == 0 && dataTrigerValue > 0 && sctollDirection > 0) {
+                console.log('Прокрутка к Медиа');
+                trigerCounter = 1;
+                document.body.classList.add('no-click');
+                lockScroll(document.querySelector('body'));
+                $('html, body').animate({
+                    scrollTop: dataTrigerValue
+                }, 2000, function () {
+                    trigerCounter = 0;
+                    console.log("Animation complete");
+                    unlockScroll(document.querySelector('body'));
+                    document.body.classList.remove('no-click');
+                });
+            }
+
+            // if (sctollDirection < 0 && dataTrigerValue > 0) {
+            //     console.log('Прокрутка к началу');
+            //     $('html, body').animate({
+            //         scrollTop: 0
+            //     }, 2000, function () {
+            //         console.log("Animation complete");
+            //     });
+            // }
+        })
+    }
+})()
+
