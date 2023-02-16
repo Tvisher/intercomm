@@ -2685,6 +2685,7 @@ footer {
   .inner-banner._small {
     margin: 10px;
     max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .header {
@@ -2818,8 +2819,13 @@ footer {
     stroke: #fff;
   }
 
-  .survey.passed .precent-value {
+  .survey.passed .precent-value,
+  .survey.passed .survey__text {
     font-size: 12px;
+  }
+
+  .survey.passed ._passed {
+    margin-bottom: 15px;
   }
 
   .media-section {

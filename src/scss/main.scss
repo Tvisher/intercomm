@@ -1598,6 +1598,7 @@ footer {
   .inner-banner._small {
     margin: 10px;
     max-width: 100%;
+    margin-bottom: 20px;
   }
   .header {
     padding-top: 170px;
@@ -1614,8 +1615,12 @@ footer {
 }
 
 @media (max-width: 576px) {
-  .survey.passed .precent-value {
+  .survey.passed .precent-value,
+  .survey.passed .survey__text {
     font-size: 12px;
+  }
+  .survey.passed ._passed {
+    margin-bottom: 15px;
   }
   .media-section {
     padding-bottom: 30px;
