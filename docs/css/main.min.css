@@ -4061,11 +4061,15 @@ footer {
 
   .search-field__input {
     padding: 6px 0px;
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .search-field:before {
+    width: 32px;
   }
 
   .search-field {
-    padding-left: 25px;
+    padding-left: 32px;
     background-position: 5px center;
   }
 }
