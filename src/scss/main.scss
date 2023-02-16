@@ -97,8 +97,9 @@ footer {
 .section-title {
   margin-bottom: 30px;
   color: $brand-red;
-  * {
+  a {
     color: $brand-red;
+    width: fit-content;
   }
   font-weight: 600;
   font-size: 40px;
@@ -920,9 +921,10 @@ footer {
 }
 
 .scroll-helper {
+  cursor: pointer;
   position: absolute;
-  right: 0;
-  bottom: 8vh;
+  right: 8vh;
+  bottom: 16vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1060,6 +1062,7 @@ footer {
 }
 
 .arrow-title {
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1365,9 +1368,10 @@ footer {
     width: 100%;
     height: 100%;
   }
+  width: 100%;
   height: 180px;
   max-width: 427px;
-  width: 100%;
+
   .inner-banner__content {
     color: #fff;
     position: relative;
@@ -1450,7 +1454,7 @@ footer {
 @media (max-width: 1200px) {
   .inner-banner._small {
     margin: 10px;
-    max-width: calc(50% - 30px);
+    max-width: calc(50% - 23px);
   }
   .footer__nav {
     gap: 20px;
@@ -1595,10 +1599,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .media-b-image {
+    margin-right: -20px;
+    margin-left: -20px;
+    width: calc(100% + 40px);
+  }
   .inner-banner._small {
     margin: 10px;
     max-width: 100%;
     margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
   }
   .header {
     padding-top: 170px;
@@ -1615,6 +1626,11 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .media-b-image {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+  }
   .survey.passed .precent-value,
   .survey.passed .survey__text {
     font-size: 12px;
@@ -1852,7 +1868,8 @@ footer {
     padding-top: 0;
   }
   .site-nav__item .item__title {
-    padding-top: 20vw;
+    padding-top: 23vw;
+    font-size: 16px;
   }
   .inner-form,
   .survey {
@@ -1871,10 +1888,10 @@ footer {
   .site-nav__item.main-slider {
     grid-column-end: 3;
     height: 130vw;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
   }
   .site-nav {
-    grid-area: 12px;
+    gap: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1883,8 +1900,8 @@ footer {
     width: 100%;
   }
   .site-nav__item {
-    width: 40vw;
-    height: 40vw;
+    width: calc(50vw - 15px);
+    height: calc(50vw - 15px);
   }
 }
 
@@ -1979,5 +1996,17 @@ footer {
   }
   .survey .survey__text::after {
     top: 3px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobile-menu {
+    padding: 10px;
+  }
+
+  .media-b-image {
+    margin-right: -10px;
+    margin-left: -10px;
+    width: calc(100% + 20px);
   }
 }
