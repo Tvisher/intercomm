@@ -233,3 +233,16 @@ document.querySelectorAll('.survey').forEach(survey => {
 
 
 
+const mobileSearchBtns = document.querySelectorAll('.mobile-search-btn');
+mobileSearchBtns.forEach(mobileSearchBtn => {
+    mobileSearchBtn.addEventListener('click', (e) => {
+        const searchField = mobileSearchBtn.parentNode.querySelector('.search-field__input');
+        if (searchField) searchField.focus();
+    })
+});
+
+
+
+
+
+
