@@ -1864,6 +1864,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .site-nav__item .item__ico {
+    width: 18vw;
+    height: 18vw;
+  }
   .main-screen {
     padding-top: 0;
   }
