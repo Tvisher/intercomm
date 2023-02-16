@@ -2305,14 +2305,61 @@ header {
   padding-left: 15px;
 }
 
+@keyframes textRun {
+  0% {
+    transform: translate(95%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes textRunMob {
+  0% {
+    transform: translate(95vw, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
 .search-field {
+  cursor: text;
+  overflow: hidden;
   width: 100%;
   position: relative;
   background-color: #ffffff;
   padding-left: 42px;
+}
+
+.search-field:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background-color: #fff;
   background-image: url("../img/lightning.svg");
   background-repeat: no-repeat;
-  background-position: 13px center;
+  background-position: center;
+  z-index: 2;
+}
+
+.search-field .dynamic-string {
+  animation: textRun 15s infinite linear;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: fit-content;
+  height: 100%;
+  white-space: nowrap;
 }
 
 .search-field::after {
@@ -2338,6 +2385,10 @@ header {
 
 .search-field__input::placeholder {
   color: #333;
+}
+
+.search-field__input:not(:placeholder-shown) + .dynamic-string {
+  opacity: 0;
 }
 
 .search-form {
@@ -3693,6 +3744,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .search-field .dynamic-string {
+    animation: textRun 12s infinite linear;
+  }
+
   .media-b-image {
     margin-right: -20px;
     margin-left: -20px;
@@ -3836,6 +3891,14 @@ footer {
 
   .mobile-menu .user-data__control svg path {
     stroke: #fff;
+  }
+
+  .search-field::after {
+    width: 60px;
+  }
+
+  .search-field .dynamic-string {
+    animation: textRunMob 14s infinite linear;
   }
 
   .media-b-image {
@@ -3992,9 +4055,18 @@ footer {
     overflow: hidden;
   }
 
-  .search-form .search-field,
   .search-form .search-btn {
     display: none;
+  }
+
+  .search-field__input {
+    padding: 6px 0px;
+    font-size: 14px;
+  }
+
+  .search-field {
+    padding-left: 25px;
+    background-position: 5px center;
   }
 }
 
