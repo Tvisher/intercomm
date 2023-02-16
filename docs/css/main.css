@@ -2126,6 +2126,76 @@ footer {
   margin-bottom: 30px;
 }
 
+.survey.passed .survey__btn {
+  display: none;
+}
+
+.survey.passed .survey__result-container {
+  display: flex;
+  width: 100%;
+}
+
+.survey.passed .inner-form__title {
+  display: none;
+}
+
+.survey.passed ._passed {
+  display: block;
+}
+
+.survey.passed .survey__text {
+  padding-left: 0;
+  width: 80%;
+  color: #333333;
+}
+
+.survey.passed .precent-value {
+  font-weight: 700;
+  width: calc(20% - 10px);
+  text-align: right;
+  display: block;
+}
+
+.survey.passed .survey__result-container,
+.survey.passed .survey__result-wrap {
+  width: 100%;
+}
+
+.survey.passed .survey__result-precent {
+  height: 5px;
+  background-color: #ad073d;
+}
+
+.survey.passed .survey__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.survey.passed .survey__input,
+.survey.passed .survey__text::before,
+.survey.passed .survey__text::after {
+  display: none;
+}
+
+.survey .precent-value {
+  display: none;
+}
+
+.survey .inner-form__last-title {
+  font-weight: 400;
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 20px;
+}
+
+.survey ._passed {
+  display: none;
+}
+
+.survey .survey__result-container {
+  display: none;
+}
+
 .survey .survey__item {
   position: relative;
   cursor: pointer;
@@ -2195,6 +2265,7 @@ footer {
 
 .inner-banner._small {
   margin: auto;
+  display: inline-block;
   margin-bottom: 30px;
   position: relative;
   height: 180px;
@@ -2422,6 +2493,11 @@ footer {
 }
 
 @media (max-width: 1200px) {
+  .inner-banner._small {
+    margin: 10px;
+    max-width: calc(50% - 30px);
+  }
+
   .footer__nav {
     gap: 20px;
   }
@@ -2606,6 +2682,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .inner-banner._small {
+    margin: 10px;
+    max-width: 100%;
+  }
+
   .header {
     padding-top: 170px;
   }
@@ -2735,6 +2816,14 @@ footer {
 
   .mobile-menu .user-data__control svg path {
     stroke: #fff;
+  }
+
+  .survey.passed .precent-value {
+    font-size: 12px;
+  }
+
+  .media-section {
+    padding-bottom: 30px;
   }
 
   .media-section__article.small-article .article__img {

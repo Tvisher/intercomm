@@ -926,26 +926,28 @@
                         </div>
                     </div>
 
-                    <form class="inner-form">
-                        <span class="inner-form__title">Подпишитесь на наш еженедельный дайджест самых интересных новостей</span>
-                        <label class="inner-form__label">
-                            <input placeholder="Введите E-mail" class="inner-form__input">
-                        </label>
-                        <button type="submit" class="red-btn inner-form__btn" disabled="true">
-                            <span>Отправить</span>
-                        </button>
-                        <label class="inner-form__agree">
-                            <input type="checkbox" name="form-agree" class="form__agree-checkbox">
-                            <span class="form-agree__text">Согласен на обработку персональных данных</span>
-                        </label>
-                        <div class="form-sucsess">
-                            <div class="form-sucsess__content">
-                                <div class="close-btn" data-close-form-sucsess></div>
-                                <div class="form-sucsess__title">Поздравляем! <br>Вы подписались<br>на еженедельный дайджест</div>
-                                <div class="red-btn" data-close-form-sucsess><span>Закрыть</span></div>
+                    <div id="pc-form-parent">
+                        <form class="inner-form" id="main-page-form">
+                            <span class="inner-form__title">Подпишитесь на наш еженедельный дайджест самых интересных новостей</span>
+                            <label class="inner-form__label">
+                                <input placeholder="Введите E-mail" class="inner-form__input">
+                            </label>
+                            <button type="submit" class="red-btn inner-form__btn" disabled="true">
+                                <span>Отправить</span>
+                            </button>
+                            <label class="inner-form__agree">
+                                <input type="checkbox" name="form-agree" class="form__agree-checkbox">
+                                <span class="form-agree__text">Согласен на обработку персональных данных</span>
+                            </label>
+                            <div class="form-sucsess">
+                                <div class="form-sucsess__content">
+                                    <div class="close-btn" data-close-form-sucsess></div>
+                                    <div class="form-sucsess__title">Поздравляем! <br>Вы подписались<br>на еженедельный дайджест</div>
+                                    <div class="red-btn" data-close-form-sucsess><span>Закрыть</span></div>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
 
                 </div>
                 <div class="media-section__col">
@@ -957,43 +959,49 @@
                             </svg>
                         </div>
                     </a>
+                    <!-- Для отображения результата опроса необходимо добавить класс passed к блоку с классом survey -->
                     <div class="survey">
                         <div class="survey__wrapper">
                             <h3 class="inner-form__title">Какой город был столицей Римской империи на протяжении большей части её существования?</h3>
+                            <div class="inner-form__title _passed">Спасибо за прохождение опроса!</div>
+                            <div class="inner-form__last-title _passed">Какой город был столицей Римской империи на протяжении большей части её существования?</div>
                             <label class="survey__item">
                                 <input class="survey__input" name="survey" type="radio" value="">
                                 <span class="survey__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                                <!-- <div class="survey__result-container">
+                                <div class="precent-value">60%</div>
+                                <div class="survey__result-container">
                                     <div class="survey__result-wrap">
                                         <div class="survey__result-precent" style="width: 60%;"></div>
                                     </div>
-                                    <div class="precent-value">60%</div>
-                                </div> -->
+                                </div>
                             </label>
                             <label class="survey__item">
                                 <input class="survey__input" name="survey" type="radio" value="">
                                 <span class="survey__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                                <!-- <div class="survey__result-container">
+                                <div class="precent-value">20%</div>
+
+                                <div class="survey__result-container">
                                     <div class="survey__result-wrap">
                                         <div class="survey__result-precent" style="width: 20%;"></div>
                                     </div>
-                                    <div class="precent-value">20%</div>
-                                </div> -->
+                                </div>
                             </label>
                             <label class="survey__item">
                                 <input class="survey__input" name="survey" type="radio" value="">
                                 <span class="survey__text">Lorem ipsum dolor sit </span>
-                                <!-- <div class="survey__result-container">
+                                <div class="precent-value">10%</div>
+
+                                <div class="survey__result-container">
                                     <div class="survey__result-wrap">
                                         <div class="survey__result-precent" style="width: 10%;"></div>
                                     </div>
-                                    <div class="precent-value">10%</div>
-                                </div> -->
+                                </div>
                             </label>
                             <div class="survey__footer">
-                                <button class="red-btn survey__btn" disabled="true">
+                                <button class="red-btn survey__btn" disabled="true" onclick="this.closest('.survey').classList.add('passed')">
                                     <span>Пройти опрос</span>
                                 </button>
+                                <a href="javascript:void(0)" class="red-btn _passed"><span>Другие опросы</span></a>
                             </div>
                         </div>
                     </div>
@@ -1013,6 +1021,7 @@
                             <span class="inner-banner__text">Текст текст текст</span>
                         </div>
                     </a>
+                    <div id="mobile-form-parent"></div>
                 </div>
             </div>
     </section>

@@ -1219,10 +1219,74 @@ footer {
 }
 
 .survey {
+  &.passed {
+    .survey__btn {
+      display: none;
+    }
+    .survey__result-container {
+      display: flex;
+      width: 100%;
+    }
+    .inner-form__title {
+      display: none;
+    }
+    ._passed {
+      display: block;
+    }
+
+    .survey__text {
+      padding-left: 0;
+      width: 80%;
+      color: #333333;
+    }
+    .precent-value {
+      font-weight: 700;
+      width: calc(20% - 10px);
+      text-align: right;
+      display: block;
+    }
+    .survey__result-container,
+    .survey__result-wrap {
+      width: 100%;
+    }
+
+    .survey__result-precent {
+      height: 5px;
+      background-color: #ad073d;
+    }
+
+    .survey__item {
+      display: flex;
+      flex-wrap: wrap;
+      // flex-direction: column;
+    }
+
+    .survey__input,
+    .survey__text::before,
+    .survey__text::after {
+      display: none;
+    }
+  }
+
+  .precent-value {
+    display: none;
+  }
+
+  .inner-form__last-title {
+    font-weight: 400;
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 20px;
+  }
+  ._passed {
+    display: none;
+  }
   background: #f0f7ff;
   padding: 30px;
   margin-bottom: 30px;
-
+  .survey__result-container {
+    display: none;
+  }
   .survey__item {
     position: relative;
     &:not(:last-child) {
@@ -1289,6 +1353,7 @@ footer {
 
 .inner-banner._small {
   margin: auto;
+  display: inline-block;
   margin-bottom: 30px;
   position: relative;
   .inner-banner__img {
@@ -1383,6 +1448,10 @@ footer {
 }
 
 @media (max-width: 1200px) {
+  .inner-banner._small {
+    margin: 10px;
+    max-width: calc(50% - 30px);
+  }
   .footer__nav {
     gap: 20px;
   }
@@ -1526,6 +1595,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .inner-banner._small {
+    margin: 10px;
+    max-width: 100%;
+  }
   .header {
     padding-top: 170px;
   }
@@ -1541,6 +1614,12 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .survey.passed .precent-value {
+    font-size: 12px;
+  }
+  .media-section {
+    padding-bottom: 30px;
+  }
   .media-section__article.small-article .article__img {
     width: 100px;
     height: 100px;

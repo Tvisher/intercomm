@@ -218,3 +218,33 @@ document.querySelectorAll('.survey').forEach(survey => {
 
 
 
+(function () {
+    let move = (item, parent, parentOriginal, width) => {
+        if ($(window).width() <= width) {
+            if (!item.hasClass('done')) {
+                item.appendTo(parent);
+                item.addClass('done');
+            }
+        } else {
+            if (item.hasClass('done')) {
+                item.appendTo(parentOriginal);
+                item.removeClass('done');
+            }
+        }
+    };
+
+
+    const block_item = $('#main-page-form');
+    const block_parent = $('#mobile-form-parent');
+    const block_parentOriginal = $('#pc-form-parent');
+
+    move(block_item, block_parent, block_parentOriginal, 1200);
+
+    $(window).resize(function () {
+        move(block_item, block_parent, block_parentOriginal, 1200);
+    });
+})();
+
+
+
+
