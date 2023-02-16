@@ -23,20 +23,18 @@ AOS.init({
     delay: 100, // values from 0 to 3000, with step 50ms
     duration: 1200, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    once: true, // whether animation should happen only once - while scrolling down
+    once: false, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
-//логика работы меню бургер
+//Отработка кликов по дукументу
 document.body.addEventListener('click', (e) => {
     const target = e.target;
     // Работа мобильно меню
     if (target.hasAttribute('data-burger-menu') || target.classList.contains('mobile-menu__close')) {
         document.querySelector('[data-header-menu]').classList.toggle('active');
     }
-
-
     // Закрытие модально окна с успешной от правкой формы
     if ((target.closest('.form-sucsess') && !target.closest('.form-sucsess__content')) || target.hasAttribute('data-close-form-sucsess')) {
         document.querySelector('.form-sucsess').classList.remove('show');
@@ -87,7 +85,7 @@ const mainSliderComponent = new Swiper('.main-slider__component', {
 
 
 
-
+// Блокировка скролла мыши
 function lockScroll(elem) {
     if (elem.addEventListener) {
         elem.addEventListener("DOMMouseScroll", elem.onmousewheel = function (e) {
@@ -99,7 +97,7 @@ function lockScroll(elem) {
         }
     }
 }
-
+// Отключение блокировки скролла мыши
 function unlockScroll(elem) {
     if (elem.removeEventListener) {
         elem.removeEventListener("DOMMouseScroll", elem.onmousewheel, false);
@@ -111,24 +109,23 @@ function unlockScroll(elem) {
 
 
 const scrollTrigger = document.querySelector('.main-screen__scroll-trigger');
-const flyingHeader = document.querySelector('.fixed-header');
-const dataReverseTriger = document.querySelector('[data-reverse-triger]');
-
-var scrollPos = 0;
-let sctollDirection = 1;
-$(window).scroll(function () {
-    var st = $(this).scrollTop();
-    if (st > scrollPos) {
-        sctollDirection = 1;
-    } else {
-        sctollDirection = -1;
-    }
-    scrollPos = st;
-});
-
 if (scrollTrigger) {
+    const flyingHeader = document.querySelector('.fixed-header');
+    const dataReverseTriger = document.querySelector('[data-reverse-triger]');
+    var scrollPos = 0;
+    let sctollDirection = 1;
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (st > scrollPos) {
+            sctollDirection = 1;
+        } else {
+            sctollDirection = -1;
+        }
+        scrollPos = st;
+    });
     let trigerCounter = 0
 
+    // Функция прокрутки к секции медиа
     function scrollToMedia() {
         if (window.innerWidth < 1360) return;
         let dataTrigerValue = dataReverseTriger.getBoundingClientRect().top - flyingHeader.clientHeight;
@@ -151,8 +148,7 @@ if (scrollTrigger) {
     document.querySelector('.scroll-helper').addEventListener('click', () => {
         sctollDirection = 1;
         scrollToMedia()
-    })
-
+    });
 }
 
 
@@ -211,9 +207,7 @@ document.querySelectorAll('.survey').forEach(survey => {
 });
 
 
-
-
-
+// Динамический адаптив на главной странице
 (function () {
     let move = (item, parent, parentOriginal, width) => {
         if ($(window).width() <= width) {
@@ -228,14 +222,10 @@ document.querySelectorAll('.survey').forEach(survey => {
             }
         }
     };
-
-
     const block_item = $('#main-page-form');
     const block_parent = $('#mobile-form-parent');
     const block_parentOriginal = $('#pc-form-parent');
-
     move(block_item, block_parent, block_parentOriginal, 1200);
-
     $(window).resize(function () {
         move(block_item, block_parent, block_parentOriginal, 1200);
     });
