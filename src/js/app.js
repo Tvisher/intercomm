@@ -129,7 +129,6 @@ if (scrollTrigger) {
     function scrollToMedia() {
         if (window.innerWidth < 1360) return;
         let dataTrigerValue = dataReverseTriger.getBoundingClientRect().top - flyingHeader.clientHeight;
-        console.log(window.scrollY < 10, trigerCounter == 0, dataTrigerValue > 0, sctollDirection > 0);
         if (window.scrollY < 10 && trigerCounter == 0 && dataTrigerValue > 0 && sctollDirection > 0) {
             trigerCounter = 1;
             document.body.classList.add('no-click');
