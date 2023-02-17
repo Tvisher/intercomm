@@ -209,6 +209,9 @@ document.querySelectorAll('.survey').forEach(survey => {
 // Динамический адаптив на главной странице
 (function () {
     let move = (item, parent, parentOriginal, width) => {
+        if (!item || !parent || !parentOriginal) {
+            return;
+        }
         if ($(window).width() <= width) {
             if (!item.hasClass('done')) {
                 item.appendTo(parent);
@@ -221,12 +224,21 @@ document.querySelectorAll('.survey').forEach(survey => {
             }
         }
     };
-    const block_item = $('#main-page-form');
-    const block_parent = $('#mobile-form-parent');
-    const block_parentOriginal = $('#pc-form-parent');
-    move(block_item, block_parent, block_parentOriginal, 1200);
+
+    const formItem = $('#main-page-form');
+    const formItem_mobileParent = $('#mobile-form-parent');
+    const formItem_parentOriginal = $('#pc-form-parent');
+
+    const navSidebar = $('#nav-sidebar');
+    const navSidebar_mobileParent = $('#mobile-nav-sidebar-parent');
+    const navSidebar_parentOriginal = $('#pc-nav-sidebar-parent');
+
+
+    move(formItem, formItem_mobileParent, formItem_parentOriginal, 1200);
+    move(navSidebar, navSidebar_mobileParent, navSidebar_parentOriginal, 1200);
     $(window).resize(function () {
-        move(block_item, block_parent, block_parentOriginal, 1200);
+        move(formItem, formItem_mobileParent, formItem_parentOriginal, 1200);
+        move(navSidebar, navSidebar_mobileParent, navSidebar_parentOriginal, 1200);
     });
 })();
 
@@ -242,7 +254,10 @@ mobileSearchBtns.forEach(mobileSearchBtn => {
 });
 
 
-
+$(document).on('click', '.sidebar-item__arrow', function (e) {
+    $(this).parent().toggleClass('toggle-open');
+    $(this).parent().next().slideToggle(() => { $(this).toggleClass('toggle-open'); })
+})
 
 
 
