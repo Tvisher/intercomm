@@ -2101,7 +2101,7 @@ button {
 .article-data .favorites-data,
 .article-data .views-data,
 .article-data .comments-data {
-  margin-right: 15px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -3082,6 +3082,20 @@ footer {
   padding: 0px 20px;
 }
 
+.media-section__content .media-section__col.wide-col {
+  width: 66.66%;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-section__content .media-section__col.wide-col .media-section__content {
+  padding-top: 100px;
+}
+
+.media-section__content .media-section__col.wide-col .media-section__content .media-section__col {
+  width: 50%;
+}
+
 .media-b-image {
   margin-bottom: 30px;
   height: 135px;
@@ -3126,6 +3140,7 @@ footer {
 }
 
 .media-section__article.image-article .article__content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -3643,9 +3658,8 @@ footer {
     margin-right: 10px;
   }
 
-  .media-section__article.image-article .atricle-date {
-    order: -1;
-    width: 100%;
+  .article-data {
+    font-size: 13px;
   }
 }
 
@@ -3788,6 +3802,16 @@ footer {
 }
 
 @media (max-width: 1200px) {
+  .media-section__content .media-section__col.wide-col {
+    width: 100%;
+  }
+
+  .media-section__content .media-section__col.wide-col .media-section__content {
+    gap: 0;
+    width: 100%;
+    padding-top: 10px;
+  }
+
   #mobile-nav-sidebar-parent {
     width: 100%;
   }
@@ -3852,7 +3876,7 @@ footer {
   }
 
   .media-section__most-read {
-    width: calc(50% - 20px);
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -3975,6 +3999,16 @@ footer {
     width: auto;
     margin-left: auto;
     order: inherit;
+  }
+}
+
+@media (max-width: 992px) {
+  .media-section__content .media-section__col.wide-col .media-section__content .media-section__col {
+    width: 100%;
+  }
+
+  .media-section__content .media-section__col.wide-col .media-section__content .media-section__col:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -4257,7 +4291,7 @@ footer {
   }
 
   .header {
-    padding-top: 114px;
+    padding-top: 106px;
   }
 
   .fixed-header .header__index-data {
@@ -4273,7 +4307,7 @@ footer {
 
   .fixed-header .header__wrapper {
     justify-content: space-between;
-    gap: 6px;
+    gap: 0px;
     padding-bottom: 0;
   }
 
