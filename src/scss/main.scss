@@ -282,6 +282,10 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .text-articles,
+  .hot-articles {
+    margin-bottom: 20px;
+  }
   .article-data .favorites-data,
   .article-data .views-data,
   .article-data .comments-data {
@@ -1924,9 +1928,9 @@ footer {
   .large-articles .media-section__article.large-article .article__img {
     height: 70vw;
   }
-  .media-section__article.large-article {
-    margin-bottom: 10px;
-  }
+  // .media-section__article.large-article {
+  //   margin-bottom: 10px;
+  // }
   .search-field::after {
     width: 60px;
   }
