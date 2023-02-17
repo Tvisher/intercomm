@@ -2502,6 +2502,7 @@ header {
 }
 
 .index-data__value {
+  align-items: center;
   display: flex;
   gap: 10px;
   font-weight: 700;
@@ -3683,6 +3684,10 @@ footer {
 }
 
 @media (max-width: 1359px) {
+  .main-slider__component .swiper-pagination {
+    padding-left: 10px;
+  }
+
   .site-nav {
     height: auto;
     grid-template-columns: repeat(6, 140px);
@@ -4291,7 +4296,7 @@ footer {
   }
 
   .header {
-    padding-top: 106px;
+    padding-top: 105px;
   }
 
   .fixed-header .header__index-data {
