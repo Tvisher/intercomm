@@ -63,6 +63,7 @@ const mainSliderComponent = new Swiper('.main-slider__component', {
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
+        clickable:true,
     },
 });
 

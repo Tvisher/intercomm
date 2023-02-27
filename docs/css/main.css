@@ -3700,7 +3700,7 @@ footer {
   margin: 16px 0;
 }
 
-.article-page__title {
+.article-page h2 {
   font-weight: 600;
   font-size: 25px;
   color: #ad073d;
@@ -5050,7 +5050,7 @@ footer {
     font-size: 24px;
   }
 
-  .article-page__title {
+  .article-page h2 {
     font-size: 22px;
   }
 }
