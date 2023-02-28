@@ -211,6 +211,11 @@ footer {
     &:not(:last-child) {
       border-bottom: 1px solid #d9d9d9;
     }
+    &.active {
+      .sidebar-item__link {
+        color: $brand-red;
+      }
+    }
   }
 
   .sidebar-item__link {
@@ -2800,5 +2805,160 @@ footer {
   }
   .article-page h2 {
     font-size: 22px;
+  }
+}
+
+.about-page {
+  h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 40px;
+    color: $brand-red;
+  }
+  .strong-text {
+    margin-bottom: 20px;
+  }
+  p {
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 25px;
+    color: $brand-red;
+    margin-bottom: 20px;
+  }
+  .principles-block {
+    padding-top: 60px;
+  }
+}
+
+.principles-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+  .list-item {
+    margin: 20px;
+    width: calc(50% - 40px);
+  }
+  .list-item__ico {
+    margin-bottom: 25px;
+    width: 82px;
+    height: 82px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  .list-item__title {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    color: $brand-red;
+  }
+  .list-item__descr {
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+  }
+}
+
+@media (max-width: 576px) {
+  .principles-list {
+    margin: 0;
+    .list-item {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .about-page .principles-block {
+    padding-top: 20px;
+  }
+  .about-page h2 {
+    font-size: 20px;
+  }
+  .principles-list .list-item__title {
+    font-size: 18px;
+  }
+  .about-page h1 {
+    font-size: 32px;
+  }
+  .about-page .strong-text {
+    margin-bottom: 0;
+  }
+}
+
+.team-group {
+  .team-group-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  .group-item__title {
+    font-weight: 600;
+    font-size: 32px;
+    color: $brand-red;
+    margin-bottom: 20px;
+  }
+  .group-item__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8.5px;
+    margin-left: -8.5px;
+  }
+  .list-item {
+    margin: 10px 8.5px;
+    width: calc(25% - 17px);
+    .list-item__image {
+      margin-bottom: 14px;
+      width: 100%;
+      height: 211px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+    &._green .list-item__image {
+      background: linear-gradient(144.49deg, #1d879a 28.77%, #1bc3e1 111.17%);
+    }
+
+    &._red .list-item__image {
+      background: linear-gradient(135.62deg, #b10f45 30.93%, #ff3377 100%);
+    }
+
+    &._purple .list-item__image {
+      background: linear-gradient(135deg, #610865 0%, #bd0c5a 100%);
+    }
+
+    &._gray .list-item__image {
+      background: linear-gradient(135deg, #444343 0%, #656097 100%);
+    }
+    &._pink .list-item__image {
+      background: linear-gradient(135deg, #aa3770 0%, #e04bda 100%);
+    }
+  }
+
+  .list-item__title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .list-item__descr {
+    font-size: 16px;
+    line-height: 130%;
+    color: #888888;
   }
 }

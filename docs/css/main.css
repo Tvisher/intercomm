@@ -2214,6 +2214,10 @@ button {
   border-bottom: 1px solid #d9d9d9;
 }
 
+.nav-sidebar .sidebar-item.active .sidebar-item__link {
+  color: #ad073d;
+}
+
 .nav-sidebar .sidebar-item__link {
   color: #333333;
   width: 100%;
@@ -3997,6 +4001,142 @@ footer {
   margin-bottom: 20px;
 }
 
+.about-page h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 40px;
+  color: #ad073d;
+}
+
+.about-page .strong-text {
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000;
+}
+
+.about-page h2 {
+  font-weight: 600;
+  font-size: 25px;
+  color: #ad073d;
+  margin-bottom: 20px;
+}
+
+.about-page .principles-block {
+  padding-top: 60px;
+}
+
+.principles-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+.principles-list .list-item {
+  margin: 20px;
+  width: calc(50% - 40px);
+}
+
+.principles-list .list-item__ico {
+  margin-bottom: 25px;
+  width: 82px;
+  height: 82px;
+}
+
+.principles-list .list-item__ico img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.principles-list .list-item__title {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ad073d;
+}
+
+.principles-list .list-item__descr {
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.team-group .team-group-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.team-group .group-item__title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #ad073d;
+  margin-bottom: 20px;
+}
+
+.team-group .group-item__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -8.5px;
+  margin-left: -8.5px;
+}
+
+.team-group .list-item {
+  margin: 10px 8.5px;
+  width: calc(25% - 17px);
+}
+
+.team-group .list-item .list-item__image {
+  margin-bottom: 14px;
+  width: 100%;
+  height: 211px;
+}
+
+.team-group .list-item .list-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.team-group .list-item._green .list-item__image {
+  background: linear-gradient(144.49deg, #1d879a 28.77%, #1bc3e1 111.17%);
+}
+
+.team-group .list-item._red .list-item__image {
+  background: linear-gradient(135.62deg, #b10f45 30.93%, #ff3377 100%);
+}
+
+.team-group .list-item._purple .list-item__image {
+  background: linear-gradient(135deg, #610865 0%, #bd0c5a 100%);
+}
+
+.team-group .list-item._gray .list-item__image {
+  background: linear-gradient(135deg, #444343 0%, #656097 100%);
+}
+
+.team-group .list-item._pink .list-item__image {
+  background: linear-gradient(135deg, #aa3770 0%, #e04bda 100%);
+}
+
+.team-group .list-item__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.team-group .list-item__descr {
+  font-size: 16px;
+  line-height: 130%;
+  color: #888888;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
@@ -4870,6 +5010,40 @@ footer {
 
   .article-page .wide-col .atricle-date {
     font-size: 12px;
+  }
+
+  .principles-list {
+    margin: 0;
+  }
+
+  .principles-list .list-item {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-page .principles-block {
+    padding-top: 20px;
+  }
+
+  .about-page h2 {
+    font-size: 20px;
+  }
+
+  .principles-list .list-item__title {
+    font-size: 18px;
+  }
+
+  .about-page h1 {
+    font-size: 32px;
+  }
+
+  .about-page .strong-text {
+    margin-bottom: 0;
   }
 }
 
