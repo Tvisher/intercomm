@@ -48,6 +48,13 @@ document.body.addEventListener('click', (e) => {
     if ((target.closest('.form-sucsess') && !target.closest('.form-sucsess__content')) || target.hasAttribute('data-close-form-sucsess')) {
         document.querySelector('.form-sucsess').classList.remove('show');
     }
+
+    if(target.closest('.modal-template__close') || (target.closest('.modal-template') && !target.closest('.modal-template__content'))){
+        const openedForm = target.closest('.modal-template.show');
+        if (openedForm) openedForm.classList.remove('show') ;
+    }
+
+
 });
 
 
@@ -110,7 +117,7 @@ function unlockScroll(elem) {
     }
 }
 
-
+const scrollHelper =  document.querySelector('.scroll-helper');
 const scrollTrigger = document.querySelector('.main-screen__scroll-trigger');
 if (scrollTrigger) {
     const flyingHeader = document.querySelector('.fixed-header');
@@ -147,7 +154,7 @@ if (scrollTrigger) {
     }
 
     window.addEventListener("scroll", scrollToMedia);
-    document.querySelector('.scroll-helper').addEventListener('click', () => {
+    scrollHelper.addEventListener('click', () => {
         sctollDirection = 1;
         scrollToMedia()
     });

@@ -659,6 +659,98 @@
         </div>
     </div>
 </footer>
+
+<div class="modal-template" data-modal-type="email-register">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <span class="modal-title">Регистрация</span>
+        <form action="#" class="modal-form">
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="E-mail" type="text">
+            </label>
+
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Пароль" type="password">
+            </label>
+
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Подтверждение пароля" type="password">
+            </label>
+
+            <label class="inner-form__agree">
+                <input type="checkbox" name="form-agree" class="form__agree-checkbox">
+                <span class="form-agree__text">Согласен на обработку персональных данных</span>
+            </label>
+
+            <button type="submit" class="red-btn submit__btn"><span>Регистрация</span></button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-template" data-modal-type="email-auth">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <span class="modal-title">Авторизация по E-mail</span>
+        <form action="#" class="modal-form">
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="E-mail" type="text">
+            </label>
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Пароль" type="password">
+            </label>
+            <a href="javascript:void(0)" class="red-text">Забыли пароль?</a>
+            <button type="submit" class="red-btn submit__btn"><span>Войти</span></button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-template show" data-modal-type="phone-auth">
+    <div class="modal-template__content phone-auth">
+        <div class="modal-template__close"></div>
+        <div class="phone-auth__iamge">
+            <img src="img/phone-auth-bg.svg" alt="">
+        </div>
+        <div class="phone-auth__content">
+            <span class="modal-title">Авторизация по телефону</span>
+            <form action="#" class="modal-form">
+                <label class="modal-field">
+                    <input type="text" class="modal-field__input" placeholder="Телефон" type="password">
+                </label>
+                <button type="submit" class="red-btn submit__btn"><span>Подвердить</span></button>
+            </form>
+            <div class="social-auth">
+                <span class="modal-title">Авторизация через соц. сети</span>
+                <div class="social-auth__list">
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/vk-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/vk-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/vk-ico.svg" alt="">
+                    </a>
+
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/vk-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/google-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/telegram-ico.svg" alt="">
+                    </a>
+                </div>
+                <div class="phone-auth__footer">
+                    <span class="red-text" data-open-modal="email-register">Регистрация по E-mail</span>
+                    <span class="red-text" data-open-modal="email-auth">Авторизация по E-mail</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 </div>
 </body>
 <script src="./js/swiper-bundle.min.js"></script>
