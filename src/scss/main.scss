@@ -436,6 +436,16 @@ footer {
       flex-direction: column;
       align-items: flex-start;
       gap: 13px;
+
+      .header__auth {
+        margin-left: 0;
+        flex-direction: row-reverse;
+        color: #fff;
+
+        svg path {
+          stroke: #fff;
+        }
+      }
     }
 
     .header__basket {
@@ -1366,6 +1376,22 @@ footer {
   }
 }
 
+.header-user-data {
+  display: flex;
+
+  .header__exit {
+    margin-right: 10px;
+  }
+}
+
+.header__auth {
+  cursor: pointer;
+  gap: 10px;
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+
 .media-section__content {
   display: flex;
   margin-right: -20px;
@@ -2120,6 +2146,9 @@ footer {
     padding-left: 30%;
     margin-left: auto;
   }
+
+
+
 
   .fixed-header .header__wrapper {
     gap: 10px;
