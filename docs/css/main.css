@@ -3094,6 +3094,7 @@ footer {
 }
 
 .scroll-helper {
+  transition: opacity 0.3s ease-in-out, visibility 0.6s ease-in-out, transform 0.3s ease-in-out;
   cursor: pointer;
   position: absolute;
   right: 8vh;
@@ -3101,6 +3102,12 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.scroll-helper.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px);
 }
 
 .scroll-helper .scroll-helper__text {

@@ -141,6 +141,7 @@ if (scrollTrigger) {
         let dataTrigerValue = dataReverseTriger.getBoundingClientRect().top - flyingHeader.clientHeight;
         if (window.scrollY < 10 && trigerCounter == 0 && dataTrigerValue > 0 && sctollDirection > 0) {
             trigerCounter = 1;
+         
             document.body.classList.add('no-click');
             lockScroll(document.querySelector('body'));
             $('html, body').animate({
@@ -149,11 +150,19 @@ if (scrollTrigger) {
                 trigerCounter = 0;
                 unlockScroll(document.querySelector('body'));
                 document.body.classList.remove('no-click');
+                
             });
         }
     }
 
     window.addEventListener("scroll", scrollToMedia);
+    window.addEventListener("scroll", (e)=> {
+       if(window.scrollY  >10){
+           scrollHelper.classList.add('hide');
+        }else{
+           scrollHelper.classList.remove('hide');
+       }
+    });
     scrollHelper.addEventListener('click', () => {
         sctollDirection = 1;
         scrollToMedia()
