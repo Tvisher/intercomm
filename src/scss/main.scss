@@ -4189,6 +4189,7 @@ footer {
   }
 
   .nav_link {
+    line-height: 100%;
     // padding: 9px 17px;
     padding: calc($index * 0.33) calc($index * 0.5);
     font-size: calc($index * 0.53);
@@ -4352,7 +4353,6 @@ footer {
   .nav_link.active::before {
     height: calc($index * 0.0666);
   }
-
 
 }
 
