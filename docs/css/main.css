@@ -2418,7 +2418,10 @@ header {
 }
 
 .user__photo {
-  background: linear-gradient(135deg, #444343 0%, #656097 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: linear-gradient(135deg, #444343 0%, #656097 100%);
   position: relative;
   width: 37px;
   height: 37px;
@@ -4706,6 +4709,7 @@ footer {
 .main-header {
   padding-top: calc((1vw + 1vh) * 0.66);
   padding-bottom: calc((1vw + 1vh) * 0.33);
+  gap: calc((1vw + 1vh) * 1.5);
 }
 
 .main-header .header__nav,
@@ -4714,13 +4718,182 @@ footer {
 }
 
 .main-header .nav_link {
-  padding: calc((1vw + 1vh) * 0.3) calc((1vw + 1vh) * 0.5);
+  padding: calc((1vw + 1vh) * 0.33) calc((1vw + 1vh) * 0.5);
   font-size: calc((1vw + 1vh) * 0.53);
 }
 
 .main-header .header__logo {
   height: calc((1vw + 1vh) * 3.33);
   width: calc((1vw + 1vh) * 5.83);
+}
+
+.main-header .header__data {
+  gap: calc((1vw + 1vh) * 0.33);
+}
+
+.main-header .header__favorites,
+.main-header .header__basket {
+  width: calc(1vw + 1vh);
+  height: calc(1vw + 1vh);
+}
+
+.main-header .header__favorites svg,
+.main-header .header__basket svg {
+  width: 100%;
+  height: 100%;
+}
+
+.main-header .header__basket .basket__count {
+  font-size: calc((1vw + 1vh) * 0.33);
+  padding: calc((1vw + 1vh) * 0.1);
+}
+
+.main-header .header__basket {
+  margin-right: calc((1vw + 1vh) * 0.66);
+}
+
+.main-header .header-user-data {
+  align-items: center;
+}
+
+.main-header .header-user-data .header__exit {
+  width: calc(1vw + 1vh);
+  height: calc(1vw + 1vh);
+  margin-right: calc((1vw + 1vh) * 0.33);
+}
+
+.main-header .header-user-data .header__exit svg {
+  width: 100%;
+  height: 100%;
+}
+
+.main-header .user__data {
+  gap: calc((1vw + 1vh) * 0.266);
+}
+
+.main-header .user__name {
+  font-size: calc((1vw + 1vh) * 0.53);
+}
+
+.main-header .user__photo {
+  height: calc((1vw + 1vh) * 1.23);
+  width: calc((1vw + 1vh) * 1.23);
+}
+
+.main-header .search-field:before {
+  width: calc((1vw + 1vh) * 1.33);
+  background-size: calc((1vw + 1vh) * 0.53);
+}
+
+.main-header .nav_link.active:before {
+  left: calc((1vw + 1vh) * 0.5);
+  right: calc((1vw + 1vh) * 0.5);
+}
+
+.main-header .search-field__input {
+  padding: calc((1vw + 1vh) * 0.33) 0px;
+  font-size: calc((1vw + 1vh) * 0.6);
+}
+
+.main-header .search-field .dynamic-string {
+  font-size: calc((1vw + 1vh) * 0.6);
+}
+
+.main-header .index-data__arrow {
+  width: calc((1vw + 1vh) * 0.8);
+  height: calc((1vw + 1vh) * 0.8);
+}
+
+.main-header .index-data__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.main-header .search-btn {
+  right: calc((1vw + 1vh) * 0.4);
+}
+
+.main-header .user__photo .messages__count,
+.main-header .header__basket .basket__count {
+  line-height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc((1vw + 1vh) * 0.1);
+  font-size: calc((1vw + 1vh) * 0.333);
+  border-radius: calc((1vw + 1vh) * 0.5);
+}
+
+.main-header .search-form {
+  height: 100%;
+}
+
+.main-header .search-field::after {
+  width: calc((1vw + 1vh) * 6.2);
+}
+
+.main-header .search-btn {
+  width: calc(1vw + 1vh);
+  height: calc(1vw + 1vh);
+  padding: 0;
+}
+
+.main-header .search-btn svg {
+  width: 100%;
+  height: 100%;
+}
+
+.main-header .header__bottom {
+  gap: calc((1vw + 1vh) * 1.33);
+}
+
+.main-header .search-form {
+  max-width: calc((1vw + 1vh) * 22);
+}
+
+.main-header .search-field {
+  padding-left: calc((1vw + 1vh) * 1.4);
+}
+
+.main-header .header__index-data {
+  padding: calc((1vw + 1vh) * 0.33) calc(1vw + 1vh);
+  gap: calc((1vw + 1vh) * 0.83);
+  align-items: center;
+}
+
+.main-header .index-data__value {
+  gap: calc((1vw + 1vh) * 0.33);
+  font-size: calc((1vw + 1vh) * 0.6);
+}
+
+.main-header .index-data__name {
+  font-size: calc((1vw + 1vh) * 0.6);
+}
+
+.main-header .header__bottom {
+  padding-top: calc((1vw + 1vh) * 0.666);
+  padding-left: calc((1vw + 1vh) * 0.5);
+}
+
+.main-header .nav_link.active::before {
+  height: calc((1vw + 1vh) * 0.0666);
+}
+
+.main-header__container {
+  max-width: calc((1vw + 1vh) * 46.666);
+  padding: 0 calc((1vw + 1vh) * 0.666);
+}
+
+.scroll-helper {
+  bottom: 12vh;
+}
+
+.scroll-helper .scroll-helper__text {
+  font-size: calc((1vw + 1vh) * 0.6);
+}
+
+.main-screen {
+  padding-top: calc(1vw + 1vh);
 }
 
 @media (min-width: 577px) {
