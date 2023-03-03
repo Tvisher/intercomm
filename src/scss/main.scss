@@ -4358,7 +4358,6 @@ footer {
 }
 
 .main-header__container {
-  // max-width: calc($index * 46.666);
   max-width: calc($index * 40.8);
   padding: 0 calc($index * 0.666);
 }
@@ -4372,9 +4371,6 @@ footer {
 
 }
 
-.site-nav {
-  // height: calc($index * 26);
-}
 
 .main-screen {
   padding-top: $index;
