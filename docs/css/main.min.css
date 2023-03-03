@@ -4709,7 +4709,7 @@ footer {
 .main-header {
   padding-top: calc((1vw + 1vh) * 0.66);
   padding-bottom: calc((1vw + 1vh) * 0.33);
-  gap: calc((1vw + 1vh) * 1.5);
+  gap: calc((1vw + 1vh) * 0.5);
 }
 
 .main-header .header__nav,

@@ -4181,7 +4181,7 @@ footer {
 .main-header {
   padding-top: calc($index * 0.66);
   padding-bottom: calc($index * 0.33);
-  gap: calc($index * 1.5);
+  gap: calc($index * 0.5);
 
   .header__nav,
   .header__top {
