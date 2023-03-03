@@ -4893,10 +4893,6 @@ footer {
   font-size: calc((1vw + 1vh) * 0.6);
 }
 
-.site-nav {
-  height: calc((1vw + 1vh) * 26);
-}
-
 .main-screen {
   padding-top: calc(1vw + 1vh);
 }
