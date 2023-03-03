@@ -4173,3 +4173,27 @@ footer {
     margin-top: 18px;
   }
 }
+
+
+.main-header {
+  padding-top: calc($index * 0.66);
+  padding-bottom: calc($index * 0.33);
+
+  .header__nav,
+  .header__top {
+    gap: $index;
+  }
+
+  .nav_link {
+    // padding: 9px 17px;
+    padding: calc($index * 0.3) calc($index * 0.5);
+    font-size: calc($index * 0.53);
+  }
+
+  .header__logo {
+    // width: 175px;
+    // height: 100px;
+    height: calc($index * 3.33);
+    width: calc($index * 5.83);
+  }
+}

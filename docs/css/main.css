@@ -4703,6 +4703,26 @@ footer {
   cursor: pointer;
 }
 
+.main-header {
+  padding-top: calc((1vw + 1vh) * 0.66);
+  padding-bottom: calc((1vw + 1vh) * 0.33);
+}
+
+.main-header .header__nav,
+.main-header .header__top {
+  gap: calc(1vw + 1vh);
+}
+
+.main-header .nav_link {
+  padding: calc((1vw + 1vh) * 0.3) calc((1vw + 1vh) * 0.5);
+  font-size: calc((1vw + 1vh) * 0.53);
+}
+
+.main-header .header__logo {
+  height: calc((1vw + 1vh) * 3.33);
+  width: calc((1vw + 1vh) * 5.83);
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
