@@ -4185,7 +4185,8 @@ footer {
 
   .header__nav,
   .header__top {
-    gap: $index;
+    // gap: $index;
+    gap: calc($index * 0.4);
   }
 
   .nav_link {
@@ -4357,7 +4358,8 @@ footer {
 }
 
 .main-header__container {
-  max-width: calc($index * 46.666);
+  // max-width: calc($index * 46.666);
+  max-width: calc($index * 40.8);
   padding: 0 calc($index * 0.666);
 }
 
@@ -4368,6 +4370,10 @@ footer {
     font-size: calc($index * 0.6);
   }
 
+}
+
+.site-nav {
+  height: calc($index * 26);
 }
 
 .main-screen {

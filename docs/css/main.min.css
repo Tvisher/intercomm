@@ -4714,7 +4714,7 @@ footer {
 
 .main-header .header__nav,
 .main-header .header__top {
-  gap: calc(1vw + 1vh);
+  gap: calc((1vw + 1vh) * 0.4);
 }
 
 .main-header .nav_link {
@@ -4881,7 +4881,7 @@ footer {
 }
 
 .main-header__container {
-  max-width: calc((1vw + 1vh) * 46.666);
+  max-width: calc((1vw + 1vh) * 40.8);
   padding: 0 calc((1vw + 1vh) * 0.666);
 }
 
@@ -4891,6 +4891,10 @@ footer {
 
 .scroll-helper .scroll-helper__text {
   font-size: calc((1vw + 1vh) * 0.6);
+}
+
+.site-nav {
+  height: calc((1vw + 1vh) * 26);
 }
 
 .main-screen {
