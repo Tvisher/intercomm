@@ -1061,7 +1061,7 @@ footer {
 
     .item__ico {
       opacity: 0;
-      transform: scale(0);
+      transform: translateX(-50%) scale(0);
     }
   }
 
@@ -1101,7 +1101,7 @@ footer {
     background-position: center;
     position: absolute;
     left: 50% !important;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
     top: 0;
     pointer-events: none;
 
