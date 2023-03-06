@@ -159,7 +159,7 @@ if (scrollTrigger) {
 
   // Функция прокрутки к секции медиа
   function scrollToMedia() {
-    if (window.innerWidth < 1360) return;
+    if (window.innerWidth < 1360 || window.innerHeight < 680) return;
     let dataTrigerValue =
       dataReverseTriger.getBoundingClientRect().top - flyingHeader.clientHeight;
     if (
@@ -255,13 +255,21 @@ document.querySelectorAll(".survey").forEach((survey) => {
   });
 });
 
+
+function scrollbarWidth() {
+  var documentWidth = parseInt(document.documentElement.clientWidth);
+  var windowsWidth = parseInt(window.innerWidth);
+  var scrollbarWidth = windowsWidth - documentWidth;
+  return scrollbarWidth;
+}
 // Динамический адаптив на главной странице
 (function () {
   let move = (item, parent, parentOriginal, width) => {
     if (!item || !parent || !parentOriginal) {
       return;
     }
-    if ($(window).width() <= width) {
+
+    if ($(window).width() <= (width - scrollbarWidth())) {
       if (!item.hasClass("done")) {
         item.appendTo(parent);
         item.addClass("done");

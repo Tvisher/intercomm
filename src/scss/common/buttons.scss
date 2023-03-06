@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   padding: 14px;
-  background: #ad073d;
+  background: #FA0056;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
@@ -11,6 +11,7 @@
   text-align: center;
   overflow: hidden;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
   &:before {
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
@@ -33,6 +34,7 @@
   &:hover::before {
     opacity: 1;
   }
+
   &:active {
     transform: translateY(2px);
   }
@@ -52,6 +54,7 @@ button {
   background-color: $brand-red;
   color: #fff;
   font-weight: 700;
+
   &:active {
     transform: translateY(2px);
   }

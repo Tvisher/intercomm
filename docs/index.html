@@ -11,7 +11,7 @@
     <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <!-- styles -->
-    <link rel="stylesheet" href="./css/main.min.css?_v=20230303165602">
+    <link rel="stylesheet" href="./css/main.min.css">
     <!-- bagfix transition zeroscript  -->
     <script> </script>
 </head>
@@ -339,153 +339,52 @@
                 <div class="site-nav__item main-slider">
                     <div class="main-slider__component swiper-slider">
                         <div class="swiper-wrapper">
-                            <a href="javascript:void(0)" class="swiper-slide main-slide" style="background-image:url('img/main-slider-image.jpg')">
+                            <a href="javascript:void(0)" class="swiper-slide main-slide"
+                                style="background-image:url('img/main-slider-image.jpg')">
                                 <div class="main-slide__content">
                                     <h3 class="main-slide__title">Баннер первого экрана</h3>
-                                    <p class="main-slide__descr">Описание баннера и информации, которая подается в шапке.<br> Сменяются до 3 баннерных блоков. </p>
+                                    <p class="main-slide__descr">Описание баннера и информации, которая подается в
+                                        шапке.<br> Сменяются до 3 баннерных блоков. </p>
                                     <div class="article-data">
-                                        <div class="favorites-data">
-                                            <div class="ico">
-                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">1</div>
-                                        </div>
-                                        <div class="views-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">12</div>
-                                        </div>
-                                        <div class="comments-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="count">6</div>
-                                        </div>
                                         <div class="atricle-date">12 Сентября 2023</div>
                                     </div>
                                 </div>
                             </a>
 
-                            <a href="javascript:void(0)" class="swiper-slide main-slide" style="background-image:url('img/main-slider-image.jpg')">
+                            <a href="javascript:void(0)" class="swiper-slide main-slide"
+                                style="background-image:url('img/main-slider-image.jpg')">
                                 <div class="main-slide__content">
                                     <h3 class="main-slide__title"> Второй баннер первого экрана</h3>
-                                    <p class="main-slide__descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вершину ты толку щеке составитель своих сих предупреждал обеспечивает ее они если, жаренные вскоре имеет. Продолжил предложения одна заголовок рукопись злых точках свое если пунктуация переписали проектах? Прямо, запятой переписали? </p>
+                                    <p class="main-slide__descr">Далеко-далеко за словесными горами в стране гласных и
+                                        согласных живут рыбные тексты. Вершину ты толку щеке составитель своих сих
+                                        предупреждал обеспечивает ее они если, жаренные вскоре имеет. Продолжил
+                                        предложения одна заголовок рукопись злых точках свое если пунктуация переписали
+                                        проектах? Прямо, запятой переписали? </p>
                                     <div class="article-data">
-                                        <div class="favorites-data">
-                                            <div class="ico">
-                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">1</div>
-                                        </div>
-                                        <div class="views-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">12</div>
-                                        </div>
-                                        <div class="comments-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="count">6</div>
-                                        </div>
                                         <div class="atricle-date">12 Сентября 2023</div>
                                     </div>
                                 </div>
                             </a>
 
-                            <a href="javascript:void(0)" class="swiper-slide main-slide" style="background-image:url('img/main-slider-image.jpg')">
+                            <a href="javascript:void(0)" class="swiper-slide main-slide"
+                                style="background-image:url('img/main-slider-image.jpg')">
                                 <div class="main-slide__content">
                                     <h3 class="main-slide__title">Баннер первого экрана</h3>
-                                    <p class="main-slide__descr">Описание баннера и информации, которая подается в шапке.<br> Сменяются до 3 баннерных блоков. </p>
+                                    <p class="main-slide__descr">Описание баннера и информации, которая подается в
+                                        шапке.<br> Сменяются до 3 баннерных блоков. </p>
                                     <div class="article-data">
-                                        <div class="favorites-data">
-                                            <div class="ico">
-                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">1</div>
-                                        </div>
-                                        <div class="views-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">12</div>
-                                        </div>
-                                        <div class="comments-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="count">6</div>
-                                        </div>
                                         <div class="atricle-date">12 Сентября 2023</div>
                                     </div>
                                 </div>
                             </a>
 
-                            <a href="javascript:void(0)" class="swiper-slide main-slide" style="background-image:url('img/main-slider-image.jpg')">
+                            <a href="javascript:void(0)" class="swiper-slide main-slide"
+                                style="background-image:url('img/main-slider-image.jpg')">
                                 <div class="main-slide__content">
                                     <h3 class="main-slide__title"> Второй баннер первого экрана</h3>
-                                    <p class="main-slide__descr">Описание баннера и информации, которая подается в шапке.<br> Сменяются до 3 баннерных блоков. </p>
+                                    <p class="main-slide__descr">Описание баннера и информации, которая подается в
+                                        шапке.<br> Сменяются до 3 баннерных блоков. </p>
                                     <div class="article-data">
-                                        <div class="favorites-data">
-                                            <div class="ico">
-                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">1</div>
-                                        </div>
-                                        <div class="views-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-                                            </div>
-                                            <div class="count">12</div>
-                                        </div>
-                                        <div class="comments-data">
-                                            <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="count">6</div>
-                                        </div>
                                         <div class="atricle-date">12 Сентября 2023</div>
                                     </div>
                                 </div>
@@ -494,7 +393,8 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="site-nav__item" data-category-block="database" style="background: linear-gradient(135.62deg, #B10F45 30.93%, #FF3377 100%);">
+                <div class="site-nav__item" data-category-block="database"
+                    style="background: linear-gradient(135.62deg, #B10F45 30.93%, #FF3377 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/database-ico.svg" alt="">
@@ -502,7 +402,8 @@
                         <span class="item__title">База знаний</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="medialine" style="background: linear-gradient(141.15deg, #ED5541 40.91%, #ED8941 102.57%);">
+                <div class="site-nav__item" data-category-block="medialine"
+                    style="background: linear-gradient(141.15deg, #ED5541 40.91%, #ED8941 102.57%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/medialine-ico.svg" alt="">
@@ -510,7 +411,8 @@
                         <span class="item__title">MEDIALINE</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="learning" style="background: linear-gradient(143.75deg, #8F0096 38.69%, #D406DE 107.29%);">
+                <div class="site-nav__item" data-category-block="learning"
+                    style="background: linear-gradient(143.75deg, #8F0096 38.69%, #D406DE 107.29%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/learning-ico.svg" alt="">
@@ -518,7 +420,8 @@
                         <span class="item__title">Обучение</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="calendar" style="background: linear-gradient(135deg, #610865 0%, #BD0C5A 100%);">
+                <div class="site-nav__item" data-category-block="calendar"
+                    style="background: linear-gradient(135deg, #610865 0%, #BD0C5A 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/calendar-ico.svg" alt="">
@@ -526,7 +429,8 @@
                         <span class="item__title">Календарь событий</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="community" style="background: linear-gradient(144.49deg, #1D879A 28.77%, #1BC3E1 111.17%);">
+                <div class="site-nav__item" data-category-block="community"
+                    style="background: linear-gradient(144.49deg, #1D879A 28.77%, #1BC3E1 111.17%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/community-ico.svg" alt="">
@@ -534,7 +438,8 @@
                         <span class="item__title">Сообщество</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="conference" style="background: linear-gradient(135.62deg, #B10F45 30.93%, #FF3377 100%);">
+                <div class="site-nav__item" data-category-block="conference"
+                    style="background: linear-gradient(135.62deg, #B10F45 30.93%, #FF3377 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/conference-ico.svg" alt="">
@@ -542,7 +447,8 @@
                         <span class="item__title">Конференции</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="intercom" style="background: linear-gradient(135deg, #610865 0%, #BD0C5A 100%);">
+                <div class="site-nav__item" data-category-block="intercom"
+                    style="background: linear-gradient(135deg, #610865 0%, #BD0C5A 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/intercom-ico.svg" alt="">
@@ -550,7 +456,8 @@
                         <span class="item__title">Inter COMM 2023</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="podcast" style="background: linear-gradient(135.62deg, #B41E44 30.93%, #FC3AAE 100%);">
+                <div class="site-nav__item" data-category-block="podcast"
+                    style="background: linear-gradient(135.62deg, #B41E44 30.93%, #FC3AAE 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/podcast.svg" alt="">
@@ -558,13 +465,19 @@
                         <span class="item__title">Аудио-подкасты</span>
                     </a>
                 </div>
-                <div class="site-nav__item socials" style="background: linear-gradient(135deg, #444343 0%, #656097 100%);">
-                    <a href="javascript:void(0)" class="item__social" style="background-image: url('img/vkontakte.svg');"></a>
-                    <a href="javascript:void(0)" class="item__social" style="background-image: url('img/telegram.svg');"></a>
-                    <a href="javascript:void(0)" class="item__social" style="background-image: url('img/youtube.svg');"></a>
-                    <a href="javascript:void(0)" class="item__social" style="background-image: url('img/dzen.svg');"></a>
+                <div class="site-nav__item socials"
+                    style="background: linear-gradient(135deg, #444343 0%, #656097 100%);">
+                    <a href="javascript:void(0)" class="item__social"
+                        style="background-image: url('img/vkontakte.svg');"></a>
+                    <a href="javascript:void(0)" class="item__social"
+                        style="background-image: url('img/telegram.svg');"></a>
+                    <a href="javascript:void(0)" class="item__social"
+                        style="background-image: url('img/youtube.svg');"></a>
+                    <a href="javascript:void(0)" class="item__social"
+                        style="background-image: url('img/dzen.svg');"></a>
                 </div>
-                <div class="site-nav__item" data-category-block="vacancies" style="background: linear-gradient(135deg, #AA3770 0%, #E04BDA 100%);">
+                <div class="site-nav__item" data-category-block="vacancies"
+                    style="background: linear-gradient(135deg, #AA3770 0%, #E04BDA 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/vacancies.svg" alt="">
@@ -572,7 +485,8 @@
                         <span class="item__title">Вакансии</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="catalog" style="background: linear-gradient(135deg, #444343 0%, #656097 100%);">
+                <div class="site-nav__item" data-category-block="catalog"
+                    style="background: linear-gradient(135deg, #444343 0%, #656097 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/catalog-ico.svg" alt="">
@@ -580,7 +494,8 @@
                         <span class="item__title">Каталог поставщиков</span>
                     </a>
                 </div>
-                <div class="site-nav__item" data-category-block="magazine" style="background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%);">
+                <div class="site-nav__item" data-category-block="magazine"
+                    style="background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%);">
                     <a href="javascript:void(0)" class="item__link">
                         <div class="item__ico">
                             <img src="img/magazine-ico.svg" alt="">
@@ -592,13 +507,17 @@
                     <span class="scroll-helper__text">Скролл вниз</span>
                     <div class="scroll-helper__ico">
                         <svg width="18" height="31" viewBox="0 0 18 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.600275" y="0.6" width="16.8" height="29.8" rx="8.4" stroke="#888888" stroke-width="1.2" />
-                            <rect x="-0.6" y="0.6" width="2.8" height="6.8" rx="1.4" transform="matrix(-1 0 0 1 9.80024 5)" stroke="#888888" stroke-width="1.2" />
+                            <rect x="0.600275" y="0.6" width="16.8" height="29.8" rx="8.4" stroke="#888888"
+                                stroke-width="1.2" />
+                            <rect x="-0.6" y="0.6" width="2.8" height="6.8" rx="1.4"
+                                transform="matrix(-1 0 0 1 9.80024 5)" stroke="#888888" stroke-width="1.2" />
                         </svg>
                     </div>
                     <div class="scroll-helper__arrow">
                         <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.57598 12.4243C4.81029 12.6586 5.19019 12.6586 5.42451 12.4243L9.24289 8.60589C9.4772 8.37157 9.4772 7.99167 9.24289 7.75736C9.00857 7.52304 8.62867 7.52304 8.39436 7.75736L5.00024 11.1515L1.60613 7.75736C1.37182 7.52304 0.991918 7.52304 0.757603 7.75736C0.523289 7.99167 0.523289 8.37157 0.757603 8.60589L4.57598 12.4243ZM5.60024 12L5.60024 2.62268e-08L4.40024 -2.62268e-08L4.40024 12L5.60024 12Z" fill="#888888" />
+                            <path
+                                d="M4.57598 12.4243C4.81029 12.6586 5.19019 12.6586 5.42451 12.4243L9.24289 8.60589C9.4772 8.37157 9.4772 7.99167 9.24289 7.75736C9.00857 7.52304 8.62867 7.52304 8.39436 7.75736L5.00024 11.1515L1.60613 7.75736C1.37182 7.52304 0.991918 7.52304 0.757603 7.75736C0.523289 7.99167 0.523289 8.37157 0.757603 8.60589L4.57598 12.4243ZM5.60024 12L5.60024 2.62268e-08L4.40024 -2.62268e-08L4.40024 12L5.60024 12Z"
+                                fill="#888888" />
                         </svg>
                     </div>
                 </div>
@@ -608,7 +527,7 @@
     <section class="media-section" data-reverse-triger>
         <div class="container">
             <a href="javascript:void(0)" class="media-b-image" data-aos="fade-in">
-                <picture><source srcset="img/b-image.webp" type="image/webp"><img src="img/b-image.png" alt=""></picture>
+                <img src="img/b-image.png" alt="">
             </a>
             <div class="media-section__content">
                 <div class="media-section__col first-col" data-aos="fade-in" data-aos-delay="200">
@@ -620,35 +539,45 @@
                             <div class="media-section__article large-article">
                                 <a href="javascript:void(0)" class="article-link">
                                     <div class="article__img">
-                                        <picture><source srcset="img/article-img-large.webp" type="image/webp"><img src="img/article-img-large.png" alt=""></picture>
+                                        <img src="img/article-img-large.png" alt="">
                                     </div>
                                     <h3 class="article__title">
-                                        С зарубежных источников, современные исследования могут быть объединены во что то очень интересное
+                                        С зарубежных источников, современные исследования могут быть объединены во что
+                                        то очень интересное
                                     </h3>
                                 </a>
                                 <div class="article-data">
                                     <div class="favorites-data">
                                         <label class="favorite-label">
                                             <input type="checkbox" class="favorite-checkbox" value="">
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                    stroke="#888888" />
                                             </svg>
                                         </label>
                                         <div class="count">1</div>
                                     </div>
                                     <div class="views-data">
                                         <div class="ico">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                                <path
+                                                    d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                    stroke="#888888" stroke-linecap="round" />
                                             </svg>
                                         </div>
                                         <div class="count">12</div>
                                     </div>
                                     <div class="comments-data">
                                         <div class="ico">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                    stroke="#888888" stroke-linecap="round" />
                                                 <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                                 <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                             </svg>
@@ -665,14 +594,15 @@
                             <a href="javascript:void(0)" class="arrow-title">
                                 <span>Самое читаемое</span>
                                 <div class="arrow-ico">
-                                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L7 7L1 13" stroke="#AD073D" stroke-width="2" />
+                                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L1 13" stroke="#333333" stroke-width="2" />
                                     </svg>
                                 </div>
                             </a>
                             <div class="media-section__article image-article">
                                 <a href="javascript:void(0)" class="article__img">
-                                    <picture><source srcset="img/most-read-img-1.webp" type="image/webp"><img src="img/most-read-img-1.jpg" alt=""></picture>
+                                    <img src="img/most-read-img-1.jpg" alt="">
                                 </a>
                                 <div class="article__content">
                                     <h4 class="article__title">
@@ -684,25 +614,35 @@
                                         <div class="favorites-data">
                                             <label class="favorite-label">
                                                 <input type="checkbox" class="favorite-checkbox" value="">
-                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                        stroke="#888888" />
                                                 </svg>
                                             </label>
                                             <div class="count">1</div>
                                         </div>
                                         <div class="views-data">
                                             <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="3" stroke="#888888"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                        stroke="#888888" stroke-linecap="round" />
                                                 </svg>
                                             </div>
                                             <div class="count">12</div>
                                         </div>
                                         <div class="comments-data">
                                             <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                        stroke="#888888" stroke-linecap="round" />
                                                     <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                                     <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                                 </svg>
@@ -716,7 +656,7 @@
                             </div>
                             <div class="media-section__article image-article">
                                 <a href="javascript:void(0)" class="article__img">
-                                    <picture><source srcset="img/most-read-img-2.webp" type="image/webp"><img src="img/most-read-img-2.jpg" alt=""></picture>
+                                    <img src="img/most-read-img-2.jpg" alt="">
                                 </a>
                                 <div class="article__content">
                                     <h4 class="article__title">
@@ -728,25 +668,35 @@
                                         <div class="favorites-data">
                                             <label class="favorite-label">
                                                 <input type="checkbox" class="favorite-checkbox" value="">
-                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                        stroke="#888888" />
                                                 </svg>
                                             </label>
                                             <div class="count">1</div>
                                         </div>
                                         <div class="views-data">
                                             <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="3" stroke="#888888"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                        stroke="#888888" stroke-linecap="round" />
                                                 </svg>
                                             </div>
                                             <div class="count">12</div>
                                         </div>
                                         <div class="comments-data">
                                             <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                        stroke="#888888" stroke-linecap="round" />
                                                     <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                                     <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                                 </svg>
@@ -760,7 +710,7 @@
                             </div>
                             <div class="media-section__article image-article">
                                 <a href="javascript:void(0)" class="article__img">
-                                    <picture><source srcset="img/most-read-img-3.webp" type="image/webp"><img src="img/most-read-img-3.jpg" alt=""></picture>
+                                    <img src="img/most-read-img-3.jpg" alt="">
                                 </a>
                                 <div class="article__content">
                                     <h4 class="article__title">
@@ -772,25 +722,35 @@
                                         <div class="favorites-data">
                                             <label class="favorite-label">
                                                 <input type="checkbox" class="favorite-checkbox" value="">
-                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                        stroke="#888888" />
                                                 </svg>
                                             </label>
                                             <div class="count">1</div>
                                         </div>
                                         <div class="views-data">
                                             <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                                    <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="3" stroke="#888888"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                        stroke="#888888" stroke-linecap="round" />
                                                 </svg>
                                             </div>
                                             <div class="count">12</div>
                                         </div>
                                         <div class="comments-data">
                                             <div class="ico">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                        stroke="#888888" stroke-linecap="round" />
                                                     <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                                     <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                                 </svg>
@@ -811,8 +771,9 @@
                     <a href="javascript:void(0)" class="arrow-title">
                         <span>Новости</span>
                         <div class="arrow-ico">
-                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L7 7L1 13" stroke="#AD073D" stroke-width="2" />
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 7L1 13" stroke="#333333" stroke-width="2" />
                             </svg>
                         </div>
                     </a>
@@ -827,25 +788,34 @@
                                 <div class="favorites-data">
                                     <label class="favorite-label">
                                         <input type="checkbox" class="favorite-checkbox" value="">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                stroke="#888888" />
                                         </svg>
                                     </label>
                                     <div class="count">1</div>
                                 </div>
                                 <div class="views-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                            <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                            <path
+                                                d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                         </svg>
                                     </div>
                                     <div class="count">12</div>
                                 </div>
                                 <div class="comments-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                         </svg>
@@ -869,25 +839,34 @@
                                 <div class="favorites-data">
                                     <label class="favorite-label">
                                         <input type="checkbox" class="favorite-checkbox" value="">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                stroke="#888888" />
                                         </svg>
                                     </label>
                                     <div class="count">1</div>
                                 </div>
                                 <div class="views-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                            <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                            <path
+                                                d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                         </svg>
                                     </div>
                                     <div class="count">12</div>
                                 </div>
                                 <div class="comments-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                         </svg>
@@ -911,25 +890,34 @@
                                 <div class="favorites-data">
                                     <label class="favorite-label">
                                         <input type="checkbox" class="favorite-checkbox" value="">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                stroke="#888888" />
                                         </svg>
                                     </label>
                                     <div class="count">1</div>
                                 </div>
                                 <div class="views-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                            <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                            <path
+                                                d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                         </svg>
                                     </div>
                                     <div class="count">12</div>
                                 </div>
                                 <div class="comments-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                         </svg>
@@ -953,25 +941,34 @@
                                 <div class="favorites-data">
                                     <label class="favorite-label">
                                         <input type="checkbox" class="favorite-checkbox" value="">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                stroke="#888888" />
                                         </svg>
                                     </label>
                                     <div class="count">1</div>
                                 </div>
                                 <div class="views-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                            <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                            <path
+                                                d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                         </svg>
                                     </div>
                                     <div class="count">12</div>
                                 </div>
                                 <div class="comments-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                         </svg>
@@ -995,25 +992,34 @@
                                 <div class="favorites-data">
                                     <label class="favorite-label">
                                         <input type="checkbox" class="favorite-checkbox" value="">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z" stroke="#888888" />
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.14374 3.62753C8.93034 1.66653 9.32364 0.686035 9.99997 0.686035C10.6763 0.686035 11.0696 1.66653 11.8562 3.62753L11.8928 3.71885C12.3372 4.82672 12.5594 5.38065 13.0123 5.71734C13.4651 6.05403 14.0596 6.10727 15.2485 6.21374L15.4634 6.23299C17.4092 6.40726 18.3822 6.49439 18.5903 7.11337C18.7985 7.73235 18.076 8.3897 16.6309 9.70438L16.1487 10.1432C15.4172 10.8087 15.0514 11.1414 14.8809 11.5776C14.8491 11.6589 14.8227 11.7423 14.8018 11.8271C14.6897 12.2817 14.7968 12.7645 15.0111 13.7299L15.0777 14.0305C15.4714 15.8048 15.6682 16.692 15.3246 17.0746C15.1961 17.2176 15.0292 17.3206 14.8438 17.3712C14.3476 17.5066 13.6431 16.9325 12.2342 15.7844C11.309 15.0305 10.8464 14.6536 10.3153 14.5688C10.1064 14.5354 9.89353 14.5354 9.68463 14.5688C9.15352 14.6536 8.69094 15.0305 7.76577 15.7844C6.35681 16.9325 5.65234 17.5066 5.15614 17.3712C4.97072 17.3206 4.80381 17.2176 4.67538 17.0746C4.33171 16.692 4.52854 15.8048 4.92222 14.0305L4.98889 13.7299C5.2031 12.7645 5.31021 12.2817 5.19815 11.8271C5.17725 11.7423 5.15081 11.6589 5.11901 11.5776C4.94854 11.1414 4.58279 10.8087 3.85128 10.1432L3.369 9.70439C1.92395 8.3897 1.20143 7.73235 1.40961 7.11337C1.61779 6.49439 2.5907 6.40726 4.53651 6.23299L4.75145 6.21374C5.94036 6.10727 6.53482 6.05403 6.98767 5.71734C7.44052 5.38065 7.66272 4.82672 8.10711 3.71885L8.14374 3.62753Z"
+                                                stroke="#888888" />
                                         </svg>
                                     </label>
                                     <div class="count">1</div>
                                 </div>
                                 <div class="views-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="12" cy="12" r="3" stroke="#888888" stroke-linecap="round" />
-                                            <path d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z" stroke="#888888" stroke-linecap="round" />
+                                            <path
+                                                d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                         </svg>
                                     </div>
                                     <div class="count">12</div>
                                 </div>
                                 <div class="comments-data">
                                     <div class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z" stroke="#888888" stroke-linecap="round" />
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.3259 5.77772C20 6.78661 20 8.19108 20 11C20 13.8089 20 15.2134 19.3259 16.2223C19.034 16.659 18.659 17.034 18.2223 17.3259C17.3409 17.9148 16.1577 17.9892 14 17.9986V18L12.8944 20.2111C12.5259 20.9482 11.4741 20.9482 11.1056 20.2111L10 18V17.9986C7.8423 17.9892 6.65907 17.9148 5.77772 17.3259C5.34096 17.034 4.96596 16.659 4.67412 16.2223C4 15.2134 4 13.8089 4 11C4 8.19108 4 6.78661 4.67412 5.77772C4.96596 5.34096 5.34096 4.96596 5.77772 4.67412C6.78661 4 8.19108 4 11 4H13C15.8089 4 17.2134 4 18.2223 4.67412C18.659 4.96596 19.034 5.34096 19.3259 5.77772Z"
+                                                stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 9L15 9" stroke="#888888" stroke-linecap="round" />
                                             <path d="M9 13H12" stroke="#888888" stroke-linecap="round" />
                                         </svg>
@@ -1028,7 +1034,8 @@
 
                     <div id="pc-form-parent">
                         <form class="inner-form" id="main-page-form">
-                            <span class="inner-form__title">Подпишитесь на наш еженедельный дайджест самых интересных новостей</span>
+                            <span class="inner-form__title">Подпишитесь на наш еженедельный дайджест самых интересных
+                                новостей</span>
                             <label class="inner-form__label">
                                 <input placeholder="Введите E-mail" class="inner-form__input">
                             </label>
@@ -1042,7 +1049,8 @@
                             <div class="form-sucsess">
                                 <div class="form-sucsess__content">
                                     <div class="close-btn" data-close-form-sucsess></div>
-                                    <div class="form-sucsess__title">Поздравляем! <br>Вы подписались<br>на еженедельный дайджест</div>
+                                    <div class="form-sucsess__title">Поздравляем! <br>Вы подписались<br>на еженедельный
+                                        дайджест</div>
                                     <div class="red-btn" data-close-form-sucsess><span>Закрыть</span></div>
                                 </div>
                             </div>
@@ -1054,20 +1062,24 @@
                     <a href="javascript:void(0)" class="arrow-title">
                         <span>Опросы</span>
                         <div class="arrow-ico">
-                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L7 7L1 13" stroke="#AD073D" stroke-width="2" />
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 7L1 13" stroke="#333333" stroke-width="2" />
                             </svg>
                         </div>
                     </a>
                     <!-- Для отображения результата опроса необходимо добавить класс passed к блоку с классом survey -->
                     <div class="survey">
                         <div class="survey__wrapper">
-                            <h3 class="inner-form__title">Какой город был столицей Римской империи на протяжении большей части её существования?</h3>
+                            <h3 class="inner-form__title">Какой город был столицей Римской империи на протяжении большей
+                                части её существования?</h3>
                             <div class="inner-form__title _passed">Спасибо за прохождение опроса!</div>
-                            <div class="inner-form__last-title _passed">Какой город был столицей Римской империи на протяжении большей части её существования?</div>
+                            <div class="inner-form__last-title _passed">Какой город был столицей Римской империи на
+                                протяжении большей части её существования?</div>
                             <label class="survey__item">
                                 <input class="survey__input" name="survey" type="radio" value="">
-                                <span class="survey__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                                <span class="survey__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
                                 <div class="precent-value">60%</div>
                                 <div class="survey__result-container">
                                     <div class="survey__result-wrap">
@@ -1077,7 +1089,8 @@
                             </label>
                             <label class="survey__item">
                                 <input class="survey__input" name="survey" type="radio" value="">
-                                <span class="survey__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
+                                <span class="survey__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                </span>
                                 <div class="precent-value">20%</div>
 
                                 <div class="survey__result-container">
@@ -1098,7 +1111,8 @@
                                 </div>
                             </label>
                             <div class="survey__footer">
-                                <button class="red-btn survey__btn" disabled="true" onclick="this.closest('.survey').classList.add('passed')">
+                                <button class="red-btn survey__btn" disabled="true"
+                                    onclick="this.closest('.survey').classList.add('passed')">
                                     <span>Пройти опрос</span>
                                 </button>
                                 <a href="javascript:void(0)" class="red-btn _passed"><span>Другие опросы</span></a>
@@ -1107,7 +1121,7 @@
                     </div>
 
                     <a href="javascript:void(0)" class="inner-banner _small">
-                        <picture><source srcset="img/inner-banner.webp" type="image/webp"><img src="img/inner-banner.jpg" alt="" class="inner-banner__img"></picture>
+                        <img src="img/inner-banner.jpg" alt="" class="inner-banner__img">
                         <div class="inner-banner__content">
                             <h3 class="inner-banner__title">Баннер</h3>
                             <span class="inner-banner__text">Текст текст текст</span>
@@ -1115,7 +1129,7 @@
                     </a>
 
                     <a href="javascript:void(0)" class="inner-banner _small">
-                        <picture><source srcset="img/inner-banner.webp" type="image/webp"><img src="img/inner-banner.jpg" alt="" class="inner-banner__img"></picture>
+                        <img src="img/inner-banner.jpg" alt="" class="inner-banner__img">
                         <div class="inner-banner__content">
                             <h3 class="inner-banner__title">Баннер</h3>
                             <span class="inner-banner__text">Текст текст текст</span>
@@ -1257,9 +1271,9 @@
 
 </div>
 </body>
-<script src="./js/swiper-bundle.min.js?_v=20230303165602"></script>
-<script src="./js/jquery.min.js?_v=20230303165602"></script>
-<script src="./js/aos.js?_v=20230303165602"></script>
-<script src="./js/app.js?_v=20230303165602"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/aos.js"></script>
+<script src="./js/app.js"></script>
 
 </html>

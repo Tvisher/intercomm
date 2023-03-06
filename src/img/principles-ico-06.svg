@@ -1,13 +1,13 @@
 <svg width="83" height="83" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.00001 82.3457L82 82.3457L82 0.345695L1.00001 82.3457Z" fill="url(#paint0_linear_515_7740)"/>
-<path d="M25 25.3457C25 17.0614 31.7157 10.3457 40 10.3457V10.3457C48.2843 10.3457 55 17.0614 55 25.3457V25.3457C55 33.63 48.2843 40.3457 40 40.3457V40.3457C31.7157 40.3457 25 33.63 25 25.3457V25.3457Z" fill="#AD073D"/>
-<path d="M13.2764 69.9229C16.8514 73.5444 21.0957 76.4171 25.7667 78.377C30.4377 80.3369 35.4441 81.3457 40.5 81.3457C45.5559 81.3457 50.5623 80.3369 55.2333 78.377C59.9044 76.4171 64.1486 73.5443 67.7236 69.9229L40.5 42.3457L13.2764 69.9229Z" fill="url(#paint1_linear_515_7740)"/>
+<path d="M1.00001 82.3457L82 82.3457L82 0.345695L1.00001 82.3457Z" fill="url(#paint0_linear_604_11268)"/>
+<path d="M25 25.3457C25 17.0614 31.7157 10.3457 40 10.3457C48.2843 10.3457 55 17.0614 55 25.3457C55 33.63 48.2843 40.3457 40 40.3457C31.7157 40.3457 25 33.63 25 25.3457Z" fill="#FA0056"/>
+<path d="M13.2764 69.9229C16.8514 73.5444 21.0957 76.4171 25.7667 78.377C30.4377 80.3369 35.4441 81.3457 40.5 81.3457C45.5559 81.3457 50.5623 80.3369 55.2333 78.377C59.9044 76.4171 64.1486 73.5443 67.7236 69.9229L40.5 42.3457L13.2764 69.9229Z" fill="url(#paint1_linear_604_11268)"/>
 <defs>
-<linearGradient id="paint0_linear_515_7740" x1="36.3077" y1="63.4226" x2="82.8765" y2="-22.3064" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_604_11268" x1="36.3077" y1="63.4226" x2="82.8765" y2="-22.3064" gradientUnits="userSpaceOnUse">
 <stop stop-color="#AD073D" stop-opacity="0"/>
 <stop offset="1" stop-color="#AD073D"/>
 </linearGradient>
-<linearGradient id="paint1_linear_515_7740" x1="87.8846" y1="108.278" x2="-22.5386" y2="94.5676" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_604_11268" x1="87.8846" y1="108.278" x2="-22.5386" y2="94.5676" gradientUnits="userSpaceOnUse">
 <stop offset="0.0261371" stop-color="#AD073D" stop-opacity="0.81"/>
 <stop offset="1" stop-color="#AD073D" stop-opacity="0"/>
 </linearGradient>

@@ -11,12 +11,14 @@ $smPhoneWidth: 380px;
 
 // Main color
 $brand-black: #333333;
-$brand-red: #ad073d;
+// $brand-red: #ad073d;
+$brand-red: #FA0056;
 $brand-primary: #ddcfc6;
 $brand-gray: #59677e;
 $brand-white: #ffffff;
 // Font
-$mainFont: "Inter";
+// $mainFont: "Inter";
+$mainFont: "Montserrat";
 $mainFontColor: $brand-black;
 
 @mixin pruning($c) {
