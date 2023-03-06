@@ -1005,11 +1005,12 @@ footer {
   max-width: 100%;
   width: fit-content;
   margin: auto;
-  height: calc(100vh - 135px);
+  // height: calc(100vh - 135px);
+  height: calc(98.5vh - 120px);
   gap: 1.5vh;
   display: grid;
-  grid-template-columns: repeat(6, 18.5vh);
-  grid-template-rows: repeat(4, 18.5vh);
+  grid-template-columns: repeat(6, 19.5vh);
+  grid-template-rows: repeat(4, 19.5vh);
 }
 
 .site-nav__item {
@@ -1687,10 +1688,10 @@ footer {
 }
 
 .inner-form__btn {
-  &:disabled {
-    pointer-events: none;
-    background-color: #888888;
-  }
+  // &:disabled {
+  //   pointer-events: none;
+  //   background-color: #888888;
+  // }
 }
 
 .inner-form__title {
@@ -1710,6 +1711,13 @@ footer {
     background: #ffffff;
     border: 1px solid #d9d9d9;
     border-radius: 4px;
+
+    &.err {
+      border-color: red;
+
+      // pointer-events: none;
+      // background-color: #888888;
+    }
   }
 }
 
@@ -1978,10 +1986,10 @@ footer {
     font-size: 14px;
   }
 
-  .header__nav,
-  .header__top {
-    gap: 15px;
-  }
+  // .header__nav,
+  // .header__top {
+  //   gap: 15px;
+  // }
 
   // .fixed-header .search-form {
   //   max-width: 45%;
@@ -4400,5 +4408,5 @@ footer {
 }
 
 .main-screen {
-  padding-top: $index;
+  padding-top: 1.5vh;
 }

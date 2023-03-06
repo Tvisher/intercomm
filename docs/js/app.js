@@ -50,7 +50,7 @@ document.body.addEventListener("click", (e) => {
   if (
     (target.closest(".form-sucsess") &&
       !target.closest(".form-sucsess__content")) ||
-    target.hasAttribute("data-close-form-sucsess")
+    target.closest("[data-close-form-sucsess]")
   ) {
     document.querySelector(".form-sucsess").classList.remove("show");
   }
@@ -209,37 +209,38 @@ function validateEmail(email) {
 
 //Валидация формы для возможности нажать Отправить
 document.querySelectorAll(".inner-form").forEach((form) => {
-  const formBtn = form.querySelector(".inner-form__btn");
-  formBtn.setAttribute("disabled", true);
-  const innerFormInput = form.querySelector(".inner-form__input");
+  // const formBtn = form.querySelector(".inner-form__btn");
+  const formInput = form.querySelector('.inner-form__input');
+  // formInput.setAttribute("disabled", true);
+  // const innerFormInput = form.querySelector(".inner-form__input");
   const formAgreeCheckbox = form.querySelector(".form__agree-checkbox");
 
-  innerFormInput.addEventListener("input", (e) => {
-    if (validateEmail(e.target.value) && formAgreeCheckbox.checked) {
-      formBtn.removeAttribute("disabled");
+  formInput.addEventListener("input", (e) => {
+    if (validateEmail(e.target.value)) {
+      formInput.classList.remove('err');
     } else {
-      formBtn.setAttribute("disabled", true);
+      formInput.classList.add('err');
     }
   });
 
   formAgreeCheckbox.addEventListener("change", (e) => {
-    if (e.target.checked && validateEmail(innerFormInput.value.trim())) {
-      formBtn.removeAttribute("disabled");
+    if (e.target.checked && validateEmail(formInput.value.trim())) {
+      // formInput.classList.remove('err');
     } else {
-      formBtn.setAttribute("disabled", true);
+      // formInput.classList.add('err');
     }
   });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (
-      validateEmail(innerFormInput.value.trim()) &&
+      validateEmail(formInput.value.trim()) &&
       formAgreeCheckbox.checked
     ) {
       // тут отправка на сервер формы
       form.querySelector(".form-sucsess").classList.add("show");
       form.reset();
-      formBtn.setAttribute("disabled", true);
+      // formBtn.setAttribute("disabled", true);
     }
   });
 });
