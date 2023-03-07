@@ -2701,7 +2701,8 @@ header {
 }
 
 .fixed-header .dynamic-string {
-  display: none;
+  animation: none;
+  padding-left: 43px;
 }
 
 .main-menu-btn {
@@ -5261,10 +5262,6 @@ footer {
     margin-bottom: 15px;
   }
 
-  .search-field .dynamic-string {
-    animation: textRun 12s infinite linear;
-  }
-
   .media-b-image {
     margin-right: -20px;
     margin-left: -20px;
@@ -5352,7 +5349,7 @@ footer {
 
 @media (max-width: 576px) {
   .fixed-header .dynamic-string {
-    display: block;
+    display: flex;
   }
 
   .text-articles,
@@ -5433,6 +5430,7 @@ footer {
   }
 
   .mobile-menu .mobile-menu__user-data .header__auth {
+    font-size: 14px;
     margin-left: 0;
     flex-direction: row-reverse;
     color: #fff;
@@ -5485,10 +5483,6 @@ footer {
 
   .search-field::after {
     width: 60px;
-  }
-
-  .search-field .dynamic-string {
-    animation: textRunMob 14s infinite linear;
   }
 
   .media-b-image {
