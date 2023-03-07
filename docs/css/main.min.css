@@ -2352,7 +2352,7 @@ header {
 .header__top {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .header__data {
