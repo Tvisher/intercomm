@@ -15,6 +15,10 @@ function testWebP() {
 }
 testWebP();
 
+
+Fancybox.bind("[data-fancybox]", {
+  hideScrollbar: false,
+});
 // // Инит и опции библиотеки анимаций
 AOS.init({
   // Global settings:
@@ -94,6 +98,30 @@ const mainSliderComponent = new Swiper(".main-slider__component", {
     el: ".swiper-pagination",
     type: "bullets",
     clickable: true,
+  },
+});
+
+
+
+const thumbSlider = new Swiper(".product-thumbs-slider", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  watchSlidesProgress: true,
+  breakpoints: {
+    576: {
+      spaceBetween: 15
+    },
+  }
+});
+
+const productSlider = new Swiper(".product-slider", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: thumbSlider,
   },
 });
 
