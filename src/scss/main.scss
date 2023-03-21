@@ -925,6 +925,9 @@ footer {
 }
 
 .footer__logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-shrink: 0;
 }
 
@@ -950,7 +953,7 @@ footer {
 .footer__nav {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 
   .footer__nav-item {
     padding: 10px;
@@ -979,12 +982,13 @@ footer {
 }
 
 .devepment-by {
+  text-align: right;
   color: #888888;
   font-size: 18px;
 
   a {
     display: inline;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: $brand-red;
   }
 }
@@ -1666,8 +1670,13 @@ footer {
   gap: 8px;
   font-weight: 600;
   font-size: 25px;
-  color: $brand-black;
+  // color: $brand-black;
+  color: $brand-red;
   margin-bottom: 30px;
+
+  svg path {
+    stroke: $brand-red;
+  }
 
   .arrow-ico {
     padding-top: 3px;
