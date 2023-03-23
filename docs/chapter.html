@@ -352,7 +352,6 @@
                         Кейсы
                     </h1>
                     <ul class="cases-list">
-
                         <li class="cases-item">
                             <div class="cases-item__link">
                                 <a href="javascript:void(0)" class="cases-item__image">
@@ -765,6 +764,9 @@
                             </div>
                         </li>
                     </ul>
+                    <div id="showmore-triger" style="display: flex;justify-content: center;">
+                        <img src="img/ajax-loader.gif" alt="">
+                    </div>
                 </div>
 
                 <div class="media-section__col">
@@ -1004,6 +1006,45 @@
         </div>
     </section>
 </main>
+<script>
+    var block_show = false;
+    var renderContainer = document.querySelector('.cases-list');
+    //счётчик подгрузки
+    var pageCounter = 1;
+    // лимит подгрузки
+    var pageLimit = 5;
+    function scrollMore() {
+        const target = document.querySelector('#showmore-triger');
+
+        if (pageCounter >= pageLimit) {
+            target.style.display = 'none';
+            return false;
+        }
+        if (block_show) {
+            return false;
+        }
+        var wt = scrollY;
+        var wh = window.innerHeight;
+        var et = target.offsetTop;
+        var eh = target.clientHeight;
+        var dh = document.body.offsetHeight;
+
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+            block_show = true;
+            pageCounter++;
+            fetch('./cases-list.php', {})
+                .then((response) => {
+                    return response.text();
+                })
+                .then((data) => {
+                    renderContainer.innerHTML += data;
+                    block_show = false;
+                });
+        }
+    };
+    window.addEventListener('scroll', (e) => { scrollMore() });
+    document.addEventListener('ready', (e) => { scrollMore() });
+</script>
 
 <footer>
     <div class="container">
