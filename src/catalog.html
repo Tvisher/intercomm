@@ -567,13 +567,30 @@
                         const resetFilterBtn = filterSidebar.querySelector('[data-remove-filter]');
                         const filterItems = filterSidebar.querySelectorAll('.filter-checkbox');
 
+                        // Выбрать все
                         addFilterBtn.addEventListener('click', (e) => {
+
                             filterItems.forEach(checkbox => checkbox.checked = true);
                         });
 
+                        // Отменить все
                         resetFilterBtn.addEventListener('click', (e) => {
                             filterItems.forEach(checkbox => checkbox.checked = false);
                         });
+
+                        // Обработка чекбоксов фильтра
+                        const filterCheckboxes = document.querySelectorAll('.filter-item input[type="checkbox"]');
+                        if (filterCheckboxes.length > 0) {
+                            filterCheckboxes.forEach(checkbox => {
+                                checkbox.addEventListener('change', (e) => {
+                                    if (checkbox.checked) {
+                                        console.log('Нажали');
+                                    } else {
+                                        console.log('Отжали');
+                                    }
+                                })
+                            });
+                        }
                     </script>
                     <div id="pc-form-parent">
                         <form class="inner-form" id="main-page-form">
