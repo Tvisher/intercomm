@@ -583,8 +583,12 @@
                         if (filterCheckboxes.length > 0) {
                             filterCheckboxes.forEach(checkbox => {
                                 checkbox.addEventListener('change', (e) => {
-                                    //значение атрибута value
+                                    //значение атрибута value кликнутого чекбокса
                                     const checkboxValue = checkbox.value;
+                                    // Массив выбранных чекбоксов
+                                    const checkedCheckboxes = Array.from(filterCheckboxes).filter(checkbox => checkbox.checked);
+                                    // Массив значений выбранных чекбоксов
+                                    const checkedCheckboxesValueArr = checkedCheckboxes.map(checkbox => checkbox.value);
                                     if (checkbox.checked) {
                                         console.log(`Нажали на чекбокс с value : ${checkboxValue}`);
                                     } else {
