@@ -501,56 +501,56 @@
                         <ul class="filter-list">
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" checked class="filter-checkbox">
+                                    <input type="checkbox" value="1" checked class="filter-checkbox">
                                     <span class="filter-span">Футболки мужские</span>
                                 </label>
                             </li>
 
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" checked class="filter-checkbox">
+                                    <input type="checkbox" value="2" checked class="filter-checkbox">
                                     <span class="filter-span">Футболки женские</span>
                                 </label>
                             </li>
 
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" class="filter-checkbox">
+                                    <input type="checkbox" value="3" class="filter-checkbox">
                                     <span class="filter-span">Кружки</span>
                                 </label>
                             </li>
 
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" checked class="filter-checkbox">
+                                    <input type="checkbox" value="4" checked class="filter-checkbox">
                                     <span class="filter-span">Бейсболки</span>
                                 </label>
                             </li>
 
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" class="filter-checkbox">
+                                    <input type="checkbox" value="5" class="filter-checkbox">
                                     <span class="filter-span">Ручки и карандаши</span>
                                 </label>
                             </li>
 
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" class="filter-checkbox">
+                                    <input type="checkbox" value="6" class="filter-checkbox">
                                     <span class="filter-span">Всякая ерунда в офис</span>
                                 </label>
                             </li>
 
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" class="filter-checkbox">
+                                    <input type="checkbox" value="7" class="filter-checkbox">
                                     <span class="filter-span">Посуда и стаканы</span>
                                 </label>
                             </li>
 
                             <li class="filter-list__item">
                                 <label class="filter-item">
-                                    <input type="checkbox" class="filter-checkbox">
+                                    <input type="checkbox" value="8" class="filter-checkbox">
                                     <span class="filter-span">Рюкзаки и сумки</span>
                                 </label>
                             </li>
@@ -583,10 +583,13 @@
                         if (filterCheckboxes.length > 0) {
                             filterCheckboxes.forEach(checkbox => {
                                 checkbox.addEventListener('change', (e) => {
+                                    //значение атрибута value
+                                    const checkboxValue = checkbox.value;
                                     if (checkbox.checked) {
-                                        console.log('Нажали');
+                                        console.log(`Нажали на чекбокс с value : ${checkboxValue}`);
                                     } else {
-                                        console.log('Отжали');
+                                        console.log(`Отжали чекбокс с value : ${checkboxValue}`);
+
                                     }
                                 })
                             });
