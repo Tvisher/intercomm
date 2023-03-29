@@ -5362,10 +5362,12 @@ ul:not([class]) {
   line-height: 180%;
   color: #1A1E20;
   margin: 40px 0;
+  padding-left: 0;
 }
 
 ol:not([class]) li,
 ul:not([class]) li {
+  position: relative;
   margin-bottom: 16px;
   font-weight: 400;
   font-size: 18px;
@@ -5374,51 +5376,42 @@ ul:not([class]) li {
 }
 
 ol:not([class]) {
-  padding-left: 0;
   counter-reset: myCounter;
 }
 
 ol:not([class]) li {
   list-style: none;
-  display: flex;
-  align-items: flex-start;
+  padding-left: 35px;
 }
 
 ol:not([class]) li:before {
+  position: absolute;
+  left: 0;
   counter-increment: myCounter;
   content: counter(myCounter) ".";
   color: white;
-  text-align: center;
   line-height: 40px;
-  margin-right: 23px;
   height: 40px;
-  display: flex;
-  justify-content: flex-start;
   font-weight: 500;
   font-size: 20px;
-  line-height: 30px;
   color: #FA0056;
+  margin-right: 20px;
+  top: -5px;
 }
 
 ul:not([class]) {
-  padding-left: 0;
+  list-style: square;
+  padding-left: 20px;
 }
 
 ul:not([class]) li {
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
+  padding-left: 15px;
 }
 
-ul:not([class]) li:before {
-  margin-top: 10px;
-  margin-right: 30px;
-  content: "";
-  flex-shrink: 0;
-  width: 7px;
-  height: 7px;
-  background: #FA0056;
-  display: flex;
+ul:not([class]) li::marker {
+  line-height: 40px;
+  font-weight: 500;
+  font-size: 20px;
   color: #FA0056;
 }
 
@@ -5444,6 +5437,10 @@ ul:not([class]) li:before {
   width: 100%;
   object-position: center;
   object-fit: cover;
+}
+
+.article-galery .galery-thumbs-slider {
+  height: fit-content;
 }
 
 .article-galery .galery-thumbs-slider .swiper-slide {
@@ -6889,13 +6886,17 @@ ul:not([class]) li:before {
     line-height: 140%;
   }
 
-  ol:not([class]) li:before,
-  ul:not([class]) li:before {
-    margin-right: 10px;
+  ol:not([class]) li {
+    padding-left: 30px;
   }
 
-  ul:not([class]) li:before {
-    margin-top: 5px;
+  ol:not([class]) li:before {
+    top: -10px;
+    font-size: 16px;
+  }
+
+  ul:not([class]) li {
+    padding-left: 10px;
   }
 }
 
