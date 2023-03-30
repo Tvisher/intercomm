@@ -1,0 +1,362 @@
+.card-game-start__wrapper {
+    // display: flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+}
+
+.card-game-start__btn {
+    float: left;
+    margin-right: 34px;
+    flex-shrink: 0;
+    width: 191px;
+    height: 191px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='211' height='211' viewBox='0 0 211 211' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='211' height='211' fill='url(%23paint0_linear_618_11076)'/%3e%3cg filter='url(%23filter0_bii_618_11076)'%3e%3cpath d='M76.708 55.9825C73.5472 54.159 69.4483 55.2325 68.1715 58.6509C65.6393 65.4306 64.9866 72.8149 66.3487 80.0072C68.1231 89.3774 73.1993 97.8004 80.6553 103.747C88.1113 109.693 97.4526 112.768 106.983 112.413C116.513 112.058 125.6 108.297 132.593 101.812C139.586 95.3283 144.021 86.5511 145.094 77.0749C146.167 67.5987 143.805 58.0521 138.438 50.1689C133.071 42.2856 125.055 36.5887 115.846 34.1126C108.776 32.212 101.364 32.3059 94.4126 34.3196C90.9077 35.3349 89.5281 39.3412 91.108 42.6305C92.6879 45.9197 96.6402 47.2135 100.217 46.4897C104.229 45.6777 108.404 45.7956 112.415 46.8738C118.57 48.5287 123.928 52.3364 127.515 57.6054C131.102 62.8743 132.681 69.255 131.964 75.5886C131.247 81.9223 128.282 87.7887 123.608 92.1226C118.934 96.4564 112.861 98.9702 106.491 99.2074C100.121 99.4446 93.8778 97.3895 88.8944 93.4153C83.911 89.441 80.5182 83.8113 79.3322 77.5485C78.5596 73.4684 78.757 69.2958 79.8692 65.3563C80.8607 61.8446 79.8687 57.806 76.708 55.9825Z' fill='white' fill-opacity='0.4'/%3e%3c/g%3e%3cg filter='url(%23filter1_ii_618_11076)'%3e%3cellipse cx='105.765' cy='72.3994' rx='4.12211' ry='4.1221' fill='white' fill-opacity='0.4'/%3e%3c/g%3e%3cg filter='url(%23filter2_ii_618_11076)'%3e%3cellipse cx='121.386' cy='72.3994' rx='4.12211' ry='4.1221' fill='white' fill-opacity='0.4'/%3e%3c/g%3e%3cg filter='url(%23filter3_ii_618_11076)'%3e%3cellipse cx='90.1446' cy='72.3994' rx='4.12211' ry='4.1221' fill='white' fill-opacity='0.4'/%3e%3c/g%3e%3cdefs%3e%3cfilter id='filter0_bii_618_11076' x='3.33611' y='-29.5706' width='204.328' height='204.329' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeGaussianBlur in='BackgroundImageFix' stdDeviation='31.1584'/%3e%3cfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_618_11076'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_618_11076' result='shape'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset dy='3.11584'/%3e%3cfeGaussianBlur stdDeviation='1.55792'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0'/%3e%3cfeBlend mode='normal' in2='shape' result='effect2_innerShadow_618_11076'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset/%3e%3cfeGaussianBlur stdDeviation='23.3688'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3e%3cfeBlend mode='normal' in2='effect2_innerShadow_618_11076' result='effect3_innerShadow_618_11076'/%3e%3c/filter%3e%3cfilter id='filter1_ii_618_11076' x='101.643' y='68.2773' width='8.24414' height='11.3619' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset dy='3.11584'/%3e%3cfeGaussianBlur stdDeviation='1.55792'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0'/%3e%3cfeBlend mode='normal' in2='shape' result='effect1_innerShadow_618_11076'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset/%3e%3cfeGaussianBlur stdDeviation='23.3688'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3e%3cfeBlend mode='normal' in2='effect1_innerShadow_618_11076' result='effect2_innerShadow_618_11076'/%3e%3c/filter%3e%3cfilter id='filter2_ii_618_11076' x='117.264' y='68.2773' width='8.24414' height='11.3619' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset dy='3.11584'/%3e%3cfeGaussianBlur stdDeviation='1.55792'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0'/%3e%3cfeBlend mode='normal' in2='shape' result='effect1_innerShadow_618_11076'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset/%3e%3cfeGaussianBlur stdDeviation='23.3688'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3e%3cfeBlend mode='normal' in2='effect1_innerShadow_618_11076' result='effect2_innerShadow_618_11076'/%3e%3c/filter%3e%3cfilter id='filter3_ii_618_11076' x='86.0225' y='68.2773' width='8.24414' height='11.3619' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset dy='3.11584'/%3e%3cfeGaussianBlur stdDeviation='1.55792'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0'/%3e%3cfeBlend mode='normal' in2='shape' result='effect1_innerShadow_618_11076'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3e%3cfeOffset/%3e%3cfeGaussianBlur stdDeviation='23.3688'/%3e%3cfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3e%3cfeBlend mode='normal' in2='effect1_innerShadow_618_11076' result='effect2_innerShadow_618_11076'/%3e%3c/filter%3e%3clinearGradient id='paint0_linear_618_11076' x1='199.5' y1='211' x2='21' y2='-12' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%235606FF' stop-opacity='0.3'/%3e%3cstop offset='1' stop-color='%23D406DE'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-game-start__example {
+    width: 100%;
+    margin: 30px 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.game-form__head {
+    display: flex;
+
+    .card-game-start__btn {
+        margin-right: 0;
+        width: 190px;
+        height: 190px;
+        font-size: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg width='211' height='211' viewBox='0 0 211 211' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='211' height='211' fill='url(%23paint0_linear_618_11268)'/%3E%3Cg style='mix-blend-mode:lighten' opacity='0.3' filter='url(%23filter0_f_618_11268)'%3E%3Cellipse cx='108.167' cy='54.6667' rx='22.6667' ry='22.6667' fill='white'/%3E%3C/g%3E%3Cpath d='M112.166 66.668L78.833 100.001H145.5L112.166 66.668Z' fill='url(%23paint1_linear_618_11268)'/%3E%3Cpath d='M88.1667 77.332L65.5 99.9987H110.833L88.1667 77.332Z' fill='url(%23paint2_linear_618_11268)'/%3E%3Ccircle cx='87.4997' cy='64.6667' r='7.97965' fill='white' stroke='white' stroke-width='1.37404'/%3E%3Ccircle cx='111.5' cy='51.3346' r='11.9796' fill='white' stroke='white' stroke-width='1.37404'/%3E%3Cpath d='M112.029 99.8633L145.021 99.8633L145.021 66.8705L112.029 99.8633Z' fill='url(%23paint3_linear_618_11268)'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_618_11268' x='67.6375' y='14.1375' width='81.058' height='81.057' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='8.93124' result='effect1_foregroundBlur_618_11268'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_618_11268' x1='84.8351' y1='43.5052' x2='225.683' y2='240.91' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%231D879A'/%3E%3Cstop offset='1' stop-color='%231BC3E1'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_618_11268' x1='47.4997' y1='110.001' x2='145.5' y2='88.668' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0261371' stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear_618_11268' x1='44.1933' y1='106.799' x2='110.833' y2='92.292' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0261371' stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear_618_11268' x1='118.627' y1='100.963' x2='118.627' y2='66.8705' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='white'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+
+    .game-form__grid-select,
+    .game-form__arrow-type {
+        padding: 12px;
+        width: 190px;
+        height: 190px;
+        background: linear-gradient(311.21deg, #EEEEEE 2.54%, #F9F9F9 74.42%);
+    }
+
+    .card-game-start__btn,
+    .game-form__grid-select,
+    .game-form__arrow-type {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
+
+
+
+.grid-select-item__title,
+.arrow-type__title {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 130%;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.grid-select-item {
+    cursor: pointer;
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .grid-select-input,
+    .arrow-select-input {
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+
+        &:checked+.marker::before {
+            opacity: 1;
+        }
+    }
+}
+
+.grid-select-item__w {
+    margin-right: 10px;
+}
+
+.marker {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    position: relative;
+
+    &::before {
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.16992 6.83187L6.82992 1.17188' stroke='%23888888' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M6.82992 6.83187L1.16992 1.17188' stroke='%23888888' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.game-form__arrow-type {
+    position: relative;
+    cursor: pointer;
+
+    .marker {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+    }
+
+    .grid-select-input,
+    .arrow-select-input {
+        opacity: 0;
+        visibility: hidden;
+
+        &:checked+.marker::before {
+            opacity: 1;
+        }
+    }
+
+    .arrow-type__img {
+        position: absolute;
+        top: 46px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.game-form__body {
+    padding-top: 40px;
+}
+
+.game-form__body-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.game-form__body-list {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: calc(100% + 10px);
+    margin-right: -5px;
+    margin-left: -5px;
+
+    .card-list-item {
+        padding: 5px;
+        width: 50%;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        &._error {
+            .card-list-item__wrapper {
+                border-color: #FA0056;
+            }
+
+            .list-item__error {
+                display: flex;
+            }
+        }
+    }
+
+    .card-list-item__wrapper {
+        height: 100%;
+        padding: 15px;
+        background: linear-gradient(311.21deg, #EEEEEE 2.54%, #F9F9F9 74.42%);
+        border: 2px solid #fff;
+        transition: border-color .3s ease-in-out;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .list-item__title {
+        flex-shrink: 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    .list-item__head {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .list-item__textarea {
+        border: 1px solid #DFE9F4;
+        border-radius: 4px;
+        width: 100%;
+        background-color: #fff;
+        resize: none;
+        padding: 14px 20px;
+    }
+
+    .list-item__image-load {
+        position: relative;
+        padding: 8px 15px;
+        background-color: #FFD1E0;
+        border-radius: 4px;
+        cursor: pointer !important;
+
+        &.file-selected {
+            background-color: transparent;
+            padding-left: 0;
+
+            .file-name {
+                display: block;
+                font-weight: 500;
+                color: #2F80ED;
+                font-size: 14px;
+            }
+
+            .file-placeholder {
+                display: none;
+            }
+        }
+    }
+
+    .file-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer !important;
+        z-index: -1;
+    }
+
+    .file-placeholder {
+        cursor: pointer !important;
+        font-size: 12px;
+        line-height: 130%;
+        color: #FA0056;
+    }
+
+    .list-item__error {
+        align-items: center;
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: #FA0056;
+        display: none;
+    }
+
+    .list-item__error-ico {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='29' height='30' viewBox='0 0 29 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='14.5002' cy='14.9992' r='13.05' fill='url(%23paint0_linear_702_11095)'/%3e%3cpath d='M27.5502 14.9992C27.5502 13.2855 27.2126 11.5885 26.5568 10.0052C25.901 8.4219 24.9397 6.98328 23.7279 5.77147C22.5161 4.55967 21.0775 3.59841 19.4942 2.94259C17.9109 2.28677 16.2139 1.94922 14.5002 1.94922L14.5002 14.9992H27.5502Z' fill='url(%23paint1_linear_702_11095)'/%3e%3cpath d='M12.2939 5.40625H16.5151L16.1633 18.0697H12.6457L12.2939 5.40625Z' fill='white'/%3e%3cpath d='M12.083 22.2487C12.083 20.914 13.165 19.832 14.4997 19.832C15.8344 19.832 16.9163 20.914 16.9163 22.2487C16.9163 23.5834 15.8344 24.6654 14.4997 24.6654C13.165 24.6654 12.083 23.5834 12.083 22.2487Z' fill='white'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_702_11095' x1='-1.56134' y1='-7.06265' x2='35.853' y2='-2.35696' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='%23FA0056' stop-opacity='0.72'/%3e%3cstop offset='1' stop-color='%23AD073D' stop-opacity='0'/%3e%3cstop offset='1' stop-color='%23FA0056' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint1_linear_702_11095' x1='-1.56134' y1='-7.06265' x2='35.853' y2='-2.35696' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='%23FA0056' stop-opacity='0.72'/%3e%3cstop offset='1' stop-color='%23AD073D' stop-opacity='0'/%3e%3cstop offset='1' stop-color='%23FA0056' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 7px;
+    }
+}
+
+.game-result-massage {
+    width: 100%;
+    background: linear-gradient(311.21deg, #EEEEEE 2.54%, #F9F9F9 74.42%);
+    padding: 20px;
+    margin-bottom: 17px;
+    border: 2px solid #fff;
+    transition: border-color .3s ease-in-out;
+
+    &._error {
+        border-color: #FA0056;
+
+        .result-massage__error {
+            display: flex;
+        }
+    }
+
+    .game-result-massage__title {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+    .game-result__textarea {
+        width: 100%;
+        resize: none;
+        background: #FFFFFF;
+        border: 1px solid #DFE9F4;
+        border-radius: 4px;
+        padding: 14px 20px;
+    }
+
+    .result-massage__error {
+        align-items: center;
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: #FA0056;
+        display: none;
+    }
+
+    .error__ico {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='29' height='30' viewBox='0 0 29 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='14.5002' cy='14.9992' r='13.05' fill='url(%23paint0_linear_702_11095)'/%3e%3cpath d='M27.5502 14.9992C27.5502 13.2855 27.2126 11.5885 26.5568 10.0052C25.901 8.4219 24.9397 6.98328 23.7279 5.77147C22.5161 4.55967 21.0775 3.59841 19.4942 2.94259C17.9109 2.28677 16.2139 1.94922 14.5002 1.94922L14.5002 14.9992H27.5502Z' fill='url(%23paint1_linear_702_11095)'/%3e%3cpath d='M12.2939 5.40625H16.5151L16.1633 18.0697H12.6457L12.2939 5.40625Z' fill='white'/%3e%3cpath d='M12.083 22.2487C12.083 20.914 13.165 19.832 14.4997 19.832C15.8344 19.832 16.9163 20.914 16.9163 22.2487C16.9163 23.5834 15.8344 24.6654 14.4997 24.6654C13.165 24.6654 12.083 23.5834 12.083 22.2487Z' fill='white'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_702_11095' x1='-1.56134' y1='-7.06265' x2='35.853' y2='-2.35696' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='%23FA0056' stop-opacity='0.72'/%3e%3cstop offset='1' stop-color='%23AD073D' stop-opacity='0'/%3e%3cstop offset='1' stop-color='%23FA0056' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint1_linear_702_11095' x1='-1.56134' y1='-7.06265' x2='35.853' y2='-2.35696' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='%23FA0056' stop-opacity='0.72'/%3e%3cstop offset='1' stop-color='%23AD073D' stop-opacity='0'/%3e%3cstop offset='1' stop-color='%23FA0056' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 7px;
+    }
+}

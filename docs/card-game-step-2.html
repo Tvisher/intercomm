@@ -337,112 +337,496 @@
             </a>
             <div class="media-section__content">
                 <div class="media-section__col wide-col">
-                    <h1 class="section-title">Личный кабинет</h1>
-                    <ul class="cabinet-items">
-                        <li class="cabinet-item">
-                            <!-- Если стоимость акций упала, добавить класс fallen к блоку с классом header__index-data -->
-                            <div class="header__index-data ">
-                                <span class="index-data__name">ITndex InterComm</span>
-                                <div class="index-data__value">
-                                    <span>2305 ₽ + 7,41%</span>
-                                    <div class="index-data__arrow">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M16 10L12 6M12 6L8 10M12 6L12 18" stroke="#00C236" stroke-width="2"
-                                                stroke-linecap="round"></path>
-                                        </svg>
+                    <h1 class="section-title">Внутриком пятнашки - сборка</h1>
+                    <form class="card-game-form" id="card-game-form">
+                        <div class="game-form__head">
+                            <div class="game-form__grid-select">
+                                <span class="grid-select-item__title">Выберите сетку</span>
+                                <label class="grid-select-item">
+                                    <div class="grid-select-item__w">
+                                        <span><b>полная сетка</b></span>
+                                        <span>мобильная</span>
                                     </div>
+                                    <div class="grid-select-item__w">
+                                        <span><b>3*3</b></span>
+                                        <span>2*5</span>
+                                    </div>
+                                    <input type="radio" checked name="grid-size" value="9" class="grid-select-input">
+                                    <div class="marker"></div>
+                                </label>
+                                <label class="grid-select-item">
+                                    <div class="grid-select-item__w">
+                                        <span><b>полная сетка</b></span>
+                                        <span>мобильная</span>
+                                    </div>
+                                    <div class="grid-select-item__w">
+                                        <span><b>3*4</b></span>
+                                        <span>2*6</span>
+                                    </div>
+                                    <input type="radio" name="grid-size" value="12" class="grid-select-input">
+                                    <div class="marker"></div>
+                                </label>
+                                <label class="grid-select-item">
+                                    <div class="grid-select-item__w">
+                                        <span><b>полная сетка</b></span>
+                                        <span>мобильная</span>
+                                    </div>
+                                    <div class="grid-select-item__w">
+                                        <span><b>3*5</b></span>
+                                        <span>2*8</span>
+                                    </div>
+                                    <input type="radio" name="grid-size" value="15" class="grid-select-input">
+                                    <div class="marker"></div>
+                                </label>
+                            </div>
+                            <label class="game-form__arrow-type">
+                                <div class="arrow-type__title">Выберите тип стрелок</div>
+                                <div class="arrow-type__img">
+                                    <img src="img/black-arrow.png" alt="">
                                 </div>
-                            </div>
-                        </li>
-                        <li class="cabinet-item">
-                            <div class="site-nav__item" data-category-block="podcast"
-                                style="background: linear-gradient(135.62deg, #B41E44 30.93%, #FC3AAE 100%);">
-                                <a href="javascript:void(0)" class="item__link">
-                                    <div class="item__ico">
-                                        <img src="img/podcast.svg" alt="">
-                                    </div>
-                                    <span class="item__title">Аудио-подкасты</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cabinet-item">
-                            <div class="site-nav__item" data-category-block="learning"
-                                style="background: linear-gradient(143.75deg, #8F0096 38.69%, #D406DE 107.29%);">
-                                <a href="javascript:void(0)" class="item__link">
-                                    <div class="item__ico">
-                                        <img src="img/learning-ico.svg" alt="">
-                                    </div>
-                                    <span class="item__title">Обучение</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cabinet-item">
-                            <div class="site-nav__item" data-category-block="vacancies"
-                                style="background: linear-gradient(135deg, #AA3770 0%, #E04BDA 100%);">
-                                <a href="javascript:void(0)" class="item__link">
-                                    <div class="item__ico">
-                                        <img src="img/vacancies.svg" alt="">
-                                    </div>
-                                    <span class="item__title">Вакансии</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cabinet-item cabinet-item__wide">
-                            <a href="javascript:void(0)" class="inner-banner _small">
-                                <img src="img/inner-banner.jpg" alt="" class="inner-banner__img">
-                                <div class="inner-banner__content">
-                                    <h3 class="inner-banner__title">Баннер</h3>
-                                    <span class="inner-banner__text">Текст текст текст</span>
+                                <input type="radio" checked name="arrow-type" value="black" class="arrow-select-input">
+                                <div class="marker"></div>
+                            </label>
+                            <label class="game-form__arrow-type">
+                                <div class="arrow-type__title">Выберите тип стрелок</div>
+                                <div class="arrow-type__img">
+                                    <img src="img/white-arrow.png" alt="">
                                 </div>
+                                <input type="radio" name="arrow-type" value="white" class="arrow-select-input">
+                                <div class="marker"></div>
+                            </label>
+                            <a href="javascript:void(0)" class="card-game-start__btn">
+                                Заказать<br> собственные<br> пятнашки
                             </a>
-                        </li>
-                        <li class="cabinet-item">
-                            <div class="site-nav__item" data-category-block="catalog"
-                                style="background: linear-gradient(135deg, #444343 0%, #656097 100%);">
-                                <a href="javascript:void(0)" class="item__link">
-                                    <div class="item__ico">
-                                        <img src="img/catalog-ico.svg" alt="">
+                        </div>
+                        <div class="game-form__body">
+                            <div class="game-form__body-title">Добавить карточки и подсказки:</div>
+
+                            <ul class="game-form__body-list">
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">1. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
                                     </div>
-                                    <span class="item__title">Каталог поставщиков</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cabinet-item cabinet-item__empty"></li>
-                        <li class="cabinet-item">
-                            <div class="site-nav__item socials"
-                                style="background: linear-gradient(135deg, #444343 0%, #656097 100%);">
-                                <a href="javascript:void(0)" class="item__social"
-                                    style="background-image: url('img/vkontakte.svg');"></a>
-                                <a href="javascript:void(0)" class="item__social"
-                                    style="background-image: url('img/telegram.svg');"></a>
-                                <a href="javascript:void(0)" class="item__social"
-                                    style="background-image: url('img/youtube.svg');"></a>
-                                <a href="javascript:void(0)" class="item__social"
-                                    style="background-image: url('img/dzen.svg');"></a>
-                            </div>
-                        </li>
-                        <li class="cabinet-item">
-                            <div class="site-nav__item" data-category-block="magazine"
-                                style="background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%);">
-                                <a href="javascript:void(0)" class="item__link">
-                                    <div class="item__ico">
-                                        <img src="img/magazine-ico.svg" alt="">
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">2. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
                                     </div>
-                                    <span class="item__title">Магазин InterCOMM</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cabinet-item cabinet-item__wide">
-                            <a href="javascript:void(0)" class="inner-banner _small">
-                                <img src="img/inner-banner.jpg" alt="" class="inner-banner__img">
-                                <div class="inner-banner__content">
-                                    <h3 class="inner-banner__title">Баннер</h3>
-                                    <span class="inner-banner__text">Текст текст текст</span>
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">3. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">4. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">5. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">6. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">7. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">8. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item show">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">9. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item ">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">10. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item ">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">11. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item ">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">12. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item ">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">13. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item ">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">14. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-list-item ">
+                                    <div class="card-list-item__wrapper">
+                                        <div class="list-item__head">
+                                            <div class="list-item__title">15. Карточка</div>
+                                            <label class="list-item__image-load">
+                                                <input type="file" name="" files="" class="file-input"
+                                                    accept="image/png, image/jpeg,image/bmp">
+                                                <span class="file-placeholder">Выберите файлы PNG, JPG или BMP</span>
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+                                        <textarea class="list-item__textarea" value=""
+                                            placeholder="Введите текст подсказки"></textarea>
+                                        <div class="list-item__error">
+                                            <div class="list-item__error-ico"></div>
+                                            <span>Необходимо добавить изображение</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="game-result-massage">
+                                <div class="game-result-massage__title">Итог пятнашек</div>
+                                <textarea name="result-message" class="game-result__textarea"
+                                    placeholder="Введите текст поздравления для пользователя!"></textarea>
+                                <div class="result-massage__error">
+                                    <div class="error__ico"></div>
+                                    <span>Необходимо добавить поздравление для пользователя</span>
                                 </div>
-                            </a>
-                        </li>
-                    </ul>
+                            </div>
+                            <button class="game-form__submit btn red-btn" type="submit">
+                                <span>Сохранить</span>
+                            </button>
+                        </div>
+                    </form>
+                    <script>
+
+                        // Параметры по умолчанию
+                        let cardCount = 9;
+                        let arrowType = 'black';
+
+                        const cardItems = document.querySelectorAll('.card-list-item');
+                        const gameSizeInputs = document.querySelectorAll('input[name="grid-size"]');
+                        gameSizeInputs.forEach(item => {
+                            item.addEventListener('change', (e) => {
+                                const selectedCardCount = +e.target.value;
+                                cardCount = selectedCardCount;
+                                //Скрываем все карточки
+                                for (let index = 0; index < cardItems.length; index++) {
+                                    const card = cardItems[index];
+                                    card.classList.remove('show', "_error");
+                                }
+                                // Показываем нужно колличество карточек
+                                for (let index = 0; index < selectedCardCount; index++) {
+                                    const card = cardItems[index];
+                                    card.classList.add('show');
+                                }
+                            });
+                        });
+
+
+                        const arrowInputs = document.querySelectorAll('input[name="arrow-type"]');
+                        arrowInputs.forEach(input => {
+                            input.addEventListener('change', (e) => {
+                                const inputArrowType = e.target.value;
+                                arrowType = inputArrowType;
+                            });
+                        });
+
+
+                        const cardFileInputs = document.querySelectorAll('.card-list-item input[type="file"]');
+                        cardFileInputs.forEach(fileInput => {
+                            fileInput.addEventListener('change', (e) => {
+                                fileInput.closest('.card-list-item.show').classList.remove('_error');
+                                const fileNameArea = fileInput.closest('.list-item__image-load');
+                                const fileNameText = fileNameArea.querySelector('.file-name');
+                                //Получаем формат файла
+                                const isfile = e.target.files[0];
+                                if (isfile) {
+                                    const fileFormat = e.target.files[0].type.toLowerCase();
+                                    //Проверяем подходит ли файл
+                                    if (fileFormat == 'image/png' || fileFormat == 'image/png' || fileFormat == 'image/bmp' || fileFormat == 'image/jpeg') {
+                                        const fileName = e.target.files[0].name;
+                                        fileNameArea.classList.add('file-selected');
+                                        fileNameText.innerHTML = fileName;
+                                    } else {
+                                        alert('Выберите файлы PNG, JPG или BMP');
+                                        fileInput.value = '';
+                                    }
+                                } else {
+                                    fileNameArea.classList.remove('file-selected');
+                                    fileNameText.innerHTML = '';
+                                }
+
+                            });
+                        });
+
+
+                        const gameResultMessage = document.querySelector('.game-result__textarea');
+                        gameResultMessage.addEventListener('input', (e) => {
+                            const messageValue = e.target.value.trim();
+                            if (messageValue.length < 1) {
+                                gameResultMessage.closest('.game-result-massage').classList.add('_error');
+                            } else {
+                                gameResultMessage.closest('.game-result-massage').classList.remove('_error');
+                            }
+                        });
+
+
+
+                        const cardForm = document.querySelector('#card-game-form');
+                        cardForm.addEventListener('submit', (e) => {
+                            e.preventDefault();
+                            const cardsFiles = document.querySelectorAll('.card-list-item.show input[type="file"]');
+                            // Валидируем на наличие подгруженного файла
+                            cardsFiles.forEach(fileInput => {
+                                const fileInputValue = fileInput.value;
+                                if (!fileInputValue) {
+                                    fileInput.closest('.card-list-item.show').classList.add('_error');
+                                }
+                            });
+                            // Проверка наличия текста в поле ввода поздравления пользователя.
+                            const gameResultMessageValue = gameResultMessage.value.trim();
+                            if (gameResultMessageValue.length < 1) {
+                                gameResultMessage.closest('.game-result-massage').classList.add('_error');
+                            } else {
+                                gameResultMessage.closest('.game-result-massage').classList.remove('_error');
+                            }
+
+                            // Колличество ошибок в форме
+                            const formErrorsLength = document.querySelectorAll('#card-game-form ._error').length;
+                            if (formErrorsLength > 0) return;
+
+                            // Текст из карточек в виде массива
+                            const cardItems = document.querySelectorAll('.card-list-item.show');
+                            const cardsText = Array.from(cardItems).reduce((acc, item, index) => {
+                                const cardItemText = item.querySelector('textarea').value.trim();
+                                acc.push({
+                                    [`Карточка № ${index + 1}`]: cardItemText,
+                                });
+                                return acc;
+                            }, []);
+
+                            // Собираем карточки в FormData;
+                            const formImages = new FormData();
+                            Array.from(cardItems).forEach((item, index) => {
+                                const cardFileInput = item.querySelector('input[type="file"]');
+                                formImages.append(`Изображение карточки ${index + 1}`, cardFileInput.files[0]);
+                            });
+                            const cardFormData = {
+                                arrowType,
+                                cardsText,
+                                formImages,
+                                'resultMessage': gameResultMessageValue,
+                            }
+                            console.log(cardFormData);
+                        });
+
+                    </script>
                 </div>
 
                 <div class="media-section__col">

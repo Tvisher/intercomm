@@ -30,9 +30,11 @@ p {
   margin: 0;
   line-height: initial;
 }
+
 span {
   display: block;
 }
+
 a {
   display: block;
   text-decoration: none;
@@ -59,6 +61,7 @@ ol[class] {
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  display: inline;
 }
 
 /* Упрощаем работу с изображениями */
@@ -68,7 +71,7 @@ img {
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -78,6 +81,7 @@ button,
 textarea,
 select {
   font: inherit;
+
   &:focus {
     outline: none;
   }
