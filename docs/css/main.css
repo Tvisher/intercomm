@@ -6749,27 +6749,18 @@ ul:not([class]) li {
 }
 
 ol:not([class]) {
-  counter-reset: myCounter;
+  padding-left: 20px;
 }
 
 ol:not([class]) li {
-  list-style: none;
-  padding-left: 35px;
+  padding-left: 15px;
 }
 
-ol:not([class]) li:before {
-  position: absolute;
-  left: 0;
-  counter-increment: myCounter;
-  content: counter(myCounter) ".";
-  color: white;
+ol:not([class]) li::marker {
   line-height: 40px;
-  height: 40px;
   font-weight: 500;
   font-size: 20px;
   color: #FA0056;
-  margin-right: 20px;
-  top: -5px;
 }
 
 ul:not([class]) {
@@ -8617,13 +8608,12 @@ ul:not([class]) li::marker {
     line-height: 140%;
   }
 
-  ol:not([class]) li {
-    padding-left: 30px;
+  ol:not([class]) {
+    padding-left: 25px;
   }
 
-  ol:not([class]) li:before {
-    top: -10px;
-    font-size: 16px;
+  ol:not([class]) li {
+    padding-left: 5px;
   }
 
   ul:not([class]) li {
