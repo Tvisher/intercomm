@@ -43,7 +43,7 @@ cardFileInputs.forEach(fileInput => {
         if (isfile) {
             const fileFormat = e.target.files[0].type.toLowerCase();
             //Проверяем подходит ли файл
-            if (fileFormat == 'image/png' || fileFormat == 'image/png' || fileFormat == 'image/bmp' || fileFormat == 'image/jpeg') {
+            if (fileFormat == 'image/png' || fileFormat == 'image/jpg' || fileFormat == 'image/bmp' || fileFormat == 'image/jpeg') {
                 const fileName = e.target.files[0].name;
                 fileNameArea.classList.add('file-selected');
                 fileNameText.innerHTML = fileName;
