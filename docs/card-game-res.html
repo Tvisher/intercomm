@@ -1539,7 +1539,6 @@
                 item.style.top = `${(itemHeight * row) + 15}px`;
             });
 
-
         }
 
         cardsRandomPosition() {
@@ -1696,7 +1695,7 @@
         gameData: gameDataRes,
         parentElement: "#grid-game"
     });
-    app.init();
+    window.onload = () => app.init();
 
 </script>
 
