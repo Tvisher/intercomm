@@ -566,29 +566,32 @@
                         const addFilterBtn = filterSidebar.querySelector('[data-add-filter]');
                         const resetFilterBtn = filterSidebar.querySelector('[data-remove-filter]');
                         const filterItems = filterSidebar.querySelectorAll('.filter-checkbox');
+                        const filterCheckboxes = document.querySelectorAll('.filter-item input[type="checkbox"]');
+
+                        // Массив выбранных чекбоксов
+                        const checkedCheckboxes = () => Array.from(filterCheckboxes).filter(checkbox => checkbox.checked);
+                        // Массив значений выбранных чекбоксов
+                        const checkedCheckboxesValueArr = () => checkedCheckboxes().map(checkbox => checkbox.value);
 
                         // Выбрать все
                         addFilterBtn.addEventListener('click', (e) => {
-
                             filterItems.forEach(checkbox => checkbox.checked = true);
+                            console.log(checkedCheckboxesValueArr(), checkedCheckboxes());
                         });
 
                         // Отменить все
                         resetFilterBtn.addEventListener('click', (e) => {
                             filterItems.forEach(checkbox => checkbox.checked = false);
+                            console.log(checkedCheckboxesValueArr(), checkedCheckboxes());
                         });
 
                         // Обработка чекбоксов фильтра
-                        const filterCheckboxes = document.querySelectorAll('.filter-item input[type="checkbox"]');
                         if (filterCheckboxes.length > 0) {
                             filterCheckboxes.forEach(checkbox => {
                                 checkbox.addEventListener('change', (e) => {
                                     //значение атрибута value кликнутого чекбокса
+                                    console.log(checkedCheckboxesValueArr(), checkedCheckboxes());
                                     const checkboxValue = checkbox.value;
-                                    // Массив выбранных чекбоксов
-                                    const checkedCheckboxes = Array.from(filterCheckboxes).filter(checkbox => checkbox.checked);
-                                    // Массив значений выбранных чекбоксов
-                                    const checkedCheckboxesValueArr = checkedCheckboxes.map(checkbox => checkbox.value);
                                     if (checkbox.checked) {
                                         console.log(`Нажали на чекбокс с value : ${checkboxValue}`);
                                     } else {
