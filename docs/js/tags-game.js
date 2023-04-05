@@ -118,4 +118,14 @@ cardForm.addEventListener('submit', (e) => {
         'resultMessage': gameResultMessageValue,
     }
     console.log(cardFormData);
+
+    const modalWaiting = document.querySelector('#modal-waiting');
+    const gameComplite = document.querySelector('#game-complite');
+
+    modalWaiting.classList.add('show');
+    setTimeout(() => {
+        modalWaiting.classList.remove('show');
+        cardForm.style.display = 'none';
+        gameComplite.classList.add('show');
+    }, 3000);
 });

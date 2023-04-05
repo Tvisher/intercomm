@@ -360,3 +360,193 @@
         margin-right: 7px;
     }
 }
+
+.card-game-form {
+    margin-bottom: 30px;
+}
+
+.cabinet-item.no-hover {
+    .site-nav__item:hover {
+        .item__ico {
+            opacity: 1;
+            transform: translateX(-50%) scale(1) !important;
+        }
+    }
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-waiting {
+    opacity: 0;
+    visibility: hidden;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    transition: opacity .3s ease-in-out,
+    visibility .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .modal-waiting__content {
+        padding: 20px;
+        max-width: 427px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-waiting__text {
+        text-align: center;
+        font-weight: 600;
+        font-size: 24px;
+        color: #fff;
+        line-height: 120%;
+    }
+}
+
+.game-complite {
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 800px;
+    background-color: #EBF4FF;
+    display: none;
+    align-content: inherit;
+    justify-content: center;
+
+    &.show {
+        display: flex;
+    }
+}
+
+.game-complite__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .red-btn {
+        width: fit-content;
+    }
+}
+
+.game-complite__ico {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='84' height='83' viewBox='0 0 84 83' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M24.8438 29.0477V2.83594C32.5402 2.83594 38.7793 9.07507 38.7793 16.7714V70.8359H30.7793C20.2859 70.8359 11.7793 62.3294 11.7793 51.8359V42.1065L24.8438 29.0477Z' fill='%23FA0056'/%3e%3cpath d='M25.7793 28.8359H74.7793L62.5293 70.8359H25.7793V28.8359Z' fill='url(%23paint0_linear_620_15695)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_620_15695' x1='33.2168' y1='37.1484' x2='81.053' y2='48.4797' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23AD073D' stop-opacity='0'/%3e%3cstop offset='1' stop-color='%23AD073D'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 82px;
+    height: 82px;
+    margin-bottom: 20px;
+}
+
+.game-complite__title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 130%;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.game-complite__descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    margin-bottom: 20px;
+    color: #888888;
+}
+
+@media (max-width: 860px) {
+    .game-form__head {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .game-form__arrow-type,
+        .game-form__grid-select,
+        .card-game-start__btn {
+            width: calc(45%);
+            margin: 7.5px !important;
+        }
+
+        .card-game-start__btn {
+            order: -1;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .game-form__body-list .card-list-item {
+        width: 100%;
+    }
+
+    .game-complite {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-game-start__btn {
+        float: none;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .game-result-massage .game-result__textarea {
+        min-height: 100px;
+    }
+
+    .game-form__head {
+
+        .game-form__arrow-type,
+        .game-form__grid-select,
+        .card-game-start__btn {
+            width: 100%;
+            margin: 0 !important;
+            margin-bottom: 15px !important;
+        }
+
+        .card-game-start__btn {
+            order: 10;
+            width: 230px;
+        }
+    }
+}

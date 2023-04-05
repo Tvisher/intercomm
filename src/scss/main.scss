@@ -2663,6 +2663,15 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .section-title {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  .game-form__body-title {
+    font-size: 24px;
+  }
+
   .site-nav__item .item__ico {
     width: 18vw;
     height: 18vw;
@@ -2781,10 +2790,7 @@ footer {
     margin-bottom: 20px;
   }
 
-  .section-title {
-    font-size: 27px;
-    margin-bottom: 20px;
-  }
+
 
   .article-data .favorite-label,
   .article-data .favorites-data .ico,
@@ -3706,8 +3712,8 @@ footer {
     height: 100%;
 
     .item__title {
-      font-size: 18px;
-      padding-top: 100px;
+      font-size: 16px;
+      padding-top: 93px;
     }
 
     .item__ico {
@@ -5676,6 +5682,20 @@ ul:not([class]) {
     padding-left: 10px;
   }
 
+}
+
+.cabinet-items__wrapper {
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+  .cabinet-items__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #212529;
+    margin-bottom: 20px;
+  }
 }
 
 
