@@ -550,3 +550,54 @@
         }
     }
 }
+
+.example__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #333333;
+    margin: 20px 0;
+
+    @media (max-width: 576px) {
+        font-size: 26px;
+    }
+}
+
+.card-games__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    justify-content: center;
+
+}
+
+.card-games__list-item-wrapper {
+    padding: 5px;
+    width: 201px;
+    height: 201px;
+
+    .card-games__list-item {
+        height: 100%;
+        border: 1px solid #000;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .list-item__size {
+        width: fit-content;
+        background-color: #fff;
+        padding: 10px;
+        color: $brand-red;
+        font-weight: 700;
+        border-radius: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 568px) {
+    .card-games__list-item-wrapper {
+        width: 45vw;
+        height: 45vw;
+    }
+}

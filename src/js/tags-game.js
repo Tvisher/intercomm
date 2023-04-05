@@ -123,6 +123,7 @@ cardForm.addEventListener('submit', (e) => {
     const gameComplite = document.querySelector('#game-complite');
 
     modalWaiting.classList.add('show');
+    // Эмуляция отправки на сервак(setTimeout)
     setTimeout(() => {
         modalWaiting.classList.remove('show');
         cardForm.style.display = 'none';
