@@ -3821,6 +3821,14 @@ footer {
 
   .contancts-map {
     width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: filter .3s ease-in-out;
+
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
 
     iframe {
       width: 100%;
