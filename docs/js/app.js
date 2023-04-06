@@ -237,25 +237,13 @@ function validateEmail(email) {
 
 //Валидация формы для возможности нажать Отправить
 document.querySelectorAll(".inner-form").forEach((form) => {
-  // const formBtn = form.querySelector(".inner-form__btn");
   const formInput = form.querySelector('.inner-form__input');
-  // formInput.setAttribute("disabled", true);
-  // const innerFormInput = form.querySelector(".inner-form__input");
   const formAgreeCheckbox = form.querySelector(".form__agree-checkbox");
-
   formInput.addEventListener("input", (e) => {
     if (validateEmail(e.target.value)) {
       formInput.classList.remove('err');
     } else {
       formInput.classList.add('err');
-    }
-  });
-
-  formAgreeCheckbox.addEventListener("change", (e) => {
-    if (e.target.checked && validateEmail(formInput.value.trim())) {
-      // formInput.classList.remove('err');
-    } else {
-      // formInput.classList.add('err');
     }
   });
 
@@ -266,9 +254,22 @@ document.querySelectorAll(".inner-form").forEach((form) => {
       formAgreeCheckbox.checked
     ) {
       // тут отправка на сервер формы
-      form.querySelector(".form-sucsess").classList.add("show");
-      form.reset();
-      // formBtn.setAttribute("disabled", true);
+      $.ajax({ // инициaлизируeм ajax зaпрoс
+        type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
+        url: '/ajax/subscribe.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
+        dataType: 'html', // oтвeт ждeм в json фoрмaтe
+        data: {
+          email: formInput.value
+        }, // дaнныe для oтпрaвки
+        success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+          form.querySelector(".form-sucsess").classList.add("show");
+          form.reset();
+        },
+        error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
+          alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
+          alert(thrownError); // и тeкст oшибки
+        },
+      });
     }
   });
 });
