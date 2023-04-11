@@ -274,6 +274,82 @@ document.querySelectorAll(".inner-form").forEach((form) => {
   });
 });
 
+
+const contanctsForm = document.querySelector('#contacts-form');
+if (contanctsForm) {
+  const formPhone = contanctsForm.querySelector('input[name="phone"]');
+  const formEmail = contanctsForm.querySelector('input[name="email"]');
+  const formMessage = contanctsForm.querySelector('textarea[name="message"]');
+  const formAgreeCheckbox = contanctsForm.querySelector(".form__agree-checkbox");
+  const phoneReg = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+
+  formEmail.addEventListener("input", (e) => {
+    if (validateEmail(e.target.value)) {
+      formEmail.classList.remove('err');
+    } else {
+      formEmail.classList.add('err');
+    }
+  });
+
+  formPhone.addEventListener("input", (e) => {
+    const phoneValue = e.target.value.trim().replace(/[^+\d]/g, '');
+    const valid = phoneReg.test(phoneValue);
+    if (!valid || phoneValue.length < 11) {
+      formPhone.classList.add('err');
+    } else {
+      formPhone.classList.remove('err');
+    }
+  });
+
+
+  contanctsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formPhoneValue = formPhone.value.trim().replace(/[^+\d]/g, '');
+    const valid = phoneReg.test(formPhoneValue);
+
+    if (!valid || formPhoneValue.trim().length < 1) {
+      formPhone.classList.add('err');
+    } else {
+      formPhone.classList.remove('err');
+    }
+
+    if (!validateEmail(formEmail.value) || formEmail.value.trim().length < 11) {
+      formEmail.classList.add('err');
+    } else {
+      formEmail.classList.remove('err');
+    }
+    const formErrors = contanctsForm.querySelectorAll('.err');
+
+    if (formErrors.length < 1 && formAgreeCheckbox.checked) {
+      const formData = {
+        formMessage: formMessage.value.trim(),
+        formPhone: formPhoneValue,
+        formEmail: formEmail.value.trim(),
+      }
+      // Отправка данных на сервак
+      $.ajax({ // инициaлизируeм ajax зaпрoс
+        type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
+        url: '/ajax/subscribe.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
+        dataType: 'html', // oтвeт ждeм в json фoрмaтe
+        data: {
+          email: formData
+        }, // дaнныe для oтпрaвки
+        success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+          form.querySelector(".form-sucsess").classList.add("show");
+          form.reset();
+        },
+        error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
+          alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
+          alert(thrownError); // и тeкст oшибки
+        },
+      });
+    }
+
+  });
+}
+
+
+
 // Валидацця опроса для возжность нажать кнопку Пройти опрос
 document.querySelectorAll(".survey").forEach((survey) => {
   const surveyVariants = survey.querySelectorAll(".survey__input");

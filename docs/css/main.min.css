@@ -4824,7 +4824,8 @@ footer {
   justify-content: center;
 }
 
-.inner-form {
+.inner-form,
+.contacts-form {
   margin-bottom: 30px;
   background-color: #f0f7ff;
   padding: 30px;
@@ -7037,6 +7038,31 @@ ul:not([class]) li::marker {
   width: fit-content;
 }
 
+.contancts-form-wrapper {
+  margin: 30px 0;
+}
+
+.contancts-form-wrapper .inner__form-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.contancts-form-wrapper .inner__form-textarea {
+  width: 100%;
+  resize: vertical;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 14px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  min-height: 100px;
+}
+
+.red-title {
+  color: #FA0056;
+}
+
 .card-game-start__wrapper {
   font-style: normal;
   font-weight: 400;
@@ -8261,6 +8287,11 @@ ul:not([class]) li::marker {
     display: none;
   }
 
+  .contancts-form-wrapper .inner__form-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+
   .game-form__body-list .card-list-item {
     width: 100%;
   }
@@ -9217,6 +9248,11 @@ ul:not([class]) li::marker {
   }
 
   .article__tag {
+    font-size: 12px;
+  }
+
+  .contancts-form-wrapper .inner__form-textarea {
+    padding: 10px 13px;
     font-size: 12px;
   }
 }
