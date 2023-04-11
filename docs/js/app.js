@@ -274,7 +274,7 @@ document.querySelectorAll(".inner-form").forEach((form) => {
   });
 });
 
-
+// Форма на  страницe контактов
 const contanctsForm = document.querySelector('#contacts-form');
 if (contanctsForm) {
   const formPhone = contanctsForm.querySelector('input[name="phone"]');
