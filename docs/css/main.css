@@ -7059,6 +7059,31 @@ ul:not([class]) li::marker {
   min-height: 100px;
 }
 
+.contancts-form-wrapper .inner-form__agree {
+  width: fit-content;
+}
+
+.contancts-form-wrapper .form-agree__link {
+  margin-left: 5px;
+}
+
+.contancts-form-wrapper .inner-form__agree {
+  margin-top: 0;
+}
+
+.contancts-form-wrapper .inner-form__agree-wrapper {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.form-agree__link {
+  display: inline;
+  margin-left: 30px;
+  color: #FA0056;
+  text-decoration: underline;
+}
+
 .red-title {
   color: #FA0056;
 }
@@ -8899,6 +8924,14 @@ ul:not([class]) li::marker {
     margin-bottom: 0px;
   }
 
+  .contancts-form-wrapper .inner-form__agree-wrapper {
+    flex-direction: column;
+  }
+
+  .contancts-form-wrapper .inner-form__agree-wrapper .form-agree__link {
+    margin-left: 30px;
+  }
+
   .example__title {
     font-size: 26px;
   }
@@ -9253,6 +9286,10 @@ ul:not([class]) li::marker {
 
   .contancts-form-wrapper .inner__form-textarea {
     padding: 10px 13px;
+    font-size: 12px;
+  }
+
+  .form-agree__link {
     font-size: 12px;
   }
 }

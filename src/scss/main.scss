@@ -5787,6 +5787,44 @@ ul:not([class]) {
     margin-bottom: 20px;
     min-height: 100px;
   }
+
+  .inner-form__agree {
+    width: fit-content;
+  }
+
+  .form-agree__link {
+    margin-left: 5px;
+  }
+
+  .inner-form__agree {
+    margin-top: 0;
+  }
+
+  .inner-form__agree-wrapper {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+
+      .form-agree__link {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.form-agree__link {
+  display: inline;
+  margin-left: 30px;
+  color: $brand-red;
+  text-decoration: underline;
+
+  @media (max-width: 390px) {
+    font-size: 12px;
+  }
+
 }
 
 .red-title {
