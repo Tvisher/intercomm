@@ -7020,6 +7020,23 @@ ul:not([class]) li::marker {
   margin-bottom: 20px;
 }
 
+.article__tag {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: #888888;
+  margin: 0 10px;
+}
+
+.media-section__article.image-article.search-res .article-data {
+  margin-top: 15px;
+}
+
+.media-section__article.image-article.search-res .atricle-date {
+  order: inherit;
+  width: fit-content;
+}
+
 .card-game-start__wrapper {
   font-style: normal;
   font-weight: 400;
@@ -8240,6 +8257,10 @@ ul:not([class]) li::marker {
     width: 800px;
   }
 
+  .media-section__article.image-article.search-res .article__img {
+    display: none;
+  }
+
   .game-form__body-list .card-list-item {
     width: 100%;
   }
@@ -8832,6 +8853,21 @@ ul:not([class]) li::marker {
     padding-left: 10px;
   }
 
+  .media-section__article.image-article.search-res .article__tag {
+    order: -2;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .media-section__article.image-article.search-res .article-data {
+    margin-top: 0;
+  }
+
+  .media-section__article.image-article.search-res .atricle-date {
+    margin-bottom: 0px;
+  }
+
   .example__title {
     font-size: 26px;
   }
@@ -9178,6 +9214,10 @@ ul:not([class]) li::marker {
   .item-product__sliders .product-slider {
     margin-right: -10px;
     margin-left: -10px;
+  }
+
+  .article__tag {
+    font-size: 12px;
   }
 }
 

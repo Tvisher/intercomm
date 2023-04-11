@@ -5706,5 +5706,56 @@ ul:not([class]) {
   }
 }
 
+.article__tag {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: #888888;
+  margin: 0 10px;
+
+  @media (max-width: 390px) {
+    font-size: 12px;
+  }
+}
+
+.media-section__article.image-article.search-res {
+  .article-data {
+    margin-top: 15px;
+  }
+
+  .atricle-date {
+    order: inherit;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 680px) {
+  .media-section__article.image-article.search-res {
+    .article__img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .media-section__article.image-article.search-res {
+
+    .article__tag {
+      order: -2;
+      margin-left: 0;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .article-data {
+      margin-top: 0;
+    }
+
+    .atricle-date {
+      margin-bottom: 0px;
+    }
+  }
+}
+
 
 @import "card-game";
