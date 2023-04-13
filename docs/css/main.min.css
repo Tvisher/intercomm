@@ -7088,6 +7088,11 @@ ul:not([class]) li::marker {
   color: #FA0056;
 }
 
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+.fc-direction-rtl .fc-daygrid-event.fc-event-start {
+  cursor: pointer;
+}
+
 .card-game-start__wrapper {
   font-style: normal;
   font-weight: 400;

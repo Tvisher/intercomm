@@ -1,0 +1,48 @@
+@@include('./html/header.html')
+<main>
+    <section>
+        <div class=" container">
+            <div id='calendar' style="margin:30px 0"></div>
+        </div>
+    </section>
+</main>
+
+
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'ru-Ru',
+            buttonText: {
+                today: 'Сегодня',
+            },
+            headerToolbar: {
+                start: 'today prev,next', // will normally be on the left. if RTL, will be on the right
+                center: 'title',
+                end: '' // will normally be on the right. if RTL, will be on the left
+            },
+            eventClick: function (info) {
+                alert('Вы нажали на событие "' + info.event.title + '"');
+            },
+            events: [
+                {
+                    title: 'Событие 1',
+                    start: '2023-04-15T10:00:00',
+                    end: '2023-04-15T12:00:00'
+                },
+                {
+                    title: 'Событие 2',
+                    start: '2023-04-17T14:00:00',
+                    end: '2023-04-17T16:00:00'
+                }
+            ]
+        });
+        calendar.render();
+    });
+
+</script>
+
+@@include('./html/footer.html')

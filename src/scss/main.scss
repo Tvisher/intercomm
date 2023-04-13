@@ -5831,5 +5831,10 @@ ul:not([class]) {
   color: $brand-red;
 }
 
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+.fc-direction-rtl .fc-daygrid-event.fc-event-start {
+  cursor: pointer;
+}
+
 
 @import "card-game";
