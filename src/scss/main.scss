@@ -5853,6 +5853,21 @@ ul:not([class]) {
   }
 }
 
+.fc-theme-standard td,
+.fc-theme-standard th {
+  position: static;
+}
+
+.fc .fc-daygrid-day-frame {
+  min-height: 150px;
+
+  &::before,
+  &::after,
+  .fc-daygrid-day-bg {
+    display: none;
+  }
+}
+
 .fc-col-header-cell {
   border-right: none !important;
   border-left: none !important;
@@ -6009,13 +6024,13 @@ ul:not([class]) {
 #calendar {
   tbody {
     td {
-      height: 180px;
+      // height: 180px;
     }
   }
 }
 
 .fc .fc-scroller-liquid-absolute {
-  overflow: visible !important;
+  // overflow: visible !important;
 }
 
 

@@ -16,17 +16,17 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             locale: 'ru-Ru',
+            contentHeight: "auto",
+            dayMaxEventRows: 4,
             buttonText: {
                 today: 'Сегодня',
             },
-            contentHeight: 1130,
             dayHeaderFormat: {
                 weekday: 'long'
             },
             moreLinkContent({ shortText }) {
                 return `${shortText} события`
             },
-            dayMaxEventRows: 4,
             titleFormat: function () {
                 // Создаем объект Date с текущей датой
                 const date = new Date();

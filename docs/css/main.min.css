@@ -7631,6 +7631,21 @@ ul:not([class]) li::marker {
   font-weight: 700;
 }
 
+.fc-theme-standard td,
+.fc-theme-standard th {
+  position: static;
+}
+
+.fc .fc-daygrid-day-frame {
+  min-height: 150px;
+}
+
+.fc .fc-daygrid-day-frame::before,
+.fc .fc-daygrid-day-frame::after,
+.fc .fc-daygrid-day-frame .fc-daygrid-day-bg {
+  display: none;
+}
+
 .fc-col-header-cell {
   border-right: none !important;
   border-left: none !important;
@@ -7776,14 +7791,6 @@ ul:not([class]) li::marker {
 .fc .fc-daygrid-day-frame .fc-daygrid-more-link:hover {
   color: #fff;
   background-color: #FA0056;
-}
-
-#calendar tbody td {
-  height: 180px;
-}
-
-.fc .fc-scroller-liquid-absolute {
-  overflow: visible !important;
 }
 
 .calendar-modal {
