@@ -7618,6 +7618,278 @@ ul:not([class]) li::marker {
   border-radius: 0 0 10px 0;
 }
 
+.fc-day-other {
+  background-color: #F9FBFF;
+}
+
+.fc-day-today {
+  background-color: #EBF4FF !important;
+}
+
+.fc-day-today .fc-daygrid-day-number {
+  color: #FA0056;
+  font-weight: 700;
+}
+
+.fc-col-header-cell {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.fc-col-header-cell .fc-scrollgrid-sync-inner {
+  display: flex;
+}
+
+.fc .fc-col-header-cell-cushion {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.fc .fc-col-header-cell-cushion::first-letter {
+  text-transform: uppercase;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  justify-content: space-between;
+}
+
+.fc .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child),
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  background-color: #EBF4FF;
+  border-radius: 0px;
+  border: none;
+  margin: 0 2px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child):focus,
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child):focus {
+  box-shadow: none;
+  border: none;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child):hover,
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child):hover {
+  background-color: #d8e4f5;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child):active,
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child):active {
+  background-color: #c3cedd;
+}
+
+.fc-icon-chevron-right:before,
+.fc-icon-chevron-left:before {
+  color: #333333;
+}
+
+.fc-today-button.fc-button {
+  transition: background-color 0.2s ease-in-out;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  background-color: #FA0056;
+  border-radius: 4px;
+  border: none;
+  padding: 14px 30px;
+  outline: none;
+}
+
+.fc-today-button.fc-button:focus,
+.fc-today-button.fc-button:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.fc .fc-daygrid-event {
+  border-radius: none;
+  padding: 6px 8px;
+  color: #fff;
+  background: linear-gradient(143.75deg, #8F0096 38.69%, #D406DE 107.29%);
+}
+
+.fc .fc-daygrid-event .fc-daygrid-event-dot,
+.fc .fc-daygrid-event .fc-event-time {
+  display: none;
+}
+
+.fc-daygrid-dot-event .fc-event-title {
+  white-space: normal;
+  font-size: 12px;
+  line-height: 130%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
+.fc .fc-daygrid-day-frame .fc-daygrid-event-harness:nth-child(odd) .fc-daygrid-event {
+  background: linear-gradient(143.75deg, #8F0096 38.69%, #D406DE 107.29%);
+}
+
+.fc .fc-daygrid-day-frame .fc-daygrid-event-harness:nth-child(even) .fc-daygrid-event {
+  background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%);
+}
+
+.fc-popover-body .fc-daygrid-event-harness:nth-child(odd) .fc-daygrid-event {
+  background: linear-gradient(143.75deg, #8F0096 38.69%, #D406DE 107.29%);
+}
+
+.fc-popover-body .fc-daygrid-event-harness:nth-child(even) .fc-daygrid-event {
+  background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%);
+}
+
+.fc .fc-daygrid-day-frame .fc-daygrid-day-bottom {
+  margin: 10px 5px !important;
+}
+
+.fc .fc-daygrid-day-frame .fc-daygrid-more-link {
+  padding: 3px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.fc .fc-daygrid-day-frame .fc-daygrid-more-link:hover {
+  color: #fff;
+  background-color: #FA0056;
+}
+
+#calendar tbody td {
+  height: 180px;
+}
+
+.fc .fc-scroller-liquid-absolute {
+  overflow: visible !important;
+}
+
+.calendar-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(51, 51, 51, 0.92);
+  backdrop-filter: blur(8.5px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.calendar-modal__content {
+  height: fit-content;
+  background-color: #fff;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.calendar-modal__content .left-content,
+.calendar-modal__content .right-content {
+  position: relative;
+  width: 50%;
+}
+
+.calendar-modal__content .left-content {
+  background: url("../img/calendar-modal.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.calendar-modal__content .left-content__date {
+  padding: 20px 0;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.calendar-modal__content .left-content__date .date__number {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 130%;
+  color: #FFFFFF;
+  letter-spacing: 5px;
+}
+
+.calendar-modal__content .left-content__date .date__data {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 121%;
+  color: #FFFFFF;
+}
+
+.left-content__event {
+  padding: 23px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.left-content__event:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.left-content__event .event__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 6px;
+}
+
+.left-content__event .event__descr {
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.left-content__event .event__descr a {
+  color: #2F80ED;
+  display: inline;
+}
+
+.left-content__event .event__descr a:hover {
+  text-decoration: underline;
+}
+
+.left-content__event .event__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.left-content__event .info__name {
+  color: #888888;
+  margin-right: 8px;
+}
+
+.left-content__event .info__text {
+  font-weight: 600;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;

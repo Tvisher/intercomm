@@ -349,31 +349,131 @@
             buttonText: {
                 today: 'Сегодня',
             },
+            contentHeight: 1130,
+            dayHeaderFormat: {
+                weekday: 'long'
+            },
+            moreLinkContent({ shortText }) {
+                return `${shortText} события`
+            },
+            dayMaxEventRows: 3,
+            titleFormat: function () {
+                // Создаем объект Date с текущей датой
+                const date = new Date();
+                // Форматируем дату с использованием метода toLocaleDateString()
+                const options = {
+                    day: 'numeric',
+                    month: 'long',
+                };
+                const formattedDate = date.toLocaleDateString('ru-RU', options);
+                const year = date.toLocaleString('ru-RU', { year: 'numeric' });
+                const capitalizedMonth = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
+                let result = capitalizedMonth + ' ' + year + ' г.';
+                result = result.split(' ').map((item, i) => {
+                    if (i == 1) {
+                        return item[0].toUpperCase() + item.slice(1);
+                    } else {
+                        return item
+                    }
+                }).join(' ');
+
+                return result;
+            },
             headerToolbar: {
-                start: 'today prev,next',
-                center: 'title',
-                end: ''
+                start: 'title',
+                center: 'prev,next',
+                end: 'today'
             },
             eventClick: function (info) {
-                alert('Вы нажали на событие "' + info.event.title + '"');
+                console.log(info.event.extendedProps.customParam);
             },
             events: [
                 {
-                    title: 'Событие 1',
+                    title: 'Большое название события, например в 2 строки',
                     start: '2023-04-15T10:00:00',
-                    end: '2023-04-15T12:00:00'
+                    customParam: 1
                 },
                 {
-                    title: 'Событие 2',
+                    title: 'Событие 2Событие 2Событие 2Событие 2',
+                    start: '2023-04-15T10:00:00',
+                    customParam: 2
+                },
+                {
+                    title: 'asdas asdasd as1231 ',
+                    start: '2023-04-15T10:00:00',
+                    customParam: 3
+                }, {
+                    title: 'Событие 4',
+                    start: '2023-04-15T10:00:00',
+                    customParam: 4
+                },
+                {
+                    title: 'Событие 5',
                     start: '2023-04-17T14:00:00',
-                    end: '2023-04-17T16:00:00'
+                    customParam: 5
+                },
+                {
+                    title: 'Событие 6',
+                    start: '2023-05-11T14:00:00',
+                    customParam: 6
                 }
             ]
         });
         calendar.render();
     });
-
 </script>
+
+
+
+<div class="calendar-modal">
+    <div class="calendar-modal__content">
+        <div class="calendar-modal__close"></div>
+        <div class="left-content">
+
+            <div class="left-content__date">
+                <div class="date__number">25</div>
+                <div class="date__data">апреля<br>2023</div>
+            </div>
+            <div class="left-content__event">
+                <div class="event__title">Событие #1 от даты 25.04</div>
+                <div class="event__descr">Какое-то описание события типа анонса под заголовком, может даже
+                    <a href="javascript:void(0)">со ссылками активными</a>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Дата:</div>
+                    <div class="info__text">23 апреля 2023</div>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Время проведения:</div>
+                    <div class="info__text">15:00</div>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Место:</div>
+                    <div class="info__text">г. Москва ул. Пушкина 123 а</div>
+                </div>
+            </div>
+            <div class="left-content__event">
+                <div class="event__title">Событие #2 от даты 25.04 может и 2 строки</div>
+                <div class="event__descr">Какое-то описание события типа анонса под заголовком, может даже
+                    <a href="javascript:void(0)">со ссылками активными</a>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Дата:</div>
+                    <div class="info__text">23 апреля 2023</div>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Время проведения:</div>
+                    <div class="info__text">15:00</div>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Место:</div>
+                    <div class="info__text">г. Москва ул. Пушкина 123 а</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content"></div>
+    </div>
+</div>
 
 <footer>
     <div class="container">
