@@ -356,7 +356,7 @@
             moreLinkContent({ shortText }) {
                 return `${shortText} события`
             },
-            dayMaxEventRows: 3,
+            dayMaxEventRows: 4,
             titleFormat: function () {
                 // Создаем объект Date с текущей датой
                 const date = new Date();
@@ -385,7 +385,10 @@
                 end: 'today'
             },
             eventClick: function (info) {
-                console.log(info.event.extendedProps.customParam);
+                const customParam = info.event.extendedProps.customParam;
+                console.log(customParam);
+                document.querySelector('[data-event-modal]').classList.add('show');
+
             },
             events: [
                 {
@@ -397,6 +400,11 @@
                     title: 'Событие 2Событие 2Событие 2Событие 2',
                     start: '2023-04-15T10:00:00',
                     customParam: 2
+                },
+                {
+                    title: 'Событие 2Событи',
+                    start: '2023-04-15T10:00:00',
+                    customParam: 12
                 },
                 {
                     title: 'asdas asdasd as1231 ',
@@ -420,16 +428,18 @@
             ]
         });
         calendar.render();
+
+        const calendarTitles = calendarEl.querySelectorAll('[title]');
+        calendarTitles.forEach(item => item.title = '');
     });
 </script>
 
 
 
-<div class="calendar-modal">
-    <div class="calendar-modal__content">
-        <div class="calendar-modal__close"></div>
+<div class="calendar-modal modal-template" data-event-modal>
+    <div class="calendar-modal__content modal-template__content">
+        <div class="calendar-modal__close modal-template__close"></div>
         <div class="left-content">
-
             <div class="left-content__date">
                 <div class="date__number">25</div>
                 <div class="date__data">апреля<br>2023</div>
@@ -471,7 +481,52 @@
                 </div>
             </div>
         </div>
-        <div class="right-content"></div>
+        <div class="right-content">
+            <div class="right-content__img">
+                <img src="img/main-slider-image.jpg" alt="">
+            </div>
+            <div class="right-content__inner">
+                <div class="right-content__title">Событие #2 от даты 25.04</div>
+                <div class="right-content__descr">
+                    Какое-то описание события типа анонса под заголовком, может даже со ссылками активными.
+                    <br>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="javascript:void(0)">Ut enim ad
+                        minim veniam</a>, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Дата:</div>
+                    <div class="info__text">23 апреля 2023</div>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Время проведения:</div>
+                    <div class="info__text">15:00</div>
+                </div>
+                <div class="event__info">
+                    <div class="info__name">Место:</div>
+                    <div class="info__text">г. Москва ул. Пушкина 123 а</div>
+                </div>
+            </div>
+            <div class="right-content__footer">
+                <div class="right-content__footer-title">Добавить напоминание</div>
+                <div class="right-content__footer-links">
+                    <a href="javascript:void(0)" class="event-link">
+                        <img src="@img" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="event-link">
+                        <img src="@img" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="event-link">
+                        <img src="@img" alt="">
+                    </a>
+                </div>
+                <a href="javascript:void(0)" class="email-event">Отправить событие по E-mail</a>
+            </div>
+        </div>
     </div>
 </div>
 
