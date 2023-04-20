@@ -6360,8 +6360,9 @@ ul:not([class]) {
   }
 
   .fc .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
-    margin-right: 25vw;
-    margin-left: 0;
+    // margin-right: 25vw;
+    // margin-left: 0;
+    display: none;
   }
 
   .fc .fc-toolbar.fc-header-toolbar {
@@ -6467,4 +6468,13 @@ ul:not([class]) {
 
 .cases-list .cases-item__image img {
   margin: 0;
+}
+
+.article-quote .quote__author-img img {
+  margin: 0;
+}
+
+.table-wrapper td,
+.table-wrapper th {
+  word-wrap: break-word;
 }

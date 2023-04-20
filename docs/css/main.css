@@ -8084,6 +8084,15 @@ ul:not([class]) li::marker {
   margin: 0;
 }
 
+.article-quote .quote__author-img img {
+  margin: 0;
+}
+
+.table-wrapper td,
+.table-wrapper th {
+  word-wrap: break-word;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
@@ -9491,8 +9500,7 @@ ul:not([class]) li::marker {
   }
 
   .fc .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
-    margin-right: 25vw;
-    margin-left: 0;
+    display: none;
   }
 
   .fc .fc-toolbar.fc-header-toolbar {

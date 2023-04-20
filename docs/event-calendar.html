@@ -356,8 +356,8 @@
             },
             headerToolbar: {
                 start: 'title',
-                center: 'prev,next',
-                end: 'today'
+                center: '',
+                end: 'prev,next today'
             },
             // Настрока отображения доп колличества событий в дневной ячейке
             moreLinkContent({ num, shortText }) {
@@ -373,24 +373,13 @@
                 return `${shortText} ${getEventEnding(num)}`;
             },
             // Вывод в шапке календаря текущей даты
-            titleFormat: function () {
-                const date = new Date();
-                const options = {
-                    day: 'numeric',
+            titleFormat: function (data) {
+                let currentMonth = new Date(data.date.marker).toLocaleDateString('Ru-ru', {
                     month: 'long',
-                };
-                const formattedDate = date.toLocaleDateString('ru-RU', options);
-                const year = date.toLocaleString('ru-RU', { year: 'numeric' });
-                const capitalizedMonth = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
-                let result = capitalizedMonth + ' ' + year + ' г.';
-                result = result.split(' ').map((item, i) => {
-                    if (i == 1) {
-                        return item[0].toUpperCase() + item.slice(1);
-                    } else {
-                        return item
-                    }
-                }).join(' ');
-                return result;
+                    year: 'numeric'
+                });
+                currentMonth = currentMonth[0].toUpperCase() + currentMonth.slice(1);
+                return currentMonth;
             },
             //Отработка клика по событию
             eventClick: function (info) {
