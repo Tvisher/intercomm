@@ -5944,14 +5944,14 @@ ul:not([class]) {
 }
 
 .fc-today-button.fc-button {
-  transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out !important;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 120%;
-  background-color: #FA0056;
-  border-radius: 4px;
+  background-color: #FA0056 !important;
+  border-radius: 4px !important;
   border: none;
   padding: 14px 30px;
   outline: none;
@@ -6061,6 +6061,10 @@ ul:not([class]) {
   padding: 50px 20px;
 }
 
+p {
+  margin-bottom: 10px;
+}
+
 .calendar-modal__close {
   transition: transform .2s ease-in-out;
   cursor: pointer;
@@ -6161,7 +6165,7 @@ ul:not([class]) {
 
   .event__info {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 6px;
     font-weight: 400;
     font-size: 14px;
@@ -6223,7 +6227,7 @@ ul:not([class]) {
 
   .event__info {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin: 14px 0;
   }
 
@@ -6490,4 +6494,10 @@ ul:not([class]) {
 .right-content .right-content__title,
 .left-content__event .event__title {
   word-wrap: break-word;
+}
+
+
+.event__info:empty,
+.right-content__img:empty {
+  display: none
 }
