@@ -332,7 +332,9 @@
 <main>
     <section>
         <div class=" container">
-            <div id='calendar' style="margin:30px 0"></div>
+            <div class="calendar-wrapper">
+                <div id='calendar'></div>
+            </div>
         </div>
     </section>
 </main>
@@ -354,13 +356,20 @@
             dayHeaderFormat: {
                 weekday: 'long'
             },
-            moreLinkContent({ shortText }) {
-                return `${shortText} события`
+            moreLinkContent({ num, shortText }) {
+                function getEventEnding(count) {
+                    if (count % 10 === 1 && count % 100 !== 11) {
+                        return 'событие';
+                    } else if (count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 10 || count % 100 >= 20)) {
+                        return 'события';
+                    } else {
+                        return 'событий';
+                    }
+                }
+                return `${shortText} ${getEventEnding(num)}`;
             },
             titleFormat: function () {
-                // Создаем объект Date с текущей датой
                 const date = new Date();
-                // Форматируем дату с использованием метода toLocaleDateString()
                 const options = {
                     day: 'numeric',
                     month: 'long',
@@ -376,7 +385,6 @@
                         return item
                     }
                 }).join(' ');
-
                 return result;
             },
             headerToolbar: {
@@ -432,6 +440,8 @@
         const calendarTitles = calendarEl.querySelectorAll('[title]');
         calendarTitles.forEach(item => item.title = '');
     });
+
+
 </script>
 
 
@@ -443,6 +453,9 @@
             <div class="left-content__date">
                 <div class="date__number">25</div>
                 <div class="date__data">апреля<br>2023</div>
+            </div>
+            <div class="right-content__img">
+                <img src="img/main-slider-image.jpg" alt="">
             </div>
             <div class="left-content__event">
                 <div class="event__title">Событие #1 от даты 25.04</div>
@@ -462,29 +475,9 @@
                     <div class="info__text">г. Москва ул. Пушкина 123 а</div>
                 </div>
             </div>
-            <div class="left-content__event">
-                <div class="event__title">Событие #2 от даты 25.04 может и 2 строки</div>
-                <div class="event__descr">Какое-то описание события типа анонса под заголовком, может даже
-                    <a href="javascript:void(0)">со ссылками активными</a>
-                </div>
-                <div class="event__info">
-                    <div class="info__name">Дата:</div>
-                    <div class="info__text">23 апреля 2023</div>
-                </div>
-                <div class="event__info">
-                    <div class="info__name">Время проведения:</div>
-                    <div class="info__text">15:00</div>
-                </div>
-                <div class="event__info">
-                    <div class="info__name">Место:</div>
-                    <div class="info__text">г. Москва ул. Пушкина 123 а</div>
-                </div>
-            </div>
         </div>
         <div class="right-content">
-            <div class="right-content__img">
-                <img src="img/main-slider-image.jpg" alt="">
-            </div>
+
             <div class="right-content__inner">
                 <div class="right-content__title">Событие #2 от даты 25.04</div>
                 <div class="right-content__descr">
