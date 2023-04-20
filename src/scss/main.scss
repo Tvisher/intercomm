@@ -6008,6 +6008,12 @@ ul:not([class]) {
   }
 }
 
+.fc-daygrid-block-event .fc-event-time,
+.fc-daygrid-block-event .fc-event-title {
+  white-space: break-spaces;
+  @include pruning(2)
+}
+
 
 .fc .fc-daygrid-day-frame {
 
@@ -6360,10 +6366,11 @@ ul:not([class]) {
   }
 
   .fc .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
-    // margin-right: 25vw;
-    // margin-left: 0;
     display: none;
   }
+
+
+
 
   .fc .fc-toolbar.fc-header-toolbar {
     margin-bottom: 10px;
@@ -6476,5 +6483,11 @@ ul:not([class]) {
 
 .table-wrapper td,
 .table-wrapper th {
+  word-wrap: break-word;
+}
+
+
+.right-content .right-content__title,
+.left-content__event .event__title {
   word-wrap: break-word;
 }

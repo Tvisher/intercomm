@@ -7783,6 +7783,20 @@ ul:not([class]) li::marker {
   background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%);
 }
 
+.fc-daygrid-block-event .fc-event-time,
+.fc-daygrid-block-event .fc-event-title {
+  white-space: break-spaces;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
 .fc .fc-daygrid-day-frame .fc-daygrid-day-bottom {
   margin: 10px 5px !important;
 }
@@ -8090,6 +8104,11 @@ ul:not([class]) li::marker {
 
 .table-wrapper td,
 .table-wrapper th {
+  word-wrap: break-word;
+}
+
+.right-content .right-content__title,
+.left-content__event .event__title {
   word-wrap: break-word;
 }
 
