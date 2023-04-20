@@ -2905,6 +2905,7 @@ footer {
   color: $brand-black;
 }
 
+
 .article-page {
   img {
     margin: 20px 0;
@@ -6427,4 +6428,43 @@ ul:not([class]) {
   &::-webkit-scrollbar-button:vertical:end:increment {
     display: none;
   }
+}
+
+
+.media-section__article.image-article.search-res {
+  b {
+    background: rgba(250, 0, 86, 0.2);
+    font-weight: 400;
+  }
+
+  .article-data {
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+.article-ex {
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.search-res__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: #333333;
+  margin: 30px 0;
+
+  @media (max-width: 390px) {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+}
+
+
+.cases-list .cases-item__image img {
+  margin: 0;
 }

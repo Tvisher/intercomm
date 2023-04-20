@@ -8054,6 +8054,36 @@ ul:not([class]) li::marker {
   display: none;
 }
 
+.media-section__article.image-article.search-res b {
+  background: rgba(250, 0, 86, 0.2);
+  font-weight: 400;
+}
+
+.media-section__article.image-article.search-res .article-data {
+  align-items: center;
+  margin-top: 10px;
+}
+
+.article-ex {
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.search-res__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: #333333;
+  margin: 30px 0;
+}
+
+.cases-list .cases-item__image img {
+  margin: 0;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
@@ -9840,6 +9870,11 @@ ul:not([class]) li::marker {
 
   .form-agree__link {
     font-size: 12px;
+  }
+
+  .search-res__title {
+    font-size: 24px;
+    margin: 15px 0;
   }
 }
 
