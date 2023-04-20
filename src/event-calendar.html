@@ -9,10 +9,8 @@
     </section>
 </main>
 
-
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+<script src='js/calendar-lib.js'></script>
 <script>
-
     document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -26,6 +24,12 @@
             dayHeaderFormat: {
                 weekday: 'long'
             },
+            headerToolbar: {
+                start: 'title',
+                center: 'prev,next',
+                end: 'today'
+            },
+            // Настрока отображения доп колличества событий в дневной ячейке
             moreLinkContent({ num, shortText }) {
                 function getEventEnding(count) {
                     if (count % 10 === 1 && count % 100 !== 11) {
@@ -38,6 +42,7 @@
                 }
                 return `${shortText} ${getEventEnding(num)}`;
             },
+            // Вывод в шапке календаря текущей даты
             titleFormat: function () {
                 const date = new Date();
                 const options = {
@@ -57,64 +62,60 @@
                 }).join(' ');
                 return result;
             },
-            headerToolbar: {
-                start: 'title',
-                center: 'prev,next',
-                end: 'today'
-            },
+            //Отработка клика по событию
             eventClick: function (info) {
+                // Получаем кастомный параметр customParam и выводим в консоль
                 const customParam = info.event.extendedProps.customParam;
                 console.log(customParam);
+                // Открытие модалки при клике на событие
                 document.querySelector('[data-event-modal]').classList.add('show');
-
             },
+
+            // Массив с событиями 
             events: [
                 {
                     title: 'Большое название события, например в 2 строки',
-                    start: '2023-04-15T10:00:00',
+                    start: '2023-04-15',
                     customParam: 1
                 },
                 {
                     title: 'Событие 2Событие 2Событие 2Событие 2',
-                    start: '2023-04-15T10:00:00',
+                    start: '2023-04-15',
                     customParam: 2
                 },
                 {
                     title: 'Событие 2Событи',
-                    start: '2023-04-15T10:00:00',
+                    start: '2023-04-15',
                     customParam: 12
                 },
                 {
                     title: 'asdas asdasd as1231 ',
-                    start: '2023-04-15T10:00:00',
+                    start: '2023-04-15',
                     customParam: 3
                 }, {
                     title: 'Событие 4',
-                    start: '2023-04-15T10:00:00',
+                    start: '2023-04-15',
                     customParam: 4
                 },
                 {
                     title: 'Событие 5',
-                    start: '2023-04-17T14:00:00',
+                    start: '2023-04-17',
                     customParam: 5
                 },
                 {
                     title: 'Событие 6',
-                    start: '2023-05-11T14:00:00',
+                    start: '2023-05-11',
                     customParam: 6
                 }
             ]
         });
-        calendar.render();
 
+        calendar.render();
+        // Убираем англ тайтлы с кнопок 
         const calendarTitles = calendarEl.querySelectorAll('[title]');
         calendarTitles.forEach(item => item.title = '');
     });
-
-
 </script>
-
-
 
 <div class="calendar-modal modal-template" data-event-modal>
     <div class="calendar-modal__content modal-template__content">
