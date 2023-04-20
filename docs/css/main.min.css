@@ -5195,6 +5195,10 @@ footer {
   color: #333333;
 }
 
+.article-page img {
+  margin: 20px 0;
+}
+
 .article-page p {
   font-size: 18px;
   line-height: 180%;
@@ -6881,6 +6885,7 @@ ul:not([class]) li::marker {
 }
 
 .article-dropdown .article-dropdown__head:after {
+  flex-shrink: 0;
   transition: transform 0.3s ease-in-out;
   margin-left: 20px;
   margin-top: 5px;
