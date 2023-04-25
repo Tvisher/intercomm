@@ -3896,17 +3896,27 @@ header {
 }
 
 .search-field .dynamic-string {
-  animation: textRun 15s infinite linear;
   position: absolute;
   left: 0;
   top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: fit-content;
+  width: 100%;
   height: 100%;
   white-space: nowrap;
+}
+
+.search-field .dynamic-string * {
+  height: 100%;
+}
+
+.search-field .dynamic-string .js-marquee {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.search-field .dynamic-string .marquee__item {
+  display: flex;
+  align-items: center;
 }
 
 .search-field::after {
@@ -4070,8 +4080,13 @@ header {
 }
 
 .fixed-header .dynamic-string {
+  pointer-events: none;
   animation: none;
   padding-left: 43px;
+}
+
+.fixed-header .dynamic-string span {
+  display: inline;
 }
 
 .main-menu-btn {

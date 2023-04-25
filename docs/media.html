@@ -141,8 +141,17 @@
 
                             <label class="search-field">
                                 <input type="text" class="search-field__input" value="" placeholder=" ">
-                                <div class="dynamic-string">Здесь динамическая промо строка, которая стоит 1-м пунктом
-                                    при контексте</div>
+                                <div class="dynamic-string">
+                                    <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                        1-мпунктом при
+                                        контексте</div>
+                                    <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                        1-мпунктом при
+                                        контексте</div>
+                                    <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                        1-мпунктом при
+                                        контексте</div>
+                                </div>
                             </label>
                             <button type="submit" class="search-btn">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -297,8 +306,17 @@
                             <form class="search-form">
                                 <label class="search-field">
                                     <input type="text" class="search-field__input" value="" placeholder=" ">
-                                    <div class="dynamic-string">Здесь динамическая промо строка, которая стоит 1-м
-                                        пунктом при контексте</div>
+                                    <div class="dynamic-string">
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                    </div>
                                 </label>
                                 <button type="submit" class="search-btn">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -1585,6 +1603,20 @@
 <script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/aos.js"></script>
 <script src="./js/fancybox.umd.js"></script>
+<script src="./js/jquery.marquee.min.js"></script>
 <script src="./js/app.js"></script>
+
+<script>
+    $('.dynamic-string').each(function () {
+        const marqueeItemLength = $(this).find('.marquee__item').length;
+        $(this).marquee({
+            duration: marqueeItemLength * 5000,
+            gap: 50,
+            delayBeforeStart: 0,
+            direction: 'left',
+            duplicated: true
+        });
+    })
+</script>
 
 </html>
