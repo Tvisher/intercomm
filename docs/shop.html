@@ -143,8 +143,6 @@
                                 <input type="text" class="search-field__input" value="" placeholder=" ">
                                 <div class="dynamic-string">
                                     <div class="marquee__item">Здесь динамическая промо строка</div>
-                                    <div class="marquee__item">Здесь динамическая промо строка</div>
-                                    <div class="marquee__item">Здесь динамическая промо строка</div>
                                 </div>
                             </label>
                             <button type="submit" class="search-btn">
@@ -300,7 +298,7 @@
                             <form class="search-form">
                                 <label class="search-field">
                                     <input type="text" class="search-field__input" value="" placeholder=" ">
-                                    <div class="dynamic-string">
+                                    <div class="dynamic-string marq">
                                         <div class="marquee__item">Здесь динамическая промо строка, которая стоит
                                             1-мпунктом при
                                             контексте</div>
@@ -1087,7 +1085,7 @@
 <script src="./js/app.js"></script>
 
 <script>
-    $('.dynamic-string').each(function () {
+    $('.dynamic-string.marq').each(function () {
         const marqueeItemLength = $(this).find('.marquee__item').length;
         $(this).marquee({
             duration: marqueeItemLength * 5000,
