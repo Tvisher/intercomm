@@ -280,6 +280,9 @@ if (contanctsForm) {
   const formPhone = contanctsForm.querySelector('input[name="phone"]');
   const formEmail = contanctsForm.querySelector('input[name="email"]');
   const formMessage = contanctsForm.querySelector('textarea[name="message"]');
+
+  const formBotValue = contanctsForm.querySelector('input[name="bot"]');
+
   const formAgreeCheckbox = contanctsForm.querySelector(".form__agree-checkbox");
   const phoneReg = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
 
@@ -320,21 +323,23 @@ if (contanctsForm) {
     }
     const formErrors = contanctsForm.querySelectorAll('.err');
 
+    //alert(formBotValue.value);
+
     if (formErrors.length < 1 && formAgreeCheckbox.checked) {
       const formData = {
         formMessage: formMessage.value.trim(),
         formPhone: formPhoneValue,
         formEmail: formEmail.value.trim(),
+        formBot: formBotValue.value,
       }
       // Отправка данных на сервак
       $.ajax({ // инициaлизируeм ajax зaпрoс
         type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
-        url: '/ajax/subscribe.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
-        dataType: 'html', // oтвeт ждeм в json фoрмaтe
-        data: {
-          email: formData
-        }, // дaнныe для oтпрaвки
+        url: '/ajax/contact.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
+        dataType: 'json', // oтвeт ждeм в json фoрмaтe
+        data: formData, // дaнныe для oтпрaвки
         success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+          console.log(data);
           contanctsForm.querySelector(".form-sucsess").classList.add("show");
           contanctsForm.reset();
         },
@@ -468,8 +473,6 @@ $(document).on('click', '[data-toggle-element]', function (e) {
   $(this).toggleClass('toggle-open');
   $(this).next().slideToggle("slow");
 })
-
-
 
 
 
