@@ -478,13 +478,14 @@ const searchFields = document.querySelectorAll('.search-field__input');
 searchFields.forEach(searchField => {
   const searchResultsWrapper = searchField.closest('.search-form').querySelector('.search-form__res');
   const searchResult = searchResultsWrapper.querySelector('.search-form__ajax-res');
+  //resultCount это ссылка в которой выводится колличество ответов на поиск. Можно ей указать url
   const resultCount = searchResultsWrapper.querySelector('.search-form__res-count');
   let searchTimeout = null;
   //Запрос за данными
   function search(query) {
     // Куда стучим, + передаём параметр q т.е query
     // const url = '/search?q=' + encodeURIComponent(query);
-    const url = '../searchres.php';
+    const url = 'https://tvisher.github.io/intercomm/searchres.php';
     fetch(url)
       .then(response => response.text())
       .then(data => {
