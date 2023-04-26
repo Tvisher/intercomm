@@ -3401,7 +3401,7 @@ footer {
 }
 
 .container {
-  width: 100%;
+  width: 100% !important;
   flex: 0 0 auto;
   position: relative;
   max-width: 1240px;
