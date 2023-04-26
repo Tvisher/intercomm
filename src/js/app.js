@@ -482,7 +482,6 @@ searchFields.forEach(searchField => {
   const searchResultsWrapper = searchField.closest('.search-form').querySelector('.search-form__res');
   const searchResult = searchResultsWrapper.querySelector('.search-form__ajax-res');
   //resultCount это ссылка в которой выводится колличество ответов на поиск. Можно ей указать url
-  const resultCount = searchResultsWrapper.querySelector('.search-form__res-count');
   let searchTimeout = null;
   //Запрос за данными
   function search(query) {
@@ -494,8 +493,6 @@ searchFields.forEach(searchField => {
       .then(data => {
         searchResult.innerHTML = '';
         searchResult.innerHTML = data;
-        const resCount = searchResult.querySelectorAll('a').length
-        resultCount.innerHTML = `Результатов найдено: ${resCount}`;
       })
       .catch(error => console.log('Ошибка выполнения запроса поиска: ', error));
   }
