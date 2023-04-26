@@ -696,6 +696,7 @@ header {
   }
 
   .dynamic-string {
+    pointer-events: none;
     // animation: textRun 15s infinite linear;
     position: absolute;
     left: 0;
@@ -6610,6 +6611,16 @@ p {
     color: #333333;
   }
 
+  .search-form__res-link {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    padding-bottom: 0;
+
+    &:not(:first-child) {
+      border-top: 1px solid rgba(250, 0, 87, 0.2)
+    }
+  }
+
 
   /* полоса прокрутки (скроллбар) */
   &::-webkit-scrollbar {
@@ -6634,5 +6645,16 @@ p {
   &::-webkit-scrollbar-button:vertical:start:decrement,
   &::-webkit-scrollbar-button:vertical:end:increment {
     display: none;
+  }
+}
+
+
+.search-form__res .search-form__res-link,
+.search-form__res .search-form__res-fix-link,
+.search-form__res-count {
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $brand-red;
   }
 }

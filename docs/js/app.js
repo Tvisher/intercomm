@@ -487,7 +487,7 @@ searchFields.forEach(searchField => {
   function search(query) {
     // Куда стучим, + передаём параметр q т.е query
     // const url = '/search?q=' + encodeURIComponent(query);
-    const url = 'https://tvisher.github.io/intercomm/searchres.php';
+    const url = '../searchres.php';
     fetch(url)
       .then(response => response.text())
       .then(data => {

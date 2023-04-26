@@ -3896,6 +3896,7 @@ header {
 }
 
 .search-field .dynamic-string {
+  pointer-events: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -8231,6 +8232,16 @@ p {
   color: #AD073D;
 }
 
+.search-form__res .search-form__res-link {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  padding-bottom: 0;
+}
+
+.search-form__res .search-form__res-link:not(:first-child) {
+  border-top: 1px solid rgba(250, 0, 87, 0.2);
+}
+
 .search-form__res::-webkit-scrollbar {
   width: 7px;
   /* ширина для вертикального скролла */
@@ -8251,6 +8262,18 @@ p {
 .search-form__res::-webkit-scrollbar-button:vertical:start:decrement,
 .search-form__res::-webkit-scrollbar-button:vertical:end:increment {
   display: none;
+}
+
+.search-form__res .search-form__res-link,
+.search-form__res .search-form__res-fix-link,
+.search-form__res-count {
+  transition: color 0.3s ease-in-out;
+}
+
+.search-form__res .search-form__res-link:hover,
+.search-form__res .search-form__res-fix-link:hover,
+.search-form__res-count:hover {
+  color: #FA0056;
 }
 
 @media (min-width: 577px) {
