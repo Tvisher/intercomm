@@ -468,3 +468,47 @@ $(document).on('click', '[data-toggle-element]', function (e) {
   $(this).toggleClass('toggle-open');
   $(this).next().slideToggle("slow");
 })
+
+
+
+
+
+
+const searchFields = document.querySelectorAll('.search-field__input');
+searchFields.forEach(searchField => {
+  const searchResultsWrapper = searchField.closest('.search-form').querySelector('.search-form__res');
+  const searchResult = searchResultsWrapper.querySelector('.search-form__ajax-res');
+  const resultCount = searchResultsWrapper.querySelector('.search-form__res-count');
+  let searchTimeout = null;
+
+
+
+  function search(query) {
+    const url = "url";
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        searchResult.innerHTML = '';
+        resultCount.innerHTML = `Результатов найдено: ${data.length}`;
+        for (let i = 0; i < data.length; i++) {
+          const result = document.createElement('a');
+          result.textContent = data[i].title;
+          searchResult.appendChild(result);
+        }
+      })
+      .catch(error => console.log('Ошибка выполнения запроса поиска: ', error));
+  }
+
+  searchField.addEventListener('input', function () {
+    const query = searchField.value;
+    clearTimeout(searchTimeout);
+    if (query.length > 2) {
+      searchResultsWrapper.classList.add('show')
+      searchTimeout = setTimeout(() => search(query), 300);
+    } else {
+      searchResultsWrapper.classList.remove('show');
+      searchResult.innerHTML = '';
+    }
+  });
+
+})

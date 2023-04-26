@@ -8140,6 +8140,76 @@ p {
   display: none;
 }
 
+.search-form__res {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  padding: 21px;
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12), inset 0px 0px 34.0148px rgba(255, 255, 255, 0.05), inset 0px 2.26765px 2.26765px rgba(255, 255, 255, 0.15);
+  z-index: 99;
+  transform: translateY(110%);
+  border-radius: 0px 0px 8px 8px;
+}
+
+.search-form__res.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(100%);
+}
+
+.search-form__res .search-form__res-fix-link {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-form__res .search-form__res-fix-link::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: "";
+  width: 20%;
+  background: linear-gradient(270deg, #FFFFFF 38.89%, rgba(255, 255, 255, 0) 75.56%);
+}
+
+.search-form__res .search-form__res-fix-link:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.55563 13.3232L9.43584 13.3123C7.90803 13.1735 7.14412 13.104 6.90146 12.5814C6.65881 12.0588 7.09869 11.4304 7.97846 10.1736L11.5612 5.05544C12.1424 4.22517 12.433 3.81003 12.6836 3.89831C12.9342 3.98658 12.9005 4.4922 12.8331 5.50343L12.6299 8.55194C12.5685 9.47214 12.5379 9.93224 12.8023 10.2419C13.0667 10.5515 13.5259 10.5933 14.4444 10.6768L14.5642 10.6877C16.092 10.8265 16.8559 10.896 17.0985 11.4186C17.3412 11.9412 16.9013 12.5696 16.0215 13.8264L12.4388 18.9446C11.8576 19.7748 11.567 20.19 11.3164 20.1017C11.0658 20.0134 11.0995 19.5078 11.1669 18.4966L11.3701 15.4481C11.4315 14.5279 11.4621 14.0678 11.1977 13.7581C10.9333 13.4485 10.4741 13.4067 9.55563 13.3232Z' fill='%23AD073D'/%3e%3c/svg%3e ");
+  display: block;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.search-form__res .search-form__res-count {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #888888;
+}
+
+.search-form__res .search-form__res-link,
+.search-form__res .search-form__res-fix-link {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+}
+
+.search-form__res .search-form__res-link b,
+.search-form__res .search-form__res-fix-link b {
+  color: #AD073D;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
