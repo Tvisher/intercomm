@@ -9300,10 +9300,6 @@ p {
     order: -1;
   }
 
-  .search-form {
-    overflow: hidden;
-  }
-
   .search-form .search-btn {
     display: none;
   }
