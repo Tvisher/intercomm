@@ -481,8 +481,6 @@ searchFields.forEach(searchField => {
   const resultCount = searchResultsWrapper.querySelector('.search-form__res-count');
   let searchTimeout = null;
 
-
-
   function search(query) {
     const url = "url";
     fetch(url)
