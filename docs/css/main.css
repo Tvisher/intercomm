@@ -8141,10 +8141,12 @@ p {
 }
 
 .search-form__res {
+  max-height: 500px;
+  overflow: auto;
   opacity: 0;
   visibility: hidden;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  padding: 21px;
+  padding: 0 20px;
   position: absolute;
   left: 0;
   bottom: -11px;
@@ -8154,6 +8156,13 @@ p {
   z-index: 99;
   transform: translateY(110%);
   border-radius: 0px 0px 8px 8px;
+  /* полоса прокрутки (скроллбар) */
+  /* ползунок скроллбара */
+  /* Стрелки */
+}
+
+.search-form__res .search-form__res_w {
+  padding: 20px 0;
 }
 
 .search-form__res.show {
@@ -8197,6 +8206,18 @@ p {
   color: #888888;
 }
 
+.search-form__res .search-form__res-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
 .search-form__res .search-form__res-link,
 .search-form__res .search-form__res-fix-link {
   margin-bottom: 15px;
@@ -8208,6 +8229,28 @@ p {
 .search-form__res .search-form__res-link b,
 .search-form__res .search-form__res-fix-link b {
   color: #AD073D;
+}
+
+.search-form__res::-webkit-scrollbar {
+  width: 7px;
+  /* ширина для вертикального скролла */
+  height: 10px;
+  /* высота для горизонтального скролла */
+  background: linear-gradient(135deg, #444343 0%, #656097 100%);
+}
+
+.search-form__res::-webkit-scrollbar-thumb {
+  background: #FA0056;
+  border-radius: 3px;
+}
+
+.search-form__res::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%);
+}
+
+.search-form__res::-webkit-scrollbar-button:vertical:start:decrement,
+.search-form__res::-webkit-scrollbar-button:vertical:end:increment {
+  display: none;
 }
 
 @media (min-width: 577px) {

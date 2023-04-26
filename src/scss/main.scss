@@ -6527,10 +6527,18 @@ p {
 }
 
 .search-form__res {
+  .search-form__res_w {
+    padding: 20px 0;
+  }
+
+  max-height: 500px;
+  overflow: auto;
   opacity: 0;
   visibility: hidden;
 
-  transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
+  transition: transform .3s ease-in-out,
+  opacity .3s ease-in-out,
+  visibility .3s ease-in-out;
 
   &.show {
     opacity: 1;
@@ -6538,7 +6546,7 @@ p {
     transform: translateY(100%);
   }
 
-  padding: 21px;
+  padding: 0 20px;
   position: absolute;
   left: 0;
   bottom: -11px;
@@ -6586,6 +6594,10 @@ p {
     color: #888888;
   }
 
+  .search-form__res-link {
+    @include pruning(2);
+  }
+
   .search-form__res-link,
   .search-form__res-fix-link {
     b {
@@ -6596,5 +6608,31 @@ p {
     font-weight: 400;
     font-size: 18px;
     color: #333333;
+  }
+
+
+  /* полоса прокрутки (скроллбар) */
+  &::-webkit-scrollbar {
+    width: 7px;
+    /* ширина для вертикального скролла */
+    height: 10px;
+    /* высота для горизонтального скролла */
+    background: linear-gradient(135deg, #444343 0%, #656097 100%);
+  }
+
+  /* ползунок скроллбара */
+  &::-webkit-scrollbar-thumb {
+    background: $brand-red;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #1E878E 0%, #45A6FF 100%)
+  }
+
+  /* Стрелки */
+  &::-webkit-scrollbar-button:vertical:start:decrement,
+  &::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
   }
 }

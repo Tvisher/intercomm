@@ -473,26 +473,25 @@ $(document).on('click', '[data-toggle-element]', function (e) {
 
 
 
-
+// Логика работы поиска
 const searchFields = document.querySelectorAll('.search-field__input');
 searchFields.forEach(searchField => {
   const searchResultsWrapper = searchField.closest('.search-form').querySelector('.search-form__res');
   const searchResult = searchResultsWrapper.querySelector('.search-form__ajax-res');
   const resultCount = searchResultsWrapper.querySelector('.search-form__res-count');
   let searchTimeout = null;
-
+  //Запрос за данными
   function search(query) {
-    const url = "url";
+    // Куда стучим, + передаём параметр q т.е query
+    // const url = '/search?q=' + encodeURIComponent(query);
+    const url = '../searchres.php';
     fetch(url)
-      .then(response => response.json())
+      .then(response => response.text())
       .then(data => {
         searchResult.innerHTML = '';
-        resultCount.innerHTML = `Результатов найдено: ${data.length}`;
-        for (let i = 0; i < data.length; i++) {
-          const result = document.createElement('a');
-          result.textContent = data[i].title;
-          searchResult.appendChild(result);
-        }
+        searchResult.innerHTML = data;
+        const resCount = searchResult.querySelectorAll('a').length
+        resultCount.innerHTML = `Результатов найдено: ${resCount}`;
       })
       .catch(error => console.log('Ошибка выполнения запроса поиска: ', error));
   }
@@ -501,12 +500,20 @@ searchFields.forEach(searchField => {
     const query = searchField.value;
     clearTimeout(searchTimeout);
     if (query.length > 2) {
-      searchResultsWrapper.classList.add('show')
-      searchTimeout = setTimeout(() => search(query), 300);
+      searchTimeout = setTimeout(() => {
+        search(query)
+        searchResultsWrapper.classList.add('show');
+      }, 300);
     } else {
       searchResultsWrapper.classList.remove('show');
       searchResult.innerHTML = '';
     }
   });
-
-})
+});
+document.addEventListener('click', (e) => {
+  const taeget = e.target;
+  const openSearch = document.querySelector('.search-form__res.show')
+  if (openSearch && !taeget.closest('.search-form__res.show')) {
+    openSearch.classList.remove('show');
+  }
+});
