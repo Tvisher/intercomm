@@ -10,7 +10,7 @@
   color: #fff;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
   &:before {
     transition: opacity 0.3s ease-in-out;
@@ -38,6 +38,23 @@
   &:active {
     transform: translateY(2px);
   }
+}
+
+.ghost-btn {
+  background-color: transparent;
+  border: 2px solid #FA0056;
+  color: #FA0056;
+
+
+  &:hover {
+    color: #fff;
+    background-color: #FA0056;
+  }
+
+  &::before {
+    display: none;
+  }
+
 }
 
 button {

@@ -3421,7 +3421,7 @@ footer {
   color: #fff;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .red-btn:before {
@@ -3449,6 +3449,21 @@ footer {
 
 .red-btn:active {
   transform: translateY(2px);
+}
+
+.ghost-btn {
+  background-color: transparent;
+  border: 2px solid #FA0056;
+  color: #FA0056;
+}
+
+.ghost-btn:hover {
+  color: #fff;
+  background-color: #FA0056;
+}
+
+.ghost-btn::before {
+  display: none;
 }
 
 button {
@@ -4176,7 +4191,7 @@ footer {
 .devepment-by {
   text-align: right;
   color: #888888;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .devepment-by a {
@@ -8294,6 +8309,11 @@ p {
   margin-left: auto;
 }
 
+.lk-settings .lk-settings__btn.ghost-btn {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 .lk-settings .lk-settings__photo {
   flex-shrink: 0;
   width: 130px;
@@ -8302,6 +8322,10 @@ p {
   border: 2px solid #FA0056;
   overflow: hidden;
   margin-right: 25px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='89' height='108' viewBox='0 0 89 108' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M71 26.75C71 41.3855 59.1355 53.25 44.5 53.25C29.8645 53.25 18 41.3855 18 26.75C18 12.1145 29.8645 0.25 44.5 0.25C59.1355 0.25 71 12.1145 71 26.75Z' fill='%23D9D9D9'/%3e%3cpath d='M89 107.75C89 101.906 87.849 96.1196 85.6126 90.7206C83.3763 85.3216 80.0985 80.416 75.9662 76.2837C71.834 72.1515 66.9284 68.8737 61.5294 66.6374C56.1304 64.401 50.3438 63.25 44.5 63.25C38.6562 63.25 32.8696 64.401 27.4706 66.6374C22.0716 68.8737 17.166 72.1515 13.0337 76.2838C8.90154 80.416 5.62369 85.3216 3.38736 90.7206C1.15103 96.1196 -5.10883e-07 101.906 0 107.75L44.5 107.75H89Z' fill='%23D9D9D9'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55%;
 }
 
 .lk-settings .lk-settings__photo img {
@@ -8314,6 +8338,12 @@ p {
 
 .lk-settings .lk-settings__user-data {
   padding-right: 10px;
+}
+
+.lk-settings .add-photo-btn {
+  width: fit-content;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .lk-settings .user-data__title {
@@ -8356,6 +8386,32 @@ p {
   font-size: 16px;
   line-height: 130%;
   color: #706F6F;
+}
+
+.lk-settings__form .lk-settings__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #706F6F;
+  margin-bottom: 25px;
+}
+
+.lk-settings__form .lk-settings__label span {
+  margin-bottom: 6px;
+}
+
+.lk-settings__form .lk-settings__label .lk-settings__input,
+.lk-settings__form .lk-settings__label .lk-settings__textarea {
+  width: 100%;
+  background: #FFFFFF;
+  padding: 14px 20px;
+  border: 1px solid #DFE9F4;
+  border-radius: 4px;
+}
+
+.lk-settings__form .lk-settings__label .lk-settings__textarea {
+  resize: vertical;
+  min-height: 90px;
 }
 
 @media (min-width: 577px) {
