@@ -5271,6 +5271,10 @@ input::-webkit-inner-spin-button {
   color: #333333;
   position: relative;
 
+  span {
+    display: inline;
+  }
+
   &:before {
     position: absolute;
     content: '';
