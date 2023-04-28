@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "https://unpkg.com/dropzone@5/dist/min/dropzone.min.css";
+
 @font-face {
   font-family: "Inter";
   font-display: swap;
@@ -8292,11 +8294,15 @@ p {
 }
 
 .lk-settings {
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
   background: linear-gradient(311.21deg, #EEEEEE 2.54%, #F9F9F9 74.42%);
   padding: 30px;
 }
 
 .lk-settings .lk-settings__head {
+  flex-wrap: wrap;
   margin-bottom: 25px;
   display: flex;
   align-items: center;
@@ -8412,6 +8418,136 @@ p {
 .lk-settings__form .lk-settings__label .lk-settings__textarea {
   resize: vertical;
   min-height: 90px;
+}
+
+.add-avatar-modal,
+.new-pass-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-avatar-modal.show,
+.new-pass-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.add-avatar-modal .add-avatar-modal__content,
+.new-pass-modal .add-avatar-modal__content {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  background: #EBF4FF;
+  padding: 25px;
+  padding-top: 15px;
+  height: 400px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.add-avatar-modal .add-avatar-modal__title,
+.new-pass-modal .add-avatar-modal__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 25px;
+}
+
+.add-avatar-modal .add-avatar-modal__dropzone,
+.new-pass-modal .add-avatar-modal__dropzone {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px dashed #888888;
+}
+
+.add-avatar-modal .add-avatar-modal__close,
+.new-pass-modal .add-avatar-modal__close {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='1.41406' width='26' height='2' transform='rotate(45 1.41406 0)' fill='%2348474D'/%3e%3crect x='19.7988' y='1.41406' width='26' height='2' transform='rotate(135 19.7988 1.41406)' fill='%2348474D'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.dz-message.needsclick {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 130%;
+  text-align: center;
+  color: #888888;
+}
+
+.dz-message.needsclick .add-photo-btn {
+  margin-top: 20px;
+}
+
+.new-pass-modal .pass-label {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.new-pass-modal .toggle-pass {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.new-pass-modal .toggle-pass svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.new-pass-modal .toggle-pass.show svg path,
+.new-pass-modal .toggle-pass.show svg circle {
+  stroke: #FA0056;
+}
+
+.new-pass-modal .pass-input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #DFE9F4;
+  border-radius: 4px;
+  padding: 14px 20px;
+}
+
+.new-pass-modal .replace-pass {
+  margin-top: 15px;
+}
+
+.new-pass-modal .red-btn {
+  margin-top: 20px;
 }
 
 @media (min-width: 577px) {
@@ -9107,6 +9243,41 @@ p {
 
   .contancts-block .contancts-data {
     padding: 20px;
+  }
+
+  .lk-settings .lk-settings__head {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lk-settings .lk-settings__head .lk-settings__photo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .lk-settings .lk-settings__head .user-data__title {
+    font-size: 18px;
+  }
+
+  .lk-settings .lk-settings__head .lk-settings__user-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .lk-settings .lk-settings__head .lk-settings__user-data .user-data__block {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .lk-settings .lk-settings__head .add-photo-btn {
+    margin-bottom: 20px;
+  }
+
+  .lk-settings .lk-settings__head .lk-settings__btn {
+    margin: auto;
   }
 }
 

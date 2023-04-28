@@ -387,6 +387,7 @@
                 </div>
             </div>
         </header>
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 <main>
     <section class="media-section media-section__inner article-page">
         <div class="container">
@@ -401,8 +402,10 @@
                             <div class="lk-settings__photo">
                                 <!-- <img src="https://sakhaday.ru/wp-content/uploads/2018/08/garold1.jpg" alt=""> -->
                             </div>
-                            <a href="" class="add-photo-btn red-btn"><span>Добавить аватар</span></a>
-                            <a href="" class="lk-settings__btn red-btn ghost-btn"><span>Сменить пароль</span></a>
+                            <div class="add-photo-btn red-btn" data-open-upload-image><span>Добавить аватар</span></div>
+                            <div class="lk-settings__btn red-btn ghost-btn" data-open-pass-replce>
+                                <span>Сменить пароль</span>
+                            </div>
                         </div>
                         <form action="" class="lk-settings__form">
                             <label class="lk-settings__label">
@@ -436,9 +439,142 @@
                                 </span>
                             </button>
                         </form>
+                        <div class="add-avatar-modal">
+                            <div class="add-avatar-modal__content">
+                                <div class="add-avatar-modal__close"
+                                    onclick="this.closest('.show').classList.remove('show')"></div>
+                                <div class="add-avatar-modal__title">Добавить аватар</div>
+                                <div class="add-avatar-modal__dropzone dropzone" id="settings-dropzone">
+                                    <div class="dz-message needsclick">
+                                        <span>Перетащите сюда<br>файлы PNG, JPG, BMP<br>или</span>
+                                        <div class="add-photo-btn red-btn"><span>Добавить аватар</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-pass-modal">
+                            <div class="add-avatar-modal__content">
+                                <div class="add-avatar-modal__close"></div>
+                                <div class="add-avatar-modal__title">Новый пароль</div>
+                                <form action="" class="replace-pass">
+                                    <label class="pass-label">
+                                        <input type="password" class="pass-input" placeholder="Старый пароль">
+                                        <div class="toggle-pass">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="3" stroke="black" stroke-linecap="round" />
+                                                <path
+                                                    d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                    stroke="black" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                    </label>
+                                    <label class="pass-label">
+                                        <input type="password" class="pass-input" placeholder="Новый пароль">
+                                        <div class="toggle-pass">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="3" stroke="black" stroke-linecap="round" />
+                                                <path
+                                                    d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                    stroke="black" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                    </label>
+                                    <label class="pass-label">
+                                        <input type="password" class="pass-input" placeholder="Повторите пароль">
+                                        <div class="toggle-pass">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="3" stroke="black" stroke-linecap="round" />
+                                                <path
+                                                    d="M21 12C21 12 16.9706 18 12 18C7.02944 18 3 12 3 12C3 12 7.02944 6 12 6C16.9706 6 21 12 21 12Z"
+                                                    stroke="black" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                    </label>
+                                    <button type="submit" class="red-btn">
+                                        <span>
+                                            Сохранить
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener('click', (e) => {
+                        const target = e.target;
+                        if (target.closest('.toggle-pass')) {
+                            const togglePass = target.closest('.toggle-pass');
+                            const toggleInput = togglePass.parentNode.querySelector('input');
+                            togglePass.classList.contains('show') ? toggleInput.type = 'password' : toggleInput.type = 'text';
+                            togglePass.classList.toggle('show');
+                            return;
+                        }
+                        // Открытие модалки с загрузкой аватара
+                        if (target.closest('[data-open-upload-image]')) {
+                            document.querySelector('.add-avatar-modal')?.classList.add('show');
+                        }
 
+                        // Открытие модалки со сменой пароля
+                        if (target.closest('[data-open-pass-replce]')) {
+                            document.querySelector('.new-pass-modal')?.classList.add('show');
+                        }
+                        // Закрытие модалки со сменой пароля
+                        if (target.closest('.new-pass-modal .add-avatar-modal__close')) {
+                            const modal = document.querySelector('.new-pass-modal.show');
+                            modal.classList.remove('show');
+                            setTimeout(() => {
+                                modal.querySelectorAll('input').forEach(input => {
+                                    input.type = 'password';
+                                    input.value = '';
+                                });
+                                modal.querySelectorAll('.toggle-pass').forEach(toggle => toggle.classList.remove('show'));
+                            }, 300);
+                        }
+                    });
+
+
+                    const dropzoneElem = document.querySelector('.dropzone');
+                    Dropzone.autoDiscover = false;
+                    if (dropzoneElem) {
+                        let myDropzone = new Dropzone(".dropzone", {
+                            url: "/api/uploader",
+                            paramName: 'temp',
+                            acceptedFiles: "image/*",
+                            addRemoveLinks: true,
+                            maxFiles: 1,
+                            maxFilesize: 50, //MB
+                            dictFileTooBig: 'Файл слишком большой. Максимальный размер файла: 50MiB.',
+                            dictDefaultMessage: 'Поместите файлы сюда для загрузки',
+                            dictInvalidFileType: 'Вы не можете загружать файлы этого типа.',
+                            dictFallbackMessage: "Ваш браузер не поддерживает загрузку файлов drag'n'drop.",
+                            success: (file, response) => {
+                                console.log(file, response);
+                            },
+                            addedfile: function (file) {
+                                const fileType = file.type.startsWith("image/");
+                                if (!fileType) {
+                                    alert("Поддеживается только загрузка изображений");
+                                    return;
+                                }
+                                const imagePreview = document.querySelector('.lk-settings__photo');
+                                if (!imagePreview) return;
+                                imagePreview.innerHTML = '';
+                                const reader = new FileReader();
+                                reader.onload = function (event) {
+                                    const img = document.createElement("img");
+                                    img.setAttribute("src", event.target.result);
+                                    imagePreview.appendChild(img);
+                                };
+                                reader.readAsDataURL(file);
+                                document.querySelector('.add-avatar-modal.show')?.classList.remove('show');
+                            }
+                        });
+                    }
+                </script>
                 <div class="media-section__col">
                     <div id="pc-nav-sidebar-parent">
                         <ul class="nav-sidebar services-sidebar" id="nav-sidebar">
