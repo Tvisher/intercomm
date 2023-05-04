@@ -4320,6 +4320,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  margin: 0;
 }
 
 .site-nav__item .item__title {
@@ -5164,6 +5165,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .inner-banner._small .inner-banner__content {
@@ -8458,7 +8460,6 @@ p {
   background: #EBF4FF;
   padding: 25px;
   padding-top: 15px;
-  height: 400px;
   max-width: 400px;
   width: 100%;
 }
@@ -8513,15 +8514,14 @@ p {
 .new-pass-modal .pass-label {
   width: 100%;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .new-pass-modal .toggle-pass {
   cursor: pointer;
   position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 13px;
   width: 24px;
   height: 24px;
 }
@@ -8552,6 +8552,34 @@ p {
 
 .new-pass-modal .red-btn {
   margin-top: 20px;
+}
+
+.lk-settings__label .pass-advice,
+.pass-label .pass-advice {
+  font-size: 13px;
+  color: #888888;
+}
+
+.lk-settings__label .error-mes,
+.pass-label .error-mes {
+  color: #FF0000;
+  font-size: 13px;
+  display: none;
+}
+
+.lk-settings__label.has-error .pass-advice,
+.pass-label.has-error .pass-advice {
+  display: none;
+}
+
+.lk-settings__label.has-error .lk-settings__input,
+.pass-label.has-error .lk-settings__input {
+  border-color: #FF0000;
+}
+
+.lk-settings__label.has-error .error-mes,
+.pass-label.has-error .error-mes {
+  display: block;
 }
 
 @media (min-width: 577px) {

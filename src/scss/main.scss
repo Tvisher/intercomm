@@ -1137,6 +1137,7 @@ footer {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      margin: 0;
     }
   }
 
@@ -2032,6 +2033,7 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
+    margin: 0;
   }
 
   width: 100%;
@@ -6863,7 +6865,7 @@ p {
     background: #EBF4FF;
     padding: 25px;
     padding-top: 15px;
-    height: 400px;
+    // height: 400px;
     max-width: 400px;
     width: 100%;
   }
@@ -6920,15 +6922,14 @@ p {
   .pass-label {
     width: 100%;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .toggle-pass {
     cursor: pointer;
     position: absolute;
     right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 13px;
     width: 24px;
     height: 24px;
 
@@ -6965,5 +6966,34 @@ p {
 
   .red-btn {
     margin-top: 20px;
+  }
+}
+
+.lk-settings__label,
+.pass-label {
+  .pass-advice {
+    font-size: 13px;
+    color: #888888;
+  }
+
+  .error-mes {
+    color: #FF0000;
+    font-size: 13px;
+    display: none;
+  }
+
+  &.has-error {
+
+    .pass-advice {
+      display: none;
+    }
+
+    .lk-settings__input {
+      border-color: #FF0000;
+    }
+
+    .error-mes {
+      display: block;
+    }
   }
 }

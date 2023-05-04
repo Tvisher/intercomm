@@ -408,21 +408,22 @@
                             </div>
                         </div>
                         <form action="" class="lk-settings__form">
-                            <label class="lk-settings__label">
-                                <span>ФИО</span>
+                            <label class="lk-settings__label has-error">
+                                <span>ФИО *</span>
                                 <input type="text" placeholder="Введите ваше ФИО" class="lk-settings__input">
+                                <div class="error-mes">Поле не может быть пустым</div>
                             </label>
 
-                            <label class="lk-settings__label">
-                                <span>E-mail</span>
+                            <label class="lk-settings__label has-error">
+                                <span>E-mail *</span>
                                 <input type="email" placeholder="E-mail" class="lk-settings__input">
+                                <div class="error-mes">Необходимо указать валидный Email</div>
                             </label class="lk-settings__label">
 
                             <label class="lk-settings__label">
                                 <span>Ваш телефон</span>
-                                <input type="email" placeholder="Номер телефона" class="lk-settings__input">
+                                <input type="tel" placeholder="Номер телефона" class="lk-settings__input">
                             </label>
-
 
                             <label class="lk-settings__label">
                                 <span>Информация о себе</span>
@@ -456,9 +457,10 @@
                             <div class="add-avatar-modal__content">
                                 <div class="add-avatar-modal__close"></div>
                                 <div class="add-avatar-modal__title">Новый пароль</div>
-                                <form action="" class="replace-pass">
+                                <form action="" class="replace-pass" id="replace-pass">
                                     <label class="pass-label">
-                                        <input type="password" class="pass-input" placeholder="Старый пароль">
+                                        <input type="password" class="pass-input" id="oldPass"
+                                            placeholder="Старый пароль">
                                         <div class="toggle-pass">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -468,9 +470,12 @@
                                                     stroke="black" stroke-linecap="round" />
                                             </svg>
                                         </div>
+                                        <div class="pass-advice">Используйте сильный пароль Aa-Ww !_# 123</div>
+                                        <div class="error-mes">Старый пароль неверный!</div>
                                     </label>
                                     <label class="pass-label">
-                                        <input type="password" class="pass-input" placeholder="Новый пароль">
+                                        <input type="password" class="pass-input" id="newPass"
+                                            placeholder="Новый пароль">
                                         <div class="toggle-pass">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -480,9 +485,11 @@
                                                     stroke="black" stroke-linecap="round" />
                                             </svg>
                                         </div>
+                                        <div class="error-mes">Пароли не совпадают!</div>
                                     </label>
-                                    <label class="pass-label">
-                                        <input type="password" class="pass-input" placeholder="Повторите пароль">
+                                    <label class="pass-label ">
+                                        <input type="password" class="pass-input" id="newPassRepeat"
+                                            placeholder="Повторите пароль">
                                         <div class="toggle-pass">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -504,6 +511,53 @@
                     </div>
                 </div>
                 <script>
+                    // const replasePassForm = document.querySelector('#replace-pass');
+                    // replasePassForm.addEventListener('submit', (e) => {
+                    //     e.preventDefault();
+                    //     const oldPass = replasePassForm.querySelector('#oldPass');
+                    //     const newPass = replasePassForm.querySelector('#newPass');
+                    //     const newPassRepeat = replasePassForm.querySelector('#newPass');
+                    //     [oldPass, newPass, newPassRepeat].forEach(item => {
+                    //         if (item.value.length < 1) {
+                    //             item.closest('.pass-label').classList.add('has-error');
+                    //         }
+                    //     });
+                    //     if (newPass !== newPassRepeat) {
+                    //         console.log(newPass !== newPassRepeat);
+                    //         newPass.closest('.pass-label').classList.add('has-error');
+                    //     }
+                    //     // Проверяем старый пароль с помощью метода fetch
+                    //     fetch('/check-old-password', {
+                    //         method: 'POST',
+                    //         headers: {
+                    //             'Content-Type': 'application/json;charset=UTF-8'
+                    //         },
+                    //         body: JSON.stringify({ oldPass })
+                    //     })
+                    //         .then(res => {
+                    //             if (!res.ok) {
+                    //                 oldPass.closest('.pass-label').classList.add('has-error');
+                    //             } else {
+                    //                 if (replasePassForm.querySelectorAll('.has-error').length !== 0) {
+                    //                     return;
+                    //                 } else {
+                    //                     fetch('/change-password', {
+                    //                         method: 'POST',
+                    //                         headers: {
+                    //                             'Content-Type': 'application/json;charset=UTF-8'
+                    //                         },
+                    //                         body: JSON.stringify({
+                    //                             oldPass,
+                    //                             newPass,
+                    //                             newPassRepeat
+                    //                         })
+                    //                     })
+                    //                 }
+                    //             }
+                    //         });
+
+                    // });
+
                     document.addEventListener('click', (e) => {
                         const target = e.target;
                         if (target.closest('.toggle-pass')) {
@@ -528,6 +582,7 @@
                             modal.classList.remove('show');
                             setTimeout(() => {
                                 modal.querySelectorAll('input').forEach(input => {
+                                    input.closest('.pass-label').classList.remove('has-error');
                                     input.type = 'password';
                                     input.value = '';
                                 });
@@ -923,6 +978,8 @@
 <script src="./js/aos.js"></script>
 <script src="./js/fancybox.umd.js"></script>
 <script src="./js/jquery.marquee.min.js"></script>
+<script src="./js/imask.js"></script>
+
 <script src="./js/app.js"></script>
 
 <script>
