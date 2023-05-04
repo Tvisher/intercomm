@@ -560,6 +560,7 @@
 
                     document.addEventListener('click', (e) => {
                         const target = e.target;
+                        // Показать\скрыть пароль
                         if (target.closest('.toggle-pass')) {
                             const togglePass = target.closest('.toggle-pass');
                             const toggleInput = togglePass.parentNode.querySelector('input');
