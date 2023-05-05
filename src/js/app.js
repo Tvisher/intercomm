@@ -486,8 +486,8 @@ searchFields.forEach(searchField => {
   //Запрос за данными
   function search(query) {
     // Куда стучим, + передаём параметр q т.е query
-    // const url = '/search?q=' + encodeURIComponent(query);
-    const url = '../searchres.php';
+    const url = '/ajax/search_ajax.php?q=' + encodeURIComponent(query);
+    //const url = 'https://tvisher.github.io/intercomm/searchres.php';
     fetch(url)
       .then(response => response.text())
       .then(data => {
@@ -518,10 +518,6 @@ document.addEventListener('click', (e) => {
     openSearch.classList.remove('show');
   }
 });
-
-
-
-
 
 // Маска на номера телефона
 document.querySelectorAll('input[type="tel"]').forEach(input => {
