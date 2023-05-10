@@ -118,7 +118,7 @@
                                         </span>
                                     </button>
                                 </form>
-                                <div class="new-pass-modal__succses show">
+                                <div class="new-pass-modal__succses">
                                     <div class="ico"></div>
                                     Ваш пароль<br> успешно изменён
                                 </div>
@@ -127,53 +127,6 @@
                     </div>
                 </div>
                 <script>
-                    // const replasePassForm = document.querySelector('#replace-pass');
-                    // replasePassForm.addEventListener('submit', (e) => {
-                    //     e.preventDefault();
-                    //     const oldPass = replasePassForm.querySelector('#oldPass');
-                    //     const newPass = replasePassForm.querySelector('#newPass');
-                    //     const newPassRepeat = replasePassForm.querySelector('#newPass');
-                    //     [oldPass, newPass, newPassRepeat].forEach(item => {
-                    //         if (item.value.length < 1) {
-                    //             item.closest('.pass-label').classList.add('has-error');
-                    //         }
-                    //     });
-                    //     if (newPass !== newPassRepeat) {
-                    //         console.log(newPass !== newPassRepeat);
-                    //         newPass.closest('.pass-label').classList.add('has-error');
-                    //     }
-                    //     // Проверяем старый пароль с помощью метода fetch
-                    //     fetch('/check-old-password', {
-                    //         method: 'POST',
-                    //         headers: {
-                    //             'Content-Type': 'application/json;charset=UTF-8'
-                    //         },
-                    //         body: JSON.stringify({ oldPass })
-                    //     })
-                    //         .then(res => {
-                    //             if (!res.ok) {
-                    //                 oldPass.closest('.pass-label').classList.add('has-error');
-                    //             } else {
-                    //                 if (replasePassForm.querySelectorAll('.has-error').length !== 0) {
-                    //                     return;
-                    //                 } else {
-                    //                     fetch('/change-password', {
-                    //                         method: 'POST',
-                    //                         headers: {
-                    //                             'Content-Type': 'application/json;charset=UTF-8'
-                    //                         },
-                    //                         body: JSON.stringify({
-                    //                             oldPass,
-                    //                             newPass,
-                    //                             newPassRepeat
-                    //                         })
-                    //                     })
-                    //                 }
-                    //             }
-                    //         });
-
-                    // });
-
                     document.addEventListener('click', (e) => {
                         const target = e.target;
                         // Показать\скрыть пароль

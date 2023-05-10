@@ -74,7 +74,6 @@ footer {
   width: 100% !important;
   flex: 0 0 auto;
   position: relative;
-  // max-width: $desktopWidth;
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
@@ -102,7 +101,7 @@ footer {
 .section-title {
   margin-bottom: 30px;
   color: $brand-black;
-
+width: 100%;
   a {
     color: $brand-black;
     width: fit-content;
@@ -111,6 +110,10 @@ footer {
   font-weight: 600;
   font-size: 40px;
   line-height: 100%;
+  &.small {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 }
 
 .site-pagination {
@@ -2917,6 +2920,7 @@ footer {
   font-weight: 600;
   font-size: 25px;
   color: $brand-black;
+  margin-bottom: 20px;
 }
 
 .article-page {
@@ -5254,6 +5258,9 @@ input::-webkit-inner-spin-button {
   p {
     font-weight: 500;
     margin: 0;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
   }
 
   .article-quote__author {
@@ -5465,7 +5472,7 @@ ul:not([class]) {
 
     &.toggle-open {
       &:after {
-        transform: rotate(45deg);
+        transform: rotate(0deg);
       }
     }
 
@@ -5481,6 +5488,7 @@ ul:not([class]) {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      transform: rotate(45deg);
     }
   }
 
@@ -6925,7 +6933,8 @@ p {
   }
   padding: 30px;
   display: flex;
-  align-items: center; justify-content: center;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   text-align: center;
   font-style: normal;
@@ -6942,9 +6951,57 @@ p {
   z-index: 3;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   &.show {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+.favorites-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+  .favorites-group__item {
+    width: 33.33%;
+    padding: 10px;
+  }
+  .atricle-tag {
+    font-size: 10px;
+    color: #888888;
+    margin-left: auto;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    transition: color .3s ease-in-out;
+    &:hover {
+      color:  $brand-red;
+    }
+  }
+
+  .article-data {
+    margin-bottom: 10px;
+  }
+  .f-image {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 8px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .f-title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 120%;
+    color: #333333;
+    @include pruning(3);
   }
 }
