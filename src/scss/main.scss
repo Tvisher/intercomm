@@ -101,7 +101,7 @@ footer {
 .section-title {
   margin-bottom: 30px;
   color: $brand-black;
-width: 100%;
+  width: 100%;
   a {
     color: $brand-black;
     width: fit-content;
@@ -4647,6 +4647,19 @@ footer {
   }
 }
 
+.product-item__basket {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 19.5L12 16.5' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M17 19.5L18 16.5' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z' stroke='%23888888' stroke-linecap='round'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
 .product-item {
   position: relative;
 
@@ -4673,18 +4686,6 @@ footer {
     margin-top: auto;
     display: flex;
     gap: 5px;
-  }
-
-  .product-item__basket {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 19.5L12 16.5' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M17 19.5L18 16.5' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375' stroke='%23888888' stroke-linecap='round'/%3e%3cpath d='M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z' stroke='%23888888' stroke-linecap='round'/%3e%3c/svg%3e ");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   .product-item__name {
@@ -5258,7 +5259,7 @@ input::-webkit-inner-spin-button {
   p {
     font-weight: 500;
     margin: 0;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
@@ -6959,6 +6960,7 @@ p {
 }
 
 .favorites-group {
+  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   margin-right: -10px;
@@ -6966,6 +6968,7 @@ p {
   .favorites-group__item {
     width: 33.33%;
     padding: 10px;
+    margin-bottom: 10px;
   }
   .atricle-tag {
     font-size: 10px;
@@ -6976,9 +6979,9 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: right;
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
     &:hover {
-      color:  $brand-red;
+      color: $brand-red;
     }
   }
 
@@ -7003,5 +7006,54 @@ p {
     line-height: 120%;
     color: #333333;
     @include pruning(3);
+  }
+}
+
+.favorites-group__item._product {
+  .f-image {
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: #f7f7f7;
+  }
+  .f-price {
+    font-weight: 600;
+    margin-left: auto;
+    color: $brand-red;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 680px) {
+  .favorites-group .favorites-group__item {
+    width: 50%;
+  }
+  .section-title.small {
+    font-size: 28px;
+  }
+}
+@media (max-width: 414px) {
+  .favorites-group .favorites-group__item {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .favorites-group {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .favorites-group .f-image {
+    height: 50vw;
+  }
+  .favorites-group .article-data {
+    margin-bottom: 5px;
+    .favorite-label,
+    .favorites-data .ico,
+    .views-data .ico,
+    .comments-data .ico {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
