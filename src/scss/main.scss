@@ -7057,3 +7057,18 @@ p {
     }
   }
 }
+
+
+.surveys-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .surveys-col {
+    width: calc(50% - 10px);
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
+

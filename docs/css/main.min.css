@@ -8709,6 +8709,17 @@ p {
   font-size: 16px;
 }
 
+.surveys-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.surveys-container .surveys-col {
+  width: calc(50% - 10px);
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
@@ -9327,6 +9338,12 @@ p {
   .right-content .right-content__title,
   .right-content .event__info {
     display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .surveys-container .surveys-col {
+    width: 100%;
   }
 }
 
