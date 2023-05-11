@@ -5273,6 +5273,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin: 0;
 }
 
 .article-page__float-img.float-right {
@@ -5300,7 +5301,7 @@ footer {
 
 .article-page__socials {
   padding: 16px;
-  width: 50%;
+  width: 20%;
   background: linear-gradient(135deg, #444343 0%, #656097 100%);
   display: flex;
   align-items: center;
@@ -5319,7 +5320,7 @@ footer {
 
 .article-page__grade {
   justify-content: center;
-  width: 50%;
+  width: 80%;
   padding: 33px 20px;
   background: #f0f7ff;
   align-items: center;
@@ -6868,6 +6869,7 @@ ul:not([class]) li::marker {
   width: 100%;
   object-position: center;
   object-fit: cover;
+  margin: 0;
 }
 
 .article-galery .galery-thumbs-slider {
@@ -6890,6 +6892,7 @@ ul:not([class]) li::marker {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin: 0;
 }
 
 .article-galery .swiper-pagination {
@@ -8718,6 +8721,59 @@ p {
 
 .surveys-container .surveys-col {
   width: calc(50% - 10px);
+}
+
+.copy-iframe-modal {
+  z-index: 99;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(51, 51, 51, 0.92);
+  backdrop-filter: blur(8.5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-iframe-modal .copy-iframe-modal__content {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  background: #ebf4ff;
+  padding: 60px 67px;
+  background-image: url(../img/iframe-modal.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.copy-iframe-modal .copy-iframe-modal__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 62px;
+}
+
+.copy-iframe-modal .copy-iframe-modal__area {
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #dfe9f4;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.copy-iframe-modal .copy-iframe-modal__close {
+  position: absolute;
 }
 
 @media (min-width: 577px) {
