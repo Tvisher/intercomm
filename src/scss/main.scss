@@ -7092,7 +7092,7 @@ p {
     width: 100%;
     background: #ebf4ff;
     padding: 60px 67px;
-   background-image: url(../img/iframe-modal.png);
+    background-image: url(../img/iframe-modal.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
@@ -7111,6 +7111,7 @@ p {
     margin-bottom: 62px;
   }
   .copy-iframe-modal__area {
+    word-break: break-all;
     text-align: left;
     width: 100%;
     padding: 20px;
@@ -7121,5 +7122,13 @@ p {
   }
   .copy-iframe-modal__close {
     position: absolute;
+  }
+}
+
+ol.breadcrumb {
+  display: flex;
+  li {
+    display: flex;
+    align-items: center;
   }
 }

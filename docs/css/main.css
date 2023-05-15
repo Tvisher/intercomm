@@ -8763,6 +8763,7 @@ p {
 }
 
 .copy-iframe-modal .copy-iframe-modal__area {
+  word-break: break-all;
   text-align: left;
   width: 100%;
   padding: 20px;
@@ -8774,6 +8775,15 @@ p {
 
 .copy-iframe-modal .copy-iframe-modal__close {
   position: absolute;
+}
+
+ol.breadcrumb {
+  display: flex;
+}
+
+ol.breadcrumb li {
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 577px) {
