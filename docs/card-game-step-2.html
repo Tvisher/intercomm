@@ -453,7 +453,7 @@
                                 <input type="radio" name="arrow-type" value="white" class="arrow-select-input">
                                 <div class="marker"></div>
                             </label>
-                            <a href="javascript:void(0)" class="card-game-start__btn">
+                            <a href="javascript:void(0)" class="card-game-start__btn" data-open-modal="feedback">
                                 Заказать<br> собственные<br> пятнашки
                             </a>
                         </div>
@@ -1024,7 +1024,38 @@
         </div>
     </section>
 </main>
-
+<div class="modal-template" data-modal-type="feedback">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <div class="contancts-form-wrapper">
+            <form class="feedback-form">
+                <div class="modal-template__title">Закажите у нас<br> собственный сервис</div>
+                <div class="inner__form-wrapper">
+                    <label class="inner-form__label">
+                        <input name="name" placeholder="Ваше имя" class="inner-form__input err" type="text">
+                    </label>
+                    <label class="inner-form__label">
+                        <input name="email" placeholder="Введите E-mail" class="inner-form__input" type="text">
+                    </label>
+                    <label class="inner-form__label">
+                        <input name="phone" placeholder="Ваш телефон" class="inner-form__input" type="tel">
+                    </label>
+                </div>
+                <button type="submit" class="red-btn inner-form__btn">
+                    <span>Отправить</span>
+                </button>
+                <div class="inner-form__agree-wrapper">
+                    <label class="inner-form__agree">
+                        <input type="checkbox" name="form-agree" class="form__agree-checkbox">
+                        <span class="form-agree__text">Согласен на обработку</span>
+                    </label>
+                    <a class="form-agree__link" target="_blank" href="javascript:void(0)">персональных
+                        данных</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <footer>
     <div class="container">
         <div class="footer__wrapper">

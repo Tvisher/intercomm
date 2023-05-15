@@ -432,11 +432,6 @@ $(document).on("click", ".sidebar-item__arrow", function (e) {
 
 
 
-
-
-
-
-
 // Галерея статьи
 const articleGaleryes = document.querySelectorAll('.article-galery');
 if (articleGaleryes.length > 0) {
@@ -518,6 +513,7 @@ document.addEventListener('click', (e) => {
     openSearch.classList.remove('show');
   }
 });
+
 
 // Маска на номера телефона
 document.querySelectorAll('input[type="tel"]').forEach(input => {
