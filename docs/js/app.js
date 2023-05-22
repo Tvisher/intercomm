@@ -524,15 +524,24 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
 
 
 
+function textareaHeight(e) {
+  const textareaTitleHeight = document.querySelectorAll('#resize-area');
+  textareaTitleHeight.forEach(element => {
+    if (element) {
+      element.style.height = element.scrollHeight + "px";
+      element.addEventListener("input", (event) => {
+        element.style.height = 0;
+        element.style.height = element.scrollHeight + "px";
 
-
-var tx = document.querySelectorAll('#resize-area');
-for (var i = 0; i < tx.length; i++) {
-  tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
-  tx[i].addEventListener("input", OnInput, false);
+        const areaHeight = element.style.height.replace(/[^0-9, ]/g, "");
+        if (areaHeight > 200) {
+          element.style.overflow = 'auto';
+        }
+        else {
+          element.style.overflow = 'hidden';
+        }
+      })
+    }
+  });
 }
-
-function OnInput() {
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-}
+textareaHeight();
