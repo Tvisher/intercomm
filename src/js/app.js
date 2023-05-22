@@ -521,3 +521,18 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
     mask: '+{7}(000) 000-00-00'
   });
 });
+
+
+
+
+
+var tx = document.querySelectorAll('#resize-area');
+for (var i = 0; i < tx.length; i++) {
+  tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+}
