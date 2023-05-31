@@ -9008,6 +9008,25 @@ p {
   flex: 0 0 auto;
 }
 
+.gpt-form .gpt-btn.dis {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.loading {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 18px;
+  clip-path: inset(0 3ch 0 0);
+  animation: loa 1s steps(4) infinite;
+}
+
+@keyframes loa {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
+
 .gpt-res__user,
 .gpt-res__bot {
   margin-bottom: 25px;
@@ -9034,6 +9053,13 @@ p {
   font-weight: 400;
   font-size: 16px;
   color: #000000;
+}
+
+.gpt-res__user pre,
+.gpt-res__bot pre {
+  margin: 0;
+  width: 100%;
+  white-space: pre-line;
 }
 
 .gpt-res__user .ico {
@@ -9140,6 +9166,14 @@ p {
 
 .history-item .history-radio:checked + .history-name .remove-item {
   display: block;
+}
+
+.fc-button-group button:last-child {
+  width: auto !important;
+}
+
+.team-group .list-item a .list-item__title {
+  color: #FA0056;
 }
 
 @media (min-width: 577px) {
@@ -10220,9 +10254,34 @@ p {
   }
 
   .fixed-header .header__wrapper {
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 0px;
     padding-bottom: 0;
+  }
+
+  .fixed-header .header__wrapper .mobile-search-btn {
+    margin-left: auto;
+  }
+
+  .fixed-header .header__wrapper .header__data {
+    margin-left: 10px;
+    display: flex;
+  }
+
+  .fixed-header .header__wrapper .header__data .header__favorites,
+  .fixed-header .header__wrapper .header__data .header__exit,
+  .fixed-header .header__wrapper .header__data .user__name {
+    display: none;
+  }
+
+  .fixed-header .header__wrapper .header__auth {
+    font-size: 0;
+  }
+
+  .fixed-header .header__logo,
+  .mobile-menu__logo {
+    margin-left: 10px;
+    width: auto;
   }
 
   .fixed-header {

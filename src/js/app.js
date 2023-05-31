@@ -432,6 +432,11 @@ $(document).on("click", ".sidebar-item__arrow", function (e) {
 
 
 
+
+
+
+
+
 // Галерея статьи
 const articleGaleryes = document.querySelectorAll('.article-galery');
 if (articleGaleryes.length > 0) {
@@ -523,7 +528,6 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
 });
 
 
-
 function textareaHeight(e) {
   const textareaTitleHeight = document.querySelectorAll('#resize-area');
   textareaTitleHeight.forEach(element => {
@@ -545,3 +549,14 @@ function textareaHeight(e) {
   });
 }
 textareaHeight();
+
+
+const activeSidebarEl = document.querySelector('.sidebar-item__link.active');
+if (activeSidebarEl) {
+  const activeElParent = activeSidebarEl.closest('.sidebar-item__body');
+  const activeElParentCategogy = activeElParent.closest('.nav-sidebar__item').querySelector('.sidebar-item__head');
+  const activeElParentArrow = activeElParentCategogy.querySelector('.sidebar-item__arrow ');
+  activeElParent.style.display = 'block';
+  activeElParentArrow.classList.add('toggle-open');
+  activeElParentCategogy.classList.add('toggle-open');
+}

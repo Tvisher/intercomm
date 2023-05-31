@@ -2480,9 +2480,30 @@ footer {
   }
 
   .fixed-header .header__wrapper {
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-start;
     gap: 0px;
     padding-bottom: 0;
+    .mobile-search-btn {
+      margin-left: auto;
+    }
+    .header__data {
+      margin-left: 10px;
+      display: flex;
+      .header__favorites,
+      .header__exit,
+      .user__name {
+        display: none;
+      }
+    }
+    .header__auth {
+      font-size: 0;
+    }
+  }
+  .fixed-header .header__logo,
+  .mobile-menu__logo {
+    margin-left: 10px;
+    width: auto;
   }
 
   .fixed-header {
@@ -7335,6 +7356,24 @@ p {
   .gpt-btn {
     width: auto;
     flex: 0 0 auto;
+    &.dis {
+      pointer-events: none;
+      opacity: 0.8;
+    }
+  }
+}
+
+.loading {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 18px;
+  clip-path: inset(0 3ch 0 0);
+  animation: loa 1s steps(4) infinite;
+}
+
+@keyframes loa {
+  to {
+    clip-path: inset(0 -1ch 0 0);
   }
 }
 
@@ -7359,6 +7398,11 @@ p {
     font-weight: 400;
     font-size: 16px;
     color: #000000;
+  }
+  pre {
+    margin: 0;
+    width: 100%;
+    white-space: pre-line;
   }
 }
 
@@ -7482,4 +7526,12 @@ p {
       width: 100%;
     }
   }
+}
+
+.fc-button-group button:last-child {
+  width: auto !important;
+}
+
+.team-group .list-item a .list-item__title {
+  color: $brand-red;
 }
