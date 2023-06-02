@@ -9226,7 +9226,7 @@ p {
 }
 
 [data-category-block=boxed-solutions] .item__ico {
-  left: 53% !important;
+  left: 52% !important;
   top: 10%;
 }
 
@@ -9311,6 +9311,10 @@ p {
   background: #ffffff;
   border: 1px solid #dfe9f4;
   border-radius: 4px;
+}
+
+.card-game-start__wrapper {
+  min-height: 191px;
 }
 
 @media (min-width: 577px) {
