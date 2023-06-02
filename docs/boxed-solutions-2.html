@@ -14,6 +14,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="./css/main.min.css">
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
 
     <!-- bagfix transition zeroscript  -->
     <script> </script>
@@ -695,7 +696,7 @@
                 Заголовок длинный про коробки в две строки да
             </div>
             <div class="left-content__event">
-                <div class="article-galery">
+                <div class="article-galery boxed-solution-sliders">
                     <div class="galery-slider__wrapper">
                         <div class="galery-slider__container">
                             <div class="swiper galery-slider unselectable">
@@ -855,6 +856,34 @@
 </div>
 
 <script>
+
+    // Галерея статьи
+    const boxedSolutionGalery = document.querySelector('.boxed-solution-sliders');
+    const mainGalSlider = boxedSolutionGalery.querySelector(".galery-thumbs-slider");
+    const thumbGalSlider = boxedSolutionGalery.querySelector(".galery-slider");
+
+    const galeryThumbsSlider = new Swiper(mainGalSlider, {
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    const galerySlider = new Swiper(thumbGalSlider, {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        thumbs: {
+            swiper: galeryThumbsSlider,
+        },
+    });
+
+
     document.addEventListener('click', (e) => {
         const target = e.target;
         if (target.closest('[data-solution]')) {
@@ -996,7 +1025,7 @@
 
 </div>
 </body>
-<script src="./js/swiper-bundle.min.js"></script>
+
 <script src="./js/aos.js"></script>
 <script src="./js/fancybox.umd.js"></script>
 <script src="./js/jquery.marquee.min.js"></script>

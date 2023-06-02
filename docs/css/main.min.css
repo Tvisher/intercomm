@@ -10954,7 +10954,7 @@ p {
 
   .boxed-solutions-modal .boxed-solutions__title {
     padding: 20px;
-    padding-top: 35px;
+    padding-right: 35px;
     font-size: 22px;
   }
 
@@ -10963,6 +10963,7 @@ p {
   }
 
   .boxed-solutions-modal .left-content__event {
+    padding: 10px;
     padding-right: 0;
     padding-left: 0;
   }

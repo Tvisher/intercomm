@@ -7724,13 +7724,14 @@ p {
   @media (max-width: 576px) {
     .boxed-solutions__title {
       padding: 20px;
-      padding-top: 35px;
+      padding-right: 35px;
       font-size: 22px;
     }
     .article-galery .galery-slider {
       height: 50vw;
     }
     .left-content__event {
+      padding: 10px;
       padding-right: 0;
       padding-left: 0;
     }
