@@ -9313,6 +9313,20 @@ p {
   border-radius: 4px;
 }
 
+.boxed-solutions-modal .modal-template__close {
+  right: 15px;
+  top: 15px;
+}
+
+.event__info {
+  display: block !important;
+}
+
+.event__info .info__text,
+.event__info .info__name {
+  display: inline !important;
+}
+
 .card-game-start__wrapper {
   min-height: 191px;
 }
@@ -9945,6 +9959,15 @@ p {
   .right-content .right-content__title,
   .right-content .event__info {
     display: none;
+  }
+
+  .boxed-solutions-modal .right-content .right-content__title,
+  .boxed-solutions-modal .right-content .event__info {
+    display: flex;
+  }
+
+  .modal-template .calendar-modal__close {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='1.41406' width='26' height='2' transform='rotate(45 1.41406 0)' fill='white'/%3e%3crect x='19.7988' y='1.41406' width='26' height='2' transform='rotate(135 19.7988 1.41406)' fill='white'/%3e%3c/svg%3e ");
   }
 }
 
@@ -10891,6 +10914,21 @@ p {
 
   .site-nav .site-nav__item[data-category-block=conference] {
     order: -1;
+  }
+
+  .boxed-solutions-modal .boxed-solutions__title {
+    padding: 20px;
+    padding-top: 35px;
+    font-size: 22px;
+  }
+
+  .boxed-solutions-modal .article-galery .galery-slider {
+    height: 50vw;
+  }
+
+  .boxed-solutions-modal .left-content__event {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
