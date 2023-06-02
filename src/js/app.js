@@ -431,12 +431,6 @@ $(document).on("click", ".sidebar-item__arrow", function (e) {
 
 
 
-
-
-
-
-
-
 // Галерея статьи
 const articleGaleryes = document.querySelectorAll('.article-galery');
 if (articleGaleryes.length > 0) {
