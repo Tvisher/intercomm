@@ -9453,6 +9453,16 @@ p {
   object-fit: cover;
 }
 
+.header__favorites svg path {
+  transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+  fill: transparent;
+}
+
+.header__favorites svg:hover path {
+  stroke: #FA0056;
+  fill: #FA0056;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
