@@ -6020,7 +6020,7 @@ ul:not([class]) {
     }
 
     &:nth-child(even) .fc-daygrid-event {
-      background: linear-gradient(135deg, #1e878e 0%, #45a6ff 100%);
+      background: linear-gradient(135deg, #6c8c8f 0%, #9bb4cb 100%);
     }
   }
 }
@@ -7916,3 +7916,5 @@ p {
     }
   }
 }
+
+@import "lecture";
