@@ -9706,7 +9706,7 @@ p {
 
 .lecture-marquee__container {
   transform: matrix(1, -0.05, 0, 1, 0, 0);
-  padding: 100px 0 50px;
+  padding: 130px 0 40px;
 }
 
 .lecture-marquee {
