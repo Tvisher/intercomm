@@ -9834,6 +9834,16 @@ p {
   margin-bottom: 0 !important;
 }
 
+.lecture-who._sec {
+  padding: 100px 0;
+}
+
+.lecture-who._sec .lecture-who__img {
+  margin-right: 30px;
+  width: 580px;
+  height: 465px;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
