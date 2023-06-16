@@ -9554,6 +9554,21 @@ p {
   margin-bottom: 30px;
 }
 
+.lecture-blocks {
+  position: relative;
+}
+
+.lecture-blocks__ball {
+  position: absolute;
+  left: 54.5%;
+  top: 100px;
+  background: linear-gradient(225deg, #9f2ad6 0%, rgba(214, 42, 126, 0) 100%);
+  content: "";
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+}
+
 .lecture-blocks__list {
   display: flex;
   margin-right: -15px;
@@ -9561,19 +9576,6 @@ p {
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
-}
-
-.lecture-blocks__list::before {
-  position: absolute;
-  right: 15px;
-  top: 0;
-  background: linear-gradient(225deg, #9f2ad6 0%, rgba(214, 42, 126, 0) 100%);
-  content: "";
-  width: 480px;
-  height: 480px;
-  border-radius: 50%;
-  z-index: -1;
-  transform: translateY(-120px);
 }
 
 .lecture-blocks__list .lecture-block {

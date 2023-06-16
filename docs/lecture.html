@@ -414,6 +414,7 @@
         </div>
     </section>
     <section class="lecture-blocks">
+        <div class="lecture-blocks__ball"></div>
         <div class="container">
             <h2 class="lecture-title">Кому будет полезен лекторий?</h2>
             <span class="lecture-descr ">Всем, кто уже работает во внутренних коммуникациях и развивает<br> карьеру в
@@ -501,6 +502,7 @@
         </div>
     </section>
     <section class="lecture-blocks __purple">
+        <div class="lecture-blocks__ball"></div>
         <div class="container">
             <h2 class="lecture-title">Что в результате?</h2>
             <span class="lecture-descr _large">Наш лекторий — это возможность<br> с помощью лучших практиков:
@@ -582,7 +584,7 @@
         <div class="lecture-marquee__wrapper ">
             <div class="lecture-marquee__container">
                 <div class="lecture-marquee horizontal-paralax" data-speed="-3.4">
-                    <div class="lecture-marquee__item"></div>
+                    <div class="lecture-marquee__item" style="margin-left: 0px;"></div>
                     <div class="lecture-marquee__item">Эффективность!</div>
                     <div class="lecture-marquee__item">Карьера!</div>
                     <div class="lecture-marquee__item">Нетворкинг!</div>
@@ -697,7 +699,7 @@
             const directionParam = item.dataset.speed;
             let mark = directionParam > 0 ? "+" : '-';
             let currenTransformValue = `${mark}${Math.abs(startPosition / directionParam)}`;
-            item.style.transform = `translate3d(${currenTransformValue / 15}vw,0,0)`;
+            item.style.transform = `translate3d(${currenTransformValue}px,0,0)`;
             item.style.willChange = "transform";
         });
     }
