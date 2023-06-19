@@ -712,3 +712,30 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 1440px) {
+  .lecture-page {
+    padding-bottom: 400px;
+    background-size: 700px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .lecture-page__logo {
+    margin-left: 0;
+    order: -1;
+    margin-bottom: 50px;
+  }
+  .lecture-page__head {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .lecture-page__subtitle {
+    margin-bottom: 20px;
+  }
+  lecture-page__head_w {
+    width: 100%;
+  }
+}
