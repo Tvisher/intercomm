@@ -944,3 +944,10 @@
     width: calc(100vw - 30px);
   }
 }
+
+@media (max-width: 576px) {
+  .lecture-curator .lecture-curator__block {
+    width: 80vw;
+    height: 80vw;
+  }
+}

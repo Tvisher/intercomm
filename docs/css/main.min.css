@@ -12074,6 +12074,11 @@ p {
   .lecture-marquee .lecture-marquee__item::after {
     margin-left: 20px;
   }
+
+  .lecture-curator .lecture-curator__block {
+    width: 80vw;
+    height: 80vw;
+  }
 }
 
 @media (max-width: 568px) {
