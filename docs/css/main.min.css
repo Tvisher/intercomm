@@ -9664,7 +9664,7 @@ p {
   bottom: 0;
   background: #fa0056;
   content: "";
-  width: 100vw;
+  width: 110vw;
 }
 
 .lecture-info__img {
@@ -12078,6 +12078,45 @@ p {
   .lecture-curator .lecture-curator__block {
     width: 80vw;
     height: 80vw;
+  }
+
+  .lecture-page__logo {
+    width: 180px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+
+  .lecture-page__title {
+    font-size: 32px;
+  }
+
+  .lecture-page__subtitle {
+    font-size: 24px;
+  }
+
+  .lecture-page__descr,
+  .lecture-page__purple {
+    font-size: 22px;
+  }
+
+  .lecture-title {
+    font-size: 32px;
+  }
+
+  .lecture-modules__slide .lecture-modules__slide_img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .lecture-modules__slide .lecture-modules__slide_title {
+    font-size: 28px;
+  }
+
+  .lecture-who.has-img,
+  .lecture-page {
+    background-size: 100vw;
+    padding-bottom: 60vw;
   }
 }
 
