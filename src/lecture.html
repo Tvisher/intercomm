@@ -826,7 +826,7 @@
                                     Ваше сообщение отправлено
                                 </div>
                                 <div class="red-btn" data-close-form-sucsess="">
-                                    Закрыть
+                                    <span>Закрыть</span>
                                 </div>
                             </div>
                         </div>
@@ -872,7 +872,7 @@
                 <div class="modal-template__title">Записаться на мероприятие</div>
                 <div class="inner__form-wrapper">
                     <label class="inner-form__label">
-                        <input name="name" placeholder="Ваше имя" class="inner-form__input err" type="text">
+                        <input name="name" placeholder="Ваше имя" class="inner-form__input" type="text">
                     </label>
                     <label class="inner-form__label">
                         <input name="email" placeholder="Введите E-mail" class="inner-form__input" type="text">
@@ -892,14 +892,28 @@
                         <input type="checkbox" name="form-agree" class="form__agree-checkbox">
                         <span class="form-agree__text">Согласен на обработку</span>
                     </label>
-                    <a class="form-agree__link" target="_blank" href="javascript:void(0)">персональных
+                    <a class="form-agree__link" target="_blank" href="https://vnutricom.ru/soglasie/">персональных
                         данных</a>
+                </div>
+                <div class="form-sucsess">
+                    <div class="form-sucsess__content">
+                        <div class="close-btn" data-close-form-sucsess="">
+                        </div>
+                        <div class="form-sucsess__title">
+                            Ваше сообщение отправлено
+                        </div>
+                        <div class="red-btn" data-close-form-sucsess="">
+                            <span>Закрыть</span>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
 <script>
+
+    // Прокручиваемая секция 
     const paralaxEls = document.querySelectorAll('.horizontal-paralax');
     window.addEventListener("scroll", horizontalParalax);
     function horizontalParalax() {
@@ -913,6 +927,8 @@
         });
     }
     horizontalParalax();
+
+    // Аккардеон Модули лектория
     $(document).ready(function () {
         $('.lecture-modules__accardeon .accardeon__head').click(function () {
             $('.lecture-modules__accardeon .accardeon__body').not($(this).next()).slideUp();
@@ -921,7 +937,7 @@
             $(this).toggleClass('active');
         });
     });
-
+    // Слайдер Модули лектория
     const lectureModulesSliderBtns = document.querySelector('.lecture-modules .lecture-slider__btns');
     const lectureModulesSlider = new Swiper('.lecture-modules__slider', {
         slidesPerView: 'auto',
@@ -932,7 +948,7 @@
         }
 
     });
-
+    // Слайдер Спикеры лектория
     const lecturePersonsSliderBtns = document.querySelector('.lecture-persons .lecture-slider__btns');
     const lecturePersonsSlider = new Swiper('.lecture-persons__slider', {
         slidesPerView: 'auto',
@@ -943,50 +959,75 @@
         }
     });
 
+    // Функция проверки Email
     function validateEmail(email) {
         const re =
             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
 
-
+    // Обработка формы внизу сайта
     const lectureForm = document.querySelector('.lecture-form__form');
-    const lectureFormName = lectureForm.querySelector('input[name="name"]');
-    const lectureFormEmail = lectureForm.querySelector('input[name="email"]');
-    const lectureFormPhone = lectureForm.querySelector('input[name="phone"]');
+    lectureForm.addEventListener('submit', formSubmit);
     lectureForm.querySelectorAll('input').forEach(item => {
         item.addEventListener('input', (e) => {
-            item.classList.remove('_err');
+            item.classList.remove('err');
         })
     });
-    lectureForm.addEventListener('submit', (e) => {
+
+    // Обработка формы в модальном окне
+    const feedbackForm = document.querySelector('.feedback-form');
+    feedbackForm.addEventListener('submit', formSubmit);
+    feedbackForm.querySelectorAll('input').forEach(item => {
+        item.addEventListener('input', (e) => {
+            item.classList.remove('err');
+        })
+    });
+
+    //Валидация форм
+    function formSubmit(e) {
         e.preventDefault();
+        this.querySelectorAll('input').forEach(item => item.classList.remove('err'));
+        const lectureFormName = this.querySelector('input[name="name"]');
+        const lectureFormEmail = this.querySelector('input[name="email"]');
+        const lectureFormPhone = this.querySelector('input[name="phone"]');
+        const lectureFormMessage = this.querySelector('input[name="message"]');
+        const lectureFormMessageText = lectureFormMessage ? lectureFormMessage.value.trim() : '';
+        const lectureFormAgree = this.querySelector('input[name="form-agree"]');
+
         if (lectureFormName.value.length < 3) {
-            lectureFormName.classList.add('_err');
+            lectureFormName.classList.add('err');
         }
         if (!validateEmail(lectureFormEmail.value)) {
-            lectureFormEmail.classList.add('_err');
+            lectureFormEmail.classList.add('err');
         }
         if (lectureFormPhone.value.length < 17) {
-            lectureFormPhone.classList.add('_err');
+            lectureFormPhone.classList.add('err');
         }
-        if (lectureForm.querySelectorAll('._err').length === 0) {
+
+        if (lectureFormAgree && !lectureFormAgree.checked) {
+            lectureFormAgree.classList.add('err');
+        }
+
+        if (this.querySelectorAll('.err').length === 0) {
             const formData = {
                 formName: lectureFormName.value.trim(),
                 formEmail: lectureFormEmail.value.trim(),
-                formPhone: lectureFormPhone.value.trim()
+                formPhone: lectureFormPhone.value.trim(),
+                formMessage: lectureFormMessageText
             }
             console.log(formData);
-            ajaxTemplate(lectureForm, formData);
+            ajaxTemplate(this, formData);
         }
-    });
+    }
 
+    // Общая функция для аякс запроса
     function ajaxTemplate(form, formData) {
         $.ajax({ // инициaлизируeм ajax зaпрoс
             type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
             url: '/ajax/contact.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
             dataType: 'json', // oтвeт ждeм в json фoрмaтe
-            data: data, // дaнныe для oтпрaвки
+            data: formData, // дaнныe для oтпрaвки
             success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
                 console.log(data);
                 form.querySelector(".form-sucsess")?.classList.add("show");

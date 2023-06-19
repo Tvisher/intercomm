@@ -10092,11 +10092,11 @@ p {
   color: #202020;
 }
 
-.lecture-form .lecture-form__ibput._err {
+.lecture-form .lecture-form__ibput.err {
   color: red;
 }
 
-.lecture-form .lecture-form__ibput._err::placeholder {
+.lecture-form .lecture-form__ibput.err::placeholder {
   color: red;
 }
 

@@ -590,7 +590,7 @@
     font-size: 18px;
     line-height: 100%;
     color: #202020;
-    &._err {
+    &.err {
       &::placeholder {
         color: red;
       }

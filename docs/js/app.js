@@ -56,7 +56,7 @@ document.body.addEventListener("click", (e) => {
       !target.closest(".form-sucsess__content")) ||
     target.closest("[data-close-form-sucsess]")
   ) {
-    document.querySelector(".form-sucsess").classList.remove("show");
+    document.querySelector(".form-sucsess.show").classList.remove("show");
   }
   // закртыие модального окна регистрации / авторизации
   if (
