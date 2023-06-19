@@ -395,7 +395,7 @@
                 <div class="lecture-page__head_w">
                     <span class="lecture-page__subtitle">Летний образовательный лекторий</span>
                     <h1 class="lecture-page__title">
-                        «Девять<br>с половиной недель»
+                        «Девять<br>с половиной недель»
                     </h1>
                 </div>
                 <div class="lecture-page__logo">
@@ -410,7 +410,7 @@
                 Из исполнителя стать стратегом?
             </div>
             <span class="lecture-page__purple">Тогда эти «Девять c половиной недель» — для тебя!</span>
-            <a href="javascript:void(0)" class="btn lecture-page__btn">Записаться</a>
+            <a href="javascript:void(0)" class="btn lecture-page__btn" data-open-modal="feedback">Записаться</a>
         </div>
     </section>
     <section class="lecture-blocks">
@@ -1198,15 +1198,27 @@
                     <div class="lecture-descr">Запишитесь на лекторий, и мы свяжемся с вами для проведения оплаты</div>
                     <form action="" class="lecture-form__form">
                         <label class="lecture-form__label">
-                            <input type="text" placeholder="Имя Фамилия" class="lecture-form__ibput">
+                            <input type="text" placeholder="Имя Фамилия" name="name" class="lecture-form__ibput">
                         </label>
                         <label class="lecture-form__label">
-                            <input type="text" placeholder="your@mail.com" class="lecture-form__ibput">
+                            <input type="text" placeholder="your@mail.com" name="email" class="lecture-form__ibput">
                         </label>
                         <label class="lecture-form__label">
-                            <input type="tel" placeholder="+7 (900) 123-45-67" class="lecture-form__ibput">
+                            <input type="tel" placeholder="+7 (900) 123-45-67" name="phone" class="lecture-form__ibput">
                         </label>
                         <button class="lecture-form__btn" type="submit">Записаться</button>
+                        <div class="form-sucsess">
+                            <div class="form-sucsess__content">
+                                <div class="close-btn" data-close-form-sucsess="">
+                                </div>
+                                <div class="form-sucsess__title">
+                                    Ваше сообщение отправлено
+                                </div>
+                                <div class="red-btn" data-close-form-sucsess="">
+                                    Закрыть
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="lecture-form__img">
@@ -1241,7 +1253,41 @@
         </div>
     </section>
 </main>
-
+<div class="modal-template" data-modal-type="feedback">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <div class="contancts-form-wrapper">
+            <form class="feedback-form">
+                <div class="modal-template__title">Записаться на мероприятие</div>
+                <div class="inner__form-wrapper">
+                    <label class="inner-form__label">
+                        <input name="name" placeholder="Ваше имя" class="inner-form__input err" type="text">
+                    </label>
+                    <label class="inner-form__label">
+                        <input name="email" placeholder="Введите E-mail" class="inner-form__input" type="text">
+                    </label>
+                    <label class="inner-form__label">
+                        <input name="phone" placeholder="Ваш телефон" class="inner-form__input" type="tel">
+                    </label>
+                    <label class="inner-form__label">
+                        <textarea class="inner__form-textarea" placeholder="Ваше сообщение" name="message"></textarea>
+                    </label>
+                </div>
+                <button type="submit" class="red-btn inner-form__btn">
+                    <span>Отправить</span>
+                </button>
+                <div class="inner-form__agree-wrapper">
+                    <label class="inner-form__agree">
+                        <input type="checkbox" name="form-agree" class="form__agree-checkbox">
+                        <span class="form-agree__text">Согласен на обработку</span>
+                    </label>
+                    <a class="form-agree__link" target="_blank" href="javascript:void(0)">персональных
+                        данных</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <script>
     const paralaxEls = document.querySelectorAll('.horizontal-paralax');
     window.addEventListener("scroll", horizontalParalax);
@@ -1251,12 +1297,11 @@
             const directionParam = item.dataset.speed;
             let mark = directionParam > 0 ? "+" : '-';
             let currenTransformValue = `${mark}${Math.abs(startPosition / directionParam)}`;
-            item.style.transform = `translate3d(${currenTransformValue}px,0,0)`;
+            item.style.transform = `translate3d(${currenTransformValue * 1.5}px,0,0)`;
             item.style.willChange = "transform";
         });
     }
     horizontalParalax();
-
     $(document).ready(function () {
         $('.lecture-modules__accardeon .accardeon__head').click(function () {
             $('.lecture-modules__accardeon .accardeon__body').not($(this).next()).slideUp();
@@ -1273,19 +1318,8 @@
         navigation: {
             nextEl: lectureModulesSliderBtns.querySelector('.lecture__next'),
             prevEl: lectureModulesSliderBtns.querySelector('.lecture__prev')
-        },
-        // Responsive breakpoints
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-            },
-            // when window width is >= 480px
-            480: {
-            },
-            // when window width is >= 640px
-            640: {
-            }
         }
+
     });
 
     const lecturePersonsSliderBtns = document.querySelector('.lecture-persons .lecture-slider__btns');
@@ -1295,20 +1329,65 @@
         navigation: {
             nextEl: lecturePersonsSliderBtns.querySelector('.lecture__next'),
             prevEl: lecturePersonsSliderBtns.querySelector('.lecture__prev')
-        },
-        // Responsive breakpoints
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-            },
-            // when window width is >= 480px
-            480: {
-            },
-            // when window width is >= 640px
-            640: {
-            }
         }
-    })
+    });
+
+    function validateEmail(email) {
+        const re =
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+
+    const lectureForm = document.querySelector('.lecture-form__form');
+    const lectureFormName = lectureForm.querySelector('input[name="name"]');
+    const lectureFormEmail = lectureForm.querySelector('input[name="email"]');
+    const lectureFormPhone = lectureForm.querySelector('input[name="phone"]');
+    lectureForm.querySelectorAll('input').forEach(item => {
+        item.addEventListener('input', (e) => {
+            item.classList.remove('_err');
+        })
+    });
+    lectureForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (lectureFormName.value.length < 3) {
+            lectureFormName.classList.add('_err');
+        }
+        if (!validateEmail(lectureFormEmail.value)) {
+            lectureFormEmail.classList.add('_err');
+        }
+        if (lectureFormPhone.value.length < 17) {
+            lectureFormPhone.classList.add('_err');
+        }
+        if (lectureForm.querySelectorAll('._err').length === 0) {
+            const formData = {
+                formName: lectureFormName.value.trim(),
+                formEmail: lectureFormEmail.value.trim(),
+                formPhone: lectureFormPhone.value.trim()
+            }
+            console.log(formData);
+            ajaxTemplate(lectureForm, formData);
+        }
+    });
+
+    function ajaxTemplate(form, formData) {
+        $.ajax({ // инициaлизируeм ajax зaпрoс
+            type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
+            url: '/ajax/contact.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
+            dataType: 'json', // oтвeт ждeм в json фoрмaтe
+            data: data, // дaнныe для oтпрaвки
+            success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+                console.log(data);
+                form.querySelector(".form-sucsess")?.classList.add("show");
+                form.reset();
+            },
+            error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
+                alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
+                alert(thrownError); // и тeкст oшибки
+            },
+        });
+    }
+
 </script>
 
 <footer>
