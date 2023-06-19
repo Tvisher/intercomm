@@ -10231,6 +10231,9 @@ p {
 
 .lecture-modules__title-wrapper .lecture__next,
 .lecture-modules__title-wrapper .lecture__prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -11173,12 +11176,17 @@ p {
   .lecture-contacts,
   .lecture-who._sec,
   .lecture-persons,
-  .lecture-curator {
+  .lecture-curator,
+  .lecture-modules {
     padding: 50px 0;
   }
 
   .lecture-info {
     padding-bottom: 50px;
+  }
+
+  .lecture-page {
+    padding-top: 30px;
   }
 
   .lecture-who._sec .lecture-who__img {
@@ -12075,12 +12083,26 @@ p {
     margin-left: 20px;
   }
 
+  .lecture-modules__accardeon .accardeon__head {
+    padding-right: 40px;
+  }
+
+  .lecture-modules__accardeon .accardeon__head b {
+    display: block;
+    width: 100%;
+  }
+
+  .lecture-modules__accardeon .accardeon__head::after {
+    right: 15px;
+  }
+
   .lecture-curator .lecture-curator__block {
     width: 80vw;
     height: 80vw;
   }
 
-  .lecture-page__logo {
+  .lecture-page__logo,
+  .lecture-who.logos .lecture-who__img {
     width: 180px;
     height: 100px;
     margin-bottom: 30px;
@@ -12096,7 +12118,7 @@ p {
 
   .lecture-page__descr,
   .lecture-page__purple {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .lecture-title {
