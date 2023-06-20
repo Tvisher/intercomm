@@ -107,8 +107,10 @@ const thumbSlider = new Swiper(".product-thumbs-slider", {
   spaceBetween: 10,
   slidesPerView: 4,
   watchSlidesProgress: true,
+  direction: 'horizontal',
   breakpoints: {
     576: {
+      direction: 'vertical',
       spaceBetween: 15
     },
   }

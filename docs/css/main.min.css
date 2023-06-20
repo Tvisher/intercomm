@@ -4300,6 +4300,22 @@ footer {
   grid-row-end: 3;
 }
 
+.site-nav__item .main-slide {
+  position: relative;
+}
+
+.site-nav__item .main-slide img {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .site-nav__item .item__link {
   position: relative;
   z-index: 3;
@@ -6423,6 +6439,7 @@ footer {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 4px;
+  color: #333333;
 }
 
 .product-item .product-item__price {
@@ -6432,12 +6449,12 @@ footer {
 }
 
 .product-item .product-item__image {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   bottom: 13px;
-  right: -13px;
+  right: 0;
 }
 
 .product-item .product-item__image img {
@@ -6460,14 +6477,20 @@ footer {
 }
 
 .item-product__sliders {
-  width: 50%;
-  float: left;
-  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 397px;
 }
 
 .item-product__sliders .product-slider {
-  height: 397px;
-  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.item-product__sliders .product-thumbs-slider {
+  width: 100px;
+  flex-shrink: 0;
 }
 
 .item-product__sliders .item-product__slide,
@@ -6493,6 +6516,11 @@ footer {
 .item-product__sliders .item-product__thumb.swiper-slide-thumb-active {
   position: relative;
   border-color: #FA0056;
+}
+
+.item-product__inner {
+  display: flex;
+  flex-direction: column;
 }
 
 .item-product__title {
@@ -6557,6 +6585,7 @@ footer {
 }
 
 .item-product__variants {
+  order: -1;
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
@@ -6603,6 +6632,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+  word-break: break-all;
   color: #666666;
 }
 
@@ -9463,6 +9493,11 @@ p {
   fill: #FA0056;
 }
 
+.item-product__sliders .item-product__slide img,
+.item-product__sliders .item-product__thumb img {
+  object-fit: contain;
+}
+
 .lecture-page {
   padding-top: 100px;
   padding-bottom: 180px;
@@ -9537,6 +9572,15 @@ p {
 
 .lecture-page__logo {
   margin-left: 80px;
+  width: 276px;
+  height: 173px;
+}
+
+.lecture-page__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left;
 }
 
 .lecture-blocks {
@@ -9879,6 +9923,7 @@ p {
 }
 
 .lecture-persons .lecture-person__img {
+  cursor: pointer;
   overflow: hidden;
   width: 175px;
   height: 175px;
@@ -9894,6 +9939,7 @@ p {
 }
 
 .lecture-persons .lecture-person__name {
+  cursor: pointer;
   font-weight: 700;
   font-size: 24px;
   line-height: 120%;
@@ -9961,8 +10007,8 @@ p {
   position: relative;
   z-index: 2;
   border-radius: 48px;
-  width: 101%;
-  height: 101%;
+  width: 102%;
+  height: 102%;
   object-fit: cover;
 }
 
@@ -10235,6 +10281,11 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.app__aside + .app__content {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 @media (min-width: 577px) {
@@ -10937,10 +10988,6 @@ p {
   .item-product__sliders {
     float: inherit;
     width: 100%;
-  }
-
-  .item-product__sliders .product-slider {
-    height: 80vw;
   }
 
   .item-product__sliders .item-product__thumb {
@@ -11813,6 +11860,10 @@ p {
     height: 100vw;
   }
 
+  .item-product__variants .variant-item {
+    width: 50%;
+  }
+
   .item-product .add-product {
     width: 100%;
   }
@@ -11826,16 +11877,18 @@ p {
     margin-bottom: 15px;
   }
 
-  .item-product__sliders .product-slider {
-    margin-bottom: 10px;
-    margin-right: -15px;
-    margin-left: -15px;
-    height: 90vw;
+  .item-product__sliders {
+    flex-direction: column;
   }
 
-  .product-thumbs-slider {
-    margin-right: -15px;
-    margin-left: -15px;
+  .item-product__sliders .product-slider {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .item-product__sliders .product-thumbs-slider {
+    width: 100%;
   }
 
   .item-product__sliders .item-product__thumb {
@@ -12081,6 +12134,10 @@ p {
 
   .lecture-marquee .lecture-marquee__item::after {
     margin-left: 20px;
+  }
+
+  .lecture-page__head {
+    margin-bottom: 20px;
   }
 
   .lecture-modules__accardeon .accardeon__head {
