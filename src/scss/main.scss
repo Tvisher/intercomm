@@ -6340,6 +6340,9 @@ p {
 }
 
 @media (max-width: 860px) {
+  .boxed-solutions-modal .calendar-modal__content {
+    max-height: inherit;
+  }
   .calendar-modal__content {
     flex-direction: column;
   }
@@ -7707,11 +7710,35 @@ p {
 
 .boxed-solutions-modal {
   .calendar-modal__content {
-    max-width: 1440px !important;
+    max-height: 65vh;
+  }
+  .calendar-modal__content .right-content {
+    /* полоса прокрутки (скроллбар) */
+    &::-webkit-scrollbar {
+      width: 10px; /* ширина для вертикального скролла */
+      height: 8px; /* высота для горизонтального скролла */
+      background: linear-gradient(-90deg, #444343 0%, #656097 100%);
+    }
+
+    /* ползунок скроллбара */
+    &::-webkit-scrollbar-thumb {
+      background-color: #fa0056;
+      border-radius: 3px;
+      // box-shadow: inset 1px 1px 10px #f3faf7;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #c30245;
+    }
+
+    overflow: auto;
   }
   ol:not([class]) li,
   ul:not([class]) li {
+    line-height: 140%;
     font-size: 16px;
+    margin-bottom: 5px;
+    padding-left: 0;
     p {
       margin-bottom: 0;
     }
@@ -7725,8 +7752,6 @@ p {
   }
 
   .left-content__event {
-    // position: sticky;
-    // top: 10%;
     padding: 20px;
   }
   .article-galery {

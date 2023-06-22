@@ -9291,12 +9291,38 @@ p {
 }
 
 .boxed-solutions-modal .calendar-modal__content {
-  max-width: 1440px !important;
+  max-height: 65vh;
+}
+
+.boxed-solutions-modal .calendar-modal__content .right-content {
+  /* полоса прокрутки (скроллбар) */
+  /* ползунок скроллбара */
+  overflow: auto;
+}
+
+.boxed-solutions-modal .calendar-modal__content .right-content::-webkit-scrollbar {
+  width: 10px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background: linear-gradient(-90deg, #444343 0%, #656097 100%);
+}
+
+.boxed-solutions-modal .calendar-modal__content .right-content::-webkit-scrollbar-thumb {
+  background-color: #fa0056;
+  border-radius: 3px;
+}
+
+.boxed-solutions-modal .calendar-modal__content .right-content::-webkit-scrollbar-thumb:hover {
+  background-color: #c30245;
 }
 
 .boxed-solutions-modal ol:not([class]) li,
 .boxed-solutions-modal ul:not([class]) li {
+  line-height: 140%;
   font-size: 16px;
+  margin-bottom: 5px;
+  padding-left: 0;
 }
 
 .boxed-solutions-modal ol:not([class]) li p,
@@ -9706,7 +9732,7 @@ p {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #fa0056;
+  background: #d52a7e;
   content: "";
   width: 110vw;
 }
@@ -9893,11 +9919,11 @@ p {
   overflow: hidden;
   position: relative;
   padding: 100px 0;
-  background: #fa0056;
+  background: #d52a7e;
 }
 
 .lecture-persons .lecture-blocks__ball {
-  background: linear-gradient(225deg, #d62a72 0%, rgba(214, 42, 126, 0) 100%);
+  opacity: 0.4;
 }
 
 .lecture-persons .lecture-blocks__ball._small {
@@ -9923,7 +9949,6 @@ p {
 }
 
 .lecture-persons .lecture-person__img {
-  cursor: pointer;
   overflow: hidden;
   width: 175px;
   height: 175px;
@@ -9939,7 +9964,6 @@ p {
 }
 
 .lecture-persons .lecture-person__name {
-  cursor: pointer;
   font-weight: 700;
   font-size: 24px;
   line-height: 120%;
@@ -10118,7 +10142,7 @@ p {
 
 .lecture-form {
   padding: 100px 0;
-  background: #fa0056;
+  background: #d52a7e;
 }
 
 .lecture-form .lecture-form__label {
@@ -11027,6 +11051,10 @@ p {
 
   .game-form__head .card-game-start__btn {
     order: -1;
+  }
+
+  .boxed-solutions-modal .calendar-modal__content {
+    max-height: inherit;
   }
 
   .calendar-modal__content {
