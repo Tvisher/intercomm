@@ -8002,6 +8002,8 @@ p {
 }
 
 .empty-basket__title {
+  line-height: 120%;
+  text-align: center;
   font-size: 36px;
   font-weight: 400;
   color: $brand-red;
@@ -8009,6 +8011,7 @@ p {
 }
 
 .empty-basket__footer {
+  text-align: center;
   margin-bottom: 30px;
   font-size: 16px;
   font-weight: 400;
