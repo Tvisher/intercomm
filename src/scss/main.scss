@@ -1272,7 +1272,7 @@ footer {
   }
 
   .item__ico {
-    left: 15%;
+    left: 52% !important;
     top: 8%;
   }
 }
@@ -1294,7 +1294,7 @@ footer {
   }
 
   .item__ico {
-    left: 15%;
+    left: 52% !important;
     top: 14%;
   }
 }
@@ -1305,7 +1305,7 @@ footer {
   }
 
   .item__ico {
-    left: 15%;
+    left: 52% !important;
     top: 9%;
   }
 }
@@ -7983,7 +7983,33 @@ p {
 
 @import "lecture";
 
-.app__aside + .app__content {
-  padding-right: 0;
-  padding-left: 0;
+.empty-basket-block {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-basket__ico {
+  width: 131px;
+  height: 131px;
+  margin-bottom: 40px;
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.empty-basket__title {
+  font-size: 36px;
+  font-weight: 400;
+  color: $brand-red;
+  margin-bottom: 40px;
+}
+
+.empty-basket__footer {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
 }
