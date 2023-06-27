@@ -3,7 +3,6 @@
 @import "utils/reset";
 @import "utils/vars";
 @import "vendors/vendors";
-@import "https://unpkg.com/dropzone@5/dist/min/dropzone.min.css";
 
 .unselectable {
   -webkit-touch-callout: none;
@@ -8015,4 +8014,46 @@ p {
   margin-bottom: 30px;
   font-size: 16px;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  html:not(.no-js) [data-aos^="fade"][data-aos^="fade"] {
+    opacity: 1 !important;
+  }
+}
+
+.group-item__list._sponsors {
+  .list-item {
+    &:first-child {
+      margin-right: 50%;
+    }
+    width: calc(50% - 17px);
+  }
+  .list-item__image {
+    height: 160px;
+    margin-bottom: 0;
+    img {
+      object-position: left bottom;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .list-item {
+      width: calc(33.33% - 17px);
+    }
+  }
+  @media (max-width: 992px) {
+    .list-item {
+      width: calc(50% - 17px);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .list-item {
+      &:first-child {
+        margin: 10px 8.5px;
+      }
+      width: 100%;
+    }
+  }
 }
