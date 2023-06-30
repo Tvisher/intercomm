@@ -5028,7 +5028,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    word-break: break-all;
+    word-break: break-word;
     color: #666666;
   }
 }
@@ -7604,7 +7604,7 @@ p {
 }
 
 .team-group .list-item a .list-item__title {
-  color: $brand-red;
+  color: #333333;
 }
 
 .search-form {
@@ -8030,6 +8030,8 @@ p {
     width: calc(50% - 17px);
   }
   .list-item__image {
+    padding: 20px;
+    padding-left: 0;
     height: 160px;
     margin-bottom: 0;
     img {
