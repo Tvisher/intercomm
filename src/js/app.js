@@ -253,6 +253,13 @@ document.querySelectorAll(".inner-form").forEach((form) => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    form.querySelectorAll('.err').forEach(err => err.classList.remove('err'));
+    if (!validateEmail(formInput.value.trim())) {
+      formInput.classList.add('err');
+    }
+    if (!formAgreeCheckbox.checked) {
+      formAgreeCheckbox.classList.add('err')
+    }
     if (
       validateEmail(formInput.value.trim()) &&
       formAgreeCheckbox.checked
@@ -275,6 +282,9 @@ document.querySelectorAll(".inner-form").forEach((form) => {
         },
       });
     }
+
+
+
   });
 });
 
@@ -325,9 +335,14 @@ if (contanctsForm) {
     } else {
       formEmail.classList.remove('err');
     }
-    const formErrors = contanctsForm.querySelectorAll('.err');
 
-    //alert(formBotValue.value);
+    if (formAgreeCheckbox.checked) {
+      formAgreeCheckbox.classList.remove('err')
+    }
+    else {
+      formAgreeCheckbox.classList.add('err');
+    }
+    const formErrors = contanctsForm.querySelectorAll('.err');
 
     if (formErrors.length < 1 && formAgreeCheckbox.checked) {
       const formData = {

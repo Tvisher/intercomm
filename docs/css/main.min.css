@@ -5504,11 +5504,11 @@ footer {
 
 .inner-form__label .inner-form__input.err {
   border-color: red;
-  animation: pulse 2s forwards;
+  animation: pulseErr 2s forwards;
   animation-iteration-count: 2;
 }
 
-@keyframes pulse {
+@keyframes pulseErr {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
   }
@@ -5553,7 +5553,7 @@ footer {
 
 .inner-form__agree .form__agree-checkbox.err + .form-agree__text::before {
   border-color: red;
-  animation: pulse 2s forwards;
+  animation: pulseErr 2s forwards;
   animation-iteration-count: 2;
 }
 
@@ -7119,6 +7119,10 @@ footer {
 .item-product__about {
   color: #333333;
   line-height: 130%;
+}
+
+.item-product__about span {
+  display: inline;
 }
 
 .item-product__variants {
@@ -9829,6 +9833,7 @@ p {
 
 .boxed-solutions-modal .calendar-modal__content {
   max-height: 65vh;
+  min-height: 596px;
 }
 
 .boxed-solutions-modal .calendar-modal__content .right-content {
@@ -11187,6 +11192,16 @@ p {
 
 .predictions__label._full-width .predictions__custom__area::-webkit-scrollbar-thumb:hover {
   background-color: #c30245;
+}
+
+.footer__title {
+  color: #888;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+  margin-top: 10px;
 }
 
 @media (min-width: 577px) {
