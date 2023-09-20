@@ -431,10 +431,70 @@
                                 <textarea name="" class="lk-settings__textarea" placeholder="О себе"></textarea>
                             </label>
 
-                            <label class="lk-settings__label">
-                                <span>Доп информация</span>
-                                <textarea name="" class="lk-settings__textarea" placeholder="О себе"></textarea>
-                            </label>
+                            <div class="legal-entity">
+                                <div class="legal-entity__head red-btn" data-toggle-element><span>Реквизиты юр
+                                        лица</span></div>
+                                <div class="legal-entity__body">
+                                    <label class="lk-settings__label ">
+                                        <span>Наименованию юр лица</span>
+                                        <input type="text" placeholder="Какой то текст" class="lk-settings__input">
+                                    </label>
+                                    <label class="lk-settings__label ">
+                                        <span>ИНН</span>
+                                        <input type="text" placeholder="Какой то текст" class="lk-settings__input">
+                                    </label>
+                                    <label class="lk-settings__label ">
+                                        <span>ККП/ОГПУ</span>
+                                        <input type="text" placeholder="Какой то текст" class="lk-settings__input">
+                                    </label>
+                                    <label class="lk-settings__label">
+                                        <span>Ваш телефон</span>
+                                        <input type="tel" placeholder="Номер телефона" class="lk-settings__input">
+                                    </label>
+                                </div>
+                            </div>
+                            <style>
+                                .legal-entity__head {
+                                    transform: none !important;
+                                    text-align: left;
+                                    width: fit-content;
+                                    padding-right: 50px;
+                                    position: relative;
+                                }
+
+                                .legal-entity__head::after {
+                                    z-index: 3;
+                                    position: absolute;
+                                    content: '';
+                                    width: 20px;
+                                    height: 20px;
+                                    right: 10px;
+                                    top: 50%;
+                                    transition: transform .3s ease-in-out;
+                                    transform: translateY(-50%);
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    background-position: center;
+                                    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.4082 0.841797L8.00014 6.8418L1.59208 0.841797' stroke='white' stroke-width='2'/%3e%3c/svg%3e ");
+                                }
+
+                                .legal-entity__head.toggle-open::after {
+                                    transform: translateY(-50%) scale(-1);
+                                }
+
+                                .legal-entity__body {
+                                    display: none;
+                                    margin: 25px 0;
+                                }
+
+                                .legal-entity__body .lk-settings__label:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                                .legal-entity {
+                                    margin-bottom: 20px;
+                                }
+                            </style>
                             <button type="submit" class="red-btn">
                                 <span>
                                     Сохранить
