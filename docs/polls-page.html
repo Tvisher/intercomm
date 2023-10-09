@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intercomm</title>
+    <!-- preload fonts -->
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/main.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <!-- bagfix transition zeroscript  -->
+    <script> </script>
+</head>
+
+<body>
+
+    <div class="body__content">
+        <header class="header">
+            <div class="fixed-header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <a href="index.html" class="header__logo">
+                            <img src="img/fixed-header-logo.svg" alt="">
+                        </a>
+                        <div class="main-menu-btn" data-burger-menu>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <!-- Мобильное меню в совокупности с маленьким меню из висячей шапки -->
+                            <div class="mobile-menu" data-header-menu>
+                                <div class="mobile-menu__head">
+                                    <div class="mobile-menu__close"></div>
+                                    <a href="javascript:void(0)" class="mobile-menu__logo">
+                                        <img src="img/mobile-logo.svg" alt="">
+                                    </a>
+                                    <div class="mobile-search-btn">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="13.75" cy="13.75" r="7.5" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                            <path d="M25 25L21.25 21.25" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mobile-menu__content">
+                                    <nav class="mobile-menu__nav">
+                                        <a href="javascript:void(0)" class="mobile-menu__link active">Премия</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Медиа</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Конференции</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Обучение</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Агентство</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Контакты</a>
+                                    </nav>
+                                    <div class="mobile-menu__user-data">
+                                        <a href="javascript:void(0)" class="user-data__item">
+                                            <div class="header__favorites" data-open-modal="phone-auth">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.6795 8.28429C13.6627 5.83305 14.1543 4.60742 14.9998 4.60742C15.8452 4.60742 16.3368 5.83305 17.32 8.2843L17.3658 8.39844C17.9213 9.78327 18.1991 10.4757 18.7651 10.8966C19.3312 11.3174 20.0743 11.384 21.5604 11.5171L21.8291 11.5411C24.2613 11.7589 25.4775 11.8679 25.7377 12.6416C25.9979 13.4153 25.0948 14.237 23.2885 15.8804L22.6856 16.4288C21.7712 17.2607 21.314 17.6767 21.1009 18.2218C21.0612 18.3235 21.0282 18.4277 21.002 18.5337C20.862 19.1021 20.9958 19.7055 21.2636 20.9123L21.3469 21.288C21.839 23.5059 22.0851 24.6148 21.6555 25.0932C21.495 25.2719 21.2863 25.4006 21.0545 25.4638C20.4343 25.6331 19.5537 24.9155 17.7925 23.4804C16.636 22.5381 16.0578 22.0669 15.3939 21.9609C15.1328 21.9192 14.8667 21.9192 14.6056 21.9609C13.9417 22.0669 13.3635 22.5381 12.207 23.4804C10.4458 24.9155 9.56521 25.6331 8.94496 25.4638C8.71318 25.4006 8.50455 25.2719 8.34402 25.0932C7.91442 24.6148 8.16046 23.5059 8.65256 21.288L8.7359 20.9123C9.00366 19.7055 9.13754 19.1021 8.99748 18.5337C8.97135 18.4277 8.9383 18.3235 8.89855 18.2218C8.68546 17.6767 8.22827 17.2607 7.31389 16.4288L6.71103 15.8804C4.90473 14.237 4.00158 13.4153 4.2618 12.6416C4.52202 11.8679 5.73816 11.7589 8.17042 11.5411L8.4391 11.5171C9.92524 11.384 10.6683 11.3174 11.2344 10.8966C11.8004 10.4757 12.0782 9.78327 12.6337 8.39844L12.6795 8.28429Z"
+                                                        stroke="#333333" />
+                                                </svg>
+                                                <div>Избранное</div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0)" class="user-data__item">
+                                            <div class="header__basket">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13 19.5L12 16.5" stroke="#333333"
+                                                        stroke-linecap="round" />
+                                                    <path d="M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                    <path d="M17 19.5L18 16.5" stroke="#333333"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                    <path
+                                                        d="M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                </svg>
+                                                <div class="basket__count">12</div>
+                                            </div>
+                                            Корзина
+                                        </a>
+                                        <div class="user-data__control">
+                                            <a href="javascript:void(0)" class="header__exit">
+                                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.5 9.25L2.5 15.5M2.5 15.5L7.5 21.75M2.5 15.5H13.75"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                    <path
+                                                        d="M11.25 11.1484V8.19933C11.25 7.21942 11.96 6.38382 12.927 6.22558L22.677 4.63012C23.8943 4.43093 25 5.37038 25 6.60387V24.3961C25 25.6296 23.8943 26.5691 22.677 26.3699L12.927 24.7744C11.96 24.6162 11.25 23.7806 11.25 22.8007V20.0742"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" class="user__data has-messages">
+                                                <div class="user__name">Иванов И.</div>
+                                                <div class="user__photo"
+                                                    style="background-image: url('img/user.jpg');">
+                                                    <div class="messages__count">3</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="header__auth" data-open-modal="phone-auth">
+                                            Личный кабинет
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.25 9.75L20.25 15M20.25 15L16.25 20.25M20.25 15H5"
+                                                    stroke="#333333" stroke-linecap="round" />
+                                                <path
+                                                    d="M11.25 10.6484V7.69933C11.25 6.71942 11.96 5.88382 12.927 5.72558L22.677 4.13012C23.8943 3.93093 25 4.87038 25 6.10387V23.8961C25 25.1296 23.8943 26.0691 22.677 25.8699L12.927 24.2744C11.96 24.1162 11.25 23.2806 11.25 22.3007V19.5742"
+                                                    stroke="#333333" stroke-linecap="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="mobile-search-btn">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13.75" cy="13.75" r="7.5" stroke="#333333" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M25 25L21.25 21.25" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <form class="search-form">
+                            <label class="search-field">
+                                <input type="text" class="search-field__input" value="" placeholder=" ">
+                                <div class="dynamic-string">
+                                    <div class="marquee__item">Здесь динамическая промо строка</div>
+                                </div>
+                            </label>
+                            <button type="submit" class="search-btn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="13.75" cy="13.75" r="7.5" stroke="#333333" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M25 25L21.25 21.25" stroke="#333333" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                            <div class="search-form__res">
+                                <div class="search-form__res_w">
+                                    <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                        промо строка,
+                                        которая
+                                        стоит 1-м пунктом при контексте</a>
+                                    <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                        промо строка,
+                                        которая стоит 1-м пунктом при контексте</a>
+                                    <div class="search-form__ajax-res">
+                                        <a href="javacript:void(0)" class="search-form__res-link"><b>Противоположна</b>я
+                                            точка зрения
+                                            подразумевает</a>
+                                        <a href="javacript:void(0)" class="search-form__res-link"><b>Противоположна</b>я
+                                            точка зрения
+                                            подразумевает</a>
+                                        <a href="javacript:void(0)" class="search-form__res-link"><b>Противоположна</b>я
+                                            точка зрения
+                                            подразумевает</a>
+                                        <a href="#" class="search-form__res-count">Результатов найдено: 123</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Если стоимость акций упала, добавить класс fallen к блоку с классом header__index-data -->
+                        <div class="header__index-data">
+                            <span class="index-data__name">ITndex InterComm</span>
+                            <div class="index-data__value">
+                                <span>2305 ₽ + 7,41%</span>
+                                <div class="index-data__arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10L12 6M12 6L8 10M12 6L12 18" stroke="#00C236" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__data">
+                            <a href="javascript:void(0)" class="header__favorites" data-open-modal="phone-auth">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.6795 8.28429C13.6627 5.83305 14.1543 4.60742 14.9998 4.60742C15.8452 4.60742 16.3368 5.83305 17.32 8.2843L17.3658 8.39844C17.9213 9.78327 18.1991 10.4757 18.7651 10.8966C19.3312 11.3174 20.0743 11.384 21.5604 11.5171L21.8291 11.5411C24.2613 11.7589 25.4775 11.8679 25.7377 12.6416C25.9979 13.4153 25.0948 14.237 23.2885 15.8804L22.6856 16.4288C21.7712 17.2607 21.314 17.6767 21.1009 18.2218C21.0612 18.3235 21.0282 18.4277 21.002 18.5337C20.862 19.1021 20.9958 19.7055 21.2636 20.9123L21.3469 21.288C21.839 23.5059 22.0851 24.6148 21.6555 25.0932C21.495 25.2719 21.2863 25.4006 21.0545 25.4638C20.4343 25.6331 19.5537 24.9155 17.7925 23.4804C16.636 22.5381 16.0578 22.0669 15.3939 21.9609C15.1328 21.9192 14.8667 21.9192 14.6056 21.9609C13.9417 22.0669 13.3635 22.5381 12.207 23.4804C10.4458 24.9155 9.56521 25.6331 8.94496 25.4638C8.71318 25.4006 8.50455 25.2719 8.34402 25.0932C7.91442 24.6148 8.16046 23.5059 8.65256 21.288L8.7359 20.9123C9.00366 19.7055 9.13754 19.1021 8.99748 18.5337C8.97135 18.4277 8.9383 18.3235 8.89855 18.2218C8.68546 17.6767 8.22827 17.2607 7.31389 16.4288L6.71103 15.8804C4.90473 14.237 4.00158 13.4153 4.2618 12.6416C4.52202 11.8679 5.73816 11.7589 8.17042 11.5411L8.4391 11.5171C9.92524 11.384 10.6683 11.3174 11.2344 10.8966C11.8004 10.4757 12.0782 9.78327 12.6337 8.39844L12.6795 8.28429Z"
+                                        stroke="#333333" />
+                                </svg>
+
+                            </a>
+                            <a href="javascript:void(0)" class="header__basket">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 19.5L12 16.5" stroke="#333333" stroke-linecap="round" />
+                                    <path d="M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375" stroke="#333333"
+                                        stroke-linecap="round" />
+                                    <path d="M17 19.5L18 16.5" stroke="#333333" stroke-linecap="round" />
+                                    <path
+                                        d="M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375"
+                                        stroke="#333333" stroke-linecap="round" />
+                                    <path
+                                        d="M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z"
+                                        stroke="#333333" stroke-linecap="round" />
+                                </svg>
+                                <div class="basket__count">12</div>
+                            </a>
+                            <div class="header-user-data">
+                                <a href="javascript:void(0)" class="header__exit">
+                                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.5 9.25L2.5 15.5M2.5 15.5L7.5 21.75M2.5 15.5H13.75" stroke="#333333"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M11.25 11.1484V8.19933C11.25 7.21942 11.96 6.38382 12.927 6.22558L22.677 4.63012C23.8943 4.43093 25 5.37038 25 6.60387V24.3961C25 25.6296 23.8943 26.5691 22.677 26.3699L12.927 24.7744C11.96 24.6162 11.25 23.7806 11.25 22.8007V20.0742"
+                                            stroke="#333333" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="user__data has-messages">
+                                    <div class="user__name">Иванов И.</div>
+                                    <div class="user__photo" style="background-image: url('img/user.jpg');">
+                                        <div class="messages__count">3</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- <div class="header__auth" data-open-modal="phone-auth">
+                                Личный кабинет
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.25 9.75L20.25 15M20.25 15L16.25 20.25M20.25 15H5" stroke="#333333" stroke-linecap="round"/>
+<path d="M11.25 10.6484V7.69933C11.25 6.71942 11.96 5.88382 12.927 5.72558L22.677 4.13012C23.8943 3.93093 25 4.87038 25 6.10387V23.8961C25 25.1296 23.8943 26.0691 22.677 25.8699L12.927 24.2744C11.96 24.1162 11.25 23.2806 11.25 22.3007V19.5742" stroke="#333333" stroke-linecap="round"/>
+</svg>
+
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container main-header__container">
+                <div class="header__wrapper main-header">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/header-logo.svg" alt="">
+                    </a>
+                    <div class="header__content">
+                        <div class="header__top">
+                            <nav class="header__nav">
+                                <a href="javascript:void(0)" class="nav_link active">Премия</a>
+                                <a href="javascript:void(0)" class="nav_link">Медиа</a>
+                                <a href="javascript:void(0)" class="nav_link">Конференции</a>
+                                <a href="javascript:void(0)" class="nav_link">Обучение</a>
+                                <a href="javascript:void(0)" class="nav_link">Агентство</a>
+                                <a href="javascript:void(0)" class="nav_link">Контакты</a>
+                            </nav>
+                            <div class="header__data">
+                                <a href="javascript:void(0)" class="header__favorites" data-open-modal="phone-auth">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.6795 8.28429C13.6627 5.83305 14.1543 4.60742 14.9998 4.60742C15.8452 4.60742 16.3368 5.83305 17.32 8.2843L17.3658 8.39844C17.9213 9.78327 18.1991 10.4757 18.7651 10.8966C19.3312 11.3174 20.0743 11.384 21.5604 11.5171L21.8291 11.5411C24.2613 11.7589 25.4775 11.8679 25.7377 12.6416C25.9979 13.4153 25.0948 14.237 23.2885 15.8804L22.6856 16.4288C21.7712 17.2607 21.314 17.6767 21.1009 18.2218C21.0612 18.3235 21.0282 18.4277 21.002 18.5337C20.862 19.1021 20.9958 19.7055 21.2636 20.9123L21.3469 21.288C21.839 23.5059 22.0851 24.6148 21.6555 25.0932C21.495 25.2719 21.2863 25.4006 21.0545 25.4638C20.4343 25.6331 19.5537 24.9155 17.7925 23.4804C16.636 22.5381 16.0578 22.0669 15.3939 21.9609C15.1328 21.9192 14.8667 21.9192 14.6056 21.9609C13.9417 22.0669 13.3635 22.5381 12.207 23.4804C10.4458 24.9155 9.56521 25.6331 8.94496 25.4638C8.71318 25.4006 8.50455 25.2719 8.34402 25.0932C7.91442 24.6148 8.16046 23.5059 8.65256 21.288L8.7359 20.9123C9.00366 19.7055 9.13754 19.1021 8.99748 18.5337C8.97135 18.4277 8.9383 18.3235 8.89855 18.2218C8.68546 17.6767 8.22827 17.2607 7.31389 16.4288L6.71103 15.8804C4.90473 14.237 4.00158 13.4153 4.2618 12.6416C4.52202 11.8679 5.73816 11.7589 8.17042 11.5411L8.4391 11.5171C9.92524 11.384 10.6683 11.3174 11.2344 10.8966C11.8004 10.4757 12.0782 9.78327 12.6337 8.39844L12.6795 8.28429Z"
+                                            stroke="#333333" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="header__basket">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 19.5L12 16.5" stroke="#333333" stroke-linecap="round" />
+                                        <path d="M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375" stroke="#333333"
+                                            stroke-linecap="round" />
+                                        <path d="M17 19.5L18 16.5" stroke="#333333" stroke-linecap="round" />
+                                        <path
+                                            d="M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375"
+                                            stroke="#333333" stroke-linecap="round" />
+                                        <path
+                                            d="M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z"
+                                            stroke="#333333" stroke-linecap="round" />
+                                    </svg>
+                                    <div class="basket__count">12</div>
+                                </a>
+                                <div class="header-user-data">
+                                    <a href="javascript:void(0)" class="header__exit">
+                                        <svg width="30" height="31" viewBox="0 0 30 31" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 9.25L2.5 15.5M2.5 15.5L7.5 21.75M2.5 15.5H13.75"
+                                                stroke="#333333" stroke-linecap="round" />
+                                            <path
+                                                d="M11.25 11.1484V8.19933C11.25 7.21942 11.96 6.38382 12.927 6.22558L22.677 4.63012C23.8943 4.43093 25 5.37038 25 6.60387V24.3961C25 25.6296 23.8943 26.5691 22.677 26.3699L12.927 24.7744C11.96 24.6162 11.25 23.7806 11.25 22.8007V20.0742"
+                                                stroke="#333333" stroke-linecap="round" />
+                                        </svg>
+                                    </a>
+                                    <a href="javascript:void(0)" class="user__data has-messages">
+                                        <div class="user__name">Иванов И.</div>
+                                        <div class="user__photo" style="background-image: url('img/user.jpg');">
+                                            <div class="messages__count">3</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- <div class="header__auth" data-open-modal="phone-auth">
+                                    Личный кабинет
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.25 9.75L20.25 15M20.25 15L16.25 20.25M20.25 15H5" stroke="#333333" stroke-linecap="round"/>
+<path d="M11.25 10.6484V7.69933C11.25 6.71942 11.96 5.88382 12.927 5.72558L22.677 4.13012C23.8943 3.93093 25 4.87038 25 6.10387V23.8961C25 25.1296 23.8943 26.0691 22.677 25.8699L12.927 24.2744C11.96 24.1162 11.25 23.2806 11.25 22.3007V19.5742" stroke="#333333" stroke-linecap="round"/>
+</svg>
+
+                                </div> -->
+                            </div>
+
+                        </div>
+                        <div class="header__bottom">
+                            <form class="search-form">
+                                <label class="search-field">
+                                    <input type="text" class="search-field__input" value="" placeholder=" ">
+                                    <div class="dynamic-string marq">
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                    </div>
+                                </label>
+                                <button type="submit" class="search-btn">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="13.75" cy="13.75" r="7.5" stroke="#333333" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M25 25L21.25 21.25" stroke="#333333" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="search-form__res">
+                                    <div class="search-form__res_w">
+                                        <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                            промо строка,
+                                            которая
+                                            стоит 1-м пунктом при контексте</a>
+                                        <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                            промо строка,
+                                            которая стоит 1-м пунктом при контексте</a>
+                                        <div class="search-form__ajax-res">
+                                            <a href="javacript:void(0)"
+                                                class="search-form__res-link"><b>Противоположна</b>я
+                                                точка зрения
+                                                подразумевает</a>
+                                            <a href="javacript:void(0)"
+                                                class="search-form__res-link"><b>Противоположна</b>я
+                                                точка зрения
+                                                подразумевает</a>
+                                            <a href="javacript:void(0)"
+                                                class="search-form__res-link"><b>Противоположна</b>я
+                                                точка зрения
+                                                подразумевает</a>
+                                            <a href="#" class="search-form__res-count">Результатов найдено: 123</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- Если стоимость акций упала, добавить класс fallen к блоку с классом header__index-data -->
+                            <div class="header__index-data">
+                                <span class="index-data__name">ITndex InterComm</span>
+                                <div class="index-data__value">
+                                    <span>2305 ₽ + 7,41%</span>
+                                    <div class="index-data__arrow">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 10L12 6M12 6L8 10M12 6L12 18" stroke="#00C236" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+<main>
+    <section class="media-section media-section__inner article-page">
+        <div class="container">
+            <a href="javascript:void(0)" class="media-b-image">
+                <img src="img/b-image.png" alt="" />
+            </a>
+            <div class="media-section__content">
+                <div class="media-section__col wide-col">
+                    <h1 class="section-title">Сервис опросов</h1>
+                    <div class="card-game-start__wrapper">
+                        <div href="ball-of-predictions-step-2.html" class="card-game-start__btn --polls"
+                            style="background: linear-gradient(225deg, #5801E4 0%, #64C4FF 100%);">
+                            <div class="bgi"></div>
+                            <span>Тариф:</span>
+                            Базовый
+                        </div>
+                        <div>
+                            <h4>Длинное название длинное </h4>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. <br><br>
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat nulla pariatur.
+                        </div>
+                    </div>
+                    <div class="polls-service">
+                        <div class="polls-service__head">
+                            <div class="head_w">
+                                <div> Тестовый период осталось: <span class="black-selection">30 дней</span></div>
+                                <a class="red-link" href="javascript:void(0)">Оформите подписку</a>
+                            </div>
+                            <a href="javascript:void(0)" class="polls-service__btn">Создать опрос</a>
+                        </div>
+                        <div class="polls-service__body">
+                            <div class="polls-service__filters">
+                                <select class="polls-service__select">
+                                    <option value="all">Все</option>
+                                    <option value="survey">Опросы</option>
+                                    <option value="quiz">Викторины</option>
+                                </select>
+                                <div class="polls-service__search">
+                                    <input type="text" placeholder="Поиск" class="polls-service__search-field">
+                                    <button type="submit" class="polls-service__search-btn">Поиск</button>
+                                </div>
+                            </div>
+                            <div class="polls-service__list">
+                                <div class="polls-service__item">
+                                    <div class="item__head">
+                                        <a href="#" class="item__name">Длинное название длинное название длинное
+                                            название Длинное название длинное название длинное название </a>
+                                        <div class="item__btns">
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1938_37517)">
+                                                        <path
+                                                            d="M0.781333 12.7459C0.281202 13.2459 0.000151033 13.9241 0 14.6312L0 15.9999H1.36867C2.07585 15.9997 2.75402 15.7187 3.254 15.2186L12.1493 6.32325L9.67667 3.85059L0.781333 12.7459Z"
+                                                            fill="#FA0056" />
+                                                        <path
+                                                            d="M15.4299 0.570239C15.2676 0.407729 15.0748 0.278809 14.8626 0.19085C14.6504 0.102891 14.423 0.0576172 14.1933 0.0576172C13.9636 0.0576172 13.7361 0.102891 13.5239 0.19085C13.3117 0.278809 13.1189 0.407729 12.9566 0.570239L10.6193 2.90824L13.0919 5.38091L15.4299 3.04357C15.5924 2.88123 15.7214 2.68845 15.8093 2.47626C15.8973 2.26406 15.9426 2.03661 15.9426 1.80691C15.9426 1.5772 15.8973 1.34975 15.8093 1.13755C15.7214 0.925358 15.5924 0.73258 15.4299 0.570239Z"
+                                                            fill="#FA0056" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1938_37517">
+                                                            <rect width="16" height="16" fill="#FA0056" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M6.50249 3.54284C4.43556 4.49029 2.99988 6.57748 2.99988 9C2.99988 9.19085 3.00879 9.37961 3.02622 9.56591L7.77539 8.29337L6.50249 3.54284ZM8.43463 3.02628L9.79351 8.09771L9.80129 8.12662C9.83462 8.25043 9.88163 8.42506 9.90226 8.58517C9.92827 8.78698 9.93438 9.10617 9.74659 9.43144C9.55879 9.75671 9.27931 9.91101 9.09154 9.98939C8.94257 10.0516 8.76783 10.0982 8.64394 10.1312L8.64394 10.1312L8.615 10.1389L3.543 11.498C4.49057 13.5646 6.5776 15 8.99988 15C12.3136 15 14.9999 12.3137 14.9999 9C14.9999 5.68629 12.3136 3 8.99988 3C8.80925 3 8.62071 3.00889 8.43463 3.02628Z"
+                                                        fill="#FA0056" />
+                                                    <path
+                                                        d="M7.40407 3.04346C7.23707 2.42022 7.15358 2.1086 6.87102 1.9774C6.58846 1.8462 6.32845 1.96847 5.80844 2.21302C5.32291 2.44134 4.86211 2.72166 4.43441 3.04985C3.65303 3.64943 2.99739 4.39704 2.50493 5.25C2.01247 6.10296 1.69284 7.04457 1.56429 8.02105C1.49392 8.55555 1.48155 9.09476 1.52658 9.62941C1.5748 10.202 1.59892 10.4883 1.85382 10.6674C2.10872 10.8465 2.42034 10.763 3.04358 10.5961L7.71222 9.34509C8.31934 9.18241 8.6229 9.10107 8.76098 8.86193C8.89905 8.62278 8.81771 8.31922 8.65503 7.7121L7.40407 3.04346Z"
+                                                        fill="#FA0056" />
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1997_22812)">
+                                                        <path
+                                                            d="M6.5854 12.0813C7.36621 12.8627 8.63253 12.8631 9.41384 12.0822C9.41415 12.0819 9.41443 12.0817 9.41474 12.0813L11.5554 9.94069C11.8023 9.66759 11.7811 9.246 11.508 8.99906C11.2537 8.76916 10.8666 8.76956 10.6127 9L8.66209 10.9513L8.66674 0.666687C8.66671 0.298469 8.36824 0 8.00006 0C7.63187 0 7.3334 0.298469 7.3334 0.666656L7.3274 10.9387L5.3874 9C5.1269 8.73969 4.70471 8.73984 4.4444 9.00034C4.18409 9.26084 4.18424 9.68303 4.44474 9.94334L6.5854 12.0813Z"
+                                                            fill="#FA0056" />
+                                                        <path
+                                                            d="M15.3333 10.667C14.9652 10.667 14.6667 10.9655 14.6667 11.3336V14.0003C14.6667 14.3685 14.3682 14.667 14 14.667H2C1.63181 14.667 1.33334 14.3685 1.33334 14.0003V11.3337C1.33334 10.9655 1.03487 10.667 0.666687 10.667C0.298469 10.667 0 10.9655 0 11.3337V14.0003C0 15.1049 0.895437 16.0003 2 16.0003H14C15.1046 16.0003 16 15.1049 16 14.0003V11.3337C16 10.9655 15.7015 10.667 15.3333 10.667Z"
+                                                            fill="#FA0056" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1997_22812">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1938_37525)">
+                                                        <path
+                                                            d="M13.625 1.875H10.838L10.5333 0.961313C10.4401 0.681239 10.2611 0.437625 10.0217 0.265061C9.78223 0.0924975 9.4945 -0.000245665 9.19934 4.88728e-07H6.80066C6.50546 -0.000195446 6.2177 0.0925603 5.97818 0.265111C5.73867 0.437661 5.55957 0.681246 5.46628 0.961313L5.16194 1.875H2.375C1.59956 1.875 0.96875 2.50581 0.96875 3.28125V4.21875C0.96875 4.74088 1.43878 4.6875 1.94322 4.6875H14.5625C14.8216 4.6875 15.0312 4.47784 15.0312 4.21875V3.28125C15.0312 2.50581 14.4004 1.875 13.625 1.875ZM6.15041 1.875L6.35572 1.25794C6.38684 1.16457 6.44657 1.08337 6.52643 1.02585C6.60629 0.968337 6.70224 0.937425 6.80066 0.9375H9.19934C9.40122 0.9375 9.58022 1.06613 9.64384 1.25794L9.84937 1.875H6.15041ZM2.02081 5.6875L2.76822 14.721C2.83459 15.4502 3.43656 16 4.16853 16H11.8315C12.5635 16 13.1654 15.4502 13.2323 14.7169L13.9793 5.6875H2.02081ZM5.65625 13.6563C5.65625 14.2742 4.71875 14.2767 4.71875 13.6563V7.09375C4.71875 6.47584 5.65625 6.47331 5.65625 7.09375V13.6563ZM8.46875 13.6563C8.46875 14.2742 7.53125 14.2767 7.53125 13.6563V7.09375C7.53125 6.47584 8.46875 6.47331 8.46875 7.09375V13.6563ZM11.2812 13.6563C11.2812 14.2742 10.3438 14.2767 10.3438 13.6563V7.09375C10.3438 6.83466 10.5534 6.625 10.8125 6.625C11.0716 6.625 11.2812 6.83466 11.2812 7.09375V13.6563Z"
+                                                            fill="#FA0056" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1938_37525">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item__info">
+                                        <div class="item__type">Викторина</div>
+                                        <div class="item__info-count">
+                                            Публикации: <span class="black-selection">12 334</span>
+                                        </div>
+                                        <div class="item__info-status">
+                                            <input type="checkbox" class="status-cb">
+                                            <span class="status-span">Активность:</span>
+                                        </div>
+                                        <div class="item__info-toggle-btn" data-toggle-btn>
+                                            <span>Информация</span>
+                                            <span>Закрыть</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item__body" data-toggle-body>
+                                        <div class="item__body-wrapper">
+                                            <div class="body-block">
+                                                <div class="body-block__image" data-block-img="counter">
+                                                </div>
+                                                <div class="body-block__info">
+                                                    <div class="body-block__large">1003</div>
+                                                    <div class="body-block__descr">Количество респондентов </div>
+                                                </div>
+                                            </div>
+                                            <div class="body-block">
+                                                <div class="body-block__image" data-block-img="time">
+
+                                                </div>
+                                                <div class="body-block__info">
+                                                    <div class="body-block__large">103 мин</div>
+                                                    <div class="body-block__descr">Среднее время прохождения </div>
+                                                </div>
+                                            </div>
+                                            <div class="body-block">
+                                                <div class="body-block__image" data-block-img="sessions">
+                                                </div>
+                                                <div class="body-block__info">
+                                                    <div class="body-block__large">32</div>
+                                                    <div class="body-block__descr">Кол-во незавершенных сессий</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="polls-service__item">
+                                    <div class="item__head">
+                                        <a href="#" class="item__name">Заголовок короткое название</a>
+                                        <div class="item__btns">
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1938_37517)">
+                                                        <path
+                                                            d="M0.781333 12.7459C0.281202 13.2459 0.000151033 13.9241 0 14.6312L0 15.9999H1.36867C2.07585 15.9997 2.75402 15.7187 3.254 15.2186L12.1493 6.32325L9.67667 3.85059L0.781333 12.7459Z"
+                                                            fill="#FA0056" />
+                                                        <path
+                                                            d="M15.4299 0.570239C15.2676 0.407729 15.0748 0.278809 14.8626 0.19085C14.6504 0.102891 14.423 0.0576172 14.1933 0.0576172C13.9636 0.0576172 13.7361 0.102891 13.5239 0.19085C13.3117 0.278809 13.1189 0.407729 12.9566 0.570239L10.6193 2.90824L13.0919 5.38091L15.4299 3.04357C15.5924 2.88123 15.7214 2.68845 15.8093 2.47626C15.8973 2.26406 15.9426 2.03661 15.9426 1.80691C15.9426 1.5772 15.8973 1.34975 15.8093 1.13755C15.7214 0.925358 15.5924 0.73258 15.4299 0.570239Z"
+                                                            fill="#FA0056" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1938_37517">
+                                                            <rect width="16" height="16" fill="#FA0056" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M6.50249 3.54284C4.43556 4.49029 2.99988 6.57748 2.99988 9C2.99988 9.19085 3.00879 9.37961 3.02622 9.56591L7.77539 8.29337L6.50249 3.54284ZM8.43463 3.02628L9.79351 8.09771L9.80129 8.12662C9.83462 8.25043 9.88163 8.42506 9.90226 8.58517C9.92827 8.78698 9.93438 9.10617 9.74659 9.43144C9.55879 9.75671 9.27931 9.91101 9.09154 9.98939C8.94257 10.0516 8.76783 10.0982 8.64394 10.1312L8.64394 10.1312L8.615 10.1389L3.543 11.498C4.49057 13.5646 6.5776 15 8.99988 15C12.3136 15 14.9999 12.3137 14.9999 9C14.9999 5.68629 12.3136 3 8.99988 3C8.80925 3 8.62071 3.00889 8.43463 3.02628Z"
+                                                        fill="#FA0056" />
+                                                    <path
+                                                        d="M7.40407 3.04346C7.23707 2.42022 7.15358 2.1086 6.87102 1.9774C6.58846 1.8462 6.32845 1.96847 5.80844 2.21302C5.32291 2.44134 4.86211 2.72166 4.43441 3.04985C3.65303 3.64943 2.99739 4.39704 2.50493 5.25C2.01247 6.10296 1.69284 7.04457 1.56429 8.02105C1.49392 8.55555 1.48155 9.09476 1.52658 9.62941C1.5748 10.202 1.59892 10.4883 1.85382 10.6674C2.10872 10.8465 2.42034 10.763 3.04358 10.5961L7.71222 9.34509C8.31934 9.18241 8.6229 9.10107 8.76098 8.86193C8.89905 8.62278 8.81771 8.31922 8.65503 7.7121L7.40407 3.04346Z"
+                                                        fill="#FA0056" />
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1997_22812)">
+                                                        <path
+                                                            d="M6.5854 12.0813C7.36621 12.8627 8.63253 12.8631 9.41384 12.0822C9.41415 12.0819 9.41443 12.0817 9.41474 12.0813L11.5554 9.94069C11.8023 9.66759 11.7811 9.246 11.508 8.99906C11.2537 8.76916 10.8666 8.76956 10.6127 9L8.66209 10.9513L8.66674 0.666687C8.66671 0.298469 8.36824 0 8.00006 0C7.63187 0 7.3334 0.298469 7.3334 0.666656L7.3274 10.9387L5.3874 9C5.1269 8.73969 4.70471 8.73984 4.4444 9.00034C4.18409 9.26084 4.18424 9.68303 4.44474 9.94334L6.5854 12.0813Z"
+                                                            fill="#FA0056" />
+                                                        <path
+                                                            d="M15.3333 10.667C14.9652 10.667 14.6667 10.9655 14.6667 11.3336V14.0003C14.6667 14.3685 14.3682 14.667 14 14.667H2C1.63181 14.667 1.33334 14.3685 1.33334 14.0003V11.3337C1.33334 10.9655 1.03487 10.667 0.666687 10.667C0.298469 10.667 0 10.9655 0 11.3337V14.0003C0 15.1049 0.895437 16.0003 2 16.0003H14C15.1046 16.0003 16 15.1049 16 14.0003V11.3337C16 10.9655 15.7015 10.667 15.3333 10.667Z"
+                                                            fill="#FA0056" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1997_22812">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1938_37525)">
+                                                        <path
+                                                            d="M13.625 1.875H10.838L10.5333 0.961313C10.4401 0.681239 10.2611 0.437625 10.0217 0.265061C9.78223 0.0924975 9.4945 -0.000245665 9.19934 4.88728e-07H6.80066C6.50546 -0.000195446 6.2177 0.0925603 5.97818 0.265111C5.73867 0.437661 5.55957 0.681246 5.46628 0.961313L5.16194 1.875H2.375C1.59956 1.875 0.96875 2.50581 0.96875 3.28125V4.21875C0.96875 4.74088 1.43878 4.6875 1.94322 4.6875H14.5625C14.8216 4.6875 15.0312 4.47784 15.0312 4.21875V3.28125C15.0312 2.50581 14.4004 1.875 13.625 1.875ZM6.15041 1.875L6.35572 1.25794C6.38684 1.16457 6.44657 1.08337 6.52643 1.02585C6.60629 0.968337 6.70224 0.937425 6.80066 0.9375H9.19934C9.40122 0.9375 9.58022 1.06613 9.64384 1.25794L9.84937 1.875H6.15041ZM2.02081 5.6875L2.76822 14.721C2.83459 15.4502 3.43656 16 4.16853 16H11.8315C12.5635 16 13.1654 15.4502 13.2323 14.7169L13.9793 5.6875H2.02081ZM5.65625 13.6563C5.65625 14.2742 4.71875 14.2767 4.71875 13.6563V7.09375C4.71875 6.47584 5.65625 6.47331 5.65625 7.09375V13.6563ZM8.46875 13.6563C8.46875 14.2742 7.53125 14.2767 7.53125 13.6563V7.09375C7.53125 6.47584 8.46875 6.47331 8.46875 7.09375V13.6563ZM11.2812 13.6563C11.2812 14.2742 10.3438 14.2767 10.3438 13.6563V7.09375C10.3438 6.83466 10.5534 6.625 10.8125 6.625C11.0716 6.625 11.2812 6.83466 11.2812 7.09375V13.6563Z"
+                                                            fill="#FA0056" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1938_37525">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item__info">
+                                        <div class="item__type">Опрос</div>
+                                        <div class="item__info-count">
+                                            Публикации: <span class="black-selection">12 334</span>
+                                        </div>
+                                        <div class="item__info-status">
+                                            <input type="checkbox" class="status-cb">
+                                            <span class="status-span">Активность:</span>
+                                        </div>
+                                        <div class="item__info-toggle-btn" data-toggle-btn>
+                                            <span>Информация</span>
+                                            <span>Закрыть</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item__body" data-toggle-body>
+                                        <div class="item__body-wrapper">
+                                            <div class="body-block">
+                                                <div class="body-block__image" data-block-img="counter">
+                                                </div>
+                                                <div class="body-block__info">
+                                                    <div class="body-block__large">1003</div>
+                                                    <div class="body-block__descr">Количество респондентов </div>
+                                                </div>
+                                            </div>
+                                            <div class="body-block">
+                                                <div class="body-block__image" data-block-img="time">
+
+                                                </div>
+                                                <div class="body-block__info">
+                                                    <div class="body-block__large">103 мин</div>
+                                                    <div class="body-block__descr">Среднее время прохождения </div>
+                                                </div>
+                                            </div>
+                                            <div class="body-block">
+                                                <div class="body-block__image" data-block-img="sessions">
+                                                </div>
+                                                <div class="body-block__info">
+                                                    <div class="body-block__large">32</div>
+                                                    <div class="body-block__descr">Кол-во незавершенных сессий</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="polls-service__pagination">
+                                <a href="javascript:void(0)" class="pagination-item pagination-item_prev">
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.41 1.41L6 0L0 6L6 12L7.41 10.59L2.83 6L7.41 1.41Z" fill="#90A0B7" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="pagination-item active">1</a>
+                                <a href="javascript:void(0)" class="pagination-item">2</a>
+                                <a href="javascript:void(0)" class="pagination-item">3</a>
+                                <a href="javascript:void(0)" class="pagination-item">...</a>
+                                <a href="javascript:void(0)" class="pagination-item">99</a>
+                                <a href="javascript:void(0)" class="pagination-item pagination-item_next">
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.43323e-05 1.41L1.41003 0L7.41003 6L1.41003 12L3.43323e-05 10.59L4.58003 6L3.43323e-05 1.41Z"
+                                            fill="#90A0B7" />
+                                    </svg>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+                    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+                    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script>
+                    $(document).on('click', '[data-toggle-btn]', function (e) {
+                        $(this).toggleClass('toggle-open');
+                        $(this).parents('.polls-service__item').find('[data-toggle-body]').slideToggle("slow");
+                    })
+
+                    $('.polls-service__select').select2({
+                        minimumResultsForSearch: -1
+                    });
+
+                    $('.polls-service__select').on('select2:select', function (e) {
+                        const data = e.params.data;
+                        const selectedOptionValue = data.id;
+                        console.log(selectedOptionValue);
+                    });
+
+                </script>
+
+                <div class="media-section__col">
+                    <div id="pc-nav-sidebar-parent">
+                        <ul class="nav-sidebar services-sidebar" id="nav-sidebar">
+                            <li class="nav-sidebar__item sidebar-item active">
+                                <div class="sidebar-item__head ">
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Мой календарь</div>
+                                        <div class="sidebar-item__counter">192</div>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="nav-sidebar__item sidebar-item">
+                                <div class="sidebar-item__head">
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Избранное</div>
+                                        <div class="sidebar-item__counter">72</div>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="nav-sidebar__item sidebar-item">
+                                <div class="sidebar-item__head">
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Центр сообщений</div>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="nav-sidebar__item sidebar-item">
+                                <div class="sidebar-item__head">
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Настройки</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-sidebar__item sidebar-item">
+                                <div class="sidebar-item__head">
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Помощь</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-sidebar__item sidebar-item">
+                                <div class="sidebar-item__head toggle-open">
+                                    <div class="sidebar-item__arrow"></div>
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Инструменты для сайтов</div>
+                                    </a>
+                                </div>
+                                <ul class="sidebar-item__body toggle-open">
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Шар с поздравлениями</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Калькуляторы</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Типограф</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Система генерации электронных открыток
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Сервис рассылок</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Конструктор Квизов/Конкурсов/Викторин
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Чат на сайт</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Сервис по оформлению сайта ( плагины
+                                                    снег и проч красивоти т.п.)</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-sidebar__item sidebar-item">
+                                <div class="sidebar-item__head toggle-open">
+                                    <div class="sidebar-item__arrow"></div>
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Коробочные решения</div>
+                                    </a>
+                                </div>
+                                <ul class="sidebar-item__body toggle-open">
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">База знаний</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Модули Bitrix (сразу выводим список
+                                                    решений, их будет мало)</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Редактор</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-sidebar__item sidebar-item">
+                                <div class="sidebar-item__head toggle-open">
+                                    <div class="sidebar-item__arrow"></div>
+                                    <a href="javascript:void(0)" class="sidebar-item__link">
+                                        <div class="sidebar-item__title">Магазин</div>
+                                    </a>
+                                </div>
+                                <ul class="sidebar-item__body toggle-open">
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Покупки</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Индивидуальные заказы</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Техническая поддержка</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">Контентная поддержка</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">3D моделирование</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-sidebar__item sidebar-item">
+                                        <div class="sidebar-item__head">
+                                            <a href="javascript:void(0)" class="sidebar-item__link">
+                                                <div class="sidebar-item__title">AR,VR, IVR</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="inner-banner _small">
+                        <img src="img/inner-banner.jpg" alt="" class="inner-banner__img" />
+                        <div class="inner-banner__content">
+                            <h3 class="inner-banner__title">Баннер</h3>
+                            <span class="inner-banner__text">Текст текст текст</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__logo-wrapper">
+                <a href="javascript:void(0)" class="footer__logo">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <div class="yaer-label">
+                    2009&mdash;2023
+                </div>
+            </div>
+            <div class="footer__bl">
+                <nav class="footer__nav">
+                    <a href="javascript:void(0)" class="footer__nav-item">Премия</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Конференции</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Обучение</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Агентство</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Контакты</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">О проекте</a>
+                </nav>
+                <h1 class="footer__title">Все о корпоративных коммуникациях</h1>
+            </div>
+            <div class="footer__right-block">
+                <div class="footer__socials">
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/vk-footer-logo.svg');"></a>
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/dzen-footer-logo.svg');"></a>
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/youtube-footer-logo.svg');"></a>
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/telegram-footer-logo.svg');"></a>
+                </div>
+                <div class="devepment-by">
+                    Разработано <a href="javascript:void(0)">MediaLine</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-template" data-modal-type="email-register">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <span class="modal-title">Регистрация</span>
+        <form action="#" class="modal-form">
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="E-mail" type="text">
+            </label>
+
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Пароль" type="password">
+            </label>
+
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Подтверждение пароля" type="password">
+            </label>
+
+            <label class="inner-form__agree">
+                <input type="checkbox" name="form-agree" class="form__agree-checkbox">
+                <span class="form-agree__text">Согласен на обработку персональных данных</span>
+            </label>
+
+            <button type="submit" class="red-btn submit__btn"><span>Регистрация</span></button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-template" data-modal-type="email-auth">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <span class="modal-title">Авторизация по E-mail</span>
+        <form action="#" class="modal-form">
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="E-mail" type="text">
+            </label>
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Пароль" type="password">
+            </label>
+            <a href="javascript:void(0)" class="red-text">Забыли пароль?</a>
+            <button type="submit" class="red-btn submit__btn"><span>Войти</span></button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-template" data-modal-type="phone-auth">
+    <div class="modal-template__content phone-auth">
+        <div class="modal-template__close"></div>
+        <div class="phone-auth__iamge">
+            <img src="img/phone-auth-bg.svg" alt="">
+        </div>
+        <div class="phone-auth__content">
+            <span class="modal-title">Авторизация по телефону</span>
+            <form action="#" class="modal-form">
+                <label class="modal-field">
+                    <input type="text" class="modal-field__input" placeholder="Телефон" type="password">
+                </label>
+                <button type="submit" class="red-btn submit__btn"><span>Подвердить</span></button>
+            </form>
+            <div class="social-auth">
+                <span class="modal-title">Авторизация через соц. сети</span>
+                <div class="social-auth__list">
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/vk-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/ok-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/mail-ico.svg" alt="">
+                    </a>
+
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/yandex-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/google-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/telegram-ico.svg" alt="">
+                    </a>
+                </div>
+                <div class="phone-auth__footer">
+                    <span class="red-text" data-open-modal="email-register">Регистрация по E-mail</span>
+                    <span class="red-text" data-open-modal="email-auth">Авторизация по E-mail</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+
+<script src="./js/aos.js"></script>
+<script src="./js/fancybox.umd.js"></script>
+<script src="./js/jquery.marquee.min.js"></script>
+<script src="./js/imask.js"></script>
+
+<script src="./js/app.js"></script>
+
+<script>
+    $('.dynamic-string.marq').each(function () {
+        const marqueeItemLength = $(this).find('.marquee__item').length;
+        $(this).marquee({
+            duration: marqueeItemLength * 5000,
+            gap: 50,
+            delayBeforeStart: 0,
+            direction: 'left',
+            duplicated: true
+        });
+    })
+</script>
+
+</html>
