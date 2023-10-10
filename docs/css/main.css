@@ -11392,6 +11392,7 @@ table p {
   margin-bottom: 20px;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .polls-service__item .item__btns {
@@ -11689,6 +11690,16 @@ table p {
   top: 0;
   height: 100% !important;
   width: 48px !important;
+}
+
+.remove-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-modal .modal-title {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 577px) {

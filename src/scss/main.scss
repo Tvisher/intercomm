@@ -8559,6 +8559,7 @@ table {
     margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
   }
   .item__btns {
     flex-shrink: 0;
@@ -8833,5 +8834,14 @@ table {
     top: 0;
     height: 100% !important;
     width: 48px !important;
+  }
+}
+
+.remove-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal-title {
+    margin-bottom: 20px;
   }
 }

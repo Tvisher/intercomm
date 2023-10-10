@@ -489,7 +489,7 @@
                                                 </svg>
 
                                             </a>
-                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                            <a href="#" class="item__btn" data-open-modal="remove-modal">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_1938_37525)">
@@ -606,7 +606,7 @@
                                                 </svg>
 
                                             </a>
-                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                            <a href="#" class="item__btn" data-open-modal="remove-modal">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_1938_37525)">
@@ -718,6 +718,19 @@
                     });
 
                 </script>
+
+                <!-- Модалка подтверждения удаления опроса/викторины -->
+                <div class="modal-template remove-modal" data-modal-type="remove-modal">
+                    <div class="modal-template__content">
+                        <div class="modal-template__close"></div>
+                        <span class="modal-title">Подтвердить<br> удаление ?</span>
+                        <div class="flex-w">
+                            <button class="red-btn submit__btn"><span>Подтвердить</span></button>
+                            <button onclick="this.closest('.show').classList.remove('show')"
+                                class="red-btn submit__btn"><span>Отмена</span></button>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="media-section__col">
                     <div id="pc-nav-sidebar-parent">
