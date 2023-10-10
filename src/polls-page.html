@@ -313,15 +313,18 @@
                     integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
                     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                 <script>
+                    //Открыть/закрыть описание элемента опроса
                     $(document).on('click', '[data-toggle-btn]', function (e) {
                         $(this).toggleClass('toggle-open');
                         $(this).parents('.polls-service__item').find('[data-toggle-body]').slideToggle("slow");
                     })
 
+                    // Инициализация селекта 
                     $('.polls-service__select').select2({
                         minimumResultsForSearch: -1
                     });
 
+                    // Событие выбора селекта
                     $('.polls-service__select').on('select2:select', function (e) {
                         const data = e.params.data;
                         const selectedOptionValue = data.id;
