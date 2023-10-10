@@ -489,7 +489,7 @@
                                                 </svg>
 
                                             </a>
-                                            <a href="#" class="item__btn" data-open-modal="remove-modal">
+                                            <a href="#" class="item__btn" data-id='1' data-open-modal="remove-modal">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_1938_37525)">
@@ -606,7 +606,7 @@
                                                 </svg>
 
                                             </a>
-                                            <a href="#" class="item__btn" data-open-modal="remove-modal">
+                                            <a href="#" class="item__btn" data-id='2' data-open-modal="remove-modal">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_1938_37525)">
@@ -702,20 +702,32 @@
                     integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
                     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                 <script>
+                    //Открыть/закрыть описание элемента опроса
                     $(document).on('click', '[data-toggle-btn]', function (e) {
                         $(this).toggleClass('toggle-open');
                         $(this).parents('.polls-service__item').find('[data-toggle-body]').slideToggle("slow");
                     })
 
+                    // Инициализация селекта 
                     $('.polls-service__select').select2({
                         minimumResultsForSearch: -1
                     });
 
+                    // Событие выбора селекта
                     $('.polls-service__select').on('select2:select', function (e) {
                         const data = e.params.data;
                         const selectedOptionValue = data.id;
                         console.log(selectedOptionValue);
                     });
+
+                    document.addEventListener('click', (e) => {
+                        const target = e.target;
+                        const removePollBtn = target.closest('[data-open-modal="remove-modal"]')
+                        if (!removePollBtn) return;
+                        const removedPollId = removePollBtn.dataset.id;
+                        const compliteRemoveBtn = document.querySelector('#complite-remove');
+                        compliteRemoveBtn.setAttribute('data-id', removedPollId)
+                    })
 
                 </script>
 
@@ -725,7 +737,8 @@
                         <div class="modal-template__close"></div>
                         <span class="modal-title">Подтвердить<br> удаление ?</span>
                         <div class="flex-w">
-                            <button class="red-btn submit__btn"><span>Подтвердить</span></button>
+                            <button class="red-btn submit__btn" data-id=""
+                                id="complite-remove"><span>Подтвердить</span></button>
                             <button onclick="this.closest('.show').classList.remove('show')"
                                 class="red-btn submit__btn"><span>Отмена</span></button>
                         </div>
