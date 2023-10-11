@@ -1395,6 +1395,16 @@ footer {
   }
 }
 
+[data-category-block="quiz-template"] {
+  .item__ico {
+    top: 14%;
+    left: 44% !important;
+    @media (max-width: 460px) {
+      left: 46.5% !important;
+    }
+  }
+}
+
 .main-slider__component {
   position: relative;
   width: 100%;
@@ -8843,5 +8853,52 @@ table {
   justify-content: center;
   .modal-title {
     margin-bottom: 20px;
+  }
+}
+.item__title-small {
+  font-size: 12px;
+}
+
+.polls-creater {
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  margin-bottom: 40px;
+  display: flex;
+  .cabinet-item {
+    height: 198px;
+    @media (max-width: 460px) {
+      width: 100%;
+    }
+    &.no-hover {
+      .site-nav__item::before {
+        display: none !important;
+      }
+    }
+  }
+}
+.polls-creater-search {
+  margin-bottom: 30px;
+  width: 100%;
+  .polls-service__search-field {
+    width: 100%;
+  }
+}
+
+.polls-creater-pagination {
+  .pagination-item {
+    width: 48px;
+    height: 48px;
+    color: #fa0056;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    &.active {
+      background-color: #ecf4ff;
+      color: #fa0056;
+    }
+    svg path {
+      fill: #fa0056;
+    }
   }
 }
