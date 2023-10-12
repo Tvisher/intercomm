@@ -11722,7 +11722,7 @@ table p {
   height: 198px;
 }
 
-.polls-creater .cabinet-item.no-hover .site-nav__item::before {
+.cabinet-item.no-hover .site-nav__item::before {
   display: none !important;
 }
 
@@ -11752,6 +11752,152 @@ table p {
 
 .polls-creater-pagination .pagination-item svg path {
   fill: #fa0056;
+}
+
+.card-game-start__wrapper .cabinet-item {
+  width: 191px;
+  height: 191px;
+  padding: 0;
+  float: left;
+  margin-right: 34px;
+}
+
+.polls-service__all-price {
+  align-items: center;
+  display: flex;
+}
+
+.polls-service__all-price .all-price__actual {
+  line-height: 100%;
+  margin-right: 18px;
+  color: #fa0056;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.polls-service__all-price .all-price__old {
+  line-height: 100%;
+  color: #707683;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: line-through;
+  margin-right: 18px;
+}
+
+.polls-service__all-price .all-price__descr {
+  color: #202020;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.head__top {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.polls-service__head .head-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.head__bottom {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.head__bottom .sale-block {
+  margin-right: 10px;
+  width: fit-content;
+  padding: 6px 14px;
+  color: #fa0056;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 18.2px */
+  text-align: center;
+  border-radius: 7px;
+  background: #ffe7ef;
+}
+
+.head__bottom .head__bottom__descr {
+  color: #202020;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+.head-wrapper__descr {
+  color: #707683;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  margin-top: 6px;
+}
+
+.item__info-btns {
+  display: flex;
+  margin-left: auto;
+}
+
+.item__info-btns .polls-service__btn._rev {
+  margin-right: 20px;
+}
+
+.polls-service__btn._rev {
+  color: #fa0056;
+  background: #ffe7ef;
+}
+
+.polls-service__item.template-item .item__name {
+  margin-bottom: 20px;
+}
+
+.polls-service__item.template-item .item__head {
+  flex-direction: column;
+}
+
+.polls-service__item.template-item .template-item-descr {
+  color: #202020;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+.polls-service__item.template-item .template-item__price {
+  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  color: #707683;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  /* 19.6px */
+}
+
+.polls-service__item.template-item .price {
+  margin-left: 10px;
+  color: #fa0056;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  /* 23.4px */
 }
 
 @media (min-width: 577px) {
@@ -13721,6 +13867,34 @@ table p {
     background-size: 100vw;
     padding-bottom: 60vw;
   }
+
+  .polls-service__all-price .all-price__descr,
+  .head__bottom .head__bottom__descr {
+    font-size: 12px;
+  }
+
+  .polls-service__head,
+  .polls-service__body {
+    padding: 15px;
+  }
+
+  .head__top,
+  .polls-service__item .item__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .head__top .polls-service__btn,
+  .polls-service__item .item__info .polls-service__btn {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .head__top .item__info-btns,
+  .polls-service__item .item__info .item__info-btns {
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 568px) {
@@ -13731,6 +13905,12 @@ table p {
 }
 
 @media (max-width: 500px) {
+  .card-game-start__wrapper .cabinet-item {
+    float: none;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
   .section-title {
     font-size: 27px;
     margin-bottom: 20px;
