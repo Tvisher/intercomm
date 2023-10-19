@@ -30,7 +30,8 @@
                                 <div> Тестовый период осталось: <span class="black-selection">30 дней</span></div>
                                 <a class="red-link" href="javascript:void(0)">Оформите подписку</a>
                             </div>
-                            <a href="javascript:void(0)" class="polls-service__btn">Создать опрос</a>
+                            <a href="javascript:void(0)" class="polls-service__btn"
+                                data-open-modal="subscribe-modal">Создать опрос</a>
                         </div>
                         <div class="polls-service__body">
                             <div class="polls-service__filters">
@@ -352,6 +353,21 @@
                                 id="complite-remove"><span>Подтвердить</span></button>
                             <button onclick="this.closest('.show').classList.remove('show')"
                                 class="red-btn submit__btn"><span>Отмена</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-template remove-modal" data-modal-type="subscribe-modal">
+                    <div class="modal-template__content" style="background-image:none;border-radius:8px">
+                        <div class="modal-template__close"></div>
+                        <span class="modal-title" style="color: #333333; margin: 0;"> Для использования сервиса купите
+                            подписку или
+                            обратитесь за тестовым
+                            периодом по почте <br><a href="mainto:i_becheykin@mlgr.ru"
+                                style="color: #fa0056; display: inline;">i_becheykin@mlgr.ru</a><br> (
+                            Бечейкин Илья)</span>
+                        <div class="flex-w">
+                            <a href="#" class="red-btn submit__btn"><span>Что то в кнопке</span></a>
                         </div>
                     </div>
                 </div>
