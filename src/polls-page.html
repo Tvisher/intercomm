@@ -82,7 +82,8 @@
                                                 </svg>
 
                                             </a>
-                                            <a href="javascript:void(0)" target="_blank" class="item__btn">
+                                            <a href="javascript:void(0)" target="_blank" class="item__btn"
+                                                data-type="quizelem" data-shfr-id="RmpreTZOTkJQa2U0REthZGduQmxLUT09">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_1997_22812)">
@@ -335,10 +336,26 @@
                     document.addEventListener('click', (e) => {
                         const target = e.target;
                         const removePollBtn = target.closest('[data-open-modal="remove-modal"]')
-                        if (!removePollBtn) return;
-                        const removedPollId = removePollBtn.dataset.id;
-                        const compliteRemoveBtn = document.querySelector('#complite-remove');
-                        compliteRemoveBtn.setAttribute('data-id', removedPollId)
+                        if (removePollBtn) {
+                            const removedPollId = removePollBtn.dataset.id;
+                            const compliteRemoveBtn = document.querySelector('#complite-remove');
+                            compliteRemoveBtn.setAttribute('data-id', removedPollId)
+                            return
+                        }
+                        const copyFrameText = target.closest('.item__btn[data-shfr-id]');
+                        if (copyFrameText) {
+                            e.preventDefault()
+                            const pollId = copyFrameText.getAttribute('data-shfr-id');
+                            const pollType = copyFrameText.getAttribute('data-type');
+                            const frameSrc = `https://vnutricom.ru/lk/poll/public/${pollType}/?id=${pollId}`
+                            const copyFrameModal = document.querySelector('[data-modal-type="copy-iframe-code"]');
+                            const modalHiddenIframe = copyFrameModal.querySelector('#iframe-template');
+                            const modalIframeTextExample = copyFrameModal.querySelector('#iframe-text-example');
+                            modalHiddenIframe.src = frameSrc;
+                            modalIframeTextExample.innerHTML = `&lt;iframe src="${frameSrc}" width="100%" height="400"&gt;&lt;/iframe&gt;`;
+                            copyFrameModal.classList.add('show');
+                            return;
+                        }
                     })
 
                 </script>
@@ -369,6 +386,24 @@
                         <div class="flex-w">
                             <a href="#" class="red-btn submit__btn"><span>Что то в кнопке</span></a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="copy-iframe-modal modal-template" data-modal-type="copy-iframe-code">
+                    <div class="copy-iframe-modal__content modal-template__content">
+                        <div class="copy-iframe-modal__close modal-template__close"></div>
+                        <div class="copy-iframe-modal__title">
+                            Скопируйте себе<br>
+                            html-код
+                        </div>
+                        <div class="copy-iframe-modal__area">
+                            <div style="display: none">
+                                <iframe width="100%" height="400" style="border: none;" src="#"
+                                    id="iframe-template"></iframe>
+                            </div>
+                            <div id="iframe-text-example"></div>
+                        </div>
+                        <button class="red-btn" id="copy-iframe-code"><span>Скопировать</span></button>
                     </div>
                 </div>
 
