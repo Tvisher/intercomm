@@ -114,7 +114,6 @@ cardForm.addEventListener('submit', (e) => {
                     itemHead.classList.add('toggle-open');
                     $(itemBody).slideToggle("slow");
                 }
-
             }
         })
         return

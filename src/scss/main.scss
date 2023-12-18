@@ -9189,18 +9189,17 @@ table {
     border-radius: 4px;
   }
   .game-result-massage {
+    border-radius: 4px;
     background: transparent;
     border-color: transparent;
-  }
-  .game-result-massage {
     padding: 0;
     margin: 0;
-  }
-  .game-result-massage._error {
-    border-color: #fa0056;
-  }
-  .game-result-massage .result-massage__error {
-    padding: 5px;
+    &._error {
+      border-color: #fa0056;
+    }
+    .result-massage__error {
+      padding: 5px;
+    }
   }
 }
 

@@ -12020,11 +12020,9 @@ table p {
 }
 
 .servise-toogle-block__body .game-result-massage {
+  border-radius: 4px;
   background: transparent;
   border-color: transparent;
-}
-
-.servise-toogle-block__body .game-result-massage {
   padding: 0;
   margin: 0;
 }
