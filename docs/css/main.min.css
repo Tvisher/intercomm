@@ -11900,6 +11900,207 @@ table p {
   /* 23.4px */
 }
 
+.servise-toogle-block {
+  padding: 20px;
+  background: #ebf4ff;
+  margin-bottom: 20px;
+}
+
+.servise-toogle-block__body {
+  display: none;
+  position: relative;
+}
+
+.servise-toogle-block__body .body_inner {
+  padding-top: 40px;
+}
+
+.servise-toogle-block__body::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(184, 202, 213, 0.4);
+}
+
+.servise-toogle-block__head {
+  cursor: pointer;
+  padding-right: 40px;
+  position: relative;
+  display: flex;
+  color: #202020;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 26.4px */
+}
+
+.servise-toogle-block__head.toggle-open::after {
+  transform: scale(-1);
+}
+
+.servise-toogle-block__head::after {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.4081 9.4082L12 15.4082L5.59196 9.4082' stroke='%23333333' stroke-width='2'/%3e%3c/svg%3e ");
+}
+
+.servise-toogle-block__head .head-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid-types {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grid-type {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  position: relative;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.grid-type .grid-type__size {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 18.2px */
+}
+
+.grid-type .grid-type__size._mob-size {
+  color: #707683;
+  font-weight: 500;
+}
+
+.grid-type .grid-type__image {
+  width: 100%;
+  height: 115px;
+}
+
+.grid-type .grid-type__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.grid-type .grid-select-input,
+.grid-type .arrow-select-input {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  accent-color: #fa0056;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.servise-toogle-block__body .game-form__body-list .card-list-item__wrapper {
+  background: #fff;
+  border-radius: 4px;
+}
+
+.servise-toogle-block__body .game-result-massage {
+  background: transparent;
+  border-color: transparent;
+}
+
+.servise-toogle-block__body .game-result-massage {
+  padding: 0;
+  margin: 0;
+}
+
+.servise-toogle-block__body .game-result-massage._error {
+  border-color: #fa0056;
+}
+
+.servise-toogle-block__body .game-result-massage .result-massage__error {
+  padding: 5px;
+}
+
+.grid-columns-save {
+  width: fit-content;
+  position: relative;
+  margin-top: 20px;
+}
+
+.grid-columns-save .grid-columns-save__cb {
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.grid-columns-save .grid-columns-save__cb:checked + .grid-columns-save__text::before {
+  background-color: #fa0056;
+}
+
+.grid-columns-save .grid-columns-save__cb:checked + .grid-columns-save__text:after {
+  left: 17px;
+}
+
+.grid-columns-save .grid-columns-save__text {
+  color: #202020;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 15.6px */
+  display: block;
+  position: relative;
+  padding-left: 38px;
+}
+
+.grid-columns-save .grid-columns-save__text::before {
+  transition: background-color 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  width: 32px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.45) inset;
+}
+
+.grid-columns-save .grid-columns-save__text:after {
+  transition: left 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;

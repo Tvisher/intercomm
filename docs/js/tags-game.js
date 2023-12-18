@@ -2,6 +2,7 @@
 // Параметры по умолчанию
 let cardCount = 9;
 let arrowType = 'black';
+let aspectRatio = '16-10';
 
 const cardItems = document.querySelectorAll('.card-list-item');
 const gameSizeInputs = document.querySelectorAll('input[name="grid-size"]');
@@ -28,6 +29,13 @@ arrowInputs.forEach(input => {
     input.addEventListener('change', (e) => {
         const inputArrowType = e.target.value;
         arrowType = inputArrowType;
+    });
+});
+
+const aspectRatioInputs = document.querySelectorAll('input[name="aspect-ratio"]');
+aspectRatioInputs.forEach(input => {
+    input.addEventListener('change', (e) => {
+        aspectRatio = e.target.value;
     });
 });
 
@@ -93,7 +101,24 @@ cardForm.addEventListener('submit', (e) => {
 
     // Колличество ошибок в форме
     const formErrorsLength = document.querySelectorAll('#card-game-form ._error').length;
-    if (formErrorsLength > 0) return;
+    if (formErrorsLength > 0) {
+        const emptyCard = document.querySelector('#card-game-form li._error');
+        const emptyMessage = document.querySelector('#card-game-form .game-result-massage._error');
+        const errorItems = [emptyCard, emptyMessage];
+        errorItems.forEach(item => {
+            if (item) {
+                const itemParent = item.closest('.servise-toogle-block')
+                const itemHead = itemParent.querySelector('.servise-toogle-block__head');
+                const itemBody = itemParent.querySelector('.servise-toogle-block__body');
+                if (!itemHead.classList.contains('toggle-open')) {
+                    itemHead.classList.add('toggle-open');
+                    $(itemBody).slideToggle("slow");
+                }
+
+            }
+        })
+        return
+    };
 
     // Текст из карточек в виде массива
     const cardItems = document.querySelectorAll('.card-list-item.show');
@@ -111,7 +136,11 @@ cardForm.addEventListener('submit', (e) => {
         const cardFileInput = item.querySelector('input[type="file"]');
         formImages.append(`Изображение карточки ${index + 1}`, cardFileInput.files[0]);
     });
+    const desktopColumnSave = document.querySelector('input[name="desktop-column-save"]').checked;
+
     const cardFormData = {
+        desktopColumnSave,
+        aspectRatio,
         arrowType,
         cardsText,
         formImages,
