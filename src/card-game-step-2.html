@@ -23,7 +23,8 @@
                                                 Полная сетка 3*3
                                             </div>
                                             <div class="grid-type__size _mob-size">
-                                                (Мобильная 2*5)
+                                                <span>(Мобильная 2*5)</span>
+                                                <span>(Мобильная 3*3)</span>
                                             </div>
                                             <div class="grid-type__image">
                                                 <img src="./img/grid-3x3.png" alt="">
@@ -36,7 +37,8 @@
                                                 Полная сетка 3*4
                                             </div>
                                             <div class="grid-type__size _mob-size">
-                                                (Мобильная 2*6)
+                                                <span>(Мобильная 2*6)</span>
+                                                <span>(Мобильная 3*4)</span>
                                             </div>
                                             <div class="grid-type__image">
                                                 <img src="./img/grid-3x4.png" alt="">
@@ -48,7 +50,8 @@
                                                 Полная сетка 3*5
                                             </div>
                                             <div class="grid-type__size _mob-size">
-                                                (Мобильная 2*8)
+                                                <span>(Мобильная 2*8)</span>
+                                                <span>(Мобильная 3*5)</span>
                                             </div>
                                             <div class="grid-type__image">
                                                 <img src="./img/grid-3x5.png" alt="">
@@ -769,4 +772,30 @@
         </div>
     </div>
 </div>
+<script>
+    const desktopColumnSaveCb = document.querySelector('[name="desktop-column-save"]');
+    if (desktopColumnSaveCb) {
+        checkDesktopColumnSave = () => {
+            const isChecked = desktopColumnSaveCb.checked;
+            const parentBlock = desktopColumnSaveCb.closest('.servise-toogle-block');
+            isChecked ? parentBlock.classList.add('is-mob-grid') : parentBlock.classList.remove('is-mob-grid')
+        }
+        checkDesktopColumnSave()
+        desktopColumnSaveCb.addEventListener('input', checkDesktopColumnSave)
+    }
+</script>
+
+<style>
+    ._mob-size span:last-child {
+        display: none;
+    }
+
+    .is-mob-grid ._mob-size span:last-child {
+        display: block;
+    }
+
+    .is-mob-grid ._mob-size span:first-child {
+        display: none;
+    }
+</style>
 @@include('./html/footer.html')

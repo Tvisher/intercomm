@@ -1309,6 +1309,17 @@ footer {
   }
 }
 
+[data-category-block="gameblock"] {
+  &:before {
+    background-image: url("@img/gameblock-bg.svg");
+  }
+
+  .item__ico {
+    left: 52% !important;
+    top: 9%;
+  }
+}
+
 [data-category-block="current-orders"] {
   &:before {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='215' height='219' viewBox='0 0 215 219' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.2'%3e%3cg style='mix-blend-mode:lighten' opacity='0.3' filter='url(%23filter0_f_1674_31765)'%3e%3ccircle cx='133.634' cy='81.8469' r='63.3' fill='white'/%3e%3c/g%3e%3crect width='93.864' height='93.864' transform='matrix(0.835391 0.549657 -0.835391 0.549657 104.007 20.7969)' fill='url(%23paint0_linear_1674_31765)'/%3e%3cpath d='M130.88 38.3047L155.194 54.9413L76.7806 106.534L52.4673 89.8976L130.88 38.3047Z' fill='white'/%3e%3crect width='93.8639' height='93.8639' transform='matrix(0.835391 0.549657 -0.835391 0.549657 104.44 104.891)' fill='url(%23paint1_linear_1674_31765)'/%3e%3cpath d='M104.007 20.7969V123.983L25.5936 72.3898L104.007 20.7969Z' fill='url(%23paint2_linear_1674_31765)'/%3e%3cpath d='M104.018 123.932L104.018 207.664L25.6047 156.071L25.6047 72.364L104.018 123.932Z' fill='url(%23paint3_linear_1674_31765)'/%3e%3cpath d='M77.424 106.484L77.424 133.407L52.2111 116.818L52.2111 89.9024L77.424 106.484Z' fill='white'/%3e%3cpath d='M77.424 162.788L77.424 189.711L52.2111 173.122L52.2111 146.207L77.424 162.788Z' fill='url(%23paint4_linear_1674_31765)'/%3e%3c/g%3e%3cdefs%3e%3cfilter id='filter0_f_1674_31765' x='52.4713' y='0.684401' width='162.325' height='162.327' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3e%3cfeGaussianBlur stdDeviation='8.93124' result='effect1_foregroundBlur_1674_31765'/%3e%3c/filter%3e%3clinearGradient id='paint0_linear_1674_31765' x1='-51.6949' y1='22.255' x2='96.9597' y2='23.8864' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint1_linear_1674_31765' x1='-51.6949' y1='22.255' x2='96.9596' y2='23.8864' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint2_linear_1674_31765' x1='42.2297' y1='4.61502' x2='115.805' y2='118.92' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint3_linear_1674_31765' x1='42.6629' y1='88.7017' x2='116.238' y2='203.006' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint4_linear_1674_31765' x1='57.696' y1='151.46' x2='81.3534' y2='188.214' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0.0261371' stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
