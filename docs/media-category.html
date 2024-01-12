@@ -1660,6 +1660,107 @@
     </div>
 </footer>
 
+<div class="cookie-modal show">
+    <div class="container">
+        <div class="cookie-modal__content">
+            <div class="cookie-modal__title">Cookie</div>
+            <div class="cookie-modal__descr">
+                <p>
+                    Принимая файлы cookie, вы&nbsp;соглашаетесь с&nbsp;тем, что мы&nbsp;сохраняем файлы cookie
+                    на&nbsp;вашем устройстве, чтобы вам было удобнее пользоваться этим веб-сайтом.
+                </p>
+                <a href="https://vnutricom.ru/soglasie/" target="_blank">Больше информации</a>
+            </div>
+            <button class="cookie-modal__btn red-btn" data-set-cookie>
+                <span>Принять</span>
+            </button>
+        </div>
+    </div>
+</div>
+<style>
+    .cookie-modal__btn {
+        width: fit-content;
+        flex-shrink: 0;
+    }
+
+    .cookie-modal__title {
+        font-family: Montserrat;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        margin-right: 40px;
+    }
+
+    .cookie-modal {
+        transition: all .3s ease-in-out;
+        transform: translateY(50%);
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .cookie-modal.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .cookie-modal__content {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        background: #EBF4FF;
+        box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    .cookie-modal__descr {
+        margin-right: 40px;
+        color: #333;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    .cookie-modal__descr a {
+        color: #FA0056;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        text-decoration-line: underline;
+    }
+
+    @media (max-width: 768px) {
+        .cookie-modal__title {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .cookie-modal__content {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .cookie-modal__descr {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .cookie-modal__btn {
+            width: 100%;
+        }
+    }
+</style>
+
 <div class="modal-template" data-modal-type="email-register">
     <div class="modal-template__content">
         <div class="modal-template__close"></div>
