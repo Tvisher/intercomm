@@ -964,6 +964,12 @@
                 </p>
                 <a href="https://vnutricom.ru/soglasie/" target="_blank">Больше информации</a>
             </div>
+            <div class="cookie-modal__descr _mob">
+                <p>
+                    Оставаясь на сайте, вы принимаете нашу политику cookie и <a href="https://vnutricom.ru/soglasie/"
+                        target="_blank">политику конфиденциальности</a>
+                </p>
+            </div>
             <button class="cookie-modal__btn red-btn" data-set-cookie>
                 <span>Принять</span>
             </button>
@@ -974,6 +980,11 @@
     .cookie-modal__btn {
         width: fit-content;
         flex-shrink: 0;
+        background-color: #b11f48;
+        color: #fff;
+        outline: none;
+        border: none;
+        padding: 10px 20px;
     }
 
     .cookie-modal__title {
@@ -1021,6 +1032,10 @@
         line-height: 130%;
     }
 
+    .cookie-modal__descr._mob {
+        display: none;
+    }
+
     .cookie-modal__descr a {
         color: #FA0056;
         font-family: Montserrat;
@@ -1038,6 +1053,14 @@
     }
 
     @media (max-width: 576px) {
+        .cookie-modal__descr {
+            display: none;
+        }
+
+        .cookie-modal__descr._mob {
+            display: block;
+        }
+
         .cookie-modal__content {
             flex-direction: column;
             padding: 20px;
@@ -1053,7 +1076,23 @@
         }
     }
 </style>
-
+<script>
+    const cookieBtn = document.querySelector('[data-set-cookie]');
+    cookieBtn.addEventListener('click', (e) => {
+        cookieBtn.closest('.cookie-modal').classList.remove('show');
+        fetch("/ajax/soglasie.php", {
+            method: "POST",
+            body: { cookie: true },
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        }).then((result) => {
+            console.log(result);
+        }).catch((err) => {
+            console.log(err);
+        });
+    });
+</script>
 <div class="modal-template" data-modal-type="email-register">
     <div class="modal-template__content">
         <div class="modal-template__close"></div>

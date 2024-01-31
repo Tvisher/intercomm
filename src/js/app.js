@@ -105,6 +105,7 @@ const mainSliderComponent = new Swiper(".main-slider__component", {
 
 
 
+
 const thumbSlider = new Swiper(".product-thumbs-slider", {
   spaceBetween: 10,
   slidesPerView: 4,

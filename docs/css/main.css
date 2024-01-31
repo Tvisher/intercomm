@@ -12108,6 +12108,195 @@ table p {
   transform: translateY(-50%);
 }
 
+.card-games__list_wrapper {
+  margin: 20px 0;
+  padding: 20px;
+  background: #ebf4ff;
+}
+
+.card-games__list_wrapper .example__title {
+  margin: 0;
+  color: #202020;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 26.4px */
+}
+
+.wrapper-hidden-container {
+  overflow: hidden;
+}
+
+.card-games__list_wrapper__head {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(184, 202, 213, 0.4);
+}
+
+.balls-nav-btns {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0;
+  transform: translate(0%, -67px);
+  gap: 10px;
+}
+
+.balls-nav-btns .swiper-button-prev,
+.balls-nav-btns .swiper-button-next {
+  width: 24px;
+  height: 24px;
+  position: static;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.balls-nav-btns .swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.592 5.5918L8.59204 11.9999L14.592 18.4079' stroke='%23333333' stroke-width='2'/%3e%3c/svg%3e ");
+}
+
+.balls-nav-btns .swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.40796 18.4082L15.408 12.0001L9.40796 5.59208' stroke='%23333333' stroke-width='2'/%3e%3c/svg%3e ");
+}
+
+.balls-nav-btns .swiper-button-prev:after,
+.balls-nav-btns .swiper-button-next:after {
+  display: none;
+}
+
+.card-games__list {
+  overflow: visible;
+}
+
+.card-games__list .swiper-slide.active .card-games__list-item {
+  border: 3px solid red;
+  box-sizing: border-box;
+}
+
+.card-games__settings {
+  margin: 20px 0;
+  padding: 20px;
+  background: #ebf4ff;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.card-games__settings .red-btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.setting-btn {
+  background: #fff;
+  color: #fa0056;
+}
+
+.setting-btn:before {
+  display: none;
+}
+
+.setting-btn span {
+  color: #707683;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 16.8px */
+}
+
+.setting-btn:hover span {
+  background: transparent;
+}
+
+.setting-btn.subscribe-btn {
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.setting-btn .setting-btn-ico {
+  margin-right: 14px;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+.instruction-btn {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.ball-example__container {
+  position: relative;
+}
+
+.ball-example__settings {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ball-example__settings .remove-btn {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 100%;
+  background: #fff;
+}
+
+.ball-example__settings .remove-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ball-example__settings .edit-btn {
+  padding: 7px 26px;
+  background: #fff;
+  color: #fa0056;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 4px;
+  line-height: 100%;
+}
+
+.empty-list-btn {
+  color: #fa0056;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 23.4px */
+  border-radius: 4px;
+  border: 1px solid #fa0056;
+  background: #fff;
+  padding: 17px 30px;
+  width: fit-content;
+  margin: 20px auto;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
@@ -12748,6 +12937,28 @@ table p {
 
   .site-nav__item.main-slider {
     grid-column-end: 5;
+  }
+
+  .ball-example__settings {
+    padding: 15px;
+  }
+
+  .card-games__settings {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card-games__settings > * {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .empty-list-btn {
+    font-size: 16px;
+    padding: 17px;
+    width: 100%;
   }
 }
 
