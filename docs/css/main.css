@@ -12648,6 +12648,10 @@ table p {
   line-height: 100%;
 }
 
+.rates-section {
+  padding-bottom: 50px;
+}
+
 @media (min-width: 577px) {
   .mobile-menu {
     opacity: 0;
