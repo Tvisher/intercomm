@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intercomm</title>
+    <!-- preload fonts -->
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/main.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <!-- bagfix transition zeroscript  -->
+    <script> </script>
+</head>
+
+<body>
+
+    <div class="body__content">
+        <header class="header">
+            <div class="fixed-header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <a href="index.html" class="header__logo">
+                            <img src="img/fixed-header-logo.svg" alt="">
+                        </a>
+                        <div class="main-menu-btn" data-burger-menu>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <!-- Мобильное меню в совокупности с маленьким меню из висячей шапки -->
+                            <div class="mobile-menu" data-header-menu>
+                                <div class="mobile-menu__head">
+                                    <div class="mobile-menu__close"></div>
+                                    <a href="javascript:void(0)" class="mobile-menu__logo">
+                                        <img src="img/mobile-logo.svg" alt="">
+                                    </a>
+                                    <div class="mobile-search-btn">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="13.75" cy="13.75" r="7.5" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                            <path d="M25 25L21.25 21.25" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mobile-menu__content">
+                                    <nav class="mobile-menu__nav">
+                                        <a href="javascript:void(0)" class="mobile-menu__link active">Премия</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Медиа</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Конференции</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Обучение</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Агентство</a>
+                                        <a href="javascript:void(0)" class="mobile-menu__link">Контакты</a>
+                                    </nav>
+                                    <div class="mobile-menu__user-data">
+                                        <a href="javascript:void(0)" class="user-data__item">
+                                            <div class="header__favorites" data-open-modal="phone-auth">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.6795 8.28429C13.6627 5.83305 14.1543 4.60742 14.9998 4.60742C15.8452 4.60742 16.3368 5.83305 17.32 8.2843L17.3658 8.39844C17.9213 9.78327 18.1991 10.4757 18.7651 10.8966C19.3312 11.3174 20.0743 11.384 21.5604 11.5171L21.8291 11.5411C24.2613 11.7589 25.4775 11.8679 25.7377 12.6416C25.9979 13.4153 25.0948 14.237 23.2885 15.8804L22.6856 16.4288C21.7712 17.2607 21.314 17.6767 21.1009 18.2218C21.0612 18.3235 21.0282 18.4277 21.002 18.5337C20.862 19.1021 20.9958 19.7055 21.2636 20.9123L21.3469 21.288C21.839 23.5059 22.0851 24.6148 21.6555 25.0932C21.495 25.2719 21.2863 25.4006 21.0545 25.4638C20.4343 25.6331 19.5537 24.9155 17.7925 23.4804C16.636 22.5381 16.0578 22.0669 15.3939 21.9609C15.1328 21.9192 14.8667 21.9192 14.6056 21.9609C13.9417 22.0669 13.3635 22.5381 12.207 23.4804C10.4458 24.9155 9.56521 25.6331 8.94496 25.4638C8.71318 25.4006 8.50455 25.2719 8.34402 25.0932C7.91442 24.6148 8.16046 23.5059 8.65256 21.288L8.7359 20.9123C9.00366 19.7055 9.13754 19.1021 8.99748 18.5337C8.97135 18.4277 8.9383 18.3235 8.89855 18.2218C8.68546 17.6767 8.22827 17.2607 7.31389 16.4288L6.71103 15.8804C4.90473 14.237 4.00158 13.4153 4.2618 12.6416C4.52202 11.8679 5.73816 11.7589 8.17042 11.5411L8.4391 11.5171C9.92524 11.384 10.6683 11.3174 11.2344 10.8966C11.8004 10.4757 12.0782 9.78327 12.6337 8.39844L12.6795 8.28429Z"
+                                                        stroke="#333333" />
+                                                </svg>
+                                                <div>Избранное</div>
+                                            </div>
+                                        </a>
+
+                                        <a href="javascript:void(0)" class="user-data__item">
+                                            <div class="header__basket">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13 19.5L12 16.5" stroke="#333333"
+                                                        stroke-linecap="round" />
+                                                    <path d="M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                    <path d="M17 19.5L18 16.5" stroke="#333333"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                    <path
+                                                        d="M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                </svg>
+                                                <div class="basket__count">12</div>
+                                            </div>
+                                            Корзина
+                                        </a>
+                                        <div class="user-data__control">
+                                            <a href="javascript:void(0)" class="header__exit">
+                                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.5 9.25L2.5 15.5M2.5 15.5L7.5 21.75M2.5 15.5H13.75"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                    <path
+                                                        d="M11.25 11.1484V8.19933C11.25 7.21942 11.96 6.38382 12.927 6.22558L22.677 4.63012C23.8943 4.43093 25 5.37038 25 6.60387V24.3961C25 25.6296 23.8943 26.5691 22.677 26.3699L12.927 24.7744C11.96 24.6162 11.25 23.7806 11.25 22.8007V20.0742"
+                                                        stroke="#333333" stroke-linecap="round" />
+                                                </svg>
+
+                                            </a>
+                                            <a href="javascript:void(0)" class="user__data has-messages">
+                                                <div class="user__name">Иванов И.</div>
+                                                <div class="user__photo"
+                                                    style="background-image: url('img/user.jpg');">
+                                                    <div class="messages__count">3</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="header__auth" data-open-modal="phone-auth">
+                                            Личный кабинет
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.25 9.75L20.25 15M20.25 15L16.25 20.25M20.25 15H5"
+                                                    stroke="#333333" stroke-linecap="round" />
+                                                <path
+                                                    d="M11.25 10.6484V7.69933C11.25 6.71942 11.96 5.88382 12.927 5.72558L22.677 4.13012C23.8943 3.93093 25 4.87038 25 6.10387V23.8961C25 25.1296 23.8943 26.0691 22.677 25.8699L12.927 24.2744C11.96 24.1162 11.25 23.2806 11.25 22.3007V19.5742"
+                                                    stroke="#333333" stroke-linecap="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="mobile-search-btn">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13.75" cy="13.75" r="7.5" stroke="#333333" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M25 25L21.25 21.25" stroke="#333333" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <form class="search-form">
+                            <label class="search-field">
+                                <input type="text" class="search-field__input" value="" placeholder=" ">
+                                <div class="dynamic-string">
+                                    <div class="marquee__item">Здесь динамическая промо строка</div>
+                                </div>
+                            </label>
+                            <button type="submit" class="search-btn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="13.75" cy="13.75" r="7.5" stroke="#333333" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M25 25L21.25 21.25" stroke="#333333" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                            <div class="search-form__res">
+                                <div class="search-form__res_w">
+                                    <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                        промо строка,
+                                        которая
+                                        стоит 1-м пунктом при контексте</a>
+                                    <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                        промо строка,
+                                        которая стоит 1-м пунктом при контексте</a>
+                                    <div class="search-form__ajax-res">
+                                        <a href="javacript:void(0)" class="search-form__res-link"><b>Противоположна</b>я
+                                            точка зрения
+                                            подразумевает</a>
+                                        <a href="javacript:void(0)" class="search-form__res-link"><b>Противоположна</b>я
+                                            точка зрения
+                                            подразумевает</a>
+                                        <a href="javacript:void(0)" class="search-form__res-link"><b>Противоположна</b>я
+                                            точка зрения
+                                            подразумевает</a>
+                                        <a href="#" class="search-form__res-count">Результатов найдено: 123</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Если стоимость акций упала, добавить класс fallen к блоку с классом header__index-data -->
+                        <!-- <div class="header__index-data">
+                            <span class="index-data__name">ITndex InterComm</span>
+                            <div class="index-data__value">
+                                <span>2305 ₽ + 7,41%</span>
+                                <div class="index-data__arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10L12 6M12 6L8 10M12 6L12 18" stroke="#00C236" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="header__data">
+                            <a href="javascript:void(0)" class="header__favorites" data-open-modal="phone-auth">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.6795 8.28429C13.6627 5.83305 14.1543 4.60742 14.9998 4.60742C15.8452 4.60742 16.3368 5.83305 17.32 8.2843L17.3658 8.39844C17.9213 9.78327 18.1991 10.4757 18.7651 10.8966C19.3312 11.3174 20.0743 11.384 21.5604 11.5171L21.8291 11.5411C24.2613 11.7589 25.4775 11.8679 25.7377 12.6416C25.9979 13.4153 25.0948 14.237 23.2885 15.8804L22.6856 16.4288C21.7712 17.2607 21.314 17.6767 21.1009 18.2218C21.0612 18.3235 21.0282 18.4277 21.002 18.5337C20.862 19.1021 20.9958 19.7055 21.2636 20.9123L21.3469 21.288C21.839 23.5059 22.0851 24.6148 21.6555 25.0932C21.495 25.2719 21.2863 25.4006 21.0545 25.4638C20.4343 25.6331 19.5537 24.9155 17.7925 23.4804C16.636 22.5381 16.0578 22.0669 15.3939 21.9609C15.1328 21.9192 14.8667 21.9192 14.6056 21.9609C13.9417 22.0669 13.3635 22.5381 12.207 23.4804C10.4458 24.9155 9.56521 25.6331 8.94496 25.4638C8.71318 25.4006 8.50455 25.2719 8.34402 25.0932C7.91442 24.6148 8.16046 23.5059 8.65256 21.288L8.7359 20.9123C9.00366 19.7055 9.13754 19.1021 8.99748 18.5337C8.97135 18.4277 8.9383 18.3235 8.89855 18.2218C8.68546 17.6767 8.22827 17.2607 7.31389 16.4288L6.71103 15.8804C4.90473 14.237 4.00158 13.4153 4.2618 12.6416C4.52202 11.8679 5.73816 11.7589 8.17042 11.5411L8.4391 11.5171C9.92524 11.384 10.6683 11.3174 11.2344 10.8966C11.8004 10.4757 12.0782 9.78327 12.6337 8.39844L12.6795 8.28429Z"
+                                        stroke="#333333" />
+                                </svg>
+
+                            </a>
+                            <a href="javascript:void(0)" class="header__basket">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 19.5L12 16.5" stroke="#333333" stroke-linecap="round" />
+                                    <path d="M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375" stroke="#333333"
+                                        stroke-linecap="round" />
+                                    <path d="M17 19.5L18 16.5" stroke="#333333" stroke-linecap="round" />
+                                    <path
+                                        d="M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375"
+                                        stroke="#333333" stroke-linecap="round" />
+                                    <path
+                                        d="M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z"
+                                        stroke="#333333" stroke-linecap="round" />
+                                </svg>
+                                <div class="basket__count">12</div>
+                            </a>
+                            <div class="header-user-data">
+                                <a href="javascript:void(0)" class="header__exit">
+                                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.5 9.25L2.5 15.5M2.5 15.5L7.5 21.75M2.5 15.5H13.75" stroke="#333333"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M11.25 11.1484V8.19933C11.25 7.21942 11.96 6.38382 12.927 6.22558L22.677 4.63012C23.8943 4.43093 25 5.37038 25 6.60387V24.3961C25 25.6296 23.8943 26.5691 22.677 26.3699L12.927 24.7744C11.96 24.6162 11.25 23.7806 11.25 22.8007V20.0742"
+                                            stroke="#333333" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="user__data has-messages">
+                                    <div class="user__name">Иванов И.</div>
+                                    <div class="user__photo" style="background-image: url('img/user.jpg');">
+                                        <div class="messages__count">3</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- <div class="header__auth" data-open-modal="phone-auth">
+                                Личный кабинет
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.25 9.75L20.25 15M20.25 15L16.25 20.25M20.25 15H5" stroke="#333333" stroke-linecap="round"/>
+<path d="M11.25 10.6484V7.69933C11.25 6.71942 11.96 5.88382 12.927 5.72558L22.677 4.13012C23.8943 3.93093 25 4.87038 25 6.10387V23.8961C25 25.1296 23.8943 26.0691 22.677 25.8699L12.927 24.2744C11.96 24.1162 11.25 23.2806 11.25 22.3007V19.5742" stroke="#333333" stroke-linecap="round"/>
+</svg>
+
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container main-header__container">
+                <div class="header__wrapper main-header">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/header-logo.svg" alt="">
+                    </a>
+                    <div class="header__content">
+                        <div class="header__top">
+                            <nav class="header__nav">
+                                <a href="javascript:void(0)" class="nav_link active">Премия</a>
+                                <a href="javascript:void(0)" class="nav_link">Медиа</a>
+                                <a href="javascript:void(0)" class="nav_link">Конференции</a>
+                                <a href="javascript:void(0)" class="nav_link">Обучение</a>
+                                <a href="javascript:void(0)" class="nav_link">Агентство</a>
+                                <a href="javascript:void(0)" class="nav_link">Контакты</a>
+                            </nav>
+                            <div class="header__data">
+                                <a href="javascript:void(0)" class="header__favorites" data-open-modal="phone-auth">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.6795 8.28429C13.6627 5.83305 14.1543 4.60742 14.9998 4.60742C15.8452 4.60742 16.3368 5.83305 17.32 8.2843L17.3658 8.39844C17.9213 9.78327 18.1991 10.4757 18.7651 10.8966C19.3312 11.3174 20.0743 11.384 21.5604 11.5171L21.8291 11.5411C24.2613 11.7589 25.4775 11.8679 25.7377 12.6416C25.9979 13.4153 25.0948 14.237 23.2885 15.8804L22.6856 16.4288C21.7712 17.2607 21.314 17.6767 21.1009 18.2218C21.0612 18.3235 21.0282 18.4277 21.002 18.5337C20.862 19.1021 20.9958 19.7055 21.2636 20.9123L21.3469 21.288C21.839 23.5059 22.0851 24.6148 21.6555 25.0932C21.495 25.2719 21.2863 25.4006 21.0545 25.4638C20.4343 25.6331 19.5537 24.9155 17.7925 23.4804C16.636 22.5381 16.0578 22.0669 15.3939 21.9609C15.1328 21.9192 14.8667 21.9192 14.6056 21.9609C13.9417 22.0669 13.3635 22.5381 12.207 23.4804C10.4458 24.9155 9.56521 25.6331 8.94496 25.4638C8.71318 25.4006 8.50455 25.2719 8.34402 25.0932C7.91442 24.6148 8.16046 23.5059 8.65256 21.288L8.7359 20.9123C9.00366 19.7055 9.13754 19.1021 8.99748 18.5337C8.97135 18.4277 8.9383 18.3235 8.89855 18.2218C8.68546 17.6767 8.22827 17.2607 7.31389 16.4288L6.71103 15.8804C4.90473 14.237 4.00158 13.4153 4.2618 12.6416C4.52202 11.8679 5.73816 11.7589 8.17042 11.5411L8.4391 11.5171C9.92524 11.384 10.6683 11.3174 11.2344 10.8966C11.8004 10.4757 12.0782 9.78327 12.6337 8.39844L12.6795 8.28429Z"
+                                            stroke="#333333" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="header__basket">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 19.5L12 16.5" stroke="#333333" stroke-linecap="round" />
+                                        <path d="M10.625 5.625L8.125 9.375M19.375 5.625L21.875 9.375" stroke="#333333"
+                                            stroke-linecap="round" />
+                                        <path d="M17 19.5L18 16.5" stroke="#333333" stroke-linecap="round" />
+                                        <path
+                                            d="M5.625 13.125H6.09422C6.55309 13.125 6.95307 13.4373 7.06437 13.8825L9.18563 22.3675C9.29693 22.8127 9.69691 23.125 10.1558 23.125H19.8442C20.3031 23.125 20.7031 22.8127 20.8144 22.3675L22.9356 13.8825C23.0469 13.4373 23.4469 13.125 23.9058 13.125H24.375"
+                                            stroke="#333333" stroke-linecap="round" />
+                                        <path
+                                            d="M24.625 13.125H5.375C4.82272 13.125 4.375 12.6773 4.375 12.125V10.375C4.375 9.82272 4.82272 9.375 5.375 9.375H24.625C25.1773 9.375 25.625 9.82272 25.625 10.375V12.125C25.625 12.6773 25.1773 13.125 24.625 13.125Z"
+                                            stroke="#333333" stroke-linecap="round" />
+                                    </svg>
+                                    <div class="basket__count">12</div>
+                                </a>
+                                <div class="header-user-data">
+                                    <a href="javascript:void(0)" class="header__exit">
+                                        <svg width="30" height="31" viewBox="0 0 30 31" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 9.25L2.5 15.5M2.5 15.5L7.5 21.75M2.5 15.5H13.75"
+                                                stroke="#333333" stroke-linecap="round" />
+                                            <path
+                                                d="M11.25 11.1484V8.19933C11.25 7.21942 11.96 6.38382 12.927 6.22558L22.677 4.63012C23.8943 4.43093 25 5.37038 25 6.60387V24.3961C25 25.6296 23.8943 26.5691 22.677 26.3699L12.927 24.7744C11.96 24.6162 11.25 23.7806 11.25 22.8007V20.0742"
+                                                stroke="#333333" stroke-linecap="round" />
+                                        </svg>
+                                    </a>
+                                    <a href="javascript:void(0)" class="user__data has-messages">
+                                        <div class="user__name">Иванов И.</div>
+                                        <div class="user__photo" style="background-image: url('img/user.jpg');">
+                                            <div class="messages__count">3</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- <div class="header__auth" data-open-modal="phone-auth">
+                                    Личный кабинет
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.25 9.75L20.25 15M20.25 15L16.25 20.25M20.25 15H5" stroke="#333333" stroke-linecap="round"/>
+<path d="M11.25 10.6484V7.69933C11.25 6.71942 11.96 5.88382 12.927 5.72558L22.677 4.13012C23.8943 3.93093 25 4.87038 25 6.10387V23.8961C25 25.1296 23.8943 26.0691 22.677 25.8699L12.927 24.2744C11.96 24.1162 11.25 23.2806 11.25 22.3007V19.5742" stroke="#333333" stroke-linecap="round"/>
+</svg>
+
+                                </div> -->
+                            </div>
+
+                        </div>
+                        <div class="header__bottom">
+                            <form class="search-form">
+                                <label class="search-field">
+                                    <input type="text" class="search-field__input" value="" placeholder=" ">
+                                    <div class="dynamic-string marq">
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                        <div class="marquee__item">Здесь динамическая промо строка, которая стоит
+                                            1-мпунктом при
+                                            контексте</div>
+                                    </div>
+                                </label>
+                                <button type="submit" class="search-btn">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="13.75" cy="13.75" r="7.5" stroke="#333333" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M25 25L21.25 21.25" stroke="#333333" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="search-form__res">
+                                    <div class="search-form__res_w">
+                                        <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                            промо строка,
+                                            которая
+                                            стоит 1-м пунктом при контексте</a>
+                                        <a href="javacript:void(0)" class="search-form__res-fix-link">Здесь динамическая
+                                            промо строка,
+                                            которая стоит 1-м пунктом при контексте</a>
+                                        <div class="search-form__ajax-res">
+                                            <a href="javacript:void(0)"
+                                                class="search-form__res-link"><b>Противоположна</b>я
+                                                точка зрения
+                                                подразумевает</a>
+                                            <a href="javacript:void(0)"
+                                                class="search-form__res-link"><b>Противоположна</b>я
+                                                точка зрения
+                                                подразумевает</a>
+                                            <a href="javacript:void(0)"
+                                                class="search-form__res-link"><b>Противоположна</b>я
+                                                точка зрения
+                                                подразумевает</a>
+                                            <a href="#" class="search-form__res-count">Результатов найдено: 123</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- Если стоимость акций упала, добавить класс fallen к блоку с классом header__index-data -->
+                            <div class="header__index-data">
+                                <span class="index-data__name">ITndex InterComm</span>
+                                <div class="index-data__value">
+                                    <span>2305 ₽ + 7,41%</span>
+                                    <div class="index-data__arrow">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 10L12 6M12 6L8 10M12 6L12 18" stroke="#00C236" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+<main>
+	<section class="media-section media-section__inner article-page">
+		<div class="container">
+			<a href="javascript:void(0)" class="media-b-image">
+				<img src="img/b-image.png" alt="" />
+			</a>
+
+			<div class="media-section__content">
+				<div class="media-section__col wide-col" style="background: #EBF4FF;">
+					<h1 class="article-page__main-title">
+						ТОП победителей
+					</h1>
+					<div class="words-game__head">
+						<a href="" class="red-btn ghost-btn">Назад</a>
+						<a href="" class="red-btn">
+							<span>Обновить статистику</span>
+						</a>
+						<a href="" class="red-btn">
+							<span>Пройти игру</span>
+						</a>
+					</div>
+					<div class="words-game__res-list">
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+						<div class="game-result__item">
+							<div class="game-result__name">qfam40</div>
+							<div class="game-result__time">01:17</div>
+						</div>
+						<div class="res-list__empty">Ещё нет ни одного прохождения</div>
+					</div>
+				</div>
+				<div class="media-section__col">
+					<div id="pc-form-parent">
+						<form class="inner-form" id="main-page-form">
+							<span class="inner-form__title">Подпишитесь на наш еженедельный дайджест самых интересных
+								новостей</span>
+							<label class="inner-form__label">
+								<input placeholder="Введите E-mail" class="inner-form__input" />
+							</label>
+							<button type="submit" class="red-btn inner-form__btn" disabled="true">
+								<span>Отправить</span>
+							</button>
+							<label class="inner-form__agree">
+								<input type="checkbox" name="form-agree" class="form__agree-checkbox" />
+								<span class="form-agree__text">Согласен на обработку персональных данных</span>
+							</label>
+							<div class="form-sucsess">
+								<div class="form-sucsess__content">
+									<div class="close-btn" data-close-form-sucsess></div>
+									<div class="form-sucsess__title">
+										Поздравляем! <br />Вы подписались<br />на еженедельный
+										дайджест
+									</div>
+									<div class="red-btn" data-close-form-sucsess>
+										<span>Закрыть</span>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<a href="javascript:void(0)" class="inner-banner _small">
+						<img src="img/inner-banner.jpg" alt="" class="inner-banner__img" />
+						<div class="inner-banner__content">
+							<h3 class="inner-banner__title">Баннер</h3>
+							<span class="inner-banner__text">Текст текст текст</span>
+						</div>
+					</a>
+					<div id="mobile-form-parent"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<style>
+	.res-list__empty {
+		margin: 30px 0;
+		font-size: 21px;
+		font-weight: 400;
+	}
+
+	.words-game__res-list {
+		min-height: 500px;
+	}
+
+	.words-game__head {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
+
+	.words-game__head .red-btn {
+		width: fit-content;
+		padding: 12px 24px;
+		line-height: 100%;
+	}
+
+	.game-result__item {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+		font-style: normal;
+		font-size: 16px;
+		counter-increment: line-number;
+		padding: 15px 30px;
+		background-color: #fff;
+	}
+
+	.game-result__item:not(:last-child) {
+		border-bottom: 1px solid #EBF4FF;
+	}
+
+	.game-result__item:nth-child(1) .game-result__name::before {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='27' viewBox='0 0 21 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.61211 6.76779C9.98015 6.03502 11.0252 6.03232 11.397 6.76318L14.4518 12.7678C14.8087 13.4693 15.7987 13.5026 16.2019 12.8266L17.6412 10.4137C18.1614 9.54147 19.5 9.91036 19.5 10.926V21C19.5 21.5523 19.0523 22 18.5 22H2.5C1.94772 22 1.5 21.5523 1.5 21V10.9262C1.5 9.91055 2.83861 9.54167 3.35884 10.4139L4.82527 12.8726C5.22967 13.5506 6.2234 13.5147 6.57773 12.8092L9.61211 6.76779Z' fill='url(%23paint0_linear_4709_8940)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_4709_8940' x1='1.5' y1='17.4054' x2='19.5' y2='17.4054' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FFC24C'/%3e%3cstop offset='0.709391' stop-color='%23FFEAC2'/%3e%3cstop offset='1' stop-color='%23FFC24C'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+	}
+
+	.game-result__item:nth-child(2) .game-result__name::before {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='27' viewBox='0 0 21 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.61211 6.76779C9.98015 6.03502 11.0252 6.03232 11.397 6.76318L14.4518 12.7678C14.8087 13.4693 15.7987 13.5026 16.2019 12.8266L17.6412 10.4137C18.1614 9.54147 19.5 9.91036 19.5 10.926V21C19.5 21.5523 19.0523 22 18.5 22H2.5C1.94772 22 1.5 21.5523 1.5 21V10.9262C1.5 9.91055 2.83861 9.54167 3.35884 10.4139L4.82527 12.8726C5.22967 13.5506 6.2234 13.5147 6.57773 12.8092L9.61211 6.76779Z' fill='url(%23paint0_linear_4709_9340)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_4709_9340' x1='1.5' y1='17.4054' x2='19.5' y2='17.4054' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23B5C8CE'/%3e%3cstop offset='0.709391' stop-color='%23E9F3FF'/%3e%3cstop offset='1' stop-color='%23BDCBD3'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+	}
+
+	.game-result__item:nth-child(3) .game-result__name::before {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='27' viewBox='0 0 21 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.61211 6.76779C9.98015 6.03502 11.0252 6.03232 11.397 6.76318L14.4518 12.7678C14.8087 13.4693 15.7987 13.5026 16.2019 12.8266L17.6412 10.4137C18.1614 9.54147 19.5 9.91036 19.5 10.926V21C19.5 21.5523 19.0523 22 18.5 22H2.5C1.94772 22 1.5 21.5523 1.5 21V10.9262C1.5 9.91055 2.83861 9.54167 3.35884 10.4139L4.82527 12.8726C5.22967 13.5506 6.2234 13.5147 6.57773 12.8092L9.61211 6.76779Z' fill='url(%23paint0_linear_4709_1090)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_4709_1090' x1='1.5' y1='17.4054' x2='19.5' y2='17.4054' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FF6D2F'/%3e%3cstop offset='0.709391' stop-color='%23FFEAC2'/%3e%3cstop offset='1' stop-color='%23FF6D2F'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+	}
+
+	.game-result__item:nth-child(1) .game-result__name::before,
+	.game-result__item:nth-child(2) .game-result__name::before,
+	.game-result__item:nth-child(3) .game-result__name::before {
+		content: "";
+		width: 21px;
+		height: 27px;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.game-result__name::before {
+		margin-right: 20px;
+		display: block;
+		font-size: 16px;
+		font-weight: 400;
+		content: counter(line-number) ".";
+		min-width: 21px;
+	}
+
+	.game-result__name {
+		flex: 0 0 85%;
+		color: #000;
+		font-weight: 400;
+		line-height: 170%;
+		display: flex;
+		align-items: center;
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 170%;
+	}
+
+	.game-result__time {
+		text-align: right;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 170%;
+	}
+
+	.article-page__main-title {
+		margin-bottom: 20px;
+	}
+</style>
+
+<footer>
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__logo-wrapper">
+                <a href="javascript:void(0)" class="footer__logo">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <div class="yaer-label">
+                    2009&mdash;2023
+                </div>
+            </div>
+            <div class="footer__bl">
+                <nav class="footer__nav">
+                    <a href="javascript:void(0)" class="footer__nav-item">Премия</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Конференции</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Обучение</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Агентство</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">Контакты</a>
+                    <a href="javascript:void(0)" class="footer__nav-item">О проекте</a>
+                </nav>
+                <h1 class="footer__title">Все о корпоративных коммуникациях</h1>
+            </div>
+            <div class="footer__right-block">
+                <div class="footer__socials">
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/vk-footer-logo.svg');"></a>
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/dzen-footer-logo.svg');"></a>
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/youtube-footer-logo.svg');"></a>
+                    <a href="javascript:void(0)" class="footer__social"
+                        style="background-image: url('img/telegram-footer-logo.svg');"></a>
+                </div>
+                <div class="devepment-by">
+                    Разработано <a href="javascript:void(0)">MediaLine</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="cookie-modal show">
+    <div class="container">
+        <div class="cookie-modal__content">
+            <div class="cookie-modal__title">Cookie</div>
+            <div class="cookie-modal__descr">
+                <p>
+                    Принимая файлы cookie, вы&nbsp;соглашаетесь с&nbsp;тем, что мы&nbsp;сохраняем файлы cookie
+                    на&nbsp;вашем устройстве, чтобы вам было удобнее пользоваться этим веб-сайтом.
+                </p>
+                <a href="https://vnutricom.ru/soglasie/" target="_blank">Больше информации</a>
+            </div>
+            <div class="cookie-modal__descr _mob">
+                <p>
+                    Оставаясь на сайте, вы принимаете нашу политику cookie и <a href="https://vnutricom.ru/soglasie/"
+                        target="_blank">политику конфиденциальности</a>
+                </p>
+            </div>
+            <button class="cookie-modal__btn red-btn" data-set-cookie>
+                <span>Принять</span>
+            </button>
+        </div>
+    </div>
+</div>
+<style>
+    .cookie-modal__btn {
+        width: fit-content;
+        flex-shrink: 0;
+        background-color: #b11f48;
+        color: #fff;
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+    }
+
+    .cookie-modal__title {
+        font-family: Montserrat;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        margin-right: 40px;
+    }
+
+    .cookie-modal {
+        transition: all .3s ease-in-out;
+        transform: translateY(50%);
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .cookie-modal.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .cookie-modal__content {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        background: #EBF4FF;
+        box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    .cookie-modal__descr {
+        margin-right: 40px;
+        color: #333;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    .cookie-modal__descr._mob {
+        display: none;
+    }
+
+    .cookie-modal__descr a {
+        color: #FA0056;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        text-decoration-line: underline;
+    }
+
+    @media (max-width: 768px) {
+        .cookie-modal__title {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .cookie-modal__descr {
+            display: none;
+        }
+
+        .cookie-modal__descr._mob {
+            display: block;
+        }
+
+        .cookie-modal__content {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .cookie-modal__descr {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .cookie-modal__btn {
+            width: 100%;
+        }
+    }
+</style>
+<script>
+    const cookieBtn = document.querySelector('[data-set-cookie]');
+    cookieBtn.addEventListener('click', (e) => {
+        cookieBtn.closest('.cookie-modal').classList.remove('show');
+        fetch("/ajax/soglasie.php", {
+            method: "POST",
+            body: { cookie: true },
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        }).then((result) => {
+            console.log(result);
+        }).catch((err) => {
+            console.log(err);
+        });
+    });
+</script>
+<div class="modal-template" data-modal-type="email-register">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <span class="modal-title">Регистрация</span>
+        <form action="#" class="modal-form">
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="E-mail" type="text">
+            </label>
+
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Пароль" type="password">
+            </label>
+
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Подтверждение пароля" type="password">
+            </label>
+
+            <label class="inner-form__agree">
+                <input type="checkbox" name="form-agree" class="form__agree-checkbox">
+                <span class="form-agree__text">Согласен на обработку персональных данных</span>
+            </label>
+
+            <button type="submit" class="red-btn submit__btn"><span>Регистрация</span></button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-template" data-modal-type="email-auth">
+    <div class="modal-template__content">
+        <div class="modal-template__close"></div>
+        <span class="modal-title">Авторизация по E-mail</span>
+        <form action="#" class="modal-form">
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="E-mail" type="text">
+            </label>
+            <label class="modal-field">
+                <input type="text" class="modal-field__input" placeholder="Пароль" type="password">
+            </label>
+            <a href="javascript:void(0)" class="red-text">Забыли пароль?</a>
+            <button type="submit" class="red-btn submit__btn"><span>Войти</span></button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-template" data-modal-type="phone-auth">
+    <div class="modal-template__content phone-auth">
+        <div class="modal-template__close"></div>
+        <div class="phone-auth__iamge">
+            <img src="img/phone-auth-bg.svg" alt="">
+        </div>
+        <div class="phone-auth__content">
+            <span class="modal-title">Авторизация по телефону</span>
+            <form action="#" class="modal-form">
+                <label class="modal-field">
+                    <input type="text" class="modal-field__input" placeholder="Телефон" type="password">
+                </label>
+                <button type="submit" class="red-btn submit__btn"><span>Подвердить</span></button>
+            </form>
+            <div class="social-auth">
+                <span class="modal-title">Авторизация через соц. сети</span>
+                <div class="social-auth__list">
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/vk-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/ok-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/mail-ico.svg" alt="">
+                    </a>
+
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/yandex-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/google-ico.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="social-auth__link">
+                        <img src="img/telegram-ico.svg" alt="">
+                    </a>
+                </div>
+                <div class="phone-auth__footer">
+                    <span class="red-text" data-open-modal="email-register">Регистрация по E-mail</span>
+                    <span class="red-text" data-open-modal="email-auth">Авторизация по E-mail</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+
+<script src="./js/aos.js"></script>
+<script src="./js/fancybox.umd.js"></script>
+<script src="./js/jquery.marquee.min.js"></script>
+<script src="./js/imask.js"></script>
+
+<script src="./js/app.js"></script>
+
+<script>
+    $('.dynamic-string.marq').each(function () {
+        const marqueeItemLength = $(this).find('.marquee__item').length;
+        $(this).marquee({
+            duration: marqueeItemLength * 5000,
+            gap: 50,
+            delayBeforeStart: 0,
+            direction: 'left',
+            duplicated: true
+        });
+    })
+</script>
+
+</html>
