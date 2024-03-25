@@ -492,9 +492,10 @@
 			</label>
 			<label class="inner-form__agree">
 				<input type="checkbox" name="form-agree" class="form__agree-checkbox">
-				<span class="form-agree__text">Даю согласие на обработку моих персональных данных в соответствии с
-					законом №152-ФЗ «О персональных данных» от 27.07.2006 и Политикой Компании в области защиты
-					персональных данных, а также на получение рекламных и информационных рассылок</span>
+				<div class="form-agree__text">Даю согласие на обработку моих персональных данных в соответствии с
+					законом №152-ФЗ «О персональных данных» от 27.07.2006 и <a class="form-agree__link" target="_blank"
+						href="/soglasie/">Политикой Компании</a> в области защиты
+					персональных данных, а также на получение рекламных и информационных рассылок</div>
 			</label>
 
 			<button type="submit" class="red-btn submit__btn"><span>Отправить</span></button>
@@ -599,6 +600,14 @@
 			font-size: 18px !important;
 			margin-bottom: 20px !important;
 		}
+	}
+
+	.get-check-list-modal .inner-form__agree .form-agree__text {
+		display: block;
+	}
+
+	.get-check-list-modal .form-agree__link {
+		margin: 0;
 	}
 </style>
 
