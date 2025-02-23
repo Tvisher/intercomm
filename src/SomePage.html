@@ -220,6 +220,10 @@
 	.get-check-list-modal .form-agree__link {
 		margin: 0;
 	}
+
+	.get-check-list__form.sending .submit__btn {
+		cursor: progress;
+	}
 </style>
 
 <script>
@@ -238,6 +242,8 @@
 	});
 	getCheckListForm.addEventListener('submit', (e) => {
 		e.preventDefault();
+		if (getCheckListForm.classList.contains('sending')) return
+
 		if (!isEmailValid(emailFiled.value.trim())) {
 			emailFiled.closest('.modal-field').classList.add('has-err')
 		}
@@ -246,6 +252,7 @@
 		}
 		const errors = getCheckListForm.querySelector('.has-err');
 		if (errors) return;
+		getCheckListForm.classList.add('sending')
 		const formData = {
 			email: emailFiled.value.trim()
 		};
@@ -258,6 +265,7 @@
 			success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
 				document.querySelector('.get-check-list-modal')
 					.classList.add("form-complite");
+				getCheckListForm.classList.remove('sending')
 				getCheckListForm.reset();
 			},
 			error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру

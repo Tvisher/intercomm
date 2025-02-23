@@ -150,6 +150,77 @@
                         </div>
                         <img src="@img/gard-game-example.jpg" alt="">
                     </div>
+
+                    <div class="card-game-info">
+                        <div class="card-game-info__el">
+                            <div class="card-game-info__ico">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.7274 20.158C16.2716 18.8822 15.2672 17.7549 13.8701 16.9508C12.4729 16.1468 10.7611 15.7109 9 15.7109C7.23893 15.7109 5.52706 16.1468 4.12991 16.9508C2.73276 17.7549 1.72839 18.8822 1.27259 20.158"
+                                        stroke="#FA0056" stroke-linecap="round" />
+                                    <path
+                                        d="M22.8295 17.3051C22.5446 16.5609 21.9169 15.9032 21.0437 15.4342C20.1704 14.9652 19.1005 14.7109 17.9999 14.7109C16.8992 14.7109 15.8293 14.9652 14.9561 15.4342"
+                                        stroke="#FA0056" stroke-linecap="round" />
+                                    <circle cx="9" cy="7.71094" r="4" stroke="#FA0056" stroke-linecap="round" />
+                                    <circle cx="18" cy="9.71094" r="3" stroke="#FA0056" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+                            <div class="card-game-info__text">Кол-во проходимцев:</div>
+                            <div class="card-game-info__count">10</div>
+                        </div>
+                        <div class="card-game-info__el">
+                            <div class="card-game-info__ico">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 7.71094L11.3793 15.7109L6 10.0639" stroke="#FA0056"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+                            <div class="card-game-info__text">Кол-во успешных проходимцев:</div>
+                            <div class="card-game-info__count">3</div>
+                        </div>
+                    </div>
+                    <style>
+                        .card-game-info {
+                            font-size: 16px;
+                            font-weight: 400;
+                            display: flex;
+                            padding: 10px 20px;
+                            gap: 15px 40px;
+                            background-color: #EBF4FF;
+                            flex-wrap: wrap;
+                        }
+
+                        .card-game-info__el {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                        }
+
+                        .card-game-info__ico {
+                            width: 24px;
+                            height: 24px;
+                            flex-shrink: 0;
+                        }
+
+                        .card-game-info__ico svg {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+
+                        .card-game-info__count {
+                            padding: 6px;
+                            background-color: #fff;
+                            border-radius: 50px;
+                            min-width: 33px;
+                            text-align: center;
+                            margin-left: 10px;
+                        }
+                    </style>
                 </div>
 
                 <div class="media-section__col">
